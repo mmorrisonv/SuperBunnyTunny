@@ -36,3 +36,8 @@ body {
 
 .tight{margin-left:5px !important; }
 .sansmargin{margin:0px !important;}
+
+#listinglayout,#homelayout,#guidelayout,#featurelayout,#productDetaillayout
+{
+	margin-top:200px;
+}

@@ -43,6 +43,7 @@ a{color:#0069d6;text-decoration:none;line-height:inherit;font-weight:inherit;}a:
 .span4{width:150px;}
 .span5{width:190px;}
 .span6{width:230px;}
+.span6p5{width:256px;}
 .span7{width:270px;}
 .span8{width:310px;}
 .span9{width:350px;}
@@ -97,6 +98,7 @@ a{color:#0069d6;text-decoration:none;line-height:inherit;font-weight:inherit;}a:
 .row>.offset10{margin-left:410px;}
 .row>.offset11{margin-left:450px;}
 .row>.offset12{margin-left:490px;}
+.span100px{width:104px;}
 .span-one-third{width:300px;}
 .span-two-thirds{width:620px;}
 .row>.offset-one-third{margin-left:340px;}
