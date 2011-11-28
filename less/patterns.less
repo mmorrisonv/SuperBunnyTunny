@@ -109,17 +109,138 @@
       .box-shadow(0 0 3px rgba(0,0,0,.15));
     }
   }
+  .fill{background-color:#222;background-color:#222222;background-repeat:repeat-x;}
 }
 
-// gradient is applied to it's own element because overflow visible is not honored by ie when filter is present
-// For backwards compatibility, include .topbar .fill
-.topbar-inner,
-.topbar .fill {
-  background-color: #222;
-  #gradient > .vertical(#333, #222);
-  @shadow: 0 1px 3px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1);
-  .box-shadow(@shadow);
+// HEADER
+// ------
+
+// Topbar for Branding and Nav
+header {
+  position: absolute;
+  top: 0;
+  padding-top:16px;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  overflow: visible;
+  border-bottom: dotted 1px @lightBaseColor;
+
+  .nav{}
+
+  // Links get text shadow
+  a {
+    color: @grayLight;
+    //text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+  }
+
+  // Hover and active states
+  // h3 for backwards compatibility
+  h3 a:hover,
+  .brand:hover,
+  ul .active > a {
+    background-color: #333;
+    background-color: rgba(255,255,255,.05);
+    color: @white;
+    text-decoration: none;
+  }
+
+  // Website name
+  // h3 left for backwards compatibility
+  h3 {
+    position: relative;
+  }
+  h3 a,
+  .brand {
+    float: left;
+    display: block;
+    padding: 8px 20px 12px;
+    margin-left: -20px; // negative indent to left-align the text down the page
+    color: @white;
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 1;
+  }
+
+  // Plain text in topbar
+  p {
+    margin: 0;
+    line-height: 40px;
+    a:hover {
+      background-color: transparent;
+      color: @white;
+    }
+  }
 }
+
+
+
+
+// FOOTER
+// ------
+
+// Topbar for Branding and Nav
+footer {
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  overflow: visible;
+  font-size:10px;
+  // Links get text shadow
+  a {
+    color: @grayLight;
+    //text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+  }
+
+  // Hover and active states
+  // h3 for backwards compatibility
+  h3 a:hover,
+  .brand:hover,
+  ul .active > a {
+    background-color: #333;
+    background-color: rgba(255,255,255,.05);
+    color: @white;
+    text-decoration: none;
+  }
+
+  // Website name
+  // h3 left for backwards compatibility
+  h3 {
+    position: relative;
+  }
+  h3 a,
+  .brand {
+    float: left;
+    display: block;
+    padding: 8px 20px 12px;
+    margin-left: -20px; // negative indent to left-align the text down the page
+    color: @white;
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 1;
+  }
+
+  // Plain text in topbar
+  p {
+    margin: 0;
+    line-height: 40px;
+    a:hover {
+      background-color: transparent;
+      color: @white;
+    }
+  }
+} 
+
+footer {
+  margin-top: @baseline - 1;
+  padding-top: @baseline - 1;
+  border-top: 1px solid #eee;
+}
+
+
 
 
 // NAVIGATION
@@ -135,18 +256,25 @@
   margin: 0 10px 0 0;
   position: relative;
   left: 0;
+
   > li {
     display: block;
     float: left;
+    text-align:center;
   }
   a {
+    font-family: 'HelveticaLTStdRoman';
+    color:@grayDark;
+    font-size:9px;
+    text-transform:uppercase;
     display: block;
     float: none;
-    padding: 10px 10px 11px;
+    padding: 2px 0 0 0;
     line-height: 19px;
     text-decoration: none;
+    cursor:pointer;
     &:hover {
-      color: @white;
+      background-color:@lightBaseColor;
       text-decoration: none;
     }
   }
@@ -471,8 +599,14 @@ a.menu:after,
 .hero-unit {
   background-color: #f5f5f5;
   margin-bottom: 30px;
-  padding: 60px;
+  
+  height: 400px;
   .border-radius(6px);
+
+  div{
+    padding: 60px 0 0 60px;
+  }
+
   h1 {
     margin-bottom: 0;
     font-size: 60px;
@@ -485,11 +619,7 @@ a.menu:after,
     line-height: @baseline * 1.5;
   }
 }
-footer {
-  margin-top: @baseline - 1;
-  padding-top: @baseline - 1;
-  border-top: 1px solid #eee;
-}
+
 
 
 // PAGE HEADERS

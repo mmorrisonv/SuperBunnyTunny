@@ -95,9 +95,11 @@ a {
 .span3     { .columns(3); }
 .span4     { .columns(4); }
 .span5     { .columns(5); }
+.span5p5     { .columns(5.5); }
 .span6     { .columns(6); }
 .span6p5     { .columns(6.65); }
 .span7     { .columns(7); }
+.span7p5     { .columns(7.5); }
 .span8     { .columns(8); }
 .span9     { .columns(9); }
 .span10    { .columns(10); }
@@ -108,7 +110,17 @@ a {
 .span15    { .columns(15); }
 .span16    { .columns(16); }
 
-// Default widths (wont apply any cascading styles set on spans, like .row > span)
+// For optional 24-column grid
+.span17    { .columns(17); }
+.span18    { .columns(18); }
+.span19    { .columns(19); }
+.span20    { .columns(20); }
+.span21    { .columns(21); }
+.span22    { .columns(22); }
+.span23    { .columns(23); }
+.span24    { .columns(24); }
+.spanFull  { width:100%;   }
+// Default widths (wont apply any cascading styles set on spans, like .row > span which applies a margin)
 .width1     { .columns(1); }
 .width2     { .columns(2); }
 .width3     { .columns(3); }
@@ -126,16 +138,6 @@ a {
 .width15    { .columns(15); }
 .width16    { .columns(16); }
 
-// For optional 24-column grid
-.span17    { .columns(17); }
-.span18    { .columns(18); }
-.span19    { .columns(19); }
-.span20    { .columns(20); }
-.span21    { .columns(21); }
-.span22    { .columns(22); }
-.span23    { .columns(23); }
-.span24    { .columns(24); }
-
 // For optional 24-column grid extension - width defintions
 .width17    { .columns(17); }
 .width18    { .columns(18); }
@@ -145,7 +147,8 @@ a {
 .width22    { .columns(22); }
 .width23    { .columns(23); }
 .width24    { .columns(24); }
-
+.widthFull  { width:100%;   }
+.widthUniform  { .columns(1);  }
 // Offset column options
 .row {
   > .offset1   { .offset(1); }

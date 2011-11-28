@@ -3,7 +3,10 @@ html, body {
 	background-color: #fff;
 }
 body {
-	padding-top: 40px; /* 40px to make the container go all the way to the bottom of the topbar */
+	padding-top: 100px; /* 40px to make the container go all the way to the bottom of the topbar */
+	/*holds footer below content*/
+	/*position: relative;
+	min-height:100%*/
 }
 
 /* The white background content wrapper */
@@ -37,7 +40,7 @@ body {
 .tight{margin-left:5px !important; }
 .sansmargin{margin:0px !important;}
 
-#listinglayout,#homelayout,#guidelayout,#featurelayout,#productDetaillayout
+#listinglayout,#homelayout,#guidelayout,#featurelayout,#productDetaillayout,#giftcardlayout
 {
 	margin-top:200px;
 }
