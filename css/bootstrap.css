@@ -110,7 +110,7 @@ a{color:#0069d6;text-decoration:none;line-height:inherit;font-weight:inherit;}a:
 .row>.offset-two-thirds{margin-left:660px;}
 .inline{display:inline;}
 p{font-size:10px;font-weight:normal;line-height:18px;margin-bottom:9px;}p small{font-size:8px;color:#bfbfbf;}
-h1,h2,h3,h4,h5,h6{font-weight:bold;color:#231f20;}h1 small,h2 small,h3 small,h4 small,h5 small,h6 small{color:#bfbfbf;}
+h1,h2,h3,h4,h5,h6{font-weight:bold;color:#231f20;font-family:'HelveticaNeue75Bold';}h1 small,h2 small,h3 small,h4 small,h5 small,h6 small{color:#bfbfbf;}
 h1{margin-bottom:18px;font-size:30px;line-height:36px;}h1 small{font-size:18px;}
 h2{font-size:24px;line-height:36px;}h2 small{font-size:14px;}
 h3,h4,h5,h6{line-height:36px;}
@@ -417,3 +417,4 @@ button.btn::-moz-focus-inner,input[type=submit].btn::-moz-focus-inner{padding:0;
 .media-grid a:hover{border-color:#0069d6;-webkit-box-shadow:0 1px 4px rgba(0, 105, 214, 0.25);-moz-box-shadow:0 1px 4px rgba(0, 105, 214, 0.25);box-shadow:0 1px 4px rgba(0, 105, 214, 0.25);}
 .box{background-color:#e6e6e6;margin:10px 0px;}
 .box1{background-color:#e6e6e6;}
+.feat{width:260px;margin-left:4px;float:left;display:inline;border:solid 1px #333;}
