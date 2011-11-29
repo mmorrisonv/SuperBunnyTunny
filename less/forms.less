@@ -69,12 +69,13 @@ select,
   display: inline-block;
   width: 210px;
   height: @baseline;
-  padding: 4px;
+  //padding: 4px;
   font-size: @basefont;
   line-height: @baseline;
   color: @gray;
-  border: 1px solid #ccc;
-  .border-radius(3px);
+  border: 1px solid @lightPinkColor;
+  .Helv
+  //.border-radius(3px);
 }
 
 // remove padding from select
@@ -207,16 +208,18 @@ form .clearfix.warning {
 form .clearfix.success {
   .formFieldState(#468847, #57a957, lighten(#57a957, 30%));
 }
+ 
 
-
-// Form element sizes
-// TODO v2: remove duplication here and just stick to .input-[size] in light of adding .spanN sizes
 .input-mini,
 input.mini,
 textarea.mini,
 select.mini {
-  width: 60px;
+  height: 20px;
 }
+
+// Form element sizes
+// TODO v2: remove duplication here and just stick to .input-[size] in light of adding .spanN sizes
+
 .input-small,
 input.small,
 textarea.small,
