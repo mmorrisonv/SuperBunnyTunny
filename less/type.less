@@ -22,7 +22,7 @@ p {
 // --------
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
+
   color: @grayDark;
   small {
     color: @grayLight;
@@ -36,6 +36,8 @@ h1 {
   small {
     font-size: 18px;
   }
+
+
 }
 h2 {
   font-size: 24px;
@@ -44,6 +46,10 @@ h2 {
     font-size: 14px;
   }
 }
+h2.light{
+  .HLight; text-transform: uppercase;
+}
+
 h3, h4, h5, h6 {
   line-height: @baseline * 2;
 }
@@ -71,12 +77,14 @@ h6 {
 .uppercase{text-transform:uppercase;}
 
 
+
+
 // COLORS
 // ------
 
 // Unordered and Ordered lists
 ul, ol {
-  margin: 0 0 @baseline 25px;
+  margin: 0 0 @baseline 2px;
 }
 ul ul,
 ul ol,
@@ -120,7 +128,7 @@ dl {
 hr {
   margin: 2px 0 1px;
   border: 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px dotted @lightBaseColor;
 }
 
 // Emphasis
@@ -233,11 +241,11 @@ pre {
 
 @font-face {
     font-family: 'HelveticaNeue45Light';
-    src: url('helveticaneue-light-webfont.eot');
-    src: url('helveticaneue-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('helveticaneue-light-webfont.woff') format('woff'),
-         url('helveticaneue-light-webfont.ttf') format('truetype'),
-         url('helveticaneue-light-webfont.svg#HelveticaNeue45Light') format('svg');
+    src: url('/assets/fonts/helveticaneue-light-webfont.eot');
+    src: url('/assets/fonts/helveticaneue-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/helveticaneue-light-webfont.woff') format('woff'),
+         url('/assets/fonts/helveticaneue-light-webfont.ttf') format('truetype'),
+         url('/assets/fonts/helveticaneue-light-webfont.svg#HelveticaNeue45Light') format('svg');
     font-weight: normal;
     font-style: normal;
 

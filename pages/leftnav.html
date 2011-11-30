@@ -25,21 +25,45 @@
   <body>
 
 
+
+
+
     <header>
       <div class="container">
       <div class="row sansmargin">
         <div class="span4">
           <img src="/assets/images/bbunnylogo.png" />
         </div>
-        <div class="width6 pull-right">
-          search
+        <div id="account"> 
+              
+            <span>Sign in</span>
+            <span>Shopping Cart (0)</span>
+            <span>My account </span>
+          
         </div>
+        <div id="search" class="">
+                <form class="inline"> 
+                  <input class="span3" id="searchfield" name="email" size="20" type="text" value="SEARCH"> 
+                  <img class="imagebtn"  src="/assets/images/css/icon-search.png"/> 
+                </form>
+
+        </div>
+
+          
         <ul class="widthFull nav jsuniform">
             <li><a>What's new</a></li>
             <li><a>Featured</a></li>
             <li><a>swimwear</a></li>
             <li><a>apparel</a></li>
-            <li><a>accessories</a></li>
+            <li class="dropdown" data-dropdown="dropdown">
+              <a class="dropdown-toggle">accessories</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Secondary link</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Another link</a></li>
+              </ul>
+            </li>
             <li><a>gifts</a></li>
             <li><a>sale</a></li>
             <li><a>campaign</a></li>
@@ -53,12 +77,20 @@
       </div>
     </header>
         
+        
+
+
+
+
 
     <div class="container">
       <div class="content">
         <div class="row listinglayout">
        
-<div class="span24 shippingbanner"><h2>ENJOY FREE SHIPPING <span> with orders over $100</span></h2></div>
+
+
+
+
 
             <div id="leftnav" class="span4 " >
               <h4>SHOP</h4>
@@ -103,48 +135,13 @@
             </div>
 
 
-            
-            <div class="span20 row"><h1 class="bbunnybox">SHOP by COLLECTION</h1> </div>
-            <div class="span20 box">
-                <img src="/assets/demo-images/banner-lola-755x359.jpg"/>
-            </div>
 
-            <div class="listing">
-              <img src="/assets/demo-images/listing-coll1-170x216.jpg" />
-              <DL>
-                <LH>Product Name</LH>
-                <DT>SET</DT>
-                <DD>$500</DD>
-              </DL>
-              <ul class="colors">
-                <li><img src="/assets/demo-images/color1.jpg"/></li>
-                <li><img src="/assets/demo-images/color2.jpg"/></li>
-              </ul>
-            </div>
-            <div class="listing">
-              <img src="/assets/demo-images/listing-coll2-170x216.jpg" />  
-              <DL>
-                <LH>Product Name</LH>
-                <DT>WDTH: 190px</DT>
-                <DD>$500</DD>
-              </DL>
-            </div>
-            <div class="listing">
-              <img src="/assets/demo-images/listing-coll3-170x216.jpg" />  
-                            <DL>
-                <LH>Product Name</LH>
-                <DT>SET</DT>
-                <DD>$500</DD>
-              </DL>
-            </div>
-            <div class="listing">
-              <img src="/assets/demo-images/listing-coll4-170x216.jpg" />  
-                            <DL>
-                <LH>Product Name</LH>
-                <DT>SET</DT>
-                <DD>$500</DD>
-              </DL>
-            </div>
+
+
+            <div class="span20 box"><h5>Intentionally Left Blank</h5></div>
+
+
+        </div>
             
         
         </div>
@@ -154,46 +151,48 @@
 
 
 
-<div class="container">
-      <footer>
-        <div class="container">  
-         
-          <div class="social row sansmargin">
 
 
-              <div class="span">
-                <span class="HBold">STAY IN THE KNOW</span>
-                <span class="Bondoni fsize2 ">news, offers &amp; more</span>
-                <form class="inline"> 
-                  <input class="span5" id="newsleeter" name="email" size="20" type="text" value="EMAIL SIGN-UP"> 
-                  <input type="submit" class="btn" value="go" /> 
-                </form>
-              </div>
-              <div class="connect width4 pull-right">
 
-                  <span class="HBold fsize0  uppercase" style="vertical-align:top; line-height:17px;">Follow Us</span>
-                  <img src="/assets/images/css/icon-facebook.png"/>
-                  <img src="/assets/images/css/icon-twitter.png"/>
-                  <img src="/assets/images/css/icon-youtube.png" style="vertical-align:top;"/>
-                
-              </div>
-         
-          </div>
-          <div class="row sansmargin">
-            <ul class="spanFull jsuniform nav">
-                <li><a>Customer Service</a></li>
-                <li><a>Wholesale</a></li>
-                <li><a>Where To Buy</a></li>
-                <li><a>About Us</a></li>
-                <li><a>Blog</a></li>
+    <footer>
+      <div class="container">  
+       
+        <div class="social row sansmargin">
 
 
-            </ul>
-          </div>
+            <div class="span">
+              <span class="HBold">STAY IN THE KNOW</span>
+              <span class="Bondoni fsize2 ">news, offers &amp; more</span>
+              <form class="inline"> 
+                <input class="span5" id="newsletter" name="email" size="20" type="text" value="EMAIL SIGN-UP"> 
+                <input type="submit" class="btn" value="go" /> 
+              </form>
+            </div>
+            <div class="connect width4 pull-right">
+
+                <span class="HBold fsize0  uppercase" style="vertical-align:top; line-height:17px;">Follow Us</span>
+                <img src="/assets/images/css/icon-facebook.png"/>
+                <img src="/assets/images/css/icon-twitter.png"/>
+                <img src="/assets/images/css/icon-youtube.png" style="vertical-align:top;"/>
+              
+            </div>
        
         </div>
-      </footer>
-</div>
+        <div class="row sansmargin">
+          <ul class="spanFull jsuniform nav">
+              <li><a>Customer Service</a></li>
+              <li><a>Wholesale</a></li>
+              <li><a>Where To Buy</a></li>
+              <li><a>About Us</a></li>
+              <li><a>Blog</a></li>
+
+
+          </ul>
+        </div>
+     
+      </div>
+    </footer>
+
     
 
   </body>

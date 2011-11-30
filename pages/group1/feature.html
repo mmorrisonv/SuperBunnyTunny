@@ -14,12 +14,12 @@
 
     <!-- Le styles -->
     <link href="/lib/bootstrap.less" rel="stylesheet/less" type="text/css">
-    <link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="/css/bbunny.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/bbunny.css" rel="stylesheet" type="text/css">
 
-    <!--<script src="/js/less-1.1.5.min.js" type="text/javascript"></script>-->
-    <script src="/js/jquery-1.7.1.min.js" type="text/javascript"></script>
-    <script src="/js/bbunny.js" type="text/javascript"></script>
+    <!--<script src="/assets/js/less-1.1.5.min.js" type="text/javascript"></script>-->
+    <script src="/assets/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="/assets/js/bbunny.js" type="text/javascript"></script>
   </head>
 
   <body>
@@ -59,19 +59,35 @@
         <div class="row listinglayout">
        
 
-            <div id="leftnav" class="span4 " style="height:500px;">
-              <h4>SHOP</h4>
+       <div class="span24 shippingbanner"><h2>ENJOY FREE SHIPPING <span> with orders over $100</span></h2></div>
+
+            <div id="leftnav" class="span4 " >
+              <h2>SHOP</h2>
               <ul>
+
                 <li><a>What's New</a></li>
                 <li><a>Featured</a></li>
-                <li><a>Swimwear</a></li>
+                <li>
+                  <a>Swimwear</a>
+                  <ul class="subcat">
+                    <li><a>Shop By <b>Collection</b></a>
+                      <ul class="tertiarycats">
+                        <li><a>Lola</a></li>
+                        <li><a>Beach Bunny Bride</a></li>
+                        <li><a>Rock the Casbah</a></li>
+                        <li><a>La Dolce Vita</a></li>
+                      </ul>
+                    </li>
+                    <li><a>Shop By <b>Style</b></a></li>
+                  </ul>
+                </li>
                 <li><a>Apparel</a></li>
                 <li><a>Accessories</a></li>
                 <li><a>Gifts</a></li>
                 <li><a>Sale</a></li>
               </ul>
 
-              <DL>
+              <DL style="text-align:center;">
                 <DT><img src="/assets/demo-images/homepage-kicker-sml2-98x52.jpg"/>
                 <DD>Tops
 
@@ -88,33 +104,53 @@
             </div>
 
 
-            <div class="span20 box"><h5>Featured</h5></div>
+            <div class="span20 row"><h1 class="bbunnybox">Featured</h1> </div>
+            <div class="span20 row">
+              <div class="feat"><img src="/assets/demo-images/feature1-260x212.jpg"></div>
+              <div class="feat"><img src="/assets/demo-images/feature2-260x212.jpg"></div>
+              <div class="feat"><img src="/assets/demo-images/feature3-260x212.jpg"></div>
+              <div class="feat"><img src="/assets/demo-images/feature4-260x212.jpg"></div>
+              <div class="feat"><img src="/assets/demo-images/feature5-260x212.jpg"></div>
+              <div class="feat"><img src="/assets/demo-images/feature6-260x212.jpg"></div>
+            </div>
 
-            <div class="feat"><img src="/assets/demo-images/feature1-260x212.jpg"></div>
-            <div class="feat"><img src="/assets/demo-images/feature2-260x212.jpg"></div>
-            <div class="feat"><img src="/assets/demo-images/feature3-260x212.jpg"></div>
-            <div class="feat"><img src="/assets/demo-images/feature4-260x212.jpg"></div>
-            <div class="feat"><img src="/assets/demo-images/feature5-260x212.jpg"></div>
-            <div class="feat"><img src="/assets/demo-images/feature6-260x212.jpg"></div>
+            <div class="span20 row">
+              <hr/>
+              <h2 class="light">Beach Bunny's</h2>
+            </div>
 
-            <div class="span100px box"><h5>Best Sellers</h5><p>100</p></div>
-            <div class="span100px box"><h5>Best Sellers</h5><p>100</p></div>
-            <div class="span100px box"><h5>Best Sellers</h5><p>100</p></div>
-            <div class="span100px box"><h5>Best Sellers</h5><p>100</p></div>
-            <div class="span100px box"><h5>Best Sellers</h5><p>100</p></div>
-            <div class="span100px box"><h5>Best Sellers</h5><p>100</p></div>
-            <div class="span100px box"><h5>Best Sellers</h5><p>100</p></div>
+            <div class="span20 row">
+
+              <div class="kicker6 ">
+                <img src="/assets/demo-images/feature-6up1-92x120.jpg">
+              </div>
+              <div class="kicker6 ">
+                <img src="/assets/demo-images/feature-6up2-92x120.jpg">
+              </div>
+              <div class="kicker6 ">
+                <img src="/assets/demo-images/feature-6up3-92x120.jpg">
+              </div>
+              <div class="kicker6 ">
+                <img src="/assets/demo-images/feature-6up4-92x120.jpg">
+              </div>
+              <div class="kicker6 ">
+                <img src="/assets/demo-images/feature-6up5-92x120.jpg">
+              </div>
+              <div class="kicker6 ">
+                <img src="/assets/demo-images/feature-6up6-92x120.jpg">
+              </div>
+            </div>
         </div>
             
         
         </div>
 
-    </div></div>
+    </div>
+    </div>
 
 
 
 
-<div class="container">
       <footer>
         <div class="container">  
          
@@ -125,7 +161,7 @@
                 <span class="HBold">STAY IN THE KNOW</span>
                 <span class="Bondoni fsize2 ">news, offers &amp; more</span>
                 <form class="inline"> 
-                  <input class="span5" id="newsleeter" name="email" size="20" type="text" value="EMAIL SIGN-UP"> 
+                  <input class="span5" id="newsletter" name="email" size="20" type="text" value="EMAIL SIGN-UP"> 
                   <input type="submit" class="btn" value="go" /> 
                 </form>
               </div>
@@ -153,7 +189,7 @@
        
         </div>
       </footer>
-</div>
+
     
 
   </body>

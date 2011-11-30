@@ -1,0 +1,182 @@
+
+/*
+	root element for the scrollable.; when scrolling occurs this element stays still.
+*/
+.scrollable, #scrollableHomepage {
+
+	/* required settings */
+	
+	overflow:hidden;
+	
+
+}
+#scrollableHomepage 
+{
+	/*overrides just for the homepage*/
+	
+	position:relative;
+	width: 960px;
+	z-index:3;
+	height:388px;/*must fit content*/
+}
+
+#scrollableHomepage .prev
+{
+	background:transparent url(/images/prev.png) no-repeat;
+	width:26px; height:52px;
+	position:absolute;
+	top:50%; left:0px;
+	padding:0; margin:0;
+	cursor:pointer;
+}
+
+#scrollableHomepage .next
+{
+	background:transparent url(/images/next.png) no-repeat;
+	width:26px; height:52px;
+	position:absolute;
+	top:50%; right:0px;
+	padding:0; margin:0;
+	cursor:pointer;
+}
+/*
+	***NOTE: root element for scrollable items. Must be absolutely positioned
+	and it should have a extremely large width to accomodate all scrollable items. ***
+	Set the width and height for the root element and not for this element(no need to set height and width).
+*/
+.scrollable .items, #scrollableHomepage .items { /*TODO:consider making this an #id... this is the nested div under scrollable*/
+	/* this cannot ever be too large; extra space does no harm */
+	width:20000em;
+	position:absolute;
+	clear:both;
+	margin:0;
+	/*text-align: center; TODO:This text-align:center is only needed for IE4/WIN and should be defined in an override == removed apr 27 2011 becuase it breaks in IE7*/
+
+}
+#scrollableHomepage .items 
+{
+	/*height:700px;*//*removed so we can detect height*/
+}
+/*
+	Specifies the size of each scrolled element. TODO:update this on page load and window resize
+*/
+#scrollableHomepage .items .slide {
+	float:left;
+	width:960px; /*height: 600px;*//*- width and height required for flash to show on firefox and IE*/
+	/*margin:0 10px;removed oct.28 so slides dont push each other inside box*/
+	/*margin: 0 auto;*//*Note - remove this to get default behavior back*/
+	/*display: block; added to make sure firefox can show our flashembed swfs*/
+    /*margin-right:15px;*/
+
+    /* 
+       -moz-box-shadow: -5px 5px 15px #777;
+    -webkit-box-shadow: -5px 5px 15px #777;
+            box-shadow: -5px 5px 15px #777;
+              behavior: url(../js/PIE.htc);
+    */
+}
+
+/*
+.slide {
+	width: 800px;
+	height: 600px;
+}*/
+
+/* active item */
+.scrollable .active {
+	border:2px solid #000;
+	position:relative;
+	cursor:default;
+}
+
+
+/* this makes it possible to add next button beside scrollable */
+.scrollable {
+	float:left;	
+}
+
+/* prev, next, prevPage and nextPage buttons */
+a.browse {
+	background:url(../img/scrollable/arrow/hori_large.png) no-repeat;
+	display:block;
+	width:30px;
+	height:30px;
+	float:left;
+	margin:40px 10px;
+	cursor:pointer;
+	font-size:1px;
+}
+
+/* right */
+a.right 				{ background-position: 0 -30px; clear:right; margin-right: 0px;}
+a.right:hover 		{ background-position:-30px -30px; }
+a.right:active 	{ background-position:-60px -30px; } 
+
+
+/* left */
+a.left				{ margin-left: 0px; } 
+a.left:hover  		{ background-position:-30px 0; }
+a.left:active  	{ background-position:-60px 0; }
+
+/* up and down */
+a.up, a.down		{ 
+	background:url(../img/scrollable/arrow/vert_large.png) no-repeat; 
+	float: none;
+	margin: 10px 50px;
+}
+
+/* up */
+a.up:hover  		{ background-position:-30px 0; }
+a.up:active  		{ background-position:-60px 0; }
+
+/* down */
+a.down 				{ background-position: 0 -30px; }
+a.down:hover  		{ background-position:-30px -30px; }
+a.down:active  	{ background-position:-60px -30px; } 
+
+
+/* disabled navigational button */
+a.disabled {
+	visibility:hidden !important;		
+} 	
+
+
+/*
+#scrollableHomepage .slide img {
+	padding-top: 20px;
+	margin-left: 20px;
+	height:560px;
+	overflow:hidden;
+}
+*/
+.homepage_hotspot{
+	background-color:#fff;
+	height:100%;
+	width:300px;
+	position:absolute;
+	z-index:18;
+	float:left;
+	display:block;
+	filter:alpha(opacity=0);
+	opacity:0;
+}
+#rightScrollableHotspot{
+	/*cursor:url(/images/css/arrow_right.png),url(/images/css/arrow_right.cur),pointer;*/
+	cursor:pointer;
+}
+#leftScrollableHotspot{
+	/*cursor:url(/images/css/arrow_left.png),url(/images/css/arrow_left.cur),pointer;*/
+	cursor:pointer;
+}
+
+#scrollable_slideSelect{
+	background:transparent url("/images/css/paper-tab-back-tall.png") no-repeat 0px -20px ;
+	position: absolute; top: 0px; right: 50%; z-index: -2;
+	height:40px; width:140px;
+	padding:8px 0 0 16px; }
+	
+.scrollableNavButtons{
+	width: 16px;
+	text-align: center;
+	padding:2px !important;
+}
