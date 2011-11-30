@@ -447,10 +447,13 @@ a.disabled{visibility:hidden !important;}
 #leftScrollableHotspot{cursor:pointer;}
 #scrollable_slideSelect{background:transparent url("/images/css/paper-tab-back-tall.png") no-repeat 0px -20px;position:absolute;top:0px;right:50%;z-index:-2;height:40px;width:140px;padding:8px 0 0 16px;}
 .scrollableNavButtons{width:16px;text-align:center;padding:2px !important;}
+.crosssells{float:right;width:190px;}
 .box{background-color:#e6e6e6;margin:10px 0px;}
 .box1{background-color:#e6e6e6;}
 .bbunnybox,.bbunnybox-light{text-align:center;font-family:'HelveticaNeue45Light';color:#fff;text-transform:uppercase;}
 H1.bbunnybox{padding:8px 0px 8px 0px;margin-bottom:8px;}
+.bbunnybox.btn{padding:3px 6px;width:95px;height:18px;line-height:18px;letter-spacing:1px;font-size:9px;}
+.bbunnybox.btn.white{background-color:#ffffff;color:#231f20;border:solid 1px #bfbfbf;}
 .bbunnybox{background-color:#ee4799;}
 .bbunnybox-light{background-color:#fbd7e7;}
 .shippingbanner{text-align:center;font-family:'HelveticaNeue75Bold';font-size:16px;margin:-10px 0 4px;padding:2px;border-bottom:dotted 1px #fbd7e7;}.shippingbanner span{font-family:'BodoniBookItalic';}
