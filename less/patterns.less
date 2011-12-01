@@ -112,381 +112,6 @@
   .fill{background-color:#222;background-color:#222222;background-repeat:repeat-x;}
 }
 
-// HEADER
-// ------
-
-// Topbar for Branding and Nav
-header {
-  position: absolute;
-  top: 0;
-  padding-top:16px;
-  left: 0;
-  right: 0;
-  z-index: 10000;
-  overflow: visible;
-  border-bottom: dotted 1px @lightBaseColor;
-
-  #search{
-    float:right;
-    height:56px;
-
-    form{
-      line-height:56px;
-      #searchfield{
-        background-color:@baseColor;
-        color:@white;
-        border:none;
-        margin-right:2px;
-      }
-    }
-  }
-  #account{
-    position: relative;
-    float:right;
-    margin-left:8px;
-    padding-left:8px;
-    border-left:solid 1px #333;
-    display:inline;
-    height: 30px;
-    margin-top: 10px;
-    span{
-      position: absolute;
-    }
-  }
-  .nav{}
-
-  // Links get text shadow
-  a {
-    color: @grayLight;
-    //text-shadow: 0 -1px 0 rgba(0,0,0,.25);
-  }
-
-  // Hover and active states
-  // h3 for backwards compatibility
-  h3 a:hover,
-  .brand:hover,
-  ul .active > a {
-    background-color: #333;
-    background-color: rgba(255,255,255,.05);
-    color: @white;
-    text-decoration: none;
-  }
-
-  // Website name
-  // h3 left for backwards compatibility
-  h3 {
-    position: relative;
-  }
-  h3 a,
-  .brand {
-    float: left;
-    display: block;
-    padding: 8px 20px 12px;
-    margin-left: -20px; // negative indent to left-align the text down the page
-    color: @white;
-    font-size: 20px;
-    font-weight: 200;
-    line-height: 1;
-  }
-
-  // Plain text in topbar
-  p {
-    margin: 0;
-    line-height: 40px;
-    a:hover {
-      background-color: transparent;
-      color: @white;
-    }
-  }
-}
-
-
-
-
-// FOOTER
-// ------
-
-// Topbar for Branding and Nav
-footer {
-  height: 50px;
-  //position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 10000;
-  overflow: visible;
-  font-size:10px;
-  // Links get text shadow
-  a {
-    color: @grayLight;
-    //text-shadow: 0 -1px 0 rgba(0,0,0,.25);
-  }
-  .social 
-  {
-    padding-bottom: 4px;
-    border-bottom: dotted 1px @baseColor;
-  }
-  .connect > img{
-    padding-left:6px;
-  }
-
-  // Hover and active states
-  // h3 for backwards compatibility
-  h3 a:hover,
-  .brand:hover,
-  ul .active > a {
-    background-color: #333;
-    background-color: rgba(255,255,255,.05);
-    color: @white;
-    text-decoration: none;
-  }
-
-  // Website name
-  // h3 left for backwards compatibility
-  h3 {
-    position: relative;
-  }
-  h3 a,
-  .brand {
-    float: left;
-    display: block;
-    padding: 8px 20px 12px;
-    margin-left: -20px; // negative indent to left-align the text down the page
-    color: @white;
-    font-size: 20px;
-    font-weight: 200;
-    line-height: 1;
-  }
-
-  // Plain text in footer
-  p {
-    margin: 0;
-    line-height: 40px;
-    a:hover {
-      background-color: transparent;
-      color: @white;
-    }
-  }
-  input{
-    
-    background-color:@white;
-    text-align: center;
-    text-transform:uppercase;
-    height:15px;
-    color:@lightPinkColor;
-  }
-
-} 
-
-footer {
-  margin-top: @baseline - 1;
-  padding-top: 8px;
-  border-top: 1px solid #eee;
-}
-
-
-
-
-// NAVIGATION
-// ----------
-
-// Topbar Nav
-// ul.nav for all topbar based navigation to avoid inheritance issues and over-specificity
-// For backwards compatibility, leave in .topbar div > ul
-.topbar div > ul,
-.nav {
-  display: block;
-  float: left;
-  margin: 0 10px 0 0;
-  position: relative;
-  left: 0;
-
-  > li {
-    display: block;
-    float: left;
-    text-align:center;
-  }
-  a {
-    font-family: 'HelveticaLTStdRoman';
-    color:@grayDark;
-    font-size:9px;
-    text-transform:uppercase;
-    display: block;
-    float: none;
-    padding: 2px 0 0 0;
-    line-height: 19px;
-    text-decoration: none;
-    cursor:pointer;
-    &:hover {
-      background-color:@lightBaseColor;
-      text-decoration: none;
-    }
-  }
-  .active > a {
-    background-color: @baseColor;
-
-  }
-
-  // Secondary (floated right) nav in topbar
-  &.secondary-nav {
-    float: right;
-    margin-left: 10px;
-    margin-right: 0;
-    // backwards compatibility
-    .menu-dropdown,
-    .dropdown-menu {
-      right: 0;
-      border: 0;
-    }
-  }
-  // Dropdowns within the .nav
-  // a.menu:hover and li.open .menu for backwards compatibility
-  a.menu:hover,
-  li.open .menu,
-  .dropdown-toggle:hover,
-  .dropdown.open .dropdown-toggle {
-    background: @lightBaseColor;
-  }
-  // .menu-dropdown for backwards compatibility
-  .menu-dropdown,
-  .dropdown-menu {
-    background-color: @lightBaseColor;
-    // a.menu for backwards compatibility
-    a.menu,
-    .dropdown-toggle {
-      color: @grayDark;
-      &.open {
-        background: #444;
-        background: rgba(255,255,255,.05);
-      }
-    }
-    li a {
-      color: @grayDark;
-      &:hover {
-        
-        color: @baseColor;
-      }
-    }
-    .active a {
-      color: @white;
-    }
-    .divider {
-      background-color: @baseColor;
-      border-color: @baseColor;
-    }
-  }
-}
-
-// For backwards compatibility with new dropdowns, redeclare dropdown link padding
-.topbar ul .menu-dropdown li a,
-.topbar ul .dropdown-menu li a {
-  padding: 4px 15px;
-}
-
-// Dropdown Menus
-// Use the .menu class on any <li> element within the topbar or ul.tabs and you'll get some superfancy dropdowns
-// li.menu for backwards compatibility
-li.menu,
-.dropdown {
-  position: relative;
-}
-// The link that is clicked to toggle the dropdown
-// a.menu for backwards compatibility
-a.menu:after,
-.dropdown-toggle:after {
-  width: 0;
-  height: 0;
-  display: inline-block;
-  content: "&darr;";
-  text-indent: -99999px;
-  vertical-align: top;
-  margin-top: 8px;
-  margin-left: 4px;
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-  border-top: 4px solid @white;
-  .opacity(50);
-}
-// The dropdown menu (ul)
-//* .menu-dropdown for backwards compatibility*/
-.menu-dropdown,
-.dropdown-menu {
-  background-color: @baseColor;
-  float: left;
-  display: none; // None by default, but block on "open" of the menu
-  position: absolute;
-  top: 40px;
-  z-index: 900;
-  min-width: 160px;
-  max-width: 220px;
-  _width: 160px;
-  margin-left: 0; // override default ul styles
-  margin-right: 0;
-  padding: 6px 0;
-  zoom: 1; // do we need this?
-  border-color: #999;
-  border-color: rgba(0,0,0,.2);
-  border-style: solid;
-  border-width: 0 1px 1px;
-  .box-shadow(0 2px 4px rgba(0,0,0,.2));
-  .background-clip(padding-box);
-
-  // Unfloat any li's to make them stack
-  li {
-    float: none;
-    display: block;
-    background-color: none;
-  }
-  // Dividers (basically an hr) within the dropdown
-  .divider {
-    height: 1px;
-    margin: 5px 0;
-    overflow: hidden;
-    background-color: #eee;
-    border-bottom: 1px solid @white;
-  }
-}
-
-.topbar .dropdown-menu,
-.dropdown-menu {
-  // Links within the dropdown menu
-  a {
-    display: block;
-    padding: 4px 15px;
-    clear: both;
-    font-weight: normal;
-    line-height: 18px;
-    color: @gray;
-    text-shadow: 0 1px 0 @white;
-    // Hover state
-    &:hover,
-    &.hover {
-      
-      color: @grayDark;
-      text-decoration: none;
-      @shadow: inset 0 1px 0 rgba(0,0,0,.025), inset 0 -1px rgba(0,0,0,.025);
-      .box-shadow(@shadow);
-    }
-  }
-}
-
-// Open state for the dropdown
-// .open for backwards compatibility
-.open,
-.dropdown.open {
-  // .menu for backwards compatibility
-  .menu,
-  .dropdown-toggle {
-    color: @white;
-    background: @baseColor;
-  }
-  // .menu-dropdown for backwards compatibility
-  .menu-dropdown,
-  .dropdown-menu {
-    display: block;
-  }
-}
-
 
 // TABS AND PILLS
 // --------------
@@ -1020,42 +645,47 @@ input[type=submit].btn {
   z-index: 11000;
   width: 560px;
   margin: -250px 0 0 -280px;
+  text-align:center;
   background-color: @white;
-  border: 1px solid #999;
-  border: 1px solid rgba(0,0,0,.3);
+  /*border: 3px solid #000;
   *border: 1px solid #999; /* IE6-7 */
-  .border-radius(6px);
   .box-shadow(0 3px 7px rgba(0,0,0,0.3));
   .background-clip(padding-box);
-  .close { margin-top: 7px; }
+  .close { 
+    .opacity(100);
+    width:20px; height:19px;
+    position: absolute; top:0; right:2px; 
+    text-indent:-9999px; 
+    background:transparent url(/assets/images/css/icon-modalclose.png) no-repeat;
+  }
   &.fade {
     .transition(e('opacity .3s linear, top .3s ease-out'));
     top: -25%;
   }
   &.fade.in { top: 50%; }
 }
+.modal-content{
+  margin:6px;
+  padding:6px;
+  border:3px solid @grayLight;
+}
 .modal-header {
-  border-bottom: 1px solid #eee;
   padding: 5px 15px;
 }
 .modal-body {
   padding: 15px;
+  &.alignleft{text-align:left;}
 }
 .modal-body form {
   margin-bottom: 0;
 }
 .modal-footer {
-  background-color: #f5f5f5;
   padding: 14px 15px 15px;
-  border-top: 1px solid #ddd;
-  .border-radius(0 0 6px 6px);
+  border-top: 1px dotted @baseColor;
   .box-shadow(inset 0 1px 0 @white);
   .clearfix();
   margin-bottom: 0;
-  .btn {
-    float: right;
-    margin-left: 5px;
-  }
+
 }
 
 // Fix the stacking of these components when in modals

@@ -1,7 +1,19 @@
+$(document).ready(function(){
+	//temporary includes
+	$.getScript("/assets/js/lib/modal.js");
+	$.getScript("/assets/js/lib/headfoot.js");
+
+		//activate select plugin on all select elements
+		$('select').selectmenu();
+		
+
+
+})
 $(window).load(function(){
 	
 	adjustNavUniform();
 	adjustScrollable();
+
 });
 
 function adjustNavUniform(){

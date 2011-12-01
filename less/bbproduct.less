@@ -1,7 +1,95 @@
 /*BBunny.less site specific styles for Product Detail*/
+#productlayout
+{
+	position: relative;
+	.cross-sell{
+		position: absolute;
+		right:0;
+		width:200px;
 
-.crosssells{
-	float:right;
-	width:190px;
+		h5{text-transform:uppercase;}
+		.row{margin:0;}
+	}
+
+	.product-desc{
+		h1,h2,h3,h4,h5,p{
+			margin:0;line-height:inherit;
+		}
+		h2{
+			color:@baseColor; 
+			.HLight;
+			letter-spacing: 1.5px;
+			line-height:inherit;
+			font-size:16px;
+			margin-bottom:8px;
+		}
+		h3{
+			font-size:11px;
+			}
+		h4{
+			font-size:10px;
+			line-height:12px;}
+		h5{
+			color:@grayDark;
+			.HLight;
+			font-size:10px;
+		}
+		p{
+			line-height:12px;
+			margin-bottom:10px;
+		}
+	}
+
+	#related-items {//any items that come below the main feature product area
+
+		.spanFull{
+			border-bottom:solid 1px @grayLight;
+			margin-bottom:6px;
+			h2{
+				color:@baseColor;
+				.HLight;
+				.fs(12px);
+				text-transform:uppercase;
+				line-height:18px;	
+			}
+		}
+		.item{
+			.span24;
+			float:left; margin-left:@gridGutterWidth;
+			position: relative;
+			.interact{
+				position: absolute;
+				right:0;
+				top:0;
+				.span6;
+				.purchase{float:right;}
+				.share{
+					margin-top:10px;
+					float:right;
+				}
+			}
+		}	
+	}
+
 }
 
+#modal-email{
+	width:410px;
+	color:@grayLight;
+	.Helv;
+	h2{
+		margin:-10px 0 10px 0;
+		color:@baseColor;
+		.Bondoni;
+		.fs(20px);
+	}
+	h4{
+		color:@baseColor;
+		.Helv;
+		.fs(12px);
+		line-height:12px;
+		padding: 0px;
+		margin:6px 0 6px 0;
+
+	}
+}

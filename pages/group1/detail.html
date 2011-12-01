@@ -19,6 +19,7 @@
 
     <!--<script src="/assets/js/less-1.1.5.min.js" type="text/javascript"></script>-->
     <script src="/assets/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="/assets/js/plugin.js"              type="text/javascript"></script>
     <script src="/assets/js/bbunny.js" type="text/javascript"></script>
   </head>
 
@@ -80,7 +81,7 @@
       <div class="content">
                 <div class="span24 shippingbanner"><h2>ENJOY FREE SHIPPING <span> with orders over $100</span></h2></div>
 
-        <div class="row listinglayout">
+        <div id="productlayout" class=" ">
        
 
 
@@ -93,7 +94,7 @@
         <div class="row ">
        
 
-            <div class="span10 product-desc" >
+            <div class="span10" >
               <div><img src="/assets/demo-images/prod-detail-main-370x470.jpg"></div>
               <div><p>ZOOM FULL SIZE IMAGE | PLAY VIDEO</p></div>
               <div>
@@ -103,7 +104,7 @@
               
             </div>
 
-            <div class="span7p5 box">
+            <div class=" product-desc span7p5">
               <h2>CHEETA-LICIOUS</h2>
               <h3>BALCONET TOP</h3>
               <h4>$192.89</h4>
@@ -144,30 +145,50 @@
                 </div>
 
         
-              <div class="bbunnybox btn"> ADD TO CART </div>
-              <div class="bbunnybox btn white"> WISHLIST </div>
+              <a class="bbunnybox btn"> ADD TO CART </a>
+              <a class="bbunnybox btn white"> WISHLIST </a>
              </div>
 
               
 
-            <div class="cross-sell" style="height:200px;"><h5>Cross Sells</h5><p>190px</p></div>
+            <div class="cross-sell" style="height:200px;">
 
+              <h5>Recently Viewed</h5>
+              <div class="row">
+                <img src="/assets/demo-images/prod-altviews1-62x80.jpg"/>
+                <img src="/assets/demo-images/prod-altviews2-62x80.jpg"/>               
+                <img src="/assets/demo-images/prod-altviews1-62x80.jpg"/>
+
+              </div>  
+              <h5>Cross Sells</h5>
+              <div class="row">
+                <img src="/assets/demo-images/prod-altviews1-62x80.jpg"/>
+                <img src="/assets/demo-images/prod-altviews2-62x80.jpg"/>               
+                <img src="/assets/demo-images/prod-altviews1-62x80.jpg"/>
+
+              </div>  
+            </div>
 
         </div>
-        <div class="row">
+
+
+
+        <div id="related-items" class="row">
        
 
-            <div class="spanFull" style=" text-align:left;"><h4>Recommended Items</h4></div>
-                <div class="product-desc row">
-                  <div class="span5p5 " ><img src="/assets/demo-images/crosssell-large1-199x253.jpg" /><p>210px</p></div>
-                  <div class="span6 box" ><h3>Product Name</h3>
-                    <h4>$xxx.xx</h4><p>230px</p></div>
-                  
-                  <div class="span12 box">
+            <div class="spanFull" style=" text-align:left;"><h2>Recommended Items</h2></div>
 
-                    <h5>AVAILABLE COLORS</h5>
-                    <img class="alt-color" src="/assets/demo-images/altcolor-17x17.jpg" />
-                   
+<div class="item">
+    <div class="row">  
+                <div class="span5p5 " ><img src="/assets/demo-images/crosssell-large1-199x253.jpg" /><p>210px</p></div>
+                <div class="span6 product-desc" ><h3>Product Name</h3>
+                  <h4>$xxx.xx</h4><p>230px</p></div>
+                
+                <div class="span6">
+
+                      <h5>AVAILABLE COLORS</h5>
+                      <img class="alt-color" src="/assets/demo-images/altcolor-17x17.jpg" />
+                     
                       <div class="input">
                         <select name="color" id="color" class="mini span4">
                           <option>AQUA CHEETAH</option>
@@ -197,15 +218,26 @@
                           <option>4</option>
                           <option>5</option>
                         </select>
-                      </div>
-                      <div>
-                          <div class="bbunnybox btn"> ADD TO CART </div>
-                          <div class="bbunnybox btn white"> WISHLIST </div>
+                        <a>SIZE CHART</a>
                       </div>
                   </div>
-                  
-                </div>
 
+                  <div class="interact">
+                        <div class="purchase">
+                          <a class="bbunnybox btn"> ADD TO CART </a>
+                          <a class="bbunnybox btn white"> WISHLIST </a>
+                        </div>
+                        <div class="share">
+                            Share
+                            <img src="/assets/images/css/icon-facebook.png"/>
+                            <img src="/assets/images/css/icon-twitter.png"/>
+                            <img src="/assets/images/css/icon-youtube.png" style="vertical-align:top;"/>
+                        </div>
+                  </div>
+
+                </div>
+   </div>            
+</div>
 
 
           </div>
@@ -239,9 +271,9 @@
                   <input type="submit" class="btn" value="go" /> 
                 </form>
               </div>
-              <div class="connect width4 pull-right">
+              <div class="share">
 
-                  <span class="HBold fsize0  uppercase" style="vertical-align:top; line-height:17px;">Follow Us</span>
+                  Follow Us
                   <img src="/assets/images/css/icon-facebook.png"/>
                   <img src="/assets/images/css/icon-twitter.png"/>
                   <img src="/assets/images/css/icon-youtube.png" style="vertical-align:top;"/>
@@ -263,6 +295,7 @@
        
         </div>
       </footer>
+      
 
   </body>
 </html>

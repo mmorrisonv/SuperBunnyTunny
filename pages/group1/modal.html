@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>BBunny Build</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+    <!-- Le styles -->
+    <link href="/lib/bootstrap.less" rel="stylesheet/less" type="text/css">
+    <link href="/assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/bbunny.css" rel="stylesheet" type="text/css">
+
+    <!--<script src="/assets/js/less-1.1.5.min.js" type="text/javascript"></script>-->
+    <script src="/assets/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="/assets/js/plugin.js"              type="text/javascript"></script>
+    <script src="/assets/js/bbunny.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+
+
+    <header>
+      <div class="container">
+      <div class="row sansmargin">
+        <div class="span4">
+          <img src="/assets/images/bbunnylogo.png" />
+        </div>
+        <div id="account"> 
+              
+            <span>Sign in</span>
+            <span>Shopping Cart (0)</span>
+            <span>My account </span>
+          
+        </div>
+        <div id="search" class="">
+                <form class="inline"> 
+                  <input class="span3" id="searchfield" name="email" size="20" type="text" value="SEARCH"> 
+                  <img class="imagebtn"  src="/assets/images/css/icon-search.png"/> 
+                </form>
+
+        </div>
+
+          
+        <ul class="widthFull nav jsuniform">
+            <li><a>What's new</a></li>
+            <li><a>Featured</a></li>
+            <li><a>swimwear</a></li>
+            <li><a>apparel</a></li>
+            <li class="dropdown" data-dropdown="dropdown">
+              <a class="dropdown-toggle">accessories</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Secondary link</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Another link</a></li>
+              </ul>
+            </li>
+            <li><a>gifts</a></li>
+            <li><a>sale</a></li>
+            <li><a>campaign</a></li>
+            <li><a>press</a></li>
+            <li><a>model search</a></li>
+            <li><a>club</a></li>
+            <li><a>video</a></li>
+
+        </ul>
+      </div>
+      </div>
+    </header>
+        
+        
+
+
+    <div id="herolayout" class="row">
+      <div class="hero-unit ">
+
+        <div class="width24 container-box">  
+         
+            <h4>BEACH BUNNY EXCLUSIVE</h4>
+            <p>
+            <a class="btn" data-controls-modal="my-modal" data-backdrop="static" >Default Modal</a>            
+            <a class="btn" data-controls-modal="modal-thankyou" data-backdrop="static" >Thank You</a>
+            <a class="btn" data-controls-modal="modal-email" data-backdrop="static" >Email a friend</a>
+            <a class="btn" data-controls-modal="modal-wlistconfirm" data-backdrop="static" >Wishlist Confirmation</a>
+            </p>
+       
+        </div>
+
+      </div>
+    </div>
+
+
+    <div id="my-modal" class="modal hide fade in ">  
+      <a href="#" class="close">×</a>
+      <div class="modal-content">        
+
+              <div class="modal-header">
+                <h3>Modal Heading</h3>
+              </div>
+              <div class="modal-body">
+                <p>One fine body…</p>
+              </div>
+              <div class="modal-footer">
+                <a href="#" class="btn primary">Primary</a>
+                <a href="#" class="btn secondary">Secondary</a>
+              </div> 
+      </div>
+    </div> 
+
+    <div id="modal-thankyou" class="modal hide fade in ">  
+      <a href="#" class="close">×</a>
+      <div class="modal-content">        
+
+              <div class="modal-header">
+                <img src="/assets/images/css/title-thankyou.jpg"/>
+              </div>
+              <div class="modal-body">
+                <p>for signing up for our mailing list.
+As a subscriber, you will be among the
+first to receive notice of our new lines,
+collection additions, end-of-season sales,
+and other promotions.</p>
+              </div>
+              <div class="modal-footer">
+                We hope you enjoy our updates!
+              </div> 
+      </div>
+    </div> 
+
+    <div id="modal-email" class="modal hide fade in ">  
+      <a href="#" class="close">×</a>
+      <div class="modal-content" >        
+
+              <div class="modal-body alignleft">
+                <h2 class="">Email A Friend</h2>
+                <div class="row">
+                  <div class="span1p5"><h4>FROM:</h4></div>
+                  <div class="span7"><input class="spanFull white" type="text"/></div>
+                </div>
+                <div class="row">
+                  <div class="span1p5"><h4>TO:</h4></div>
+                  <div class="span7"><p class="tight">(Max. of 20 email addresses per invite.  Separate emails with a comma.)</p></div>
+                </div>
+                <div class="row">
+                  <div class="span1p5">Email</div>
+                  <div class="span7"><textarea class="spanFull white"name="emails" id="mail-emails"></textarea></div>
+                </div>
+                <div class="row" style="height:14px; margin-top:10px;">
+                  <div class="span1p5"><h4 class="sansmargin">NOTE:</h4></div>
+                  <div class="span7">&nbsp;</div>
+                </div>
+                <div class="row" style="margin-top:-10px;">
+                  <div class="span1p5">(optional)</div>
+                  <div class="span7">
+                      <textarea class="spanFull white"name="note" id="mail-note"></textarea>
+   
+                      (Max. of 300 letters)
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="span1p5"><input class="white" type="checkbox" style="float:right" /></div>
+                  <div class="span7">Send me a copy of my message</div>
+                </div>                           
+                <div class="row" style="margin-top:10px;">                
+                  <a href="#" class="btn bbunnybox white" style="float:left;">CANCEL</a>
+                  <a href="#" class="btn bbunnybox-Light  " style="float:right;">+ SEND EMAIL</a>
+                </div>
+              </div>
+      </div>
+    </div> 
+
+        <div id="modal-wlistconfirm" class="modal hide fade in" style="width:360px;">  
+        <a href="#" class="close">×</a>
+          <div class="modal-content">        
+
+                  <div class="modal-body">
+                    <p class="sansmargin fsize4">This item has been added to your </p>
+                    <h5 style="line-height:14px;">WISH LIST</h5>
+
+                <div class="row" style="margin-top:30px;">                
+                  <a href="#" class="btn bbunnybox" style=" width:inherit;">CONTIINUE SHOPPING</a>
+                  <a href="#" class="btn bbunnybox-Light" >VIEW WISH LIST</a>
+                </div>
+
+                  </div>
+
+          </div>
+    </div> 
+
+      <footer>
+        <div class="container">  
+         
+          <div class="social row sansmargin">
+
+
+              <div class="span">
+                <span class="HBold">STAY IN THE KNOW</span>
+                <span class="Bondoni fsize2 ">news, offers &amp; more</span>
+                <form class="inline"> 
+                  <input class="span5" id="newsletter" name="email" size="20" type="text" value="EMAIL SIGN-UP"> 
+                  <input type="submit" class="btn" value="go" /> 
+                </form>
+              </div>
+              <div class="share">
+
+                  Follow Us
+                  <img src="/assets/images/css/icon-facebook.png"/>
+                  <img src="/assets/images/css/icon-twitter.png"/>
+                  <img src="/assets/images/css/icon-youtube.png" style="vertical-align:top;"/>
+                
+              </div>
+         
+          </div>
+          <div class="row sansmargin">
+            <ul class="spanFull jsuniform nav">
+                <li><a>Customer Service</a></li>
+                <li><a>Wholesale</a></li>
+                <li><a>Where To Buy</a></li>
+                <li><a>About Us</a></li>
+                <li><a>Blog</a></li>
+
+
+            </ul>
+          </div>
+       
+        </div>
+      </footer>
+
+ 
+
+  </body>
+</html>

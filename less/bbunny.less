@@ -8,23 +8,38 @@
 	color:#fff;
 	text-transform:uppercase;
 }
+.bbunnybox{background-color: @baseColor;}
+.bbunnybox-light{background-color: @lightBaseColor; color:@baseColor;}
 H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px;}
 
-.bbunnybox.btn{
+.bbunnybox.btn,.bbunnybox-Light.btn{
 	padding:3px 6px; 
 	width:95px; height:18px; 
 	line-height: 18px;
 	letter-spacing: 1px;
-	font-size:9px;}
+	font-size:9px;
+	border:solid 1px @baseColor;}
+.bbunnybox-Light.btn{
+	border:solid 1px @lightBaseColor;
+	background-color:@lightBaseColor;
+	color:@baseColor;}	
 .bbunnybox.btn.white{
 	background-color: @white;
 	color:@grayDark;
 	border:solid 1px @grayLight;
 }
 
-.bbunnybox{background-color: @baseColor;}
-.bbunnybox-light{background-color: @lightBaseColor;}
 
+
+
+
+
+
+//GENERAL 
+.content .banner{
+	border:solid 1px @grayLight;
+
+}
 
 .shippingbanner{
 	text-align:center; 
@@ -38,6 +53,47 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px;}
 	}
 }
 
+.share{
+	.HBold; .fsize0;  .uppercase;
+	vertical-align:top; line-height:17px;
+	h4{display:inline-block;}
+}
+
+.noticemodal{display: none;}
+
+//ERROR PAGE
+#errorlayout{
+	border:solid 1px @grayLight;
+	text-align:center;
+	position:relative;
+	margin-top:50px;margin-bottom:50px;
+	padding:30px;
+	.floatedtitle{
+		z-index: 2;
+		position: absolute;
+		top:-18px;
+		left:130px;
+	}
+}
+//GIFTCARD PAGE
+.giftcardsignup{
+	margin-top:40px;
+	padding-top:30px;
+	border:solid 3px @grayLight;
+	position: relative;
+
+	.floatedtitle{
+		z-index: 2;
+		position: absolute;
+		top:-38px;
+		left:20px;
+	}
+	.error{//push this div over just on this page
+		margin-left:150px;
+	}
+}
+
+// HOMEPAGE STYLES
 .feat{
 	width:260px;
 	margin:-2px 3px 0 0px;
@@ -136,6 +192,8 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px;}
 	}
 }
 
+
+//LEFTNAV STYLES
 #leftnav{
 	>h2{ .Helv; font-size:16px; padding-left: 6px; }
 	> ul{
