@@ -28,6 +28,7 @@ header {
         color:@white;
         border:none;
         margin-right:2px;
+        vertical-align:text-bottom;
       }
     }
   }
@@ -40,9 +41,43 @@ header {
     display:inline;
     height: 30px;
     margin-top: 10px;
-    span{
-      position: absolute;
-    }
+    width:190px;
+      span{
+        display:inline-block;
+          padding:0 5px;
+          text-align:right;
+          min-width:60px;
+      }
+      .shopcart{
+        position: relative;
+        &.hover{background:@lightBaseColor;}
+          h5{
+            .fs(11px);
+            line-height:inherit;
+            text-transform:uppercase;
+          }
+          .shopcart-menu{
+            position: absolute;
+            top:16px;
+            right:0;
+            width:180px;
+            background:@lightBaseColor;
+            text-align: left;
+            padding:6px;
+
+            .box,img{
+              width:85px;
+              height:85px;
+              float:left;
+              margin-left:10px;
+            }
+
+            .cart-link{
+              border-top:solid 1px @gray;
+              text-align:center;
+            }
+          }
+      }
   }
   .nav{}
 

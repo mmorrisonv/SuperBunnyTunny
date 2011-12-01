@@ -668,8 +668,12 @@ a.disabled{visibility:hidden !important;}
 #leftScrollableHotspot{cursor:pointer;}
 #scrollable_slideSelect{background:transparent url("/images/css/paper-tab-back-tall.png") no-repeat 0px -20px;position:absolute;top:0px;right:50%;z-index:-2;height:40px;width:140px;padding:8px 0 0 16px;}
 .scrollableNavButtons{width:16px;text-align:center;padding:2px !important;}
-header{position:absolute;top:0;padding-top:16px;left:0;right:0;z-index:10000;overflow:visible;border-bottom:dotted 1px #fbd7e7;}header #search{float:right;height:56px;}header #search form{line-height:56px;}header #search form #searchfield{background-color:#fbd7e7;color:#ffffff;border:none;margin-right:2px;}
-header #account{position:relative;float:right;margin-left:8px;padding-left:8px;border-left:solid 1px #333;display:inline;height:30px;margin-top:10px;}header #account span{position:absolute;}
+header{position:absolute;top:0;padding-top:16px;left:0;right:0;z-index:10000;overflow:visible;border-bottom:dotted 1px #fbd7e7;}header #search{float:right;height:56px;}header #search form{line-height:56px;}header #search form #searchfield{background-color:#fbd7e7;color:#ffffff;border:none;margin-right:2px;vertical-align:text-bottom;}
+header #account{position:relative;float:right;margin-left:8px;padding-left:8px;border-left:solid 1px #333;display:inline;height:30px;margin-top:10px;width:190px;}header #account span{display:inline-block;padding:0 5px;text-align:right;min-width:60px;}
+header #account .shopcart{position:relative;}header #account .shopcart.hover{background:#fbd7e7;}
+header #account .shopcart h5{font-size:11px;line-height:inherit;text-transform:uppercase;}
+header #account .shopcart .shopcart-menu{position:absolute;top:16px;right:0;width:180px;background:#fbd7e7;text-align:left;padding:6px;}header #account .shopcart .shopcart-menu .box,header #account .shopcart .shopcart-menu img{width:85px;height:85px;float:left;margin-left:10px;}
+header #account .shopcart .shopcart-menu .cart-link{border-top:solid 1px #808080;text-align:center;}
 header a{color:#bfbfbf;}
 header h3 a:hover,header .brand:hover,header ul .active>a{background-color:#333;background-color:rgba(255, 255, 255, 0.05);color:#ffffff;text-decoration:none;}
 header h3{position:relative;}
