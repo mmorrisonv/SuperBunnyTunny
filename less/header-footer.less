@@ -42,6 +42,9 @@ header {
     height: 30px;
     margin-top: 10px;
     width:190px;
+    .HLight;
+      a{color:black;}
+      a.bbunnybox{color:white;text-shadow:none;}
       span{
         display:inline-block;
           padding:0 5px;
@@ -50,7 +53,8 @@ header {
       }
       .shopcart{
         position: relative;
-        &.hover{background:@lightBaseColor;}
+        z-index:10005;
+        &:hover{background:@lightBaseColor;}
           h5{
             .fs(11px);
             line-height:inherit;
@@ -60,16 +64,18 @@ header {
             position: absolute;
             top:16px;
             right:0;
-            width:180px;
+            width:190px;
             background:@lightBaseColor;
             text-align: left;
             padding:6px;
-
-            .box,img{
-              width:85px;
-              height:85px;
+            display:none;
+            z-index:3;
+            img{
+              width:90px;
+          
               float:left;
               margin-left:10px;
+              margin-bottom:10px;
             }
 
             .cart-link{

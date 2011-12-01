@@ -4,11 +4,14 @@ $(document).ready(function(){
 
 
 })
-$(window).load(function(){
+//$(window).load(function(){
+
 	setupResettableInputs('#newsletter,#searchfield');
 	setupSearchBar();
 	setupNewsletter();
-});
+	setupShoppingBag();
+//});
+
 
 function setupResettableInputs(inputs){
 	$.each($(inputs),function(i,elment){
@@ -25,6 +28,17 @@ function setupResettableInputs(inputs){
 		}
 	});
 
+}
+
+function setupShoppingBag(){
+	$('.shopcart').hover(
+		function(){
+			$(this).children('.shopcart-menu').show();
+			},
+		function(){
+			$(this).children('.shopcart-menu').hide();
+		}
+		);
 }
 
 function setupSearchBar(){
