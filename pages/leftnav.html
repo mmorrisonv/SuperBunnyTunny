@@ -13,7 +13,6 @@
 
 
     <!-- Le styles -->
-    <link href="/lib/bootstrap.less" rel="stylesheet/less" type="text/css">
     <link href="/assets/css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="/assets/css/bbunny.css" rel="stylesheet" type="text/css">
 
@@ -28,24 +27,44 @@
 
 
 
-
     <header>
       <div class="container">
       <div class="row sansmargin">
-        <div class="span4">
-          <img src="/assets/images/bbunnylogo.png" />
+        <div class="span7">
+          <a href="/"><img src="/assets/images/bbunnylogo.png" /></a>
         </div>
         <div id="account"> 
               
-            <span>Sign in</span>
-            <span>Shopping Cart (0)</span>
-            <span>My account </span>
+            <div class="row">
+                <span><a href="#">Sign in</a></span>
+                <span class="shopcart" >
+                  <a href="#">Shopping Cart (0)</a>
+                  <div class="shopcart-menu">
+                      <h5>items</h5>
+                      <div class="row">
+                        <a href="#"><img src="/assets/demo-images/feature-6up1-92x120.jpg"/></a>
+                        <a href="#"><img src="/assets/demo-images/feature-6up2-92x120.jpg"/></a>
+                        <a href="#"><img src="/assets/demo-images/feature-6up3-92x120.jpg"/></a>
+                        <a href="#"><img src="/assets/demo-images/feature-6up4-92x120.jpg"/></a>
+                      </div>
+                      <div class="cart-link">
+                        <h5>View Cart</h5>
+                        <a class="bbunnybox btn"> GO TO CHECKOUT </a>
+                      </div>
+
+                  </div>
+                </span>
+                
+            </div>
+            <div class="row">
+              <span><a href="#">My account</a> </span>
+            </div>
           
         </div>
         <div id="search" class="">
                 <form class="inline"> 
                   <input class="span3" id="searchfield" name="email" size="20" type="text" value="SEARCH"> 
-                  <img class="imagebtn"  src="/assets/images/css/icon-search.png"/> 
+                  <img class="searchbtn"  src="/assets/images/css/icon-search.png"/> 
                 </form>
 
         </div>
@@ -56,16 +75,66 @@
             <li><a>Featured</a></li>
             <li><a>swimwear</a></li>
             <li><a>apparel</a></li>
-            <li class="dropdown" data-dropdown="dropdown">
-              <a class="dropdown-toggle">accessories</a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Secondary link</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Another link</a></li>
+
+            <li>
+              <a>accessories</a>
+
+              <div class="dropdown-nav" >
+
+              <ul>
+                <li class="title">SHOP BY <b>COLLECTION</b>
+                  <ul>
+                    <li><a href="#">LOLA</a></li>
+                    <li><a href="#">BEACH BUNNY BRIDE</a></li>
+                    <li><a href="#">ROCK THE CASBAH</a></li>
+                    <li><a href="#">LA DOLCE VITA</a></li>
+                    <li><a href="#">FLOWER CHILD</a></li>
+                    <li><a href="#">KARDASHIANS for BEACH BUNNY</a></li>
+                    <li><a href="#">SIGNATURE LADY LACE</a></li>
+                  </ul>
+                </li>
+
               </ul>
+
+              <ul class="right">
+                <li class="title">SHOP BY <b>STYLE</b>
+                  <ul>
+                  <li><a class="title" href="#">TOPS</a></li>
+                  <li><a href="#">TRIANGLE</a></li>
+                  <li><a href="#">UNDERWIRE</a></li>
+                  <li><a href="#">HALTER</a></li>
+                  <li><a href="#">BANDAEU</a></li>
+                  <li><a class="title" href="#">BOTTOMS</a></li>
+                  <li><a href="#">LACE</a></li>
+                  <li><a href="#">TIE SIDE</a></li>
+                  <li><a href="#">JEWELED</a></li>
+                  <li><a href="#">SHIRRED</a></li>
+                  <li><a href="#">BASIC</a></li>
+                  <li><a href="#">HOTSHOT</a></li>
+                  <li><a class="title" href="#">ONE PIECES</a></li>
+                  <li><a class="title" href="#">COVER-UPS</a></li>
+                  <li><a href="#">TUNICS</a></li>
+                  <li><a href="#">SHORTS</a></li>
+                  <li><a href="#">JUMPERS</a></li>
+                  <li><a href="#">DRESSES</a></li>
+                  </ul>
+
+                </li>
+
+              </ul>
+
+              </div>
             </li>
-            <li><a>gifts</a></li>
+
+            <li>
+              <a>gifts</a>
+                <ul class="dropdown-nav">
+                  <li>SHOP BY <b>STYLE</b></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Another link</a></li>
+                </ul>
+            </li>
             <li><a>sale</a></li>
             <li><a>campaign</a></li>
             <li><a>press</a></li>
@@ -99,7 +168,7 @@
 
                 <li><a>What's New</a></li>
                 <li><a>Featured</a></li>
-                <li>
+                <li class="">
                   <a>Swimwear</a>
                   <ul class="subcat">
                     <li><a>Shop By <b>Collection</b></a>
@@ -110,7 +179,14 @@
                         <li><a>La Dolce Vita</a></li>
                       </ul>
                     </li>
-                    <li><a>Shop By <b>Style</b></a></li>
+                    <li><a>Shop By <b>Style</b></a>
+                      <ul class="tertiarycats">
+                        <li><a class="title">TOPS</a></li>
+                        <li><a>TRIANGLE</a></li>
+                        <li><a>UNDERWIRE</a></li>
+                        <li><a>HALTER</a></li>
+                      </ul>
+                    </li>
                   </ul>
                 </li>
                 <li><a>Apparel</a></li>
@@ -153,47 +229,62 @@
 
 
 
+      <footer>
+
+              <div id="modal-newsletter-thankyou" class="modal hide fade in ">  
+                <a href="#" class="close">×</a>
+                <div class="modal-content">        
+
+                        <div class="modal-header">
+                          <img src="/assets/images/css/title-thankyou.jpg"/>
+                        </div>
+                        <div class="modal-body">
+                          <p>for signing up for our mailing list.As a subscriber, you will be among the first to receive notice of our new lines, collection additions, end-of-season sales, and other promotions.</p>
+                        </div>
+                        <div class="modal-footer">
+                          We hope you enjoy our updates!
+                        </div> 
+                </div>
+              </div> 
 
 
-    <footer>
-      <div class="container">  
-       
-        <div class="social row sansmargin">
+        <div class="container">  
+         
+          <div class="social row sansmargin">
 
 
-            <div class="span">
-              <span class="HBold">STAY IN THE KNOW</span>
-              <span class="Bondoni fsize2 ">news, offers &amp; more</span>
-              <form class="inline"> 
-                <input class="span5" id="newsletter" name="email" size="20" type="text" value="EMAIL SIGN-UP"> 
-                <input type="submit" class="btn" value="go" /> 
-              </form>
-            </div>
-            <div class="connect width4 pull-right">
+              <div class="span">
+                <span class="HBold">STAY IN THE KNOW</span>
+                <span class="Bondoni fsize2 ">news, offers &amp; more</span>
+        
+                  <input class="span5" id="newsletter" name="email" size="20" type="text" value="EMAIL SIGN-UP"> 
+                  <input id="newsletterbtn" type="submit" class="btn" value="go" /> 
+                  <span id="newslettererror"></span>
+             
+              </div>
 
-                <span class="HBold fsize0  uppercase" style="vertical-align:top; line-height:17px;">Follow Us</span>
-                <img src="/assets/images/css/icon-facebook.png"/>
-                <img src="/assets/images/css/icon-twitter.png"/>
-                <img src="/assets/images/css/icon-youtube.png" style="vertical-align:top;"/>
-              
-            </div>
+              <div class="share">
+                  Follow Us
+                  <a><img src="/assets/images/css/icon-facebook.png"/></a>
+                  <a><img src="/assets/images/css/icon-twitter.png"/></a>
+                  <a><img src="/assets/images/css/icon-youtube.png" style="vertical-align:top;"/></a>
+              </div>
+         
+          </div>
+          <div class="row sansmargin">
+            <ul class="spanFull jsuniform nav">
+                <li><a>Customer Service</a></li>
+                <li><a>Wholesale</a></li>
+                <li><a>Where To Buy</a></li>
+                <li><a>About Us</a></li>
+                <li><a>Blog</a></li>
+
+
+            </ul>
+          </div>
        
         </div>
-        <div class="row sansmargin">
-          <ul class="spanFull jsuniform nav">
-              <li><a>Customer Service</a></li>
-              <li><a>Wholesale</a></li>
-              <li><a>Where To Buy</a></li>
-              <li><a>About Us</a></li>
-              <li><a>Blog</a></li>
-
-
-          </ul>
-        </div>
-     
-      </div>
-    </footer>
-
+      </footer>
     
 
   </body>

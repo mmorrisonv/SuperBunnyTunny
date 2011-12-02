@@ -229,9 +229,11 @@ label{
 .banner1{
 	.span11{
 		margin:0 28px 0 0;
-		H2{.Helv;
-		font-size:22px;
-		padding:10px 0 0 10px;
+		H2{
+			.Helv;
+			font-size:22px;
+			padding:10px 0 0 10px;
+			color:white;
 		}
 	}
 			
@@ -251,17 +253,23 @@ label{
 	.span11{
 		margin:0;
 		width:453px;
+	background-color:@lightBaseColor;
 		h2{
-			padding:5px 0 0 10px;
+			.Helv;
+			padding:5px 0 0 15px;
 			text-transform: uppercase;
 			color:@baseColor;
-			font-size:18px;}
+			font-size:18px;
+			
+		}
 		h5{
 			.Bondoni; 
-			padding: 0px 0px 20px 10px;
+			padding: 0px 0px 20px 15px;
 			font-size:14px;
 			line-height:14px;
 			margin-top:-5px;
+			color:@baseColor;
+		
 		}
 	}
 }
@@ -270,7 +278,10 @@ label{
 	
 	.span-one-third{
 		position: relative;
-		img{width:300px;}
+		img{
+			width:298px;
+			border:solid 1px @lightBaseColor;
+		}
 		.kicker{text-align:center;}
 		h2{
 			width:100%;
@@ -319,7 +330,7 @@ label{
 	> ul{
 	  list-style: none;
 	  text-transform:uppercase;
-
+	  margin:0;
 	  
 		> li > a{ 
 			color:@baseColor; 
@@ -331,13 +342,25 @@ label{
 				color:@white;
 				background-color: @grayDark;
 			}
+
+		}
+		.subcat{display:none;margin:0;}
+		.open{
+			//border-bottom:solid 1px @grayDark;
+			.subcat{
+				float:left;
+				display:block;
+				border-bottom:solid 1px @grayDark;
+			}
 		}
 
 		> li > .subcat li { 
-
+			float: left;
+			margin:0;
 			list-style:none;
+			width:100%;
 			a {
-
+				cursor: pointer;
 				color:@baseColor;
 				border-top:solid 1px @grayDark;
 				border-bottom:solid 1px @grayDark;
@@ -345,14 +368,27 @@ label{
 				float:left;
 				text-decoration:none;
 				padding-left:2px;
+				padding-bottom:0;
+				margin-right:8px;
 			}
+			ul.tertiarycats{
+				li a{ 
+					
+					color:@grayDark;
+					border:none;
+					width:inherit;
+					text-decoration:none;
+					margin-left:10px;
+					font-size:9px;
+					float:left;
 
-			ul li a{ 
-				color:@grayDark;
-				border:none;
-				text-decoration:none;
-				margin-left:10px;
-				font-size:9px;
+					&:hover{
+						text-decoration:none;
+						cursor:pointer;
+						color:@white;
+						background-color: @grayDark;
+					}
+				}
 			}
 		}
 	}

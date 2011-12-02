@@ -29,7 +29,9 @@ header {
         border:none;
         margin-right:2px;
         vertical-align:text-bottom;
+        text-align: center;
       }
+      .searchbtn{        cursor: pointer;}
     }
   }
   #account{
@@ -42,6 +44,7 @@ header {
     height: 30px;
     margin-top: 10px;
     width:190px;
+    text-transform:uppercase;
     .HLight;
       a{color:black;}
       a.bbunnybox{color:white;text-shadow:none;}
@@ -50,6 +53,7 @@ header {
           padding:0 5px;
           text-align:right;
           min-width:60px;
+          .fs(9px);
       }
       .shopcart{
         position: relative;
@@ -85,8 +89,62 @@ header {
           }
       }
   }
-  .nav{}
 
+  .dropdown-nav{
+    width:110px;
+    display: none;
+    float:left;
+    background-color: @lightBaseColor;
+    .fs(8px);
+    position: absolute;
+    top:20px;left:0;
+    margin:0;
+    padding:5px 0 10px 0;
+    li{ //all li's under dropdown
+      list-style:none;
+      color:@grayDark;
+      line-height:12px;
+      padding:3px 0 3px 0;
+      a{
+        color:@grayDark;
+        &:hover{color:@baseColor;}
+      }
+    }
+    ul{//second level nav inside li's
+      float:left;
+      text-align:left;
+      .fs(8px);
+      width:100px;
+      &.right{
+        float: right;
+        width:110px;
+        
+        ul{
+          //padding-left:10px;
+          //border-left:solid 1px @grayDark;
+          margin:0;
+        }
+        
+      }
+
+      li{
+        &.title{
+          .fs(7px);      
+          border-bottom:solid 1px #000;
+          padding-bottom:0;
+          margin-bottom:3px;
+          b{.HBold;}
+        }
+      }
+
+    }
+
+  }
+  //override for 2up dropdowns built under a div instead of a ul
+  div.dropdown-nav{
+    width:230px;
+    padding:0 5px;
+  }
   // Links get text shadow
   a {
     color: @grayLight;
@@ -168,7 +226,10 @@ footer {
   .connect > img{
     padding-left:6px;
   }
-
+  #newslettererror{
+    color:red;
+    .fs(8px);
+  }
   // Hover and active states
   // h3 for backwards compatibility
   h3 a:hover,
@@ -223,7 +284,7 @@ footer {
 // NAVIGATION
 // ----------
 
-// Topbar Nav
+// .Nav
 // ul.nav for all topbar based navigation to avoid inheritance issues and over-specificity
 // For backwards compatibility, leave in .topbar div > ul
 .topbar div > ul,
@@ -235,31 +296,39 @@ footer {
   left: 0;
 
   > li {
+    position: relative;
     display: block;
     float: left;
     text-align:center;
-  }
-  a {
-    font-family: 'HelveticaLTStdRoman';
-    color:@grayDark;
-    font-size:9px;
-    text-transform:uppercase;
-    display: block;
-    float: none;
-    padding: 2px 0 0 0;
-    line-height: 19px;
-    text-decoration: none;
-    cursor:pointer;
+    min-width:50px;
     &:hover {
       background-color:@lightBaseColor;
       text-decoration: none;
     }
+    > a {
+      font-family: 'HelveticaLTStdRoman';
+      color:@grayDark;
+      font-size:9px;
+      text-transform:uppercase;
+      display: block;
+      float: none;
+      padding: 2px 0 0 0;
+      line-height: 19px;
+      text-decoration: none;
+      cursor:pointer;
+      &:hover {
+        background-color:@lightBaseColor;
+        text-decoration: none;
+      }
+    }
   }
+}
+/*
   .active > a {
     background-color: @baseColor;
 
-  }
-
+  }*/
+/*
   // Secondary (floated right) nav in topbar
   &.secondary-nav {
     float: right;
@@ -314,8 +383,8 @@ footer {
 .topbar ul .menu-dropdown li a,
 .topbar ul .dropdown-menu li a {
   padding: 4px 15px;
-}
-
+}*/
+/*
 // Dropdown Menus
 // Use the .menu class on any <li> element within the topbar or ul.tabs and you'll get some superfancy dropdowns
 // li.menu for backwards compatibility
@@ -340,8 +409,9 @@ a.menu:after,
   border-top: 4px solid @white;
   .opacity(50);
 }
+
 // The dropdown menu (ul)
-//* .menu-dropdown for backwards compatibility*/
+// .menu-dropdown for backwards compatibility
 .menu-dropdown,
 .dropdown-menu {
   background-color: @baseColor;
@@ -357,12 +427,6 @@ a.menu:after,
   margin-right: 0;
   padding: 6px 0;
   zoom: 1; // do we need this?
-  border-color: #999;
-  border-color: rgba(0,0,0,.2);
-  border-style: solid;
-  border-width: 0 1px 1px;
-  .box-shadow(0 2px 4px rgba(0,0,0,.2));
-  .background-clip(padding-box);
 
   // Unfloat any li's to make them stack
   li {
@@ -402,7 +466,7 @@ a.menu:after,
     }
   }
 }
-
+*/
 // Open state for the dropdown
 // .open for backwards compatibility
 .open,

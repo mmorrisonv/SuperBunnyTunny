@@ -262,7 +262,7 @@
 // ------------
 
 #herolayout{
-  
+  min-height:450px;
   #scrollableHomepage{
     position: absolute;
   }
@@ -278,7 +278,7 @@
   #hero-blurb{
     /*position: absolute;
     top:30px;*/
-
+    padding-left:90px;
   }
 
   div{
@@ -298,7 +298,53 @@
   }
 }
 
+.hero-campaign {
 
+
+  z-index: 6;
+
+
+  #hero-blurb{
+    position: absolute;
+
+    left:200px;
+    top:100px;
+  }
+  #leftnav{
+    position: absolute;
+    top:30px;
+    left:30px;
+    h4{color:white;}
+    > ul{padding-top:4px;}
+    li a:hover{ background-color:@baseColor; }
+    > ul > li > .subcat li a{
+      border-color:white;
+    }
+    > ul .open .subcat{
+      border-top:solid 1px white;
+      border-color:white;
+    }
+    > ul > li > .subcat li ul.tertiarycats li a {
+      color:white;
+      &:hover{background-color:none;}
+    }
+  }
+  div{
+    
+  }
+
+  h1 {
+    margin-bottom: 0;
+    font-size: 60px;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+  p {
+    font-size: 18px;
+    font-weight: 200;
+    line-height: @baseline * 1.5;
+  }
+}
 
 // PAGE HEADERS
 // ------------
