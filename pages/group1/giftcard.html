@@ -144,42 +144,46 @@
               <div class="floatedtitle"><img src="/assets/demo-images/banner-giftcardtitle.png"></div>
               
 
-              <div>
+              <div style="margin-tOP:-20px">
 
                 <form class="form-stacked">
                   <div class="error">
-                    <h2>Oops!</h2>
-                    <p>please provide all information</p>
+                    <h2 class="">Oops!</h2>
+                    <p>please complete all the details marked below</p>
                   </div>
-                  <div class="input"><label >AMOUNT ($)*</label>
-                    <select class="mini" name="amount" id="amountselect"><option>$1</option><option>$2</option><option>$3</option><option>$4</option><option>$5</option></select>
+                  <div class="input"><label >AMOUNT ($)*</label><span class="fielderror">GIFT CARD MUST BE BTWEEN $50.00 and $2,000.00</span><br/>
+                    <select class="span3" name="amount" id="amountselect"><option>$1</option><option>$50</option><option>$300</option><option>$500</option><option>$1000</option><option>OTHER AMMOUNT</option></select>
                   </div>
-                  
-                  <div class="input">
-                      <label >YOUR NAME</label>
+
+                  <div class="input jotheramount">
+                      <label >OTHER AMOUNT</label><span class="fielderror">GIFT CARD MUST BE BTWEEN $50.00 and $2,000.00</span><br/>
                       <input class="mini span12" id="name" name="name" size="30" type="text"/></div>
                   
                   <div class="input">
-                      <label >YOUR EMAIL</label>
+                      <label >YOUR NAME</label><span class="fielderror">test</span><br/>
+                      <input class="mini span12" id="name" name="name" size="30" type="text"/></div>
+                  
+                  <div class="input">
+                      <label >YOUR EMAIL</label><span class="fielderror">test</span><br/>
                       <input class="mini span12" id="email" name="email" size="30" type="text"/></div>
                   
                   <div class="input">
-                      <label >RECIPIENT NAME</label>
+                      <label >RECIPIENT NAME</label><span class="fielderror">test</span><br/>
                       <input class="mini span12" id="toname" name="toname" size="30" type="text"/></div>
                   
                   <div class="input">
-                      <label >RECIPIENT EMAIL</label>
+                      <label >RECIPIENT EMAIL</label><span class="fielderror">test</span><br/>
                       <input class="mini span12" id="toemail" name="toemail" size="30" type="text"/></div>
                   
                   <div class="input">
-                  <label >MESSAGE</label>
+                  <label >MESSAGE</label><span class="fielderror">test</span><br/>
                   <textarea class="span12" id="msg" name="message" size="50" type="text"></textarea></div>
                 </form>
 
               </div>
               <div class="row">
               <div class="span4 offset4">
-              <a class="bbunnybox btn"> ADD TO CART </a>
+              <a class="bbunnybox btn" style="margin-left:10px; margin-bottom:20px;"> ADD TO CART </a>
               </div>
               </div>
             </div>

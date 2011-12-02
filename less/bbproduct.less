@@ -7,7 +7,12 @@
 		right:0;
 		width:200px;
 
-		h5{text-transform:uppercase;}
+		h5{
+			text-transform:uppercase;
+			.fs(11px);
+			line-height:14px;
+			margin-bottom:4px;
+		}
 		.row{margin:0;}
 	}
 
@@ -15,7 +20,7 @@
 		h1,h2,h3,h4,h5,p{
 			margin:0;line-height:inherit;
 		}
-		h2{
+		h2{//set name
 			color:@baseColor; 
 			.HLight;
 			letter-spacing: 1.5px;
@@ -23,25 +28,31 @@
 			font-size:16px;
 			margin-bottom:8px;
 		}
-		h3{
+		h3{//product name
 			font-size:11px;
+			text-transform:uppercase;
 			}
-		h4{
+		h4{//price
 			font-size:10px;
 			line-height:12px;}
-		h5{
-			color:@grayDark;
-			.HLight;
-			font-size:10px;
-		}
+
 		p{
 			line-height:12px;
 			margin-bottom:10px;
 		}
 	}
+	.product-slct{
+		h5{
+			color:@grayDark;
+			.HLight;
+			font-size:10px;
+			line-height:10px; letter-spacing:.5px;
+			margin-bottom:4px;
+		}
+	}
 
 	#related-items {//any items that come below the main feature product area
-
+		margin-top:50px;
 		.spanFull{
 			border-bottom:solid 1px @grayLight;
 			margin-bottom:6px;
@@ -66,11 +77,29 @@
 				.share{
 					margin-top:10px;
 					float:right;
+					color:@baseColor;
 				}
 			}
 		}	
 	}
 
+	//some general styling stuff
+	.ui-selectmenu {
+		margin-bottom:6px;
+	}
+
+	.interact-zoom{
+		span{margin-right:30px;}
+		.zoombtn{cursor: pointer;}
+	}
+
+	.thumbs img{
+		padding:1px;
+		border:solid 1px @gray;
+		&.active{
+			border:solid 1px @baseColor;
+		}
+	}
 }
 
 #modal-email{

@@ -68,11 +68,21 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px;}
 	position:relative;
 	margin-top:50px;margin-bottom:50px;
 	padding:30px;
+	h4{
+		.fs(12px);
+	}
+	p{
+		.fs(14px)
+	}
 	.floatedtitle{
 		z-index: 2;
 		position: absolute;
-		top:-18px;
+		top:-14px;
 		left:130px;
+	}
+	h2{
+		color:@baseColor;
+		.HLight
 	}
 }
 //GIFTCARD PAGE
@@ -82,6 +92,28 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px;}
 	border:solid 3px @grayLight;
 	position: relative;
 
+label{
+	display:inline-block;
+}
+.fielderror{
+	display:inline-block;
+	color:red;
+	text-transform:uppercase;
+}
+	.error{
+			color:red;
+		
+		h2{
+			color:red;
+			.Bondoni;
+			.fs(38px);
+		}
+		p{	
+			.fs(9px);
+			text-transform:uppercase;
+		}
+	}
+	.jotheramount{.hide}
 	.floatedtitle{
 		z-index: 2;
 		position: absolute;
@@ -93,32 +125,90 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px;}
 	}
 }
 
-// HOMEPAGE STYLES
-.feat{
-	width:260px;
-	margin:-2px 3px 0 0px;
-	float:left;
-	display:inline;
-	img{	border:solid 1px @grayLight; }
+//LISTING PAGE STYLES
+	.pageination,.sort{
+		margin-bottom:4px;
+				.fs(9px);
+	}
+	.pageination{
+		float:left; 
+		width:300px;
 
-}
+	}
+	.sort{float:right;
+		span{margin-left:14px;}}
 
 .listing{
 	width:190px;
 	position: relative;
 	margin:0px 0px 0 10px;
 	float:left;
-	display:inline;
-	background-color:@grayLighter; 
 	> img{ 	width:190px;}
+	.notice{
+		background:@baseColor;
+		color:white;
+		position: absolute; top:223px;left:0;
+		width:100%; text-align:center;
+		z-index:3;
+	}
+	lh{
+		text-transform:uppercase;
+	}
+	dl{ line-height:12px;
+		width:148px;
+		font-weight:normal;}
+	dd{ margin-top:-2px;
+		line-height:12px;
+		font-weight:bold;}
 	.colors{ float:right;
 		list-style:none;
 		width:46px;
-		position: absolute; top: 244px; right:0;
+		position: absolute; top: 248px; right:0;
+		text-align:right;
+		float:right;
 		li{width:20px;display:inline;}
 		li img{width:20px;}
 	}
 }
+
+
+
+// HOMEPAGE STYLES
+.feat{
+	width:260px;
+	margin:-2px 3px 0 0px;
+	float:left;
+	display:inline;
+	position: relative;
+	img{	border:solid 1px @grayLight;}
+
+			h2{
+			width:100%;
+			position: absolute;
+			bottom:60px; left:10px;
+			float:left;
+			text-transform:uppercase;
+			letter-spacing: 2px;
+			font-size:18px;
+			line-height:20px;
+			&.white{color:white;}
+			&.pink{color:@baseColor;}
+		}
+		h4{
+			position: absolute;
+			margin-top:3px;
+			bottom:40px; left:10px;
+			float:left;
+			width:100%;
+			.fs(14px);
+			line-height:20px;
+			.Bondoni;
+			&.white{color:white;}
+			&.pink{color:@baseColor;}
+		}
+
+}
+
 
 .kicker6{
 	width:125px;
@@ -180,14 +270,43 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px;}
 	
 	.span-one-third{
 		position: relative;
+		img{width:300px;}
+		.kicker{text-align:center;}
 		h2{
-			position: absolute;
-			bottom:10px; left:0px;
-			float:left;
 			width:100%;
+			position: absolute;
+			bottom:60px; left:0px;
+			float:left;
 			text-align:center;
 			text-transform:uppercase;
+			letter-spacing: 2px;
 			font-size:18px;
+
+			&.white{
+				span{
+					padding:0 4px;
+					background-color: white;
+					color:@baseColor;
+				}
+			}
+		}
+		h4{
+			position: absolute;
+			margin-top:3px;
+			bottom:40px; left:0px;
+			float:left;
+			text-align:center;
+			width:100%;
+			.fs(14px);
+			line-height:20px;
+			.Bondoni;
+			&.white{
+				span{ 
+					padding:0 4px;
+					background-color: white;
+					color:@baseColor;
+				}
+			}
 		}
 	}
 }
@@ -196,6 +315,7 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px;}
 //LEFTNAV STYLES
 #leftnav{
 	>h2{ .Helv; font-size:16px; padding-left: 6px; }
+	>h4{ .Helv; font-size:16px; padding-left: 6px; .fs(18px); line-height:18px; }
 	> ul{
 	  list-style: none;
 	  text-transform:uppercase;
