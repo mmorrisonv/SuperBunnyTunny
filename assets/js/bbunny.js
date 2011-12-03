@@ -2,7 +2,7 @@ $(document).ready(function(){
 	//temporary includes
 	$.getScript("/assets/js/lib-usr/modal.js");
 	$.getScript("/assets/js/lib-usr/headfoot.js");
-
+	$.getScript("/assets/js/lib-usr/campaign.js");
 	//activate select plugin on all select elements
 	$('select').selectmenu();
 	

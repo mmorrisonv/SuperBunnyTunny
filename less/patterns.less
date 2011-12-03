@@ -2,7 +2,22 @@
  * Repeatable UI elements outside the base styles provided from the scaffolding
  * ---------------------------------------------------------------------------- */
 
+//aICONS
+// -----
+.icon-blogheart {
+  background:transparent url('/assets/images/css/icon-blogheart.png') no-repeat 110px 5px;
+}
+.icon-bbheart {
+  background:transparent url('/assets/images/css/icon-heart.png') no-repeat 110px 5px;
+}
+.icon-zoomimage {
+  background:transparent url('/assets/images/css/icon-zoom.png') no-repeat 120px 1px;
+}
+.icon-zoomvideo {
+  background:transparent url('/assets/images/css/icon-zoomplay.png') no-repeat 65px 2px;
+}
 
+.jemailbtn{cursor:pointer;}
 // TOPBAR
 // ------
 
@@ -236,7 +251,7 @@
 
 // BREADCRUMBS
 // -----------
-
+/* // saved for refrernce
 .breadcrumb {
   padding: 7px 14px;
   margin: 0 0 @baseline;
@@ -255,19 +270,40 @@
   .active a {
     color: @grayDark;
   }
+}*/
+.breadcrumb {
+  padding:  0;
+  .Helv;
+  .fs(11px);
+  letter-spacing:1px;
+  color:@grayLight;
+  li {
+    display: inline;
+    text-shadow: 0 1px 0 @white;
+  }
+  .divider {
+    padding: 0 5px;
+    color: @grayLight;
+  }
+  .active a {
+    color: @grayDark;
+  }
 }
-
 
 // PAGE HEADERS
 // ------------
 
 #herolayout{
-  min-height:450px;
+  min-height:398px;
   #scrollableHomepage{
     position: absolute;
   }
 }
-
+#campaign-nav{
+  position: absolute;
+  bottom:30px;
+}
+  
 .hero-unit {
 
   padding: 120px 0 0 30px;
@@ -284,6 +320,7 @@
   div{
     
   }
+  h4{.HLight; line-height:18px;}
 
   h1 {
     margin-bottom: 0;
@@ -329,6 +366,8 @@
       &:hover{background-color:none;}
     }
   }
+
+
   div{
     
   }

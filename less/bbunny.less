@@ -180,6 +180,7 @@ label{
 	float:left;
 	display:inline;
 	position: relative;
+	cursor:pointer;
 	img{	border:solid 1px @grayLight;}
 
 			h2{
@@ -230,6 +231,7 @@ label{
 	.span11{
 		margin:0 28px 0 0;
 		H2{
+			text-transform:none;
 			.Helv;
 			font-size:22px;
 			padding:10px 0 0 10px;
@@ -257,7 +259,6 @@ label{
 		h2{
 			.Helv;
 			padding:5px 0 0 15px;
-			text-transform: uppercase;
 			color:@baseColor;
 			font-size:18px;
 			
@@ -277,6 +278,7 @@ label{
 .banner3{
 	
 	.span-one-third{
+		cursor:pointer;
 		position: relative;
 		img{
 			width:298px;
@@ -350,6 +352,7 @@ label{
 			.subcat{
 				float:left;
 				display:block;
+				border-top:solid 1px @grayDark;
 				border-bottom:solid 1px @grayDark;
 			}
 		}
@@ -371,16 +374,18 @@ label{
 				padding-bottom:0;
 				margin-right:8px;
 			}
+
 			ul.tertiarycats{
 				li a{ 
 					
 					color:@grayDark;
 					border:none;
-					width:inherit;
+					width:auto;
 					text-decoration:none;
 					margin-left:10px;
 					font-size:9px;
 					float:left;
+					padding:0 5px 0 5px;
 
 					&:hover{
 						text-decoration:none;
@@ -388,13 +393,20 @@ label{
 						color:@white;
 						background-color: @grayDark;
 					}
+
 				}
+				li.active a{
+					background-color:@grayDark;
+					color:white;
+				}				
+
 			}
 		}
 	}
 
 	DL 
 	{
+		margin-top:30px;
 		DD{
 		
 			position: relative;
