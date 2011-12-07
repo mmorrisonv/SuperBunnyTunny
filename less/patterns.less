@@ -11,10 +11,10 @@
   background:transparent url('/assets/images/css/icon-heart.png') no-repeat 110px 5px;
 }
 .icon-zoomimage {
-  background:transparent url('/assets/images/css/icon-zoom.png') no-repeat 120px 1px;
+  background:transparent url('/assets/images/css/icon-zoom.png') no-repeat 114px 1px;
 }
 .icon-zoomvideo {
-  background:transparent url('/assets/images/css/icon-zoomplay.png') no-repeat 65px 2px;
+  background:transparent url('/assets/images/css/icon-zoomplay.png') no-repeat 59px 1px;
 }
 .icon-triangle {
   margin-left:2px; padding:0;
@@ -27,7 +27,7 @@
   &.white{background-position:0px 14px;}
   &.pink{background-position:0px 7px;}
 }
-.jemailbtn{cursor:pointer;}
+.jemailbtn{cursor:pointer; position: relative; top:-1px;}
 // TOPBAR
 // ------
 
@@ -286,7 +286,7 @@
   .Helv;
   .fs(11px);
   letter-spacing:1px;
-  color:@grayLight;
+  color:#A7A9AC;
   li {
     display: inline;
     text-shadow: 0 1px 0 @white;
@@ -304,7 +304,7 @@
 // ------------
 
 #herolayout{
-  min-height:398px;
+  min-height:560px;
   #scrollableHomepage{
     position: absolute;
   }
@@ -359,15 +359,17 @@
   }
   #leftnav{
     position: absolute;
-    top:30px;
+    top:8px;
     left:30px;
     h4{color:white;}
     > ul{padding-top:4px;}
     li a:hover{ background-color:@baseColor; }
+
     > ul > li > .subcat li a{
       border-color:white;
     }
     > ul .open .subcat{
+    
       border-top:solid 1px white;
       border-color:white;
     }
@@ -650,7 +652,14 @@ input[type=submit].btn {
 
   }
 }
-
+.pageination,.sort{
+  a{
+        color:#231F20;
+      &.active, &:hover{
+        color:lighten(#231F20,50%);
+      }
+  }
+}
 
 // PAGINATION
 // ----------
@@ -678,6 +687,7 @@ input[type=submit].btn {
     border-right-color: rgba(0,0,0,.15);
     *border-right-color: #ddd; /* IE6-7 */
     text-decoration: none;
+    color:#231F20;
   }
   a:hover,
   .active a {
@@ -730,7 +740,7 @@ input[type=submit].btn {
 
 .modal-backdrop,
 .modal-backdrop.fade.in {
-  .opacity(80);
+  .opacity(49);
 }
 
 .modal {
@@ -776,7 +786,7 @@ input[type=submit].btn {
 }
 .modal-footer {
   padding: 14px 15px 15px;
-  border-top: 1px dotted @baseColor;
+  border-top: 2px dotted @baseColor;
   .box-shadow(inset 0 1px 0 @white);
   .clearfix();
   margin-bottom: 0;

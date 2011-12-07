@@ -2,6 +2,7 @@
 #productlayout
 {
 	position: relative;
+
 	.cross-sell{
 		position: absolute;
 		right:0;
@@ -12,8 +13,17 @@
 			.fs(11px);
 			line-height:14px;
 			margin-bottom:4px;
+			border-bottom:2px dotted @baseColor;		
 		}
-		.row{margin:0 0 10px 0;}
+		.row{
+			margin:0 0 30px 0;
+			padding:0 0 5px 0;
+	
+			a{
+				margin-right:1px;
+			}
+			/*width:192px;*/
+		}
 	}
 
 
@@ -39,11 +49,32 @@
 			}
 		h4{//price
 			font-size:10px;
-			line-height:12px;}
+			line-height:12px;
+			margin-bottom:15px;}
 
 		p{
 			line-height:12px;
 			margin-bottom:10px;
+		}
+
+		input /*qty input*/
+		{ color: @baseColor; 
+			height:12px; 
+			line-height:12px; 
+			text-align:center;
+			margin-bottom:5px;
+		}
+
+		.jAddToCart{
+			margin-right:4px;
+		}
+
+		ul {
+			margin-left:0; padding-left:0;
+			list-style-type: none;
+			li{padding-left:10px; 
+				background: url(/assets/images/css/bullet.png) left center no-repeat ;
+				 }
 		}
 	}
 	
@@ -84,7 +115,7 @@
 			h2{
 				color:@baseColor;
 				.HLight;
-				.fs(12px);
+				.fs(18px);
 				text-transform:uppercase;
 				line-height:18px;	
 			}
@@ -96,9 +127,11 @@
 
 			.item{
 				margin-top:10px; 
-				padding-top:4px;
-				border-top:solid 1px @grayLight;
+				/*padding-bottom:8px;
+				border-bottom:solid 1px @grayLight;*/
 				position: relative;
+
+				.span18 { width:730px; }//stretch row out to the end of the parent
 					.interact{
 						position: absolute;
 						right:0;
@@ -112,7 +145,7 @@
 						}
 					}
 
-				}
+			}
 
 
 		}	
@@ -124,7 +157,7 @@
 	}
 
 	.interact-zoom{
-		span{margin-right:0px; padding:0 18px 0 0;}
+		span{margin-right:0px; padding:0 23px 0 0;}
 		.zoombtn{cursor: pointer; }
 	}
 

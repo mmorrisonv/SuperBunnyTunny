@@ -123,7 +123,10 @@ input[type=file] {
   line-height: @baseline * 1.5;
   *margin-top: 4px; /* For IE7, add top margin to align select with labels */
 }
-
+select,
+input[type=text] {
+  //padding-left:3px;
+}
 // Make multiple select elements height not fixed
 select[multiple] {
   height: inherit;
@@ -165,7 +168,7 @@ input[type=file]:focus,
 input[type=checkbox]:focus,
 select:focus {
   .box-shadow(none); // override for file inputs
-  outline: 1px dotted #666; // Selet elements don't get box-shadow styles, so instead we do outline
+  outline: 2px dotted #666; // Selet elements don't get box-shadow styles, so instead we do outline
 }
 
 
@@ -216,11 +219,11 @@ form .clearfix.success {
 input.mini,
 textarea.mini,
 select.mini {
-  height: 20px;
+  height: 16px;
 }
 
-// Form element sizes
-// TODO v2: remove duplication here and just stick to .input-[size] in light of adding .spanN sizes
+/* Form element sizes*/
+/* TODO v2: remove duplication here and just stick to .input-[size] in light of adding .spanN  */
 
 .input-small,
 input.small,

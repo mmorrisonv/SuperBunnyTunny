@@ -10,7 +10,7 @@
 }
 .bbunnybox{background-color: @baseColor;}
 .bbunnybox-light{background-color: @lightBaseColor; color:@baseColor;}
-H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px;}
+H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .HLight;}
 
 .bbunnybox.btn,.bbunnybox-Light.btn{
 	padding:3px 6px; 
@@ -47,7 +47,7 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px;}
 	font-size:16px;
 	margin:-10px 0 4px;//pull up a bit more than traditional content
 	padding:2px;
-	border-bottom:dotted 1px @lightBaseColor;
+	border-bottom:dotted 2px @lightBaseColor;
 	span{
 		.Bondoni
 	}
@@ -66,7 +66,7 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px;}
 	border:solid 1px @grayLight;
 	text-align:center;
 	position:relative;
-	margin-top:50px;margin-bottom:50px;
+	margin-top:150px;margin-bottom:150px;
 	padding:30px;
 	h4{
 		.fs(12px);
@@ -89,17 +89,19 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px;}
 .giftcardsignup{
 	margin-top:40px;
 	padding-top:30px;
-	border:solid 3px @grayLight;
+	border:solid 1px @grayLight;
 	position: relative;
+	width:783px;
 
-label{
-	display:inline-block;
-}
-.fielderror{
-	display:inline-block;
-	color:red;
-	text-transform:uppercase;
-}
+	label{
+		display:inline-block;
+		color:#231520;
+	}
+	.fielderror{
+		display:inline-block;
+		color:red;
+		text-transform:uppercase;
+	}
 	.error{
 			color:red;
 		
@@ -117,7 +119,7 @@ label{
 	.floatedtitle{
 		z-index: 2;
 		position: absolute;
-		top:-38px;
+		top:-22px;
 		left:20px;
 	}
 	.error{//push this div over just on this page
@@ -141,9 +143,9 @@ label{
 .listing{
 	width:190px;
 	position: relative;
-	margin:0px 0px 0 10px;
+	margin:0px 10px 20px 0px;
 	float:left;
-	> img{ 	width:190px;}
+	> a > img, > img{ 	width:190px;}
 	.notice{
 		background:@baseColor;
 		color:white;
@@ -175,15 +177,17 @@ label{
 
 // HOMEPAGE STYLES
 .feat{
-	width:260px;
-	margin:-2px 3px 0 0px;
+	width:257px;
+	margin:-2px 7px 10px 0px;
 	float:left;
 	display:inline;
 	position: relative;
 	cursor:pointer;
-	img{	border:solid 1px @grayLight;}
+	border:solid 1px @grayLight;
+	overflow:hidden;
+		img{	}
 
-			h2{
+		h2{
 			width:100%;
 			position: absolute;
 			bottom:60px; left:10px;
@@ -405,7 +409,8 @@ label{
 	}
 
 	DL 
-	{
+	{	
+		width:98px;
 		margin-top:30px;
 		DD{
 		
