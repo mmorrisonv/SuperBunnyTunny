@@ -610,7 +610,7 @@ dl dt, dl dd {
 hr {
   margin: 2px 0 1px;
   border: 0;
-  border-bottom: 1px dotted #fbd7e7;
+  border-bottom: 2px dotted #fbd7e7;
 }
 strong {
   font-style: inherit;
@@ -884,7 +884,7 @@ input[type=file]:focus, input[type=checkbox]:focus, select:focus {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  outline: 1px dotted #666;
+  outline: 2px dotted #666;
 }
 form .clearfix.error > label, form .clearfix.error .help-block, form .clearfix.error .help-inline {
   color: #b94a48;
@@ -944,8 +944,10 @@ form .clearfix.success .input-prepend .add-on, form .clearfix.success .input-app
 input.mini,
 textarea.mini,
 select.mini {
-  height: 20px;
+  height: 16px;
 }
+/* Form element sizes*/
+/* TODO v2: remove duplication here and just stick to .input-[size] in light of adding .spanN  */
 .input-small,
 input.small,
 textarea.small,
@@ -1475,10 +1477,10 @@ table .headerSortUp.purple, table .headerSortDown.purple {
   background: transparent url('/assets/images/css/icon-heart.png') no-repeat 110px 5px;
 }
 .icon-zoomimage {
-  background: transparent url('/assets/images/css/icon-zoom.png') no-repeat 120px 1px;
+  background: transparent url('/assets/images/css/icon-zoom.png') no-repeat 114px 1px;
 }
 .icon-zoomvideo {
-  background: transparent url('/assets/images/css/icon-zoomplay.png') no-repeat 65px 2px;
+  background: transparent url('/assets/images/css/icon-zoomplay.png') no-repeat 59px 1px;
 }
 .icon-triangle {
   margin-left: 2px;
@@ -1501,6 +1503,8 @@ table .headerSortUp.purple, table .headerSortDown.purple {
 }
 .jemailbtn {
   cursor: pointer;
+  position: relative;
+  top: -1px;
 }
 .topbar {
   height: 40px;
@@ -1732,7 +1736,7 @@ table .headerSortUp.purple, table .headerSortDown.purple {
   font-family: 'HelveticaLTStdRoman';
   font-size: 11px;
   letter-spacing: 1px;
-  color: #bfbfbf;
+  color: #A7A9AC;
 }
 .breadcrumb li {
   display: inline;
@@ -1746,7 +1750,7 @@ table .headerSortUp.purple, table .headerSortDown.purple {
   color: #231f20;
 }
 #herolayout {
-  min-height: 398px;
+  min-height: 560px;
 }
 #herolayout #scrollableHomepage {
   position: absolute;
@@ -1792,7 +1796,7 @@ table .headerSortUp.purple, table .headerSortDown.purple {
 }
 .hero-campaign #leftnav {
   position: absolute;
-  top: 30px;
+  top: 8px;
   left: 30px;
 }
 .hero-campaign #leftnav h4 {
@@ -2118,6 +2122,15 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
 .alert-message.block-message.info p a {
   color: #231f20;
 }
+.pageination a, .sort a {
+  color: #231F20;
+}
+.pageination a.active,
+.sort a.active,
+.pageination a:hover,
+.sort a:hover {
+  color: #a69b9e;
+}
 .pagination {
   height: 36px;
   margin: 18px 0;
@@ -2148,6 +2161,7 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
   /* IE6-7 */
 
   text-decoration: none;
+  color: #231F20;
 }
 .pagination a:hover, .pagination .active a {
   background-color: #c7eefe;
@@ -2190,10 +2204,10 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
   opacity: 0;
 }
 .modal-backdrop, .modal-backdrop.fade.in {
-  filter: alpha(opacity=80);
-  -khtml-opacity: 0.8;
-  -moz-opacity: 0.8;
-  opacity: 0.8;
+  filter: alpha(opacity=49);
+  -khtml-opacity: 0.49;
+  -moz-opacity: 0.49;
+  opacity: 0.49;
 }
 .modal {
   position: fixed;
@@ -2257,7 +2271,7 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
 }
 .modal-footer {
   padding: 14px 15px 15px;
-  border-top: 1px dotted #ee4799;
+  border-top: 2px dotted #ee4799;
   -webkit-box-shadow: inset 0 1px 0 #ffffff;
   -moz-box-shadow: inset 0 1px 0 #ffffff;
   box-shadow: inset 0 1px 0 #ffffff;
@@ -3498,9 +3512,9 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
   /*overrides just for the homepage*/
 
   position: relative;
-  width: 960px;
+  width: 100%;
   z-index: 3;
-  height: 388px;
+  height: 550px;
   /*must fit content*/
 
 }
@@ -3555,26 +3569,7 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
 */
 #scrollableHomepage .items .slide {
   float: left;
-  width: 960px;
-  /*height: 600px;*/
-  /*- width and height required for flash to show on firefox and IE*/
-
-  /*margin:0 10px;removed oct.28 so slides dont push each other inside box*/
-
-  /*margin: 0 auto;*/
-  /*Note - remove this to get default behavior back*/
-
-  /*display: block; added to make sure firefox can show our flashembed swfs*/
-
-  /*margin-right:15px;*/
-
-  /* 
-       -moz-box-shadow: -5px 5px 15px #777;
-    -webkit-box-shadow: -5px 5px 15px #777;
-            box-shadow: -5px 5px 15px #777;
-              behavior: url(../js/PIE.htc);
-    */
-
+  width: 975px;
 }
 /*
 .slide {
@@ -3706,7 +3701,7 @@ header {
   right: 0;
   z-index: 10000;
   overflow: visible;
-  border-bottom: dotted 1px #fbd7e7;
+  border-bottom: dotted 2px #fbd7e7;
 }
 header #search {
   float: right;
@@ -3886,7 +3881,7 @@ footer a {
 }
 footer .social {
   padding-bottom: 4px;
-  border-bottom: dotted 1px #ee4799;
+  border-bottom: dotted 2px #ee4799;
 }
 footer .share {
   float: right;
@@ -3953,7 +3948,7 @@ footer input {
 .topbar div > ul > li > a, .nav > li > a {
   font-family: 'HelveticaLTStdRoman';
   color: #231f20;
-  font-size: 9px;
+  font-size: 10px;
   text-transform: uppercase;
   display: block;
   float: none;
@@ -4137,9 +4132,37 @@ a.menu:after,
   font-size: 11px;
   line-height: 14px;
   margin-bottom: 4px;
+  border-bottom: 2px dotted #ee4799;
 }
 #productlayout .cross-sell .row {
-  margin: 0 0 10px 0;
+  margin: 0 0 30px 0;
+  padding: 0 0 0px 0;
+}
+#productlayout .cross-sell .row a {
+  margin-right: 1px;
+  padding: 0;
+  position: relative;
+  display: inline-block;
+}
+#productlayout .cross-sell .row a .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  display: none;
+}
+#productlayout .cross-sell .row a .overlay .canvas {
+  width: 100%;
+  height: 100%;
+  background-color: #ee4799;
+  opacity: 0.5;
+  -moz-opacity: 0.5;
+  filter: alpha(opacity=5);
+  position: absolute;
+}
+#productlayout .cross-sell .row a .overlay .verbiage {
+  text-align: center;
 }
 #productlayout .product-desc {
   border-bottom: solid 1px #bfbfbf;
@@ -4170,10 +4193,30 @@ a.menu:after,
 #productlayout .product-desc h4 {
   font-size: 10px;
   line-height: 12px;
+  margin-bottom: 15px;
 }
 #productlayout .product-desc p {
   line-height: 12px;
   margin-bottom: 10px;
+}
+#productlayout .product-desc input {
+  color: #ee4799;
+  height: 12px;
+  line-height: 12px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+#productlayout .product-desc .jAddToCart {
+  margin-right: 4px;
+}
+#productlayout .product-desc ul {
+  margin-left: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+#productlayout .product-desc ul li {
+  padding-left: 10px;
+  background: url(/assets/images/css/bullet.png) left center no-repeat;
 }
 #productlayout .product-slct {
   position: relative;
@@ -4212,7 +4255,7 @@ a.menu:after,
 #productlayout #related-items .spanFull h2 {
   color: #ee4799;
   font-family: 'HelveticaNeue45Light';
-  font-size: 12px;
+  font-size: 18px;
   text-transform: uppercase;
   line-height: 18px;
 }
@@ -4223,9 +4266,13 @@ a.menu:after,
 }
 #productlayout #related-items .items .item {
   margin-top: 10px;
-  padding-top: 4px;
-  border-top: solid 1px #bfbfbf;
+  /*padding-bottom:8px;
+				border-bottom:solid 1px @grayLight;*/
+
   position: relative;
+}
+#productlayout #related-items .items .item .span18 {
+  width: 730px;
 }
 #productlayout #related-items .items .item .interact {
   position: absolute;
@@ -4246,7 +4293,7 @@ a.menu:after,
 }
 #productlayout .interact-zoom span {
   margin-right: 0px;
-  padding: 0 18px 0 0;
+  padding: 0 23px 0 0;
 }
 #productlayout .interact-zoom .zoombtn {
   cursor: pointer;
@@ -4301,6 +4348,8 @@ a.menu:after,
 H1.bbunnybox {
   padding: 8px 0px 8px 0px;
   margin-bottom: 8px;
+  letter-spacing: 2px;
+  font-family: 'HelveticaNeue45Light';
 }
 .bbunnybox.btn, .bbunnybox-Light.btn {
   padding: 3px 6px;
@@ -4330,7 +4379,7 @@ H1.bbunnybox {
   font-size: 16px;
   margin: -10px 0 4px;
   padding: 2px;
-  border-bottom: dotted 1px #fbd7e7;
+  border-bottom: dotted 2px #fbd7e7;
 }
 .shippingbanner span {
   font-family: 'BodoniBookItalic';
@@ -4352,8 +4401,8 @@ H1.bbunnybox {
   border: solid 1px #bfbfbf;
   text-align: center;
   position: relative;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 150px;
+  margin-bottom: 150px;
   padding: 30px;
 }
 #errorlayout h4 {
@@ -4375,11 +4424,13 @@ H1.bbunnybox {
 .giftcardsignup {
   margin-top: 40px;
   padding-top: 30px;
-  border: solid 3px #bfbfbf;
+  border: solid 1px #bfbfbf;
   position: relative;
+  width: 783px;
 }
 .giftcardsignup label {
   display: inline-block;
+  color: #231520;
 }
 .giftcardsignup .fielderror {
   display: inline-block;
@@ -4404,7 +4455,7 @@ H1.bbunnybox {
 .giftcardsignup .floatedtitle {
   z-index: 2;
   position: absolute;
-  top: -38px;
+  top: -22px;
   left: 20px;
 }
 .giftcardsignup .error {
@@ -4427,10 +4478,10 @@ H1.bbunnybox {
 .listing {
   width: 190px;
   position: relative;
-  margin: 0px 0px 0 10px;
+  margin: 0px 10px 20px 0px;
   float: left;
 }
-.listing > img {
+.listing > a > img, .listing > img {
   width: 190px;
 }
 .listing .notice {
@@ -4474,15 +4525,14 @@ H1.bbunnybox {
   width: 20px;
 }
 .feat {
-  width: 260px;
-  margin: -2px 3px 0 0px;
+  width: 257px;
+  margin: -2px 7px 10px 0px;
   float: left;
   display: inline;
   position: relative;
   cursor: pointer;
-}
-.feat img {
   border: solid 1px #bfbfbf;
+  overflow: hidden;
 }
 .feat h2 {
   width: 100%;
@@ -4638,10 +4688,16 @@ H1.bbunnybox {
   text-transform: uppercase;
   margin: 0;
 }
+#leftnav > ul > li {
+  display: block;
+  width: 100%;
+  float: left;
+}
 #leftnav > ul > li > a {
   color: #ee4799;
   font-family: 'HelveticaNeue75Bold';
   padding: 1px 6px;
+  display: block;
 }
 #leftnav > ul > li > a:hover {
   text-decoration: none;
@@ -4652,6 +4708,7 @@ H1.bbunnybox {
 #leftnav > ul .subcat {
   display: none;
   margin: 0;
+  width: 100%;
 }
 #leftnav > ul .open .subcat {
   float: left;
@@ -4698,7 +4755,9 @@ H1.bbunnybox {
   color: white;
 }
 #leftnav DL {
+  width: 98px;
   margin-top: 30px;
+  float: left;
 }
 #leftnav DL DD {
   position: relative;

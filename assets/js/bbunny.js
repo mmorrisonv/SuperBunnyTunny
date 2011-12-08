@@ -18,6 +18,8 @@ $(window).load(function(){
 	initScrollable();
 	setupScrollable();
 
+    setupAltViewRollover();
+
 	onResizePage();
 });
 
@@ -25,6 +27,30 @@ $(window).load(function(){
     
 $(window).resize(onResizePage);
 
+function setupAltViewRollover(){
+    $('.cross-sell a').hover(
+        function(){
+            var $this = $(this),
+            verbiage = $this.find('img').attr('alt')
+            overlayDiv = $this.find('.overlay'),
+            canvasDiv = $('<div class="canvas"></div>'),
+            verbiageDiv = $('<div class="verbiage"></div>').text(verbiage);
+
+            if(verbiage == "" || verbiage === undefined )
+                return;
+            
+            overlayDiv.prepend(verbiageDiv).prepend(canvasDiv).stop(true,true).show()
+
+            console.log(verbiage);
+        },
+        function(){
+            var $this = $(this),
+            overlayDiv = $this.find('.overlay');
+            overlayDiv.stop(true,true).hide();
+            overlayDiv.empty('.verbiage');
+        }
+    )
+}
 
 
 function onResizePage()
@@ -80,14 +106,14 @@ function adjustScrollable(){
     function setupScrollable(){
         $('#scrollableLoading').remove();
        
-        scrapi.seekTo(0,0);
+        ///scrapi.seekTo(0,0);
         /*var wwidth = gwd('w');
         var wheight = gwd('h');*/
         //rectifyScrollable({w:wwidth , h:wheight , verticalcenter:true});
         
         //scrapi.seekTo(0);
         
-        scrapi.seekTo(0,100);
+        //scrapi.seekTo(0,100);
         $("#scrollableHomepage").fadeOut(0);
         $("#scrollableHomepage").css('visibility','visible');
         /*$('#boxBackground').show();
@@ -102,13 +128,13 @@ function adjustScrollable(){
     function rectifyScrollable(opt){
         //if not locked
         if(!opt.originY)
-            opt.originY = $('.slide').offset().top;
+            //opt.originY = $('.slide').offset().top;
         var sldHeight = $('.slide').height();
         //sldHeight = 452;
         
         if(opt.verticalcenter === true && sldHeight > 100 ){
              //$("#scrollableHomepage").css({ 'top' : opt.h / 2 - ( sldHeight / 2 ) });//vertically center scrollable
-             opt.originY = $('.slide').offset().top;
+             //opt.originY = $('.slide').offset().top;
         }
         var mL = (opt.w/2) - (980 / 2) -5;
         //$('#page').css('margin-left', mL );//position the sldies relative inside the parent scrollable div
