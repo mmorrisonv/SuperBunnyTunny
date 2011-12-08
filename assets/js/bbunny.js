@@ -39,7 +39,7 @@ function setupAltViewRollover(){
             if(verbiage == "" || verbiage === undefined )
                 return;
             
-            overlayDiv.prepend(verbiageDiv).prepend(canvasDiv).stop(true,true).show()
+            overlayDiv.append(verbiageDiv).prepend(canvasDiv).stop(true,true).show()
 
             console.log(verbiage);
         },

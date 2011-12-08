@@ -4163,6 +4163,13 @@ a.menu:after,
 }
 #productlayout .cross-sell .row a .overlay .verbiage {
   text-align: center;
+  color: white;
+  position: relative;
+  z-index: 2;
+  font-family: 'HelveticaLTStdRoman';
+  font-size: 10px;
+  padding: 0 5px 0 5px;
+  text-transform: uppercase;
 }
 #productlayout .product-desc {
   border-bottom: solid 1px #bfbfbf;
