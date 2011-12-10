@@ -47,10 +47,11 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 	font-size:16px;
 	margin:-10px 0 4px;//pull up a bit more than traditional content
 	padding:2px;
-	border-bottom:dotted 2px @lightBaseColor;
+	border-bottom:dotted 2px @baseColor;
 	span{
 		.Bondoni
 	}
+	h2{	.fs(20px); }
 }
 
 .share{
@@ -130,7 +131,11 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 //LISTING PAGE STYLES
 	.pageination,.sort{
 		margin-bottom:4px;
-				.fs(9px);
+		.fs(9px);
+		&.right{
+			text-align:right;
+			float:right;
+		}
 	}
 	.pageination{
 		float:left; 
@@ -155,6 +160,11 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 	}
 	lh{
 		text-transform:uppercase;
+		a
+		{ 
+			color:@bbunnyBlack; 
+			&:hover{color:@lightBaseColor;}
+		}
 	}
 	dl{ line-height:12px;
 		width:148px;
@@ -255,82 +265,37 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 }
  
 .banner2{
-	margin:4px 0 4px 0;
-	.span11{
-		margin:0;
-		width:453px;
-	background-color:@lightBaseColor;
-		h2{
-			.Helv;
-			padding:5px 0 0 15px;
-			color:@baseColor;
-			font-size:18px;
-			
-		}
-		h5{
-			.Bondoni; 
-			padding: 0px 0px 20px 15px;
-			font-size:14px;
-			line-height:14px;
-			margin-top:-5px;
-			color:@baseColor;
-		
+	margin:5px 0 0 0;
+	img{
+		margin-left:3px;
+		&:first-child{
+			margin:0;
 		}
 	}
 }
 
 .banner3{
-	
-	.span-one-third{
-		cursor:pointer;
-		position: relative;
-		img{
-			width:298px;
-			border:solid 1px @lightBaseColor;
-		}
-		.kicker{text-align:center;}
-		h2{
-			width:100%;
-			position: absolute;
-			bottom:60px; left:0px;
-			float:left;
-			text-align:center;
-			text-transform:uppercase;
-			letter-spacing: 2px;
-			font-size:18px;
+	margin-left:0px;
 
-			&.white{
-				span{
-					padding:0 4px;
-					background-color: white;
-					color:@baseColor;
-				}
-			}
+	img{
+		width:311px;
+		border:solid 1px @lightBaseColor;
+		margin-left:5px;
+		&:first-child{
+			margin:0;
 		}
-		h4{
-			position: absolute;
-			margin-top:3px;
-			bottom:40px; left:0px;
-			float:left;
-			text-align:center;
-			width:100%;
-			.fs(14px);
-			line-height:20px;
-			.Bondoni;
-			&.white{
-				span{ 
-					padding:0 4px;
-					background-color: white;
-					color:@baseColor;
-				}
-			}
-		}
+	
+
 	}
 }
 
 
 //LEFTNAV STYLES
 #leftnav{
+
+	width:140px;
+	margin-right:10px;
+
 	>h2{ .Helv; font-size:16px; padding-left: 6px; }
 	>h4{ .Helv; font-size:16px; padding-left: 6px; .fs(18px); line-height:18px; }
 	> ul{

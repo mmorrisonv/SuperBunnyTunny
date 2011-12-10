@@ -15,7 +15,7 @@ header {
   right: 0;
   z-index: 10000;
   overflow: visible;
-  border-bottom: dotted 2px @lightBaseColor;
+  border-bottom: dotted 2px @baseColor;
 
   #search{
     float:right;
@@ -46,6 +46,7 @@ header {
     width:190px;
     text-transform:uppercase;
     .HLight;
+    letter-spacing:1px;
       a{color:black;}
       a.bbunnybox{color:white;text-shadow:none;}
       span{
@@ -217,12 +218,14 @@ footer {
   }
   .social 
   {
+ 
     padding-bottom: 4px;
     border-bottom: dotted 2px @baseColor;
   }
 
   .share{
     float:right;
+    margin-right:10px;
   }
   .connect > img{
     padding-left:6px;
