@@ -15,7 +15,11 @@ header {
   right: 0;
   z-index: 10000;
   overflow: visible;
-  border-bottom: dotted 2px @baseColor;
+
+  > .container{
+    border-bottom: dotted 2px @baseColor;  
+  }
+  
 
   #search{
     float:right;
@@ -45,8 +49,9 @@ header {
     margin-top: 10px;
     width:190px;
     text-transform:uppercase;
-    .HLight;
-    letter-spacing:1px;
+    .Helv;
+    .fs(10px);
+    /*letter-spacing:1px;*/
       a{color:black;}
       a.bbunnybox{color:white;text-shadow:none;}
       span{
@@ -54,7 +59,7 @@ header {
           padding:0 5px;
           text-align:right;
           min-width:60px;
-          .fs(9px);
+          //.fs(9px);
       }
       .shopcart{
         position: relative;
@@ -100,13 +105,17 @@ header {
     position: absolute;
     top:20px;left:0;
     margin:0;
-    padding:5px 0 10px 0;
+    padding:5px 0 10px 4px;
+
+
     li{ //all li's under dropdown
       list-style:none;
       color:@grayDark;
       line-height:12px;
       padding:3px 0 3px 0;
+      font-family:Arial;
       a{
+        font-family:Arial;
         color:@grayDark;
         &:hover{color:@baseColor;}
         &.title{.HBold;}
@@ -117,6 +126,7 @@ header {
       text-align:left;
       .fs(8px);
       width:100px;
+          
       &.right{
         float: right;
         width:110px;
@@ -209,8 +219,12 @@ footer {
   overflow: visible;
   font-size:10px;
   margin-top: @baseline - 1;
-  padding-top: 8px;
-  border-top: 1px solid #eee;
+
+  > .container{
+    padding-top: 8px;
+    border-top: 1px solid #eee;
+  }
+
   // Links get text shadow
   a {
     color: @grayLight;
@@ -303,7 +317,7 @@ footer {
     position: relative;
     display: block;
     float: left;
-    text-align:center;
+    //text-align:center;
     min-width:50px;
     &:hover {
       background-color:@lightBaseColor;

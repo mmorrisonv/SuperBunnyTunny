@@ -1,7 +1,4 @@
-/* Override some defaults */
-html, body {
-	background-color: #fff;
-}
+
 body {
 	padding-top: 100px; /* 40px to make the container go all the way to the bottom of the topbar */
 	/*holds footer below content*/

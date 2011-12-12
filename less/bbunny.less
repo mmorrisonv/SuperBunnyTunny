@@ -2,7 +2,7 @@
 
 .box{ background-color:@grayLighter; margin:10px 0px;}
 .box1{ background-color:@grayLighter;}
-.bbunnybox, .bbunnybox-light{
+.bbunnybox, .bbunnybox-Light{
 	text-align:center;
 	.HLight;
 	color:#fff;
@@ -90,10 +90,10 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 .giftcardsignup{
 	margin-top:40px;
 	padding-top:30px;
-	border:solid 1px @grayLight;
+	border:solid 4.5px @grayLight;
 	position: relative;
 	width:783px;
-
+	margin-left:-2px;
 	label{
 		display:inline-block;
 		color:#231520;
@@ -130,16 +130,21 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 
 //LISTING PAGE STYLES
 	.pageination,.sort{
-		margin-bottom:4px;
+		margin-top:4px;
+		margin-bottom:8px;
 		.fs(9px);
 		&.right{
 			text-align:right;
 			float:right;
 		}
 	}
-	.pageination{
+	.pageination{		
 		float:left; 
 		width:300px;
+
+		&.right{
+			margin-bottom:-20px; //if pageination has class
+		}
 
 	}
 	.sort{float:right;
@@ -158,19 +163,23 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 		width:100%; text-align:center;
 		z-index:3;
 	}
+
 	lh{
 		text-transform:uppercase;
-		a
-		{ 
+		a{ 
 			color:@bbunnyBlack; 
-			&:hover{color:@lightBaseColor;}
+			&:hover{color:@baseColor;}
 		}
 	}
-	dl{ line-height:12px;
-		width:148px;
-		font-weight:normal;}
+	dl{ 
+		width:148px;//to accomidate color swatches
+		margin-top:6px;
+		font-weight:normal;
+		lh,dt,dd{
+			line-height:11px;
+		}
+	}
 	dd{ margin-top:-2px;
-		line-height:12px;
 		font-weight:bold;}
 	.colors{ float:right;
 		list-style:none;

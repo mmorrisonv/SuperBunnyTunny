@@ -765,7 +765,7 @@ input[type=submit].btn {
   }
   &.zoom{
     width:600px;
-    padding-top:40px;
+    //padding-top:40px;
   }
   .close { 
     .opacity(100);
@@ -773,6 +773,9 @@ input[type=submit].btn {
     position: absolute; top:0; right:2px; 
     text-indent:-9999px; 
     background:transparent url(/assets/images/css/icon-modalclose.png) no-repeat;
+  }
+  .zoom .close{
+    right:20px;
   }
   &.fade {
     .transition(e('opacity .3s linear, top .3s ease-out'));
@@ -783,7 +786,7 @@ input[type=submit].btn {
 .modal-content{
   margin:6px;
   padding:6px;
-  border:3px solid @grayLight;
+  border:1px solid @grayLight;
 }
 .modal-header {
   padding: 5px 15px;
