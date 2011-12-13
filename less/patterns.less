@@ -362,9 +362,11 @@
     top:8px;
     left:30px;
     h4{color:white;}
+    a.title{
+      font-weight:bold;
+    }
     > ul{padding-top:4px;}
     li a:hover{ background-color:@baseColor; }
-
     > ul > li > .subcat li a{
       border-color:white;
     }
@@ -376,6 +378,9 @@
     > ul > li > .subcat li ul.tertiarycats li a {
       color:white;
       &:hover{background-color:none;}
+      &.title{
+        font-weight:bold;
+      }
     }
   }
 

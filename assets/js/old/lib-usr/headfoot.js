@@ -1,7 +1,7 @@
 //code for the header - footer. 
 //global - but added to its own file for locality of refrence
 $(document).ready(function(){
-	setupResettableInputs('#newsletter,#searchfield,.qtyinput');
+	setupResettableInputs('#newsletter,#searchfield');
 	setupSearchBar();
 	setupNewsletter();
 	setupShoppingBag();
@@ -17,7 +17,7 @@ function setupResettableInputs(inputs){
 	$(inputs).bind({
 		click:function(){
 			var valOnClick  =  $(this).val();
-			if( valOnClick == 'EMAIL SIGN-UP' || valOnClick == 'SEARCH' || valOnClick == 'QTY' || valOnClick === null)
+			if( valOnClick == 'EMAIL SIGN-UP' || valOnClick == 'SEARCH' || valOnClick === null)
 			{
 				$(this).data( 'defaultWord' , valOnClick );
 				$(this).val('');	
@@ -66,7 +66,7 @@ function setupNewsletter(){
 	$('#newsletterbtn').click(function(){
 		var email;
 		email = $('#newsletter').val();
-		
+		console.log(email);
 		if( email === null || email == 'EMAIL SIGN-UP' || email == '' ){
 			$('#newslettererror').text('*PLEASE ENTER A VALID EMAIL ADDRESS');
 		}

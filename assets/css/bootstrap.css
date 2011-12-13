@@ -1805,6 +1805,9 @@ table .headerSortUp.purple, table .headerSortDown.purple {
 .hero-campaign #leftnav h4 {
   color: white;
 }
+.hero-campaign #leftnav a.title {
+  font-weight: bold;
+}
 .hero-campaign #leftnav > ul {
   padding-top: 4px;
 }
@@ -1823,6 +1826,9 @@ table .headerSortUp.purple, table .headerSortDown.purple {
 }
 .hero-campaign #leftnav > ul > li > .subcat li ul.tertiarycats li a:hover {
   background-color: none;
+}
+.hero-campaign #leftnav > ul > li > .subcat li ul.tertiarycats li a.title {
+  font-weight: bold;
 }
 .hero-campaign h1 {
   margin-bottom: 0;
@@ -4574,6 +4580,10 @@ H1.bbunnybox {
 }
 .listing dl lh, .listing dl dt, .listing dl dd {
   line-height: 11px;
+}
+.listing dl .sale {
+  color: #ee4799;
+  font-weight: bold;
 }
 .listing dd {
   margin-top: -2px;

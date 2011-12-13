@@ -3,29 +3,151 @@ $(document).ready(function(){
 	$.getScript("/assets/js/lib-usr/modal.js");
 	$.getScript("/assets/js/lib-usr/headfoot.js");
 	$.getScript("/assets/js/lib-usr/campaign.js");
+
 	//activate select plugin on all select elements
 	$('select').selectmenu();
 	
 	//rejigger nav
 	adjustNavUniform();
+	adjustScrollable();
+	
+	//if ready try to setup scrollable
+	onResizePage();
 
 })
 $(window).load(function(){
 	
 
-	adjustScrollable();
-
-	initScrollable();
-	setupScrollable();
-
-    setupAltViewRollover();
 
 	onResizePage();
+	
 });
 
 
     
 $(window).resize(onResizePage);
+
+BBUNNY  = { //namespace
+    common:{
+        init:function(){
+                var alertFallback = false;
+                if (typeof console === "undefined" || typeof console.log === "undefined") {
+                    console = {};
+                    console.log = function() {};
+                }
+        },
+        finalize:function(){
+    
+        }
+    },
+    jBBhome:{
+        init:function(){
+            $(window).load(function(){
+            	adjustScrollable();
+
+	            initScrollable();
+	            setupScrollable();
+	            
+	           
+
+            });
+        },
+        finalize:function(){
+        
+        }   
+    },
+	jBBcampaign: {
+	    init: function(){
+	        // we do not want to show the scrollable functionality, hide all the things
+	        $('.next,.prev').hide();
+	        $('.jBBCampaginStart').click(BBUNNY.jBBcampaign.startCampaign).css('cursor','pointer');
+	        $('.slide:not(.jfirst)').fadeTo(0,0);
+	    },
+	    startCampaign:function(){
+	            //$('.slide').show();
+            	adjustScrollable();
+                
+	            initScrollable();
+	            $('.slide').fadeTo('slow',1);
+	            setupScrollable();
+	            
+	            //console.log('scrollable setup');
+	        $('.next,.prev').fadeIn();
+	        $('.hero-campaign').fadeOut();
+	    }
+	},
+	jBBproduct:{
+	    init: function(){
+	        BBUNNY.jBBproduct.setupCrossSellRollovers();
+	        setupAltViewRollover();
+	        setupProductPage();
+	    },
+	    setupCrossSellRollovers:function(){
+	        $('.cross-sell img').hover(
+	            function(){},
+	            function(){}
+	        );
+	    }
+	}
+};
+UTIL = {
+	fire : function(func,funcname,args){
+		var namespace = BBUNNY;
+		funcname = (funcname === undefined) ? 'init' : funcname;
+		if (func !== '' && namespace[func] && typeof namespace[func][funcname] == 'function'){
+			namespace[func][funcname](args);
+		}
+	},
+	loadEvents : function(){
+		var bodyId = document.body.id;
+		UTIL.fire('common');
+		
+		$.each(document.body.className.split(/\s+/),function(i,classnm){
+			UTIL.fire(classnm);
+			UTIL.fire(classnm,bodyId);
+		});
+		UTIL.fire('common','finalize');
+	},
+	notEmpty: function (value){
+		var blankPattern = /\S/;
+		return blankPattern.test(value);
+	},
+	isEmail: function(value){
+		var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;  
+   		return emailPattern.test(value);
+	},
+	isNumeric: function(value){
+		var numPattern = /^-?\d+$/;
+		return numPattern.test(value);
+	}
+}
+$(function(){
+	UTIL.loadEvents();
+});
+
+function onResizePage()
+{
+	var $win = $(window),
+	wh = $win.height(),
+	ww = $win.width()
+
+    rectifyScrollable({ w:ww , h:wh, verticalcenter:true });
+    rectifyModals({ w:ww , h:wh, verticalcenter:true });
+}
+
+
+function rectifyModals( opt ){
+
+    $('.modal').each(function(i,val)
+    {
+        var xoffset = ( opt.w / 2 ) - ( $(this).width() / 2 );
+        var yoffset = ( opt.h / 2 ) - ( $(this).height() / 2 );
+       $(this).css({left:xoffset,top:yoffset});
+    });
+};
+
+
+
 
 function setupAltViewRollover(){
     $('.cross-sell a').hover(
@@ -41,7 +163,7 @@ function setupAltViewRollover(){
             
             overlayDiv.append(verbiageDiv).prepend(canvasDiv).stop(true,true).show()
 
-            console.log(verbiage);
+            //console.log(verbiage);
         },
         function(){
             var $this = $(this),
@@ -53,24 +175,24 @@ function setupAltViewRollover(){
 }
 
 
-function onResizePage()
-{
-	console.log('resize');
-	var $win = $(window),
-	wh = $win.height(),
-	ww = $win.width()
-
-    rectifyScrollable({ w:ww , h:wh, verticalcenter:true });
-}
-
 
 function adjustNavUniform(){
-
+    //make nav children have unifrom padding
 	$.each($('.jsuniform'),function(index,value){
 		$this = $(this);
-		var width = $this.width();
-		var count = $this.children().length;
-		$this.children().css('width',width / count);
+		var width = $this.width(),
+		contentWidth=0,
+		numChildren=0,
+		paddingAmount=0;
+	
+		$.each($this.children(),function(i,val){
+		    contentWidth += $(this).width();
+		});
+		
+		numChildren = $this.children().length;
+		paddingAmount = ((width - contentWidth) / numChildren) / 2 - 1;
+		
+		$this.children().css({'padding-left':paddingAmount,'padding-right':paddingAmount});
 	});
 };
 
@@ -78,11 +200,21 @@ function adjustScrollable(){
     var wwidth = $(window).width();
     var cwidth = $('#scrollableHomepage').width();
     
-    //console.log(wwidth + ' ' + cwidth);
     $('#scrollableHomepage').css('left',(wwidth/2) - (cwidth/2));
 };
 
-
+function setupProductPage()
+{
+    $('#mainAltViews img').css('cursor','pointer');
+    $('#mainAltViews img').click(function(){
+        var fsimage = $(this).attr('fs'),
+            fsOID =  $(this).attr('oid');
+        //console.log(fsimage);
+        $('#mainAltViews img').removeClass('active');
+        $(this).addClass('active');
+        $('#mainProductView img').attr({'src':fsimage,'oid':fsOID});      
+    });
+};
 
 
 //-------------------------------------------------SCROLLABLE SETUP
@@ -106,62 +238,32 @@ function adjustScrollable(){
     function setupScrollable(){
         $('#scrollableLoading').remove();
        
-        ///scrapi.seekTo(0,0);
-        /*var wwidth = gwd('w');
-        var wheight = gwd('h');*/
-        //rectifyScrollable({w:wwidth , h:wheight , verticalcenter:true});
-        
-        //scrapi.seekTo(0);
-        
-        //scrapi.seekTo(0,100);
-        $("#scrollableHomepage").fadeOut(0);
+       /* $("#scrollableHomepage").fadeOut(0);
         $("#scrollableHomepage").css('visibility','visible');
-        /*$('#boxBackground').show();
-        $("#scrollableHomepage").show().css('visibility','visible');*/
-        $('#boxBackground').fadeIn();
-        $("#scrollableHomepage").fadeIn();
-        //rectifyScrollable({w:wwidth , h:wheight , verticalcenter:true});
-        //scrapi.seekTo(0,0);
+
+        $("#scrollableHomepage").fadeIn();*/
          
     }
 
-    function rectifyScrollable(opt){
-        //if not locked
-        if(!opt.originY)
-            //opt.originY = $('.slide').offset().top;
-        var sldHeight = $('.slide').height();
-        //sldHeight = 452;
+    function rectifyScrollable(win){
         
-        if(opt.verticalcenter === true && sldHeight > 100 ){
-             //$("#scrollableHomepage").css({ 'top' : opt.h / 2 - ( sldHeight / 2 ) });//vertically center scrollable
-             //opt.originY = $('.slide').offset().top;
-        }
-        var mL = (opt.w/2) - (980 / 2) -5;
+        var slideWidth = $('#page .slide').width();
+        var slideHeight = $('#page .slide').height();
+        var mL = (win.w/2) - (slideWidth / 2) ;
         //$('#page').css('margin-left', mL );//position the sldies relative inside the parent scrollable div
-        $('#boxBackground').css('margin-left', mL );
-        $('#scrollableHomepage').css('left', mL+14 );
+        //console.log(mL);
+        //$('#boxBackground').css('margin-left', mL );
+        $('#scrollableHomepage #page').css('margin-left', mL );
+        $('#scrollableHomepage .hero-campaign').css({'left': mL,'position':'relative'} );
         
         //make slides the width of the browser so that only one is visible at a time
-        //$('#scrollableHomepage .items .slide').css({'width':opt.w});
+        //$('#scrollableHomepage .items .slide').css({'width':win.w});
         
         //move prev next buttons
-        $('.prev.button').css({'left':opt.w/2 - (920/2) - 30,'top':opt.originY + ( sldHeight / 2 ) });
-        $('.next.button').css({'left':opt.w/2 + (920/2) - -5,'top':opt.originY + ( sldHeight / 2 ) });
+        $('#scrollableHomepage .prev').css({'left':win.w/2 - (slideWidth/2) - -10,'top':win.originY + ( slideHeight / 2 ) });
+        $('#scrollableHomepage .next').css({'left':win.w/2 + (slideWidth/2) - 25,'top':win.originY + ( slideHeight / 2 ) });
         
         //adjust scrollable_slideSelect slide menu 1 2 3
         $('#scrollable_slideSelect').css({ 'top':$('#page').height() - 10, 'right':$(window).width() / 2 - 70 });
     }
     
-    function rectifyhomepagehotspot(){
-
-        var slideWidth = $('.slide-container').width();
-        if(slideWidth == 0) slideWidth = 920;
-        var sxpos  = $('.slide-container').offset().left;
-        var windowWidth = $(this).width();
-        var windowHeight = $(this).height();
-        var newX = (windowWidth / 2) + (slideWidth / 2);
-        var newLeftWidth = (windowWidth / 2) - (slideWidth / 2) - (windowWidth / 32);
-        $('#rightScrollableHotspot').css({'right':0,'width':windowWidth - newX ,'height':windowHeight - 10});
-        $('#leftScrollableHotspot').css({'width':newLeftWidth , left:0,'height':windowHeight - 10});
-        
-    }
