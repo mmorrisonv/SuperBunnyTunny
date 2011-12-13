@@ -661,7 +661,8 @@ input[type=submit].btn {
   a{
         color:#231F20;
       &.active, &:hover{
-        color:lighten(#231F20,50%);
+        //color:lighten(#231F20,50%);
+        .HBold;
       }
   }
 }
@@ -696,7 +697,8 @@ input[type=submit].btn {
   }
   a:hover,
   .active a {
-    background-color: lighten(@blue, 45%);
+    background-color: @grayDark;
+    //.HBold;
   }
   .disabled a,
   .disabled a:hover {
