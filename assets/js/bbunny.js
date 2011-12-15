@@ -71,6 +71,9 @@ BBUNNY  = { //namespace
 	            $('.slide').fadeTo('slow',1);
 	            setupScrollable();
 	            
+	            //show nav
+	            $('#herolayout').animate({'height':650},300);
+	            $('#campaignNav').show();
 	            //console.log('scrollable setup');
 	        $('.next,.prev').fadeIn();
 	        $('.hero-campaign').fadeOut();
@@ -209,10 +212,11 @@ function setupProductPage()
     $('#mainAltViews img').click(function(){
         var fsimage = $(this).attr('fs'),
             fsOID =  $(this).attr('oid');
+            fsAVID =  $(this).attr('avid');
         //console.log(fsimage);
         $('#mainAltViews img').removeClass('active');
         $(this).addClass('active');
-        $('#mainProductView img').attr({'src':fsimage,'oid':fsOID});      
+        $('#mainProductView img').attr({'src':fsimage,'oid':fsOID,'avid':fsAVID});      
     });
 };
 

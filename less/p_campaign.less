@@ -1,0 +1,146 @@
+#herolayout{
+  min-height:555px;
+  #scrollableHomepage{
+    position: absolute;
+  }
+
+  #campaignNav{
+    display:none;
+    position: relative;
+    top:545px;
+    .row{margin-left:0px;}
+    #row1{
+      border-bottom:solid 1px #eee;
+      .returnBtn{float:left;}
+    }
+    .slideNav
+    {
+      float:left;
+      list-style-type:none;
+      display:inline-block;
+      margin:0 0 0 380px;
+      .fs(12px);
+      li{
+        float:left;
+        margin-right:10px;
+      }
+    }
+    #row2{
+      padding:0px;
+      margin:0 auto;
+      float:left;
+      h3{
+        .HLight;
+        display:inline-block;
+        float:left;
+      }
+      .productList{
+        float:left;
+        display:inline-block;
+        list-style-type:none;
+        display:inline-block;
+        margin:4px 0 0 30px
+        float:left;
+        .fs(12px);
+        li{
+          float:left;
+          margin-right:10px;
+        }
+      }
+      span{
+        float:left;
+      }
+    }
+
+
+
+  }
+}
+
+  
+.hero-unit {
+
+  padding: 120px 0 0 30px;
+  position: relative;
+  z-index: 6;
+  height:280px;
+
+  #hero-blurb{
+    /*position: absolute;
+    top:30px;*/
+    padding-left:90px;
+  }
+
+  h4{
+    .HLight; 
+    line-height:18px;}
+
+  h1 {
+    margin-bottom: 0;
+    font-size: 60px;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+  p {
+    font-size: 18px;
+    font-weight: 200;
+    line-height: @baseline * 1.5;
+  }
+}
+
+.hero-campaign {
+
+
+  z-index: 6;
+
+
+  #hero-blurb{
+    position: absolute;
+
+    left:200px;
+    top:100px;
+  }
+  #leftnav{
+    position: absolute;
+    top:8px;
+    left:30px;
+    h4{color:white;}
+    a.title{
+      font-weight:bold;
+    }
+    > ul{padding-top:4px;}
+    li a:hover{ background-color:@baseColor; }
+    > ul > li > .subcat li a{
+      border-color:white;
+    }
+    > ul .open .subcat{
+    
+      border-top:solid 1px white;
+      border-color:white;
+    }
+    > ul > li > .subcat li ul.tertiarycats li a {
+      color:white;
+      &:hover{background-color:none;}
+      &.title{
+        font-weight:bold;
+      }
+    }
+  }
+
+
+  div{
+    
+  }
+
+  h1 {
+    margin-bottom: 0;
+    font-size: 60px;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+  p {
+    font-size: 18px;
+    font-weight: 200;
+    line-height: @baseline * 1.5;
+  }
+}
