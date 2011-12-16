@@ -66,13 +66,44 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 //CUSTOMER SERVICE PAGE
 #custservlayout{
 	position:relative;
+
+	.banner{margin-bottom:10px;}
+
 	h1{
 		.HLight;
+		//color:@baseColor;
+	}
+
+	h2{
 		color:@baseColor;
+		border-bottom:solid 4px @lightBaseColor;
+		&.subheading{
+			.fs(18px);
+			line-height:20px;
+			margin:16px 0 8px 0;
+			.Helv;
+		}
+
+		span{ //like a sub heading inside the h2
+			.fs(12px);
+			.HLight;
+		}
 	}
 
 	h5{
 		color:@baseColor;
+	}
+
+	h6{
+		color:@grayDark;
+		.Helv;
+		.fs(12px);
+		line-height:12px;
+		margin-bottom:6px;
+	}
+
+	p{
+		.fs(12px);
 	}
 
 	.txtbanner{
@@ -83,6 +114,7 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 		padding:4px;
 		wuidth:950px;
 		margin-top:5px;
+		.HBold;
 
 	}
 
@@ -90,6 +122,10 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 		border:solid 3px #ccc;
 		padding:10px;
 		margin-top:20px;
+		.floatedtitle{
+			position:relative;
+			top:-26px;
+		}
 	}
 
 	table{
@@ -100,15 +136,20 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 		}
 		ul{margin:0; padding-left:20px;
 			li{
-				padding-left:25px;
+				//padding-left:25px;
+				margin-left:10px;
 			}
 		}
+	}
+
+	li{
+		margin-left:20px;
 	}
 }
 
 
 //SHOPPING BAG PAGE
-#shopbaglayout{
+#shopbaglayout,#checkoutlayout{
 
 
 	position:relative;
@@ -146,6 +187,13 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 		text-align:center;
 		margin-top:80px;margin-bottom:60px;
 		padding:30px;
+	}
+
+	form{
+		label{
+			text-align:left;
+			width:inherit;
+		}
 	}
 }
 
