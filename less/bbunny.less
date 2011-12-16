@@ -63,6 +63,13 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 
 .noticemodal{display: none;}
 
+.assitancelink{width:300px; height:30px; display: block;position: absolute; top:0; left:0;}
+
+
+
+
+
+
 //CUSTOMER SERVICE PAGE
 #custservlayout{
 	position:relative;
@@ -72,6 +79,9 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 	h1{
 		.HLight;
 		color:@baseColor;
+		&.grayDark{
+			color:@grayDark;
+		}
 	}
 
 	h2{
@@ -141,10 +151,10 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 			color:@baseColor;
 			text-transform:uppercase;
 		}
-		ul{margin:0; padding-left:20px;
+		ul{margin:0; padding-left:10px;
 			li{
 				//padding-left:25px;
-				margin-left:10px;
+				margin-left:20px;
 			}
 		}
 	}
@@ -200,6 +210,8 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 		&.white{ border-color:@grayDark;}
 	}
 
+
+
 	.desc{
 		position: relative;
 		height:230px;
@@ -240,14 +252,15 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 		
 		.row > [class*="span"] {
 			
-			margin-left:6px;
+			//margin-left:6px;
 		}
-		.row > label{margin-left:6px;}
+		.row > label{margin-left:10px;}
 		input{margin-bottom:10px;}
 	}
 
 	table{
 		.HBold;
+		.fs(12px);
 		thead{
 			//.fs(13px);
 			color:@baseColor;
@@ -258,14 +271,24 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 			&.rightcol{
 				text-align:right;
 				padding-right:40px;
+				width:180px;
+				
 			}
+			&.midcol{
+				width:200px;
+			}
+			.gray{color:@gray;}
 		}
+
 	}
 
-	table.shipopts{
+	table.shipopts{ //specifically to style shipping options table
 		border-top:1px dotted @gray;
+		
 		td{
 			border-bottom:1px dotted @gray;
+			padding-top:20px;padding-bottom:10px;
+			position: relative;
 		}
 		li{
 			.fs(12px);
@@ -276,16 +299,19 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 			.HBold;
 			text-transform:uppercase;
 			.fs(13px);
+			padding-left:27px;
 			input{
 				margin-right:10px;
+				position: absolute;
+				left:5px;top:19px;
 
 			}
 		}
 	}
-
+	.merch{margin-top:-16px;}
 	.headeritem{
 		color:@baseColor;
-		.fs(11px);
+		.fs(12px);
 		.HBold;
 		text-transform:uppercase;
 		margin-bottom:1px;
@@ -321,6 +347,23 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 
 }
 
+
+	.checkoutbtns{
+		margin-bottom:40px;
+		.bbunnybox{
+			.HBold;
+			border:0;
+			color:#f8d0e5;
+			text-shadow:none;
+			background-color:#f498c0;
+			float:left; margin-left:4px;width:173px;
+			&.current{background-color:@baseColor;}
+			&.locked{background-color:#a7a9ac;}
+
+		}
+	}
+
+
 //ERROR PAGE
 #errorlayout{
 	border:solid 1px @grayLight;
@@ -335,6 +378,12 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 	p{
 		.fs(14px)
 	}
+	.returnlink{
+		width:300px; height:60px;
+		display: block;
+		position: absolute; top:200px; left:260px;
+
+	}
 	.floatedtitle{
 		z-index: 2;
 		position: absolute;
@@ -345,6 +394,10 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 		color:@baseColor;
 		.HLight
 	}
+	.message{
+		color:@grayDark;
+		a{color:@baseColor;}
+	}
 	.confnum{
 		position: absolute;
 		top: 170px;
@@ -353,6 +406,13 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 		color:@baseColor;
 		.HBold;
 	}
+
+}
+
+//WHOLESALE FORM APPLICATION APGE
+#wholesaleformcontainer
+{
+	border:solid 5px @gray;
 }
 //GIFTCARD PAGE
 .giftcardsignup{
@@ -383,6 +443,20 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 			.fs(9px);
 			text-transform:uppercase;
 		}
+	}
+	.address{
+	  margin-left:20px;
+	  h5{
+	  	line-height:26px;
+	  }
+	  .pink{line-height:14px; color:@baseColor;}
+	  p{
+	  	.fs(12px);
+	  }
+
+	}
+	.lettercount{
+		display:block;
 	}
 	.jotheramount{.hide}
 	.floatedtitle{
