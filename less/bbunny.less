@@ -71,7 +71,7 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 
 	h1{
 		.HLight;
-		//color:@baseColor;
+		color:@baseColor;
 	}
 
 	h2{
@@ -103,7 +103,8 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 	}
 
 	p{
-		.fs(12px);
+		.fs(11px);
+		.Helv;
 	}
 
 	.txtbanner{
@@ -111,10 +112,14 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 		color:@baseColor;
 		width:100%;
 		.fs(14px);
-		padding:4px;
-		wuidth:950px;
-		margin-top:5px;
-		.HBold;
+		span{
+			padding:6px;
+			margin-top:5px;
+			.HBold;
+			display:block;
+		}
+		margin-bottom:10px;
+
 
 	}
 
@@ -177,7 +182,7 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 	h2{
 		color:@baseColor;
 		.HLight;
-		margin-bottom:20px;
+		margin-bottom:10px;
 	}
 	h3{
 		line-height:20px;
@@ -195,6 +200,7 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 			width:inherit;
 		}
 	}
+	.options{margin-top:40px;}
 }
 
 //ERROR PAGE
@@ -301,11 +307,22 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 	float:left;
 	> a > img, > img{ 	width:190px;}
 	.notice{
-		background:@baseColor;
-		color:white;
-		position: absolute; top:223px;left:0;
+		
+		position: absolute; top:224px;left:0;
 		width:100%; text-align:center;
 		z-index:3;
+
+		div{
+			background:@baseColor;
+			width:100%;height:100%;
+			.opacity(84);
+			position: absolute; top:0;left:0;
+		}
+		span{
+			color:white;
+			.opacity(100);
+			position: relative;	
+		}
 	}
 
 	lh{

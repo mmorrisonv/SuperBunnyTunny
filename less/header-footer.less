@@ -255,7 +255,7 @@ footer {
   ul .active > a {
     background-color: #333;
     background-color: rgba(255,255,255,.05);
-    color: @white;
+    //color: @white;
     text-decoration: none;
   }
 
@@ -319,7 +319,7 @@ footer {
     float: left;
     //text-align:center;
     min-width:50px;
-    &.selected{
+    &.selected,&.active{
       background-color:@lightBaseColor;
       text-decoration: none;
       a:hover{
@@ -342,6 +342,7 @@ footer {
       line-height: 19px;
       text-decoration: none;
       cursor:pointer;
+      //text-align:center;
       &:hover {
         background-color:@lightBaseColor;
         text-decoration: none;

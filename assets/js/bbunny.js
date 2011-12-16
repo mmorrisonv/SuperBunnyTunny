@@ -21,10 +21,7 @@ $(window).load(function(){
 
 	onResizePage();
 	
-});
-
-
-    
+}); 
 $(window).resize(onResizePage);
 
 BBUNNY  = { //namespace
@@ -37,7 +34,12 @@ BBUNNY  = { //namespace
                 }
         },
         finalize:function(){
-    
+ 			
+        },
+        debug:function(){
+        	//console.log('remove debug functions');
+        	//add bestseller banner to listing page
+        	$('.listinglayout .listing').eq(2).append('<div class="notice"><div>&nbsp;</div><span>BEST SELLER</span></div>');
         }
     },
     jBBhome:{
@@ -110,6 +112,7 @@ UTIL = {
 			UTIL.fire(classnm,bodyId);
 		});
 		UTIL.fire('common','finalize');
+		UTIL.fire('common','debug');
 	},
 	notEmpty: function (value){
 		var blankPattern = /\S/;
