@@ -85,13 +85,15 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 		}
 
 		span{ //like a sub heading inside the h2
-			.fs(12px);
-			.HLight;
+			.fs(13px);
+			.HBold;
+			font-style:italic;
 		}
 	}
 
 	h5{
 		color:@baseColor;
+		&.subheading{color:@grayDark;}
 	}
 
 	h6{
@@ -150,20 +152,21 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 	li{
 		margin-left:20px;
 	}
+
 }
 
 
-//SHOPPING BAG PAGE
+//SHOPPING BAG / CHECKOUT PAGE
 #shopbaglayout,#checkoutlayout{
 
 
 	position:relative;
-	margin-top:20px;
+	//margin-top:20px;
 	h4{
 		.fs(12px);
 	}
 	p{
-		.fs(14px)
+		.fs(14px); //why so large?
 	}
 	.floatedtitle{
 		z-index: 2;
@@ -175,8 +178,12 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 		&.heading{
 			.HLight;
 			color:@baseColor;
-			border-bottom:10px solid @lightBaseColor;
+			border-bottom:14px solid @lightBaseColor;
 
+		}
+		&.pink{
+			.HLight;
+			color:@baseColor;
 		}
 	}
 	h2{
@@ -188,10 +195,107 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 		line-height:20px;
 		&.bold{ .HBold; }
 	}
+
+	input{
+		&.white{ border-color:@grayDark;}
+	}
+
+	.desc{
+		position: relative;
+		height:230px;
+		p{
+			.fs(11px);
+			margin:0;
+		}
+		h3{
+			.fs(16px);
+			line-height:18px;
+		}
+		.bottom{
+			position: absolute;
+			bottom:0; left:0;
+			h5{margin:0;line-height:16px;}
+			h6{/*instock*/ color:@baseColor;}
+		}
+	}
+
+	.desc-price{
+		position: relative;
+		height:230px;
+		.bottom{
+			position: absolute;
+			bottom:0; left:0;
+			h5{margin:0;line-height:16px;}
+			h6{/*instock*/ color:@baseColor;}
+		}
+	}
+
 	.error-section{
 		text-align:center;
 		margin-top:80px;margin-bottom:60px;
 		padding:30px;
+	}
+
+	.billingform{
+		
+		.row > [class*="span"] {
+			
+			margin-left:6px;
+		}
+		.row > label{margin-left:6px;}
+		input{margin-bottom:10px;}
+	}
+
+	table{
+		.HBold;
+		thead{
+			//.fs(13px);
+			color:@baseColor;
+		}
+		td{
+			border:0;
+			padding:4px;
+			&.rightcol{
+				text-align:right;
+				padding-right:40px;
+			}
+		}
+	}
+
+	table.shipopts{
+		border-top:1px dotted @gray;
+		td{
+			border-bottom:1px dotted @gray;
+		}
+		li{
+			.fs(12px);
+			.Helv;
+		}
+		.leftpink{
+			color:@baseColor;
+			.HBold;
+			text-transform:uppercase;
+			.fs(13px);
+			input{
+				margin-right:10px;
+
+			}
+		}
+	}
+
+	.headeritem{
+		color:@baseColor;
+		.fs(11px);
+		.HBold;
+		text-transform:uppercase;
+		margin-bottom:1px;
+
+	}
+
+	.promocode{
+		h5{
+			line-height:36px;
+		}
 	}
 
 	form{
@@ -200,7 +304,21 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 			width:inherit;
 		}
 	}
-	.options{margin-top:40px;}
+
+		.error{
+			color:red;
+		
+		h2{
+			color:red;
+			.Bondoni;
+			.fs(38px);
+		}
+		p{	
+			.fs(9px);
+			text-transform:uppercase;
+		}
+	}
+
 }
 
 //ERROR PAGE

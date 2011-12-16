@@ -170,6 +170,15 @@ textarea {
 /* Mixins.less
  * Snippets of reusable CSS to develop faster and keep code readable
  * ----------------------------------------------------------------- */
+.txtleft {
+  text-align: left;
+}
+.txtright {
+  text-align: right;
+}
+.txtcntr {
+  text-align: center;
+}
 /*
  * Scaffolding
  * Basic and global styles for generating a grid system, structural layout, and page templates
@@ -4380,11 +4389,15 @@ H1.bbunnybox {
   font-family: 'HelveticaLTStdRoman';
 }
 #custservlayout h2 span {
-  font-size: 12px;
-  font-family: 'HelveticaNeue45Light';
+  font-size: 13px;
+  font-family: 'HelveticaNeue75Bold';
+  font-style: italic;
 }
 #custservlayout h5 {
   color: #ee4799;
+}
+#custservlayout h5.subheading {
+  color: #231f20;
 }
 #custservlayout h6 {
   color: #231f20;
@@ -4436,7 +4449,6 @@ H1.bbunnybox {
 }
 #shopbaglayout, #checkoutlayout {
   position: relative;
-  margin-top: 20px;
 }
 #shopbaglayout h4, #checkoutlayout h4 {
   font-size: 12px;
@@ -4453,7 +4465,11 @@ H1.bbunnybox {
 #shopbaglayout h1.heading, #checkoutlayout h1.heading {
   font-family: 'HelveticaNeue45Light';
   color: #ee4799;
-  border-bottom: 10px solid #fbd7e7;
+  border-bottom: 14px solid #fbd7e7;
+}
+#shopbaglayout h1.pink, #checkoutlayout h1.pink {
+  font-family: 'HelveticaNeue45Light';
+  color: #ee4799;
 }
 #shopbaglayout h2, #checkoutlayout h2 {
   color: #ee4799;
@@ -4466,18 +4482,124 @@ H1.bbunnybox {
 #shopbaglayout h3.bold, #checkoutlayout h3.bold {
   font-family: 'HelveticaNeue75Bold';
 }
+#shopbaglayout input.white, #checkoutlayout input.white {
+  border-color: #231f20;
+}
+#shopbaglayout .desc, #checkoutlayout .desc {
+  position: relative;
+  height: 230px;
+}
+#shopbaglayout .desc p, #checkoutlayout .desc p {
+  font-size: 11px;
+  margin: 0;
+}
+#shopbaglayout .desc h3, #checkoutlayout .desc h3 {
+  font-size: 16px;
+  line-height: 18px;
+}
+#shopbaglayout .desc .bottom, #checkoutlayout .desc .bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+#shopbaglayout .desc .bottom h5, #checkoutlayout .desc .bottom h5 {
+  margin: 0;
+  line-height: 16px;
+}
+#shopbaglayout .desc .bottom h6, #checkoutlayout .desc .bottom h6 {
+  /*instock*/
+  color: #ee4799;
+}
+#shopbaglayout .desc-price, #checkoutlayout .desc-price {
+  position: relative;
+  height: 230px;
+}
+#shopbaglayout .desc-price .bottom, #checkoutlayout .desc-price .bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+#shopbaglayout .desc-price .bottom h5, #checkoutlayout .desc-price .bottom h5 {
+  margin: 0;
+  line-height: 16px;
+}
+#shopbaglayout .desc-price .bottom h6, #checkoutlayout .desc-price .bottom h6 {
+  /*instock*/
+  color: #ee4799;
+}
 #shopbaglayout .error-section, #checkoutlayout .error-section {
   text-align: center;
   margin-top: 80px;
   margin-bottom: 60px;
   padding: 30px;
 }
+#shopbaglayout .billingform .row > [class*="span"], #checkoutlayout .billingform .row > [class*="span"] {
+  margin-left: 6px;
+}
+#shopbaglayout .billingform .row > label, #checkoutlayout .billingform .row > label {
+  margin-left: 6px;
+}
+#shopbaglayout .billingform input, #checkoutlayout .billingform input {
+  margin-bottom: 10px;
+}
+#shopbaglayout table, #checkoutlayout table {
+  font-family: 'HelveticaNeue75Bold';
+}
+#shopbaglayout table thead, #checkoutlayout table thead {
+  color: #ee4799;
+}
+#shopbaglayout table td, #checkoutlayout table td {
+  border: 0;
+  padding: 4px;
+}
+#shopbaglayout table td.rightcol, #checkoutlayout table td.rightcol {
+  text-align: right;
+  padding-right: 40px;
+}
+#shopbaglayout table.shipopts, #checkoutlayout table.shipopts {
+  border-top: 1px dotted #808080;
+}
+#shopbaglayout table.shipopts td, #checkoutlayout table.shipopts td {
+  border-bottom: 1px dotted #808080;
+}
+#shopbaglayout table.shipopts li, #checkoutlayout table.shipopts li {
+  font-size: 12px;
+  font-family: 'HelveticaLTStdRoman';
+}
+#shopbaglayout table.shipopts .leftpink, #checkoutlayout table.shipopts .leftpink {
+  color: #ee4799;
+  font-family: 'HelveticaNeue75Bold';
+  text-transform: uppercase;
+  font-size: 13px;
+}
+#shopbaglayout table.shipopts .leftpink input, #checkoutlayout table.shipopts .leftpink input {
+  margin-right: 10px;
+}
+#shopbaglayout .headeritem, #checkoutlayout .headeritem {
+  color: #ee4799;
+  font-size: 11px;
+  font-family: 'HelveticaNeue75Bold';
+  text-transform: uppercase;
+  margin-bottom: 1px;
+}
+#shopbaglayout .promocode h5, #checkoutlayout .promocode h5 {
+  line-height: 36px;
+}
 #shopbaglayout form label, #checkoutlayout form label {
   text-align: left;
   width: inherit;
 }
-#shopbaglayout .options, #checkoutlayout .options {
-  margin-top: 40px;
+#shopbaglayout .error, #checkoutlayout .error {
+  color: red;
+}
+#shopbaglayout .error h2, #checkoutlayout .error h2 {
+  color: red;
+  font-family: 'BodoniBookItalic';
+  font-size: 38px;
+}
+#shopbaglayout .error p, #checkoutlayout .error p {
+  font-size: 9px;
+  text-transform: uppercase;
 }
 #errorlayout {
   border: solid 1px #bfbfbf;
@@ -5044,7 +5166,9 @@ H1.bbunnybox {
 }
 #modal-forgotpw p {
   font-size: 12px;
-  margin: 0 0 10px 0;
+  font-family: 'HelveticaLTStdRoman';
+  font-weight: bold;
+  margin: 12px 0 12px 0;
 }
 #modal-forgotpw .row .spanFull {
   margin: 0;
