@@ -134,6 +134,7 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 
 
 	}
+	.span20 > .txtbanner{ width:785px; }
 
 	.contentbox{
 		border:solid 3px #ccc;
@@ -150,6 +151,13 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 			background-color:@lightBaseColor;
 			color:@baseColor;
 			text-transform:uppercase;
+			.HBold;
+		}
+		&.custServTable{
+			td{
+				border-top:dotted 2px @gray;
+				&.top{border-top:none;}
+			}
 		}
 		ul{margin:0; padding-left:10px;
 			li{
@@ -160,7 +168,7 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 	}
 
 	li{
-		margin-left:20px;
+		//margin-left:20px;
 	}
 
 }
@@ -210,7 +218,24 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 		&.white{ border-color:@grayDark;}
 	}
 
+	.address{
+		float:left;
+		width:280px;
+		padding: 12px;
+		border-right:solid 1px @bbunnyBlack;
 
+		p{
+			.fs(11px);
+		}
+		&.last{
+			border:0;
+		}
+		h6{
+			color:@baseColor;
+		 	text-decoration:underline;
+		 	.fs(12px);
+		}
+	}
 
 	.desc{
 		position: relative;
@@ -222,6 +247,9 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 		h3{
 			.fs(16px);
 			line-height:18px;
+		}
+		h5{//used instead of h3 for cart overview
+			line-height:14px;
 		}
 		.bottom{
 			position: absolute;
@@ -260,7 +288,7 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 
 	table{
 		.HBold;
-		.fs(12px);
+		.fs(12.5px);
 		thead{
 			//.fs(13px);
 			color:@baseColor;
@@ -283,10 +311,10 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 	}
 
 	table.shipopts{ //specifically to style shipping options table
-		border-top:1px dotted @gray;
+		border-top:2px dotted @gray;
 		
 		td{
-			border-bottom:1px dotted @gray;
+			border-bottom:2px dotted @gray;
 			padding-top:20px;padding-bottom:10px;
 			position: relative;
 		}
@@ -300,6 +328,12 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 			text-transform:uppercase;
 			.fs(13px);
 			padding-left:27px;
+			label{
+				color:@baseColor;
+				.HBold;
+				text-transform:uppercase;
+				.fs(13px);
+			}
 			input{
 				margin-right:10px;
 				position: absolute;
@@ -320,8 +354,17 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 
 	.promocode{
 		h5{
-			line-height:36px;
+			position: relative;
+			top:4px;
 		}
+		input{
+			padding:3px;
+			padding-bottom:4px;
+		}
+		.btn{
+			padding:2px;
+		}
+
 	}
 
 	form{
@@ -362,7 +405,32 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 
 		}
 	}
+//JUST THE CHECKOUT FORM THAT TAKES MONMEY
+#checkout-paymentform{
+	h4{
+		.fs(14px);
+	}
+	h5{
+		
+	}
+	h6{
+		.fs(12px);
+		line-height:12px;
+		&.bal{
+			
+		}
+	}
+	.bal{//balance checker font
+		text-decoration:underline;
+		.HLight;
+		.fs(10px);
+	}
+	}
+	label{
+		text-align:left;
 
+	.ui-selectmenu{height:20px;}
+}
 
 //ERROR PAGE
 #errorlayout{
@@ -679,13 +747,22 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 				.HBold; 
 				padding:1px 6px;
 				display:block;
-				&:hover{
+				&:hover,&.current{
 					text-decoration:none;
 					cursor:pointer;
 					color:@white;
 					background-color: @grayDark;
 				}
 			}
+			&.current > a{
+
+					text-decoration:none;
+					cursor:pointer;
+					color:@white;
+					background-color: @grayDark; 
+				
+			}
+			
 
 		}
 		.subcat{display:none;margin:0; width:100%;}

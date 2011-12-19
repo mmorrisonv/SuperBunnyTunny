@@ -4442,6 +4442,9 @@ H1.bbunnybox {
   font-family: 'HelveticaNeue75Bold';
   display: block;
 }
+#custservlayout .span20 > .txtbanner {
+  width: 785px;
+}
 #custservlayout .contentbox {
   border: solid 3px #ccc;
   padding: 10px;
@@ -4455,15 +4458,19 @@ H1.bbunnybox {
   background-color: #fbd7e7;
   color: #ee4799;
   text-transform: uppercase;
+  font-family: 'HelveticaNeue75Bold';
+}
+#custservlayout table.custServTable td {
+  border-top: dotted 2px #808080;
+}
+#custservlayout table.custServTable td.top {
+  border-top: none;
 }
 #custservlayout table ul {
   margin: 0;
   padding-left: 10px;
 }
 #custservlayout table ul li {
-  margin-left: 20px;
-}
-#custservlayout li {
   margin-left: 20px;
 }
 #shopbaglayout, #checkoutlayout {
@@ -4504,6 +4511,23 @@ H1.bbunnybox {
 #shopbaglayout input.white, #checkoutlayout input.white {
   border-color: #231f20;
 }
+#shopbaglayout .address, #checkoutlayout .address {
+  float: left;
+  width: 280px;
+  padding: 12px;
+  border-right: solid 1px #231520;
+}
+#shopbaglayout .address p, #checkoutlayout .address p {
+  font-size: 11px;
+}
+#shopbaglayout .address.last, #checkoutlayout .address.last {
+  border: 0;
+}
+#shopbaglayout .address h6, #checkoutlayout .address h6 {
+  color: #ee4799;
+  text-decoration: underline;
+  font-size: 12px;
+}
 #shopbaglayout .desc, #checkoutlayout .desc {
   position: relative;
   height: 230px;
@@ -4515,6 +4539,9 @@ H1.bbunnybox {
 #shopbaglayout .desc h3, #checkoutlayout .desc h3 {
   font-size: 16px;
   line-height: 18px;
+}
+#shopbaglayout .desc h5, #checkoutlayout .desc h5 {
+  line-height: 14px;
 }
 #shopbaglayout .desc .bottom, #checkoutlayout .desc .bottom {
   position: absolute;
@@ -4560,7 +4587,7 @@ H1.bbunnybox {
 }
 #shopbaglayout table, #checkoutlayout table {
   font-family: 'HelveticaNeue75Bold';
-  font-size: 12px;
+  font-size: 12.5px;
 }
 #shopbaglayout table thead, #checkoutlayout table thead {
   color: #ee4799;
@@ -4581,10 +4608,10 @@ H1.bbunnybox {
   color: #808080;
 }
 #shopbaglayout table.shipopts, #checkoutlayout table.shipopts {
-  border-top: 1px dotted #808080;
+  border-top: 2px dotted #808080;
 }
 #shopbaglayout table.shipopts td, #checkoutlayout table.shipopts td {
-  border-bottom: 1px dotted #808080;
+  border-bottom: 2px dotted #808080;
   padding-top: 20px;
   padding-bottom: 10px;
   position: relative;
@@ -4599,6 +4626,12 @@ H1.bbunnybox {
   text-transform: uppercase;
   font-size: 13px;
   padding-left: 27px;
+}
+#shopbaglayout table.shipopts .leftpink label, #checkoutlayout table.shipopts .leftpink label {
+  color: #ee4799;
+  font-family: 'HelveticaNeue75Bold';
+  text-transform: uppercase;
+  font-size: 13px;
 }
 #shopbaglayout table.shipopts .leftpink input, #checkoutlayout table.shipopts .leftpink input {
   margin-right: 10px;
@@ -4617,7 +4650,15 @@ H1.bbunnybox {
   margin-bottom: 1px;
 }
 #shopbaglayout .promocode h5, #checkoutlayout .promocode h5 {
-  line-height: 36px;
+  position: relative;
+  top: 4px;
+}
+#shopbaglayout .promocode input, #checkoutlayout .promocode input {
+  padding: 3px;
+  padding-bottom: 4px;
+}
+#shopbaglayout .promocode .btn, #checkoutlayout .promocode .btn {
+  padding: 2px;
 }
 #shopbaglayout form label, #checkoutlayout form label {
   text-align: left;
@@ -4653,6 +4694,24 @@ H1.bbunnybox {
 }
 .checkoutbtns .bbunnybox.locked {
   background-color: #a7a9ac;
+}
+#checkout-paymentform h4 {
+  font-size: 14px;
+}
+#checkout-paymentform h6 {
+  font-size: 12px;
+  line-height: 12px;
+}
+#checkout-paymentform .bal {
+  text-decoration: underline;
+  font-family: 'HelveticaNeue45Light';
+  font-size: 10px;
+}
+label {
+  text-align: left;
+}
+label .ui-selectmenu {
+  height: 20px;
 }
 #errorlayout {
   border: solid 1px #bfbfbf;
@@ -4997,7 +5056,13 @@ H1.bbunnybox {
   padding: 1px 6px;
   display: block;
 }
-#leftnav > ul > li > a:hover {
+#leftnav > ul > li > a:hover, #leftnav > ul > li > a.current {
+  text-decoration: none;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #231f20;
+}
+#leftnav > ul > li.current > a {
   text-decoration: none;
   cursor: pointer;
   color: #ffffff;
