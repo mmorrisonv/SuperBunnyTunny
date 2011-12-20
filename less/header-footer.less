@@ -97,11 +97,12 @@ header {
   }
 
   .dropdown-nav{
-    width:110px;
+    width:130px;
     display: none;
     float:left;
     background-color: @lightBaseColor;
-    .fs(8px);
+    .fs(11px);
+    //text-transform:uppercase;
     position: absolute;
     top:20px;left:0;
     margin:0;
@@ -111,11 +112,11 @@ header {
     li{ //all li's under dropdown
       list-style:none;
       color:@grayDark;
-      line-height:12px;
+      line-height:18px;
       padding:3px 0 3px 0;
-      font-family:Arial;
+      font-family:Verdana,Arial;
       a{
-        font-family:Arial;
+        font-family:verdana,Arial;
         color:@grayDark;
         &:hover{color:@baseColor;}
         &.title{.HBold;}
@@ -124,24 +125,25 @@ header {
     ul{//second level nav inside li's
       float:left;
       text-align:left;
-      .fs(8px);
-      width:100px;
+      //.fs(8px);
+      width:130px;
           
       &.right{
         float: right;
-        width:110px;
+        width:130px;
         
         ul{
           //padding-left:10px;
           //border-left:solid 1px @grayDark;
           margin:0;
+          padding-left:10px;
         }
         
       }
 
       li{
         &.title{
-          .fs(7px);      
+          //.fs(7px);      
           border-bottom:solid 1px #000;
           padding-bottom:0;
           margin-bottom:3px;
@@ -154,7 +156,7 @@ header {
   }
   //override for 2up dropdowns built under a div instead of a ul
   div.dropdown-nav{
-    width:230px;
+    width:270px;
     padding:0 5px;
   }
   // Links get text shadow

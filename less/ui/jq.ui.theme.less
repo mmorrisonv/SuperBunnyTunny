@@ -60,6 +60,8 @@
 .ui-widget .ui-widget { font-size: 9px; }
 .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button { font-family: Verdana,Arial,sans-serif; font-size: 9px; }
 .ui-widget-content { border: 0px solid #f062a4; background: #fbd7e7 url(/assets/images/css/ui/images/ui-bg_flat_75_fbd7e7_40x100.png) 50% 50% repeat-x; color: #ee4799; }
+#checkoutlayout .ui-widget-content, .grayScaleInputs .ui-widget-content{color:gray;}
+#checkoutlayout .ui-widget-content a, .grayScaleInputs .ui-widget-content a{color:gray;} 
 .ui-widget-content a { color: #ee4799; }
 .ui-widget-header { border: 1px solid #aaaaaa; background: #cccccc url(/assets/images/css/ui/images/ui-bg_highlight-soft_75_cccccc_1x100.png) 50% 50% repeat-x; color: #222222; font-weight: bold; }
 .ui-widget-header a { color: #222222; }
@@ -67,11 +69,14 @@
 /* Interaction states
 ----------------------------------*/
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default { border: 1px solid #fbd7e7; background: #fbd7e7 url(/assets/images/css/ui/images/ui-bg_glass_75_fbd7e7_1x400.png) 50% 50% repeat-x; font-weight: normal; color: @baseColor; }
+#checkoutlayout .ui-state-default, #checkoutlayout .ui-widget-content .ui-state-default, #checkoutlayout .ui-widget-header .ui-state-default { color: gray; }
 .ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited { color: @baseColor; text-decoration: none; }
 /*HOVER FOCUS*/
 .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus { border: 1px solid #fbd7e7; /*background: #fbd7e7 url(/assets/images/css/ui/images/ui-bg_glass_75_fbd7e7_1x400.png) 50% 50% repeat-x; font-weight: normal;*/ color: @baseColor; }
 .ui-state-hover a, .ui-state-hover a:hover { color: @baseColor; text-decoration: none; }
+/*main styles selectbox come from here*/
 .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active { border: 1px solid #fbd7e7; background: #fbd7e7 url(/assets/images/css/ui/images/ui-bg_glass_65_fbd7e7_1x400.png) 50% 50% repeat-x; font-weight: normal; color: @baseColor; }
+#checkoutlayout .ui-state-active,#checkoutlayout  .ui-widget-content .ui-state-active,#checkoutlayout  .ui-widget-header .ui-state-active {  color: gray; }
 .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited { color: @baseColor; text-decoration: none; }
 .ui-widget :active { outline: none; }
 

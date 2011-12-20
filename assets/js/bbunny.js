@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 	//activate select plugin on all select elements
 	$('select').selectmenu();
-	
+
 	//rejigger nav
 	adjustNavUniform();
 	adjustScrollable();

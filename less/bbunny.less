@@ -119,6 +119,8 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 		.Helv;
 	}
 
+	.highlight{ text-transform:uppercase; color:@baseColor; .HBold; .fs(14px);}
+
 	.txtbanner{
 		background-color:@lightBaseColor;
 		color:@baseColor;
@@ -152,10 +154,15 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 			color:@baseColor;
 			text-transform:uppercase;
 			.HBold;
+			border:1px solid @lightBaseColor;
+		}
+		.rightborder{
+			
 		}
 		&.custServTable{
+			border:1px solid #808285;
 			td{
-				border-top:dotted 2px @gray;
+				border-top:dotted 2px #808285;
 				&.top{border-top:none;}
 			}
 		}
@@ -216,6 +223,10 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 
 	input{
 		&.white{ border-color:@grayDark;}
+	}
+
+	a.locked{
+		cursor:default;
 	}
 
 	.address{
@@ -333,8 +344,9 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 				.HBold;
 				text-transform:uppercase;
 				.fs(13px);
+				padding:0;
 			}
-			input{
+			input,.radio{
 				margin-right:10px;
 				position: absolute;
 				left:5px;top:19px;

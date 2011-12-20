@@ -896,6 +896,33 @@ input[type=file]:focus, input[type=checkbox]:focus, select:focus {
   box-shadow: none;
   outline: 2px dotted #666;
 }
+body {
+  font: 0.8em/21px arial, sans-serif;
+}
+.checkbox, .radio {
+  width: 19px;
+  height: 25px;
+  padding: 0 5px 0 0;
+  background: url(/assets/images/css/checkbox.gif) no-repeat;
+  display: block;
+  clear: left;
+  float: left;
+}
+.radio {
+  background: url(/assets/images/css/radio.gif) no-repeat;
+}
+.select {
+  position: absolute;
+  width: 158px;
+  /* With the padding included, the width is 190 pixels: the actual width of the image. */
+
+  height: 21px;
+  padding: 0 24px 0 8px;
+  color: #fff;
+  font: 12px/21px arial, sans-serif;
+  background: url(select.gif) no-repeat;
+  overflow: hidden;
+}
 form .clearfix.error > label, form .clearfix.error .help-block, form .clearfix.error .help-inline {
   color: #b94a48;
 }
@@ -2553,6 +2580,12 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
   background: #fbd7e7 url(/assets/images/css/ui/images/ui-bg_flat_75_fbd7e7_40x100.png) 50% 50% repeat-x;
   color: #ee4799;
 }
+#checkoutlayout .ui-widget-content, .grayScaleInputs .ui-widget-content {
+  color: gray;
+}
+#checkoutlayout .ui-widget-content a, .grayScaleInputs .ui-widget-content a {
+  color: gray;
+}
 .ui-widget-content a {
   color: #ee4799;
 }
@@ -2573,6 +2606,9 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
   font-weight: normal;
   color: #ee4799;
 }
+#checkoutlayout .ui-state-default, #checkoutlayout .ui-widget-content .ui-state-default, #checkoutlayout .ui-widget-header .ui-state-default {
+  color: gray;
+}
 .ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited {
   color: #ee4799;
   text-decoration: none;
@@ -2592,11 +2628,15 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
   color: #ee4799;
   text-decoration: none;
 }
+/*main styles selectbox come from here*/
 .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
   border: 1px solid #fbd7e7;
   background: #fbd7e7 url(/assets/images/css/ui/images/ui-bg_glass_65_fbd7e7_1x400.png) 50% 50% repeat-x;
   font-weight: normal;
   color: #ee4799;
+}
+#checkoutlayout .ui-state-active, #checkoutlayout .ui-widget-content .ui-state-active, #checkoutlayout .ui-widget-header .ui-state-active {
+  color: gray;
 }
 .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
   color: #ee4799;
@@ -3719,11 +3759,11 @@ header #account .shopcart .shopcart-menu .cart-link {
   text-align: center;
 }
 header .dropdown-nav {
-  width: 110px;
+  width: 130px;
   display: none;
   float: left;
   background-color: #fbd7e7;
-  font-size: 8px;
+  font-size: 11px;
   position: absolute;
   top: 20px;
   left: 0;
@@ -3733,12 +3773,12 @@ header .dropdown-nav {
 header .dropdown-nav li {
   list-style: none;
   color: #231f20;
-  line-height: 12px;
+  line-height: 18px;
   padding: 3px 0 3px 0;
-  font-family: Arial;
+  font-family: Verdana,Arial;
 }
 header .dropdown-nav li a {
-  font-family: Arial;
+  font-family: verdana,Arial;
   color: #231f20;
 }
 header .dropdown-nav li a:hover {
@@ -3750,18 +3790,17 @@ header .dropdown-nav li a.title {
 header .dropdown-nav ul {
   float: left;
   text-align: left;
-  font-size: 8px;
-  width: 100px;
+  width: 130px;
 }
 header .dropdown-nav ul.right {
   float: right;
-  width: 110px;
+  width: 130px;
 }
 header .dropdown-nav ul.right ul {
   margin: 0;
+  padding-left: 10px;
 }
 header .dropdown-nav ul li.title {
-  font-size: 7px;
   border-bottom: solid 1px #000;
   padding-bottom: 0;
   margin-bottom: 3px;
@@ -3770,7 +3809,7 @@ header .dropdown-nav ul li.title b {
   font-family: 'HelveticaNeue75Bold';
 }
 header div.dropdown-nav {
-  width: 230px;
+  width: 270px;
   padding: 0 5px;
 }
 header a {
@@ -4429,6 +4468,12 @@ H1.bbunnybox {
   font-size: 11px;
   font-family: 'HelveticaLTStdRoman';
 }
+#custservlayout .highlight {
+  text-transform: uppercase;
+  color: #ee4799;
+  font-family: 'HelveticaNeue75Bold';
+  font-size: 14px;
+}
 #custservlayout .txtbanner {
   background-color: #fbd7e7;
   color: #ee4799;
@@ -4459,9 +4504,13 @@ H1.bbunnybox {
   color: #ee4799;
   text-transform: uppercase;
   font-family: 'HelveticaNeue75Bold';
+  border: 1px solid #fbd7e7;
+}
+#custservlayout table.custServTable {
+  border: 1px solid #808285;
 }
 #custservlayout table.custServTable td {
-  border-top: dotted 2px #808080;
+  border-top: dotted 2px #808285;
 }
 #custservlayout table.custServTable td.top {
   border-top: none;
@@ -4510,6 +4559,9 @@ H1.bbunnybox {
 }
 #shopbaglayout input.white, #checkoutlayout input.white {
   border-color: #231f20;
+}
+#shopbaglayout a.locked, #checkoutlayout a.locked {
+  cursor: default;
 }
 #shopbaglayout .address, #checkoutlayout .address {
   float: left;
@@ -4632,8 +4684,12 @@ H1.bbunnybox {
   font-family: 'HelveticaNeue75Bold';
   text-transform: uppercase;
   font-size: 13px;
+  padding: 0;
 }
-#shopbaglayout table.shipopts .leftpink input, #checkoutlayout table.shipopts .leftpink input {
+#shopbaglayout table.shipopts .leftpink input,
+#checkoutlayout table.shipopts .leftpink input,
+#shopbaglayout table.shipopts .leftpink .radio,
+#checkoutlayout table.shipopts .leftpink .radio {
   margin-right: 10px;
   position: absolute;
   left: 5px;

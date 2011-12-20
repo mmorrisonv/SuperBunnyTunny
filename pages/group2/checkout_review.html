@@ -66,17 +66,17 @@
               <a class="bbunnybox btn">SHOPPING BAG </a> 
               <a class="bbunnybox btn ">BILLING &amp; SHIPPING </a> 
               <a class="bbunnybox btn ">SHIPPING METHOD </a> 
-              <a class="bbunnybox btn ">REVIEW / PAYMENT </a>
-              <a class="bbunnybox btn current">CONFIRMATION </a>
+              <a class="bbunnybox btn current ">REVIEW / PAYMENT </a>
+              <a class="bbunnybox btn locked">CONFIRMATION </a>
             </div>
 
-      <h1 class="HLight baseColor" style="margin-bottom:10px;">REVIEW PAYMENT</h1>
+      <h1 class="HLight baseColor" style="margin-bottom:10px;">REVIEW &#47; PAYMENT</h1>
 
 
 
       <div class="row" style="margin-left:20px;margin-bottom:20px;" >
       <div class="address">
-          <h5>BILLING ADDRESS</h5>
+          <h5 class="baseColor">BILLING ADDRESS</h5>
           <p>STANDARD DELIVERY
           LORIE LAVENDAR<br/>
           17742 COWAN ST<br/>
@@ -87,7 +87,7 @@
           <h6>edit</h6>
       </div>
       <div class="address">
-          <h5>SHIPPING ADDRESS</h5>
+          <h5 class="baseColor">SHIPPING ADDRESS</h5>
           <p>LORIE LAVENDAR<br/>
           17742 COWAN ST<br/>
           IRVINE CA 92626<br/>
@@ -97,7 +97,7 @@
           <h6>edit</h6>
       </div>
       <div class="address last">
-          <h5>SHIPPING METHIOD</h5>
+          <h5 class="baseColor">SHIPPING METHIOD</h5>
           <p>STANDARD DELIVERY</p>
           <h6>edit</h6>
       </div>
@@ -105,7 +105,9 @@
 
 
 
-
+      <div class="row">
+        <h4 class="baseColor">MERCHANDISE SUMMARY</h4>
+      </div>
 
 
       <div class="row" id="itemsheader" style="background-color:#FBD7E7;">
@@ -118,7 +120,7 @@
 
 
 
-      <div id="itemscontainer" style="border-top: solid 1px #bfbfbf;padding:10px 0 10px 0;margin-left:0;">
+      <div id="itemscontainer" style="padding:10px 0 10px 0;margin-left:0;">
 
 
             <div class="row span24 item" style="border-bottom: dotted 2px #bfbfbf;margin-bottom:10px;">
@@ -182,7 +184,7 @@
           <table class="" style="background-color: #fbd7e7;width: 100%;">
             <thead>
                   <tr>
-                    <td class="" colspan="2">ORDER SUMMARY</td>
+                    <td class="" colspan="2">BILLING SUMMARY</td>
                     <td class="rightcol"> ORDER TOTAL </td>
                   </tr>
             </thead>
@@ -211,7 +213,7 @@
                     <td class="rightcol baseColor">PAYMENT TOTAL</td>
                   </tr>
                   <tr>
-                    <td class="" style="width:500px;"><span class="gray">Your merchandise subtotal may not yet include shipping and handling, tax, or promotional pricing offers, which will be reflected at Checkout.</span></td>
+                    <td class="" style="width:500px;"><span class="gray Helv fsize2">Your merchandise subtotal may not yet include shipping and handling, tax, or promotional pricing offers, which will be reflected at Checkout.</span></td>
                     <td class="rightcol">$640.00</td>
                   </tr>              </tbody>
               </table>
@@ -221,6 +223,7 @@
 
             <div id="checkout-paymentform">
           <h4 class="baseColor">GIFT CARD</h4>
+          <input type="checkbox" name="giftcatdtrue" class="styled" />&nbsp;<h4 class="baseColor inline">Gift Card</h4>
           <div class="row">
                 <div class=" span5">
                   <div class="spanFull"><label>GIFT CARD NUMBER</label></div>

@@ -61,6 +61,7 @@ form .input {
 input[type=checkbox],
 input[type=radio] {
   cursor: pointer;
+  //background:none;
 }
 
 // Inputs, Textareas, Selects
@@ -171,6 +172,35 @@ input[type=checkbox]:focus,
 select:focus {
   .box-shadow(none); // override for file inputs
   outline: 2px dotted #666; // Selet elements don't get box-shadow styles, so instead we do outline
+}
+
+// RADIO CHECKBOX PLUGIN CSS
+// --------------------------
+body {
+  font: 0.8em/21px arial,sans-serif;
+}
+
+.checkbox, .radio {
+  width: 19px;
+  height: 25px;
+  padding: 0 5px 0 0;
+  background: url(/assets/images/css/checkbox.gif) no-repeat;
+  display: block;
+  clear: left;
+  float: left;
+}
+.radio {
+  background: url(/assets/images/css/radio.gif) no-repeat;
+}
+.select {
+  position: absolute;
+  width: 158px; /* With the padding included, the width is 190 pixels: the actual width of the image. */
+  height: 21px;
+  padding: 0 24px 0 8px;
+  color: #fff;
+  font: 12px/21px arial,sans-serif;
+  background: url(select.gif) no-repeat;
+  overflow: hidden;
 }
 
 
