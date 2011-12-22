@@ -65,7 +65,9 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 
 .assitancelink{width:300px; height:30px; display: block;position: absolute; top:0; left:0;}
 
-
+#bbsuggest{
+	h3{line-height:25px;}
+}
 
 
 
@@ -77,7 +79,9 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 	.banner{margin-bottom:10px;}
 
 	h1{
-		.HLight;
+		.HUltra;
+		.fs(27px);
+		.ls(2px);
 		color:@baseColor;
 		&.grayDark{
 			color:@grayDark;
@@ -115,7 +119,7 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 	}
 
 	p{
-		.fs(11px);
+		.fs(13px);
 		.Helv;
 	}
 
@@ -125,7 +129,8 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 		background-color:@lightBaseColor;
 		color:@baseColor;
 		width:100%;
-		.fs(14px);
+		.fs(12px);
+		.ls(1px);
 		span{
 			padding:6px;
 			margin-top:5px;
@@ -160,9 +165,9 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 			
 		}
 		&.custServTable{
-			border:1px solid #808285;
+			border:1px solid #DDD;
 			td{
-				border-top:dotted 2px #808285;
+				border-top:dotted 2px #DDD;
 				&.top{border-top:none;}
 			}
 		}
@@ -206,7 +211,7 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 			letter-spacing:3px;
 			color:@baseColor;
 			border-bottom:19px solid @lightBaseColor;
-
+			.fs(27px);
 		}
 		&.pink{
 			.HLight;
@@ -240,7 +245,7 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 
 	.address{
 		float:left;
-		width:280px;
+		width:240px;
 		padding: 12px;
 		border-right:solid 1px @bbunnyBlack;
 
@@ -256,32 +261,45 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 		 	.fs(12px);
 		}
 	}
-
-	.desc{
-		position: relative;
-		height:230px;
-		p{
-			.fs(11px);
-			margin:0;
+	.item{
+		.fs(11px);
+		margin-left:0;
+		padding-top:10px;
+		.prodImage{
+			margin-left:2px;
 		}
-		h3{
-			.fs(16px);
-			line-height:18px;
-		}
-		h5{//used instead of h3 for cart overview
-			line-height:14px;
-		}
-		.bottom{
-			position: absolute;
-			bottom:0; left:0;
-			h5{margin:0;line-height:16px;}
-			h6{/*instock*/ color:@baseColor;}
+		.desc{
+			position: relative;
+			height:160px;
+			p{
+				.fs(11px);
+				//line-spacing(11px);
+				line-height:11px;
+				margin:0;
+			}
+			h3{
+				.fs(12px);
+				line-height:14px;
+			}
+			h5{//used instead of h3 for cart overview
+				line-height:14px;
+				.fs(11px);
+			}
+			.bottom{
+				position: absolute;
+				bottom:0; left:0;
+				h5{margin:0;line-height:16px;}
+				h6{/*instock*/ 
+					color:@baseColor;
+					//line-height:14px;
+				}
+			}
 		}
 	}
 
 	.desc-price{
 		position: relative;
-		height:230px;
+		height:155px;
 		.bottom{
 			position: absolute;
 			bottom:0; left:0;
@@ -363,10 +381,24 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 			}
 		}
 	}
+
+	table.floatingcart{
+		.fs(11px);
+	}
+	table.merch{
+		.fs(11px);
+		span.note{
+			.Helv;
+			color:@gray;
+			width:400px;
+			float:left;
+
+		}
+	}
 	.merch{margin-top:-16px;}
 	.headeritem{
 		color:@baseColor;
-		.fs(12px);
+		.fs(10px);
 		.HBold;
 		text-transform:uppercase;
 		margin-bottom:1px;
@@ -413,15 +445,16 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 
 
 	.checkoutbtns{
-		margin-bottom:40px;
+		margin:20px auto 20px auto;
 		.bbunnybox{
 			.HBold;
 			border:0;
 			color:#f8d0e5;
 			text-shadow:none;
 			background-color:#f498c0;
-			float:left; margin-left:4px;width:173px;
-			&.current{background-color:@baseColor;}
+			float:left; margin-left:4px;
+			width:142px;
+			&.current{background-color:@baseColor;padding: 3px 8px;}
 			&.locked{background-color:#a7a9ac;}
 
 		}
@@ -538,6 +571,9 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 	  h5{
 	  	line-height:26px;
 	  }
+		&:first-child{
+			margin-left:0;
+		}
 	  .pink{line-height:14px; color:@baseColor;}
 	  p{
 	  	.fs(12px);
@@ -589,9 +625,9 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 	> a > img, > img{ 	width:190px;}
 	.notice{
 		
-		position: absolute; top:224px;left:0;
+		position: absolute; top:220px;left:0;
 		width:100%; text-align:center;
-		z-index:3;
+		z-index:3;height:21px;
 
 		div{
 			background:@baseColor;
@@ -618,6 +654,7 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 		margin-top:6px;
 		font-weight:normal;
 		lh,dt,dd{
+			font-size:11px;
 			line-height:11px;
 		}
 		.sale{

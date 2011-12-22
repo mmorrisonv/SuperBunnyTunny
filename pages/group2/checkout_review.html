@@ -58,12 +58,12 @@
                   </div>
                 </header>
 
-<div class="container">
+<div class="container span20">
   <div class="content">
     <div id="checkoutlayout">
 
-            <div class="span24 checkoutbtns row  " style="margin-left:0;">
-              <a class="bbunnybox btn">SHOPPING BAG </a> 
+            <div class="span20 checkoutbtns row  " style="margin-left:0;">
+              <a class="bbunnybox btn sansmargin">SHOPPING BAG </a> 
               <a class="bbunnybox btn ">BILLING &amp; SHIPPING </a> 
               <a class="bbunnybox btn ">SHIPPING METHOD </a> 
               <a class="bbunnybox btn current ">REVIEW / PAYMENT </a>
@@ -74,7 +74,7 @@
 
 
 
-      <div class="row" style="margin-left:20px;margin-bottom:20px;" >
+      <div class="row" style="margin-bottom:20px;" >
       <div class="address">
           <h5 class="baseColor">BILLING ADDRESS</h5>
           <p>STANDARD DELIVERY
@@ -106,16 +106,16 @@
 
 
       <div class="row">
-        <h4 class="baseColor">MERCHANDISE SUMMARY</h4>
+        <h4 class="baseColor span20">MERCHANDISE SUMMARY</h4>
       </div>
 
 
-      <div class="row" id="itemsheader" style="background-color:#FBD7E7;">
-          <div class="span11 headeritem">item description/color</div>
-          <div class="span3 headeritem txtcntr">size</div>
+      <div id="itemsheader" class="row sansmargin" style="background-color:#FBD7E7;">
+          <div class="span8 headeritem">item description/color</div>
+          <div class="span2 headeritem txtcntr">size</div>
           <div class="span2 headeritem txtcntr">qty</div>
-          <div class="span4 headeritem">price</div>
-          <div class="span2 headeritem">total</div>
+          <div class="span2 headeritem">price</div>
+          <div class="span3 offset2 headeritem">total</div>
       </div>
 
 
@@ -123,9 +123,9 @@
       <div id="itemscontainer" style="padding:10px 0 10px 0;margin-left:0;">
 
 
-            <div class="row span24 item" style="border-bottom: dotted 2px #bfbfbf;margin-bottom:10px;">
+            <div class="row span20 item" style="border-bottom: dotted 2px #bfbfbf;margin-bottom:10px;">
 
-              <div class="span11 desc" style="height:100px;">
+              <div class="span8 desc" style="height:100px;">
                 <h5>HIPS DONT LIE</h5>
                 <h5>White tri top</h5>
 
@@ -135,21 +135,24 @@
                     <h6>IN-STOCK</h6>
                 </div>
               </div>
-              <div class="span3 txtcntr"><b>SMALL</b></div>
+              <div class="span2 txtcntr"><b>SMALL</b></div>
               <div class="span2 txtcntr">1</div>
-              <div class="span4 ">
+              <div class="span2 ">
                 <b>$130.00</b>
 
               </div>
-              <div class="span2"><b>$130.00</b></div>
+              <div class="span3 offset2"><b>$130.00</b></div>
             </div>
       
 
 
 
-            <div class="row span24 item" style="border-bottom: dotted 2px #bfbfbf;margin-bottom:10px;">
 
-              <div class="span11 desc" style="height:100px;">
+      
+
+            <div class="row span20 item" style="border-bottom: dotted 2px #bfbfbf;margin-bottom:10px;">
+
+              <div class="span8 desc" style="height:100px;">
                 <h5>HIPS DONT LIE</h5>
                 <h5>White tri top</h5>
 
@@ -159,17 +162,14 @@
                     <h6>IN-STOCK</h6>
                 </div>
               </div>
-              <div class="span3 txtcntr"><b>SMALL</b></div>
+              <div class="span2 txtcntr"><b>SMALL</b></div>
               <div class="span2 txtcntr">1</div>
-              <div class="span4 ">
+              <div class="span2 ">
                 <b>$130.00</b>
 
               </div>
-              <div class="span2"><b>$130.00</b></div>
+              <div class="span3 offset2"><b>$130.00</b></div>
             </div>
-      
-
-
 
 
 
@@ -181,10 +181,10 @@
 
       
       <!-- order summary section -->
-          <table class="" style="background-color: #fbd7e7;width: 100%;">
+          <table class="floatingcart" style="background-color: #fbd7e7;width: 100%;">
             <thead>
                   <tr>
-                    <td class="" colspan="2">BILLING SUMMARY</td>
+                    <td class="" colspan="2">ORDER SUMMARY</td>
                     <td class="rightcol"> ORDER TOTAL </td>
                   </tr>
             </thead>
@@ -196,11 +196,13 @@
                   </tr>
       
                   <tr>
-                    <td colspan="2">Taxable Subtotal</td>
+                    <td>&nbsp;</td>
+                    <td>Taxable Subtotal</td>
                     <td class="rightcol">$640.00</td>
                   </tr>
                   <tr>
-                    <td colspan="2">Order Total</td>
+                    <td>&nbsp;</td>
+                    <td>Order Total</td>
                     <td class="rightcol">$640.00</td>
                   </tr>
                 </tbody>
@@ -213,10 +215,15 @@
                     <td class="rightcol baseColor">PAYMENT TOTAL</td>
                   </tr>
                   <tr>
-                    <td class="" style="width:500px;"><span class="gray Helv fsize2">Your merchandise subtotal may not yet include shipping and handling, tax, or promotional pricing offers, which will be reflected at Checkout.</span></td>
+                    <td class="" style="width:500px;padding-top:0;"><span class="note">Your merchandise subtotal may not yet include shipping and handling, tax, or promotional pricing offers, which will be reflected at Checkout.</span></td>
                     <td class="rightcol">$640.00</td>
                   </tr>              </tbody>
               </table>
+              
+              <div class="row sansmargin" ><a href="/pages/Group2/group2.html"><img style="height:26px;" src="/assets/images/css/btn-wht-continueshopping.jpg"></a></div>
+              <div class="row" style="position:relative; margin-top:5px;"><a class="assitancelink" href="mailto:support@beachbunny.com">&nbsp;</a><img src="/assets/images/css/verbiage-needassitance.png"></div>
+              <div class="row"><a href="#"><img style="float:right;" src="/assets/images/css/btn-purchase.jpg"></a></div>
+              
               
 
 
