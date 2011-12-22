@@ -777,7 +777,7 @@ H1.bbunnybox{padding:8px 0px 8px 0px;margin-bottom:8px;letter-spacing:2px;font-f
 #custservlayout .highlight{text-transform:uppercase;color:#ee4799;font-family:'HelveticaNeue75Bold';font-size:14px;}
 #custservlayout .txtbanner{background-color:#fbd7e7;color:#ee4799;width:100%;font-size:12px;letter-spacing:1px;margin-bottom:10px;}#custservlayout .txtbanner span{padding:6px;margin-top:5px;font-family:'HelveticaNeue75Bold';display:block;}
 #custservlayout .span20>.txtbanner{width:785px;}
-#custservlayout .contentbox{border:solid 3px #ccc;padding:10px;margin-top:20px;}#custservlayout .contentbox .floatedtitle{position:relative;top:-26px;}
+#custservlayout .contentbox{border:solid 3px #E6E7E8;padding:10px;margin-top:20px;}#custservlayout .contentbox .floatedtitle{position:relative;top:-26px;}
 #custservlayout table .leftpink{background-color:#fbd7e7;color:#ee4799;text-transform:uppercase;font-family:'HelveticaNeue75Bold';border:1px solid #fbd7e7;}
 #custservlayout table.custServTable{border:1px solid #DDD;}#custservlayout table.custServTable td{border-top:dotted 2px #DDD;}#custservlayout table.custServTable td.top{border-top:none;}
 #custservlayout table ul{margin:0;padding-left:10px;}#custservlayout table ul li{margin-left:20px;}
@@ -809,10 +809,10 @@ H1.bbunnybox{padding:8px 0px 8px 0px;margin-bottom:8px;letter-spacing:2px;font-f
 #shopbaglayout table td,#checkoutlayout table td{border:0;padding:4px;}#shopbaglayout table td.rightcol,#checkoutlayout table td.rightcol{text-align:right;padding-right:40px;width:180px;}
 #shopbaglayout table td.midcol,#checkoutlayout table td.midcol{width:200px;}
 #shopbaglayout table td .gray,#checkoutlayout table td .gray{color:#808080;}
-#shopbaglayout table.shipopts,#checkoutlayout table.shipopts{border-top:2px dotted #808080;}#shopbaglayout table.shipopts td,#checkoutlayout table.shipopts td{border-bottom:2px dotted #808080;padding-top:20px;padding-bottom:10px;position:relative;}
+#shopbaglayout table.shipopts,#checkoutlayout table.shipopts{border-top:2px dotted #808080;}#shopbaglayout table.shipopts td,#checkoutlayout table.shipopts td{border-bottom:2px dotted #808080;padding-top:20px;padding-bottom:10px;}#shopbaglayout table.shipopts td .tddiv,#checkoutlayout table.shipopts td .tddiv{position:relative;padding-left:27px;}
 #shopbaglayout table.shipopts li,#checkoutlayout table.shipopts li{font-size:12px;font-family:'HelveticaLTStdRoman';}
-#shopbaglayout table.shipopts .leftpink,#checkoutlayout table.shipopts .leftpink{color:#ee4799;font-family:'HelveticaNeue75Bold';text-transform:uppercase;font-size:13px;padding-left:27px;}#shopbaglayout table.shipopts .leftpink label,#checkoutlayout table.shipopts .leftpink label{color:#ee4799;font-family:'HelveticaNeue75Bold';text-transform:uppercase;font-size:13px;padding:0;}
-#shopbaglayout table.shipopts .leftpink input,#checkoutlayout table.shipopts .leftpink input,#shopbaglayout table.shipopts .leftpink .radio,#checkoutlayout table.shipopts .leftpink .radio{margin-right:10px;position:absolute;left:5px;top:19px;}
+#shopbaglayout table.shipopts .leftpink,#checkoutlayout table.shipopts .leftpink{color:#ee4799;font-family:'HelveticaNeue75Bold';text-transform:uppercase;font-size:13px;}#shopbaglayout table.shipopts .leftpink label,#checkoutlayout table.shipopts .leftpink label{color:#ee4799;font-family:'HelveticaNeue75Bold';text-transform:uppercase;font-size:13px;padding:0;}
+#shopbaglayout table.shipopts .leftpink input,#checkoutlayout table.shipopts .leftpink input,#shopbaglayout table.shipopts .leftpink .radio,#checkoutlayout table.shipopts .leftpink .radio{margin-right:10px;position:absolute;left:5px;}
 #shopbaglayout table.floatingcart,#checkoutlayout table.floatingcart{font-size:11px;}
 #shopbaglayout table.merch,#checkoutlayout table.merch{font-size:11px;}#shopbaglayout table.merch span.note,#checkoutlayout table.merch span.note{font-family:'HelveticaLTStdRoman';color:#808080;width:400px;float:left;}
 #shopbaglayout .merch,#checkoutlayout .merch{margin-top:-16px;}
