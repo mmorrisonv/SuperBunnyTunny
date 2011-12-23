@@ -48,7 +48,7 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 	font-size:16px;
 	margin:-10px 0 4px;//pull up a bit more than traditional content
 	padding:2px;
-	border-bottom:dotted 2px @baseColor;
+	.bbunnyborder();
 	span{
 		.Bondoni
 	}
@@ -106,6 +106,7 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 	}
 
 	h5{
+		.fs(11px);
 		color:@baseColor;
 		&.subheading{color:@grayDark;}
 	}
@@ -136,6 +137,7 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 			margin-top:5px;
 			.HBold;
 			display:block;
+			text-align:center;
 		}
 		margin-bottom:10px;
 
@@ -149,7 +151,7 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 		margin-top:20px;
 		.floatedtitle{
 			position:relative;
-			top:-26px;
+			top:-26px;left:25px;
 		}
 	}
 
@@ -159,16 +161,33 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 			color:@baseColor;
 			text-transform:uppercase;
 			.HBold;
-			border:1px solid @lightBaseColor;
+			.fs(11px);
+			//border:1px solid @lightBaseColor;
 		}
 		.rightborder{
 			
 		}
+		&.dotted{
+			td{
+				.bbunnyborderTop(grayLight);
+				&.top{.bbunnyborderTop(none);}
+				&.first{
+					.bbunnyborderTop(none);
+				}
+				&.leftpink{
+					.bbunnyborderTop(none);
+				}
+			}
+		}
 		&.custServTable{
+			.fs(13px);			
 			border:1px solid #DDD;
 			td{
-				border-top:dotted 2px #DDD;
-				&.top{border-top:none;}
+				.bbunnyborderTop(grayLight);
+				&.top{.bbunnyborderTop(none);}
+				/*&.leftpink{
+					.bbunnyborderTop(none);
+				}*/
 			}
 		}
 		ul{margin:0; padding-left:10px;
@@ -197,6 +216,10 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 	}
 	p{
 		.fs(14px); //why so large?
+		&.error{
+			.Helv;
+			.fs(9px);
+		}
 	}
 	.floatedtitle{
 		z-index: 2;
@@ -245,28 +268,41 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 
 	.address{
 		float:left;
-		width:240px;
+		width:240px; height:140px;
 		padding: 12px;
-		border-right:solid 1px @bbunnyBlack;
-
+		padding-top:0;
+		border-right:solid 1px #E6E7E8;
+		position: relative;
+		h5{
+			line-height:16px;
+			margin-bottom:16px;
+		}
 		p{
 			.fs(11px);
+			line-height:11px;
 		}
 		&.last{
 			border:0;
 		}
 		h6{
+			position: absolute;
+			bottom:0;left:12px;
 			color:@baseColor;
 		 	text-decoration:underline;
-		 	.fs(12px);
+		 	.fs(9px);
 		}
 	}
 	.item{
-		.fs(11px);
+		.fs(10px);
 		margin-left:0;
 		padding-top:10px;
 		.prodImage{
 			margin-left:2px;
+		}
+		&.dotted{
+			//border-bottom: dotted 2px #bfbfbf;
+			margin-bottom:10px;
+			.bbunnyborder(gray);
 		}
 		.desc{
 			position: relative;
@@ -275,7 +311,7 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 				.fs(11px);
 				//line-spacing(11px);
 				line-height:11px;
-				margin:0;
+			
 			}
 			h3{
 				.fs(12px);
@@ -288,8 +324,10 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 			.bottom{
 				position: absolute;
 				bottom:0; left:0;
+				p{margin-bottom:0;}
 				h5{margin:0;line-height:16px;}
 				h6{/*instock*/ 
+					.fs(9px);
 					color:@baseColor;
 					//line-height:14px;
 				}
@@ -327,6 +365,7 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 	table{
 		.HBold;
 		.fs(12.5px);
+		margin-bottom:6px;
 		thead{
 			//.fs(13px);
 			color:@baseColor;
@@ -349,25 +388,31 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 	}
 
 	table.shipopts{ //specifically to style shipping options table
-		border-top:2px dotted @gray;
-		
+		.bbunnyborderTop(gray);
+		tr{
+			.bbunnyborder(gray);
+			/*&:first-child{
+				.bbunnyborderTop(gray);
+			}*/
+		}
 		td{
-			border-bottom:2px dotted @gray;
-			padding-top:20px;padding-bottom:10px;
+			//border-bottom:2px dotted @gray;
+
+			padding-top:20px;//padding-bottom:10px;
 			.tddiv{
 				position: relative;
 				padding-left:27px;
 			}
 		}
 		li{
-			.fs(12px);
+			.fs(13px);
 			.Helv;
 		}
 		.leftpink{
 			color:@baseColor;
 			.HBold;
 			text-transform:uppercase;
-			.fs(13px);
+			.fs(11px);
 			
 			label{
 				color:@baseColor;
@@ -390,6 +435,7 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 	}
 	table.merch{
 		.fs(11px);
+		margin-bottom:6px;
 		span.note{
 			.Helv;
 			color:@gray;
@@ -398,10 +444,10 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 
 		}
 	}
-	.merch{margin-top:-16px;}
+	.merch{margin-top:-18px;margin-bottom:6px;}
 	.headeritem{
 		color:@baseColor;
-		.fs(10px);
+		.fs(9px);
 		.HBold;
 		text-transform:uppercase;
 		margin-bottom:1px;
@@ -411,7 +457,9 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 	.promocode{
 		h5{
 			position: relative;
-			top:4px;
+			top:2px;
+			.fs(12px);
+			margin-right:4px;
 		}
 		input{
 			padding:3px;
@@ -466,6 +514,7 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 #checkout-paymentform{
 	h4{
 		.fs(14px);
+		line-height:16px;
 	}
 	h5{
 		
@@ -477,16 +526,24 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 			
 		}
 	}
-	.bal{//balance checker font
+	.checkoutheadings{
+		.fs(10px);
+	}
+	.bal{
+		//balance checker font
 		text-decoration:underline;
 		.HLight;
-		.fs(10px);
+		.fs(9px);
+	}
+	label{
+		float:inherit;
+		line-height:22px;
 	}
 	}
 	label{
 		text-align:left;
-
-	.ui-selectmenu{height:20px;}
+		.ui-selectmenu{height:20px;
+	}
 }
 
 //ERROR PAGE
@@ -577,7 +634,9 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 		&:first-child{
 			margin-left:0;
 		}
-	  .pink{line-height:14px; color:@baseColor;}
+	  .pink{line-height:14px; color:@baseColor;
+		  .fs(11px);
+		}
 	  p{
 	  	.fs(12px);
 	  }
@@ -808,6 +867,7 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 				.HBold; 
 				padding:1px 6px;
 				display:block;
+				.fs(10px);
 				&:hover,&.current{
 					text-decoration:none;
 					cursor:pointer;

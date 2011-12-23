@@ -23,20 +23,27 @@
 	
 	h5{
 		color:@baseColor;
-		.fs(12px);
+		.fs(11px);
 		line-height:20px;
 	}
 	.row{margin:10px 0 0 10px;}
+	.modal-content{
+		border-width:3px;
+		border-color:#E6E7E8;
+	}
+	.modal-body{
+		padding-top:0;
+	}
 
 }
 
 #modal-tycontact{
 	width:450px;
 	padding:4px;
-	.modal-content{border-width:2px;}
+	.modal-content{border-width:3px;border-color:#E6E7E8;}
 	.modal-body{
 		text-align:center;
-		padding:15px 0 15px 0;
+		padding:15px 0 5px 0;
 	}
 	.floatedtitle{
 		position:relative;top:-29px;
@@ -47,10 +54,14 @@
 
 	width:470px;
 	padding:12px;
+	.close{
+		top:14px;
+		right:11px;
+	}
 	.floatedtitle{ 
 		position: absolute;
 		top:0px;
-		left:40px;
+		left:60px;
 	}
 	.modal-body{
 		padding-top:40px;
@@ -58,6 +69,7 @@
 	}
 	.modal-content{
 		border-width:3px;
+		border-color:#E6E7E8;
 	}
 	h5{
 		.fs(11px);

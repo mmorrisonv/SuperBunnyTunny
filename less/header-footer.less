@@ -17,7 +17,8 @@ header {
   overflow: visible;
 
   > .container{
-    border-bottom: dotted 2px @baseColor;  
+    //border-bottom: dotted 2px @baseColor;  
+    .bbunnyborder();
   }
   
 
@@ -172,7 +173,7 @@ header {
   ul .active > a {
     background-color: #333;
     background-color: rgba(255,255,255,.05);
-    color: @white;
+    color: #231F20;
     text-decoration: none;
   }
 
@@ -236,7 +237,8 @@ footer {
   {
  
     padding-bottom: 4px;
-    border-bottom: dotted 2px @baseColor;
+    //border-bottom: dotted 2px @baseColor;
+    .bbunnyborder();
   }
   .ftrFB{margin-right:3px; margin-left:3px;}
   .ftrYouTube{margin-right:3px; margin-left:3px;}
@@ -345,7 +347,7 @@ footer {
       line-height: 19px;
       text-decoration: none;
       cursor:pointer;
-      //text-align:center;
+      text-align:center;
       &:hover {
         background-color:@lightBaseColor;
         text-decoration: none;

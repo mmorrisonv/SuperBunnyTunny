@@ -33,6 +33,17 @@
   .size(@size, @size);
 }
 
+.bbunnyborder(@color:baseColor){
+    background-image: url('/assets/images/css/border@{color}.jpg');
+    background-position: 0% 100%;
+    background-repeat: repeat-x;
+}
+.bbunnyborderTop(@color:baseColor){
+    background-image: url('/assets/images/css/border@{color}.png');
+    background-position: 0% 0%;
+    background-repeat: repeat-x;
+}
+
 //fontsizes
 .fs(@fontsize: 12px){
   font-size:@fontsize;
