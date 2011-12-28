@@ -5,3 +5,5 @@ html-template/
 bin-release/
 .actionScriptProperties
 .flexProperties
+.DS_Store
+
