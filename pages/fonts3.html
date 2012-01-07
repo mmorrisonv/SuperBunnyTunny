@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta charset="utf-8" /><title>
+  BBunny Build
+</title><meta name="description" /><meta name="author" />
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Le styles -->
+    <link href="/assets/css/bootstrap.css" rel="stylesheet" type="text/css" /><link href="/assets/css/bbunny.css" rel="stylesheet" type="text/css" />
+    <!--<script src="/assets/js/less-1.1.5.min.js" type="text/javascript"></script>-->
+    <script src="/assets/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="/assets/js/plugin.js" type="text/javascript"></script>
+    <script src="/assets/js/bbunny.js" type="text/javascript"></script>
+
+    <script src="/assets/js/lib/cufon-yui.js" type="text/javascript"></script>
+    <script src="/assets/fonts/Helvetica_Neue_200.font.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      //Cufon.replace('.cufon');
+      Cufon('.cufonHUltra',{
+        letterSpacing:'3px',
+        fontFamily:"Helvetica Neue Ultra Light"
+      });
+      Cufon('.cufonHLight',{
+        letterSpacing:'4px',
+        fontFamily:"Helvetica Neue Light"
+      });
+      Cufon('.cufonHelv',{
+        letterSpacing:'3px',
+        fontFamily:"Helvetica LT Std"
+      }
+      )
+
+      $(document).ready(function(){
+        var OSName="Unknown OS";
+        if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows PC";
+        if (navigator.appVersion.indexOf("Mac")!=-1) OSName="Macintosh";
+        if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX PC";
+        if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux PC";
+
+        //alert('Your operating system:' + OSName);
+
+        if(OSName == 'Macintosh')
+        {
+          $('.jDebug').text(" " +OSName + ' ( Helvetica Neue Ultra Light | size 27px | letter-spacing 2px )');
+          $('.jheading').addClass('HUltra');
+        }
+        else
+        {
+          $('.jDebug').text('  ' +OSName + ' ( Helvetica Light | size 25px | letter-spacing 2px )');
+      
+        }        
+      });
+    </script>    
+</head>
+
+<body>
+<header>
+                  <div class="container">
+                  <div class="row sansmargin">
+                    <div class="span7">
+                      <a href="/"><img src="/assets/images/bbunnylogo.png"></a>
+                    </div>
+                    <div id="account"> 
+                        <div class="row">
+                            <span><a href="#">Sign in</a></span>
+                            <span class="shopcart">
+                              <a href="#">Shopping Cart (0)</a>
+                              <div class="shopcart-menu">
+                                  <h5>items</h5>
+                                  <div class="row">
+                                    <a href="#"><img src="/assets/demo-images/feature-6up1-92x120.jpg"></a>
+                                    <a href="#"><img src="/assets/demo-images/feature-6up2-92x120.jpg"></a>
+                                    <a href="#"><img src="/assets/demo-images/feature-6up3-92x120.jpg"></a>
+                                    <a href="#"><img src="/assets/demo-images/feature-6up4-92x120.jpg"></a>
+                                  </div>
+                                  <div class="cart-link">
+                                    <h5>View Cart</h5>
+                                    <a class="bbunnybox btn"> GO TO CHECKOUT </a>
+                                  </div>
+                              </div>
+                            </span>
+                        </div>
+                        <div class="row">
+                          <span><a href="#">My account</a> </span>
+                        </div>
+                    </div>
+                    <div id="search" class="">
+                            <form class="inline"> 
+                              <input class="span3" id="searchfield" name="email" maxlength="20" size="20" type="text" value="SEARCH"> 
+                              <img class="searchbtn" src="/assets/images/css/icon-search.png"> 
+                            </form>
+                    </div>
+                    <ul class="widthFull nav jsuniform">&nbsp;
+                    </ul>
+                  </div>
+                  </div>
+                </header>
+
+<div class="container span20">
+  <div class="content">
+    <div id="checkoutlayout">
+
+            <div class="span20 checkoutbtns row  " style="margin-left:0;">
+              <a class="bbunnybox btn sansmargin">SHOPPING BAG </a> 
+              <a class="bbunnybox btn ">BILLING &amp; SHIPPING </a> 
+              <a class="bbunnybox btn ">SHIPPING METHOD </a> 
+              <a class="bbunnybox btn current ">REVIEW / PAYMENT </a>
+              <a class="bbunnybox btn locked">CONFIRMATION </a>
+            </div>
+
+      <h1 class="pink jheading" style="margin-bottom:10px; letter-spacing:2px; font-size:27px;">REVIEW &#47; PAYMENT</h1>
+
+
+
+      <div class="row" style="margin-bottom:20px;" >
+      <div class="address">
+          <h5 class="baseColor">BILLING ADDRESS</h5>
+          <p>STANDARD DELIVERY
+          LORIE LAVENDAR<br/>
+          17742 COWAN ST<br/>
+          IRVINE CA 92626<br/>
+          US<br/>
+          (949)336-6300<br/>
+          LORIEL@BEACHBUNNYSWIMWEAR.COM</p>
+          <h6>edit</h6>
+      </div>
+      <div class="address">
+          <h5 class="baseColor">SHIPPING ADDRESS</h5>
+          <p>LORIE LAVENDAR<br/>
+          17742 COWAN ST<br/>
+          IRVINE CA 92626<br/>
+          US<br/>
+          (949)336-6300<br/>
+          LORIEL@BEACHBUNNYSWIMWEAR.COM</p>
+          <h6>edit</h6>
+      </div>
+      <div class="address last">
+          <h5 class="baseColor">SHIPPING METHOD</h5>
+          <p>STANDARD DELIVERY</p>
+          <h6>edit</h6>
+      </div>
+      </div>
+
+
+
+      <div class="row">
+        <h4 class="baseColor span20">MERCHANDISE SUMMARY</h4>
+      </div>
+
+
+      <div id="itemsheader" class="row sansmargin" style="background-color:#FBD7E7;">
+          <div class="span8 headeritem">item description/color</div>
+          <div class="span2 headeritem txtcntr">size</div>
+          <div class="span2 headeritem txtcntr">qty</div>
+          <div class="span2 headeritem">price</div>
+          <div class="span3 offset2 headeritem">total</div>
+      </div>
+
+
+
+      <div id="itemscontainer" style="padding:10px 0 10px 0;margin-left:0;">
+
+
+            <div class="row span20 item dotted" >
+
+              <div class="span8 desc " style="height:100px;">
+                <h5>HIPS DONT LIE</h5>
+                <h5>White tri top</h5>
+
+                <div class="bottom" style="position:inherit;">
+                    <h5>WHITE</h5>
+                    <p>SKU CR1272T1</p>
+                    <h6>IN-STOCK</h6>
+                </div>
+              </div>
+              <div class="span2 txtcntr"><b>SMALL</b></div>
+              <div class="span2 txtcntr">1</div>
+              <div class="span2 ">
+                <b>$130.00</b>
+
+              </div>
+              <div class="span3 offset2"><b>$130.00</b></div>
+            </div>
+      
+
+
+
+
+      
+
+
+
+
+
+      </div>
+
+      <!-- end div itemscontainer -->
+
+      
+
+
+
+
+    <div id="checkout-paymentform" style="margin-top:10px;">
+
+
+
+
+
+
+ 
+
+              <div class="row sansmargin" style="border-top: solid 1px #bfbfbf; padding-top:5px;" >You are using a:<span class="jDebug"></span></div>
+    
+
+
+
+      </div>
+      </div>
+      
+      </div>
+    </div>
+  </div>     
+       
+  </body>
+</html>

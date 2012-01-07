@@ -58,7 +58,7 @@ BBUNNY  = { //namespace
         
         }   
     },
-	jBBcampaign: {
+	jBBcampaign: { // campaign page
 	    init: function(){
 	        // we do not want to show the scrollable functionality, hide all the things
 	        $('.next,.prev').hide();
@@ -74,7 +74,7 @@ BBUNNY  = { //namespace
 	            setupScrollable();
 	            
 	            //show nav
-	            $('#herolayout').animate({'height':650},300);
+	            $('#herolayout').animate({'height':630},300);
 	            $('#campaignNav').show();
 	            //console.log('scrollable setup');
 	        $('.next,.prev').fadeIn();
@@ -83,7 +83,7 @@ BBUNNY  = { //namespace
 	},
 	jBBproduct:{
 	    init: function(){
-	        BBUNNY.jBBproduct.setupCrossSellRollovers();
+	        this.setupCrossSellRollovers();
 	        setupAltViewRollover();
 	        setupProductPage();
 	    },
@@ -92,6 +92,34 @@ BBUNNY  = { //namespace
 	            function(){},
 	            function(){}
 	        );
+	    }
+	},
+	jBBcontact:{
+  
+	    init : function(){
+
+	        
+	        $('#msg').keyup(this.onMsgChange);
+	      
+	    },
+	    onMsgChange:function(){
+
+	        BBUNNY.jBBcontact.keysPressed ++;
+	    	
+	    	var totalChars = $('#msg').siblings('.lettercount').find('.total').text(),
+	            remainingDOM = $('#msg').siblings('.lettercount').find('.remaining'),
+	            charLength = $(this).val().length,
+	            charsLeft = totalChars - charLength;
+	            
+	        //console.log(charsLeft);
+	        if( charsLeft >= 0 )
+	            $(remainingDOM).text(charsLeft);
+	        else
+	        {
+	            $(remainingDOM).text((charsLeft > 0)?charsLeft: 0);
+	            //event.preventDefault();
+	            return;
+	        }
 	    }
 	}
 };

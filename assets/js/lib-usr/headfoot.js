@@ -31,15 +31,40 @@ function setupResettableInputs(inputs){
 
 }
 
+//function setupShoppingBag(){
+//	$('.shopcart').hover(
+//		function(){
+//			$(this).children('.shopcart-menu').show();
+//			},
+//		function(){
+//			$(this).children('.shopcart-menu').hide();
+//		}
+//		);
+//}
+
 function setupShoppingBag(){
 	$('.shopcart').hover(
-		function(){
-			$(this).children('.shopcart-menu').show();
-			},
-		function(){
-			$(this).children('.shopcart-menu').hide();
-		}
-		);
+		function(){ ShowBag(); },
+		function(){	$(this).children('.shopcart-menu').hide();
+	});
+
+//  $.ajax({
+//    
+//        type:'POST',
+//        dataType:'json',
+//        url:'/ajx/cart.aspx?action=retrieve',  
+//        success: function(data){
+//            jsonQuestionResponse = data;            
+//            var jsonResponse = jsonQuestionResponse.status;
+//            var cartCount = jsonQuestionResponse.cartcount;
+//            $('#cartCountTotal').text('Shopping Cart ('+cartCount+')');
+//          }
+//    });
+}
+
+function ShowBag()
+{
+	$('.shopcart').children('.shopcart-menu').load('ajx/cartdrop.aspx').show();
 }
 
 function setupHeaderDropdowns(){

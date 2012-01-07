@@ -20,10 +20,46 @@ $(document).ready(function(){
 	});
 	
 	//setup modal for zoom on product detail page
-	$('.jemailbtn').click(function(){
+	$('img.jemailbtn').click(function(){
+	    var oid = $(this).attr('oid');
 		$('#modal-email').modal('show');
-		$('.jModalSendEmailBtn').click(function(){sendEmail();});
+		
+		$('.jModalSendEmailBtn').click(function()
+		{
+		    sendEmail(oid);
+		    $('.jModalSendEmailBtn').unbind('click');
+		});
+		
+		$('.jModalCancelEmailBtn').click(function()
+		{  
+		    $('#modal-email').modal('hide');
+		});
 	});
+	
+	$('a.jContactUsbtn').click(function(){
+        $.ajax({
+        type:'POST',
+        dataType:'json',
+        url:'/ajx/sendemail.aspx?action=contactus',   
+        data:$("form").serialize(),
+            
+        success: function(data){
+            $('span[id$="_err"]').empty();               
+            if(data.status == 'error'){
+                $('#dvOops').show();
+                $.each(data.errors, function(i,val){
+                    $('#'+val.field+'_err').html(val.msg);
+                    if (val.field=="system") alert(val.msg);
+                });
+            } else {
+                $('#dvOops').hide();
+                $('#modal-tycontact').modal('show');
+            }
+          }
+        });
+	});
+	
+	
 	//setup modal for jwishlistbtn
 	$('.jwishlistbtn').click(function(){
 		$('#modal-wlistconfirm').modal('show');
@@ -50,49 +86,32 @@ $(window).load(function(){
 
 });
 
-function sendEmail(){
+function sendEmail(oid){
 	//Send Message
-    
+    var jsonQuestionResponse = null;         
 
-        
-        var jsonQuestionResponse = null;
-          
-         
-        
-        //our ajax call - qajx = questionajax
-        var qajx = $.ajax({
-            url:'/ajx/sendemail.aspx',  
-            type:'POST',
-            dataType:'json',
-            data:{ name:$('.question_name').val() , email:$('.question_email').val(), subject:$('.question_subject').val() , message:$('.question_message').val()}
-        })
-        .success(function(data){
-
-            jsonQuestionResponse = data;            
-            var jsonResponse = jsonQuestionResponse.PRODUCT_QUESTION_INFO;
-            var msgStatus; 
-            if(jsonResponse.SUCCESS != 'YES'){                      
-                $.each( data.PRODUCT_QUESTION_INFO.ERRORS , function(i,val){
-                    msgStatus = val; 
-                });
-            }
-            else// success
-                msgStatus = 'Thank You. Your message has been sent. We will get back to you shortly. If you would like to speak to customer service directly please call 1.866.654.4577'
- 
-            $('p.formresponse',responseTab).text(msgStatus);    //todo: should we just create a p element instead
-        })
-        .error(function(data){
-
-      
-            jsonQuestionResponse = data;
-            $('p.formresponse',responseTab).text('An error has occoured, please try again.');    //todo: should we just create a p element instead
+    $.ajax({
+        type:'POST',
+        dataType:'json',
+        url:'/ajx/sendemail.aspx?action=send&oid='+oid,   
+        data:{emailname:$('#email-name').val(),emailaddresses:$('#email-to-addresses').val()
+            ,emailnotes:$('#email-notes').val(),emailcopy:$('#email-copy').attr('checked')},
             
-        })
-        .complete(  function(){
-
-	    
+        success: function(data){
+            jsonQuestionResponse = data;            
+            var jsonResponse = jsonQuestionResponse.info;
+            var msgStatus; 
+          }
+    });
+}          
+            
+//            if(jsonResponse.status == 'error'){                      
+//                $.each( data.PRODUCT_QUESTION_INFO.ERRORS , function(i,val){
+//                    msgStatus = val; 
+//                });
+//            }
+//            else// success
+//                msgStatus = 'Thank You. Your message has been sent. We will get back to you shortly. If you would like to speak to customer service directly please call 1.866.654.4577';
+ 
         
-        });
-        
 
-}
