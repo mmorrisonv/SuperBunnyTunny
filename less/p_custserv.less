@@ -1,0 +1,250 @@
+/*p_custserv.less site specific styles for customer service pages*/
+
+//CUSTOMER SERVICE PAGE
+#custservlayout{
+	position:relative;
+
+	.banner{margin-bottom:10px;}
+
+	h1{
+		.HUltra;
+		.fs(27px);
+		.ls(2px);
+		color:@baseColor;
+		&.grayDark{
+			color:@grayDark;
+		}
+	}
+
+	h2{
+		color:@baseColor;
+		border-bottom:solid 4px @lightBaseColor;
+		&.subheading{
+			.fs(18px);
+			line-height:20px;
+			margin:16px 0 8px 0;
+			.Helv;
+		}
+
+		span{ //like a sub heading inside the h2
+			.fs(13px);
+			.HBold;
+			font-style:italic;
+		}
+	}
+
+	h5{
+		.fs(11px);
+		color:@baseColor;
+		&.subheading{color:@grayDark;}
+	}
+
+	h6{
+		color:@grayDark;
+		.Helv;
+		.fs(12px);
+		line-height:12px;
+		margin-bottom:6px;
+	}
+
+	p{
+		.fs(13px);
+		.Helv;
+	}
+
+	.highlight{ text-transform:uppercase; color:@baseColor; .HBold; .fs(14px);}
+
+	.txtbanner{
+		background-color:@lightBaseColor;
+		color:@baseColor;
+		width:100%;
+		.fs(12px);
+		.ls(1px);
+		span{
+			padding:6px;
+			margin-top:5px;
+			.HBold;
+			display:block;
+			text-align:center;
+		}
+		margin-bottom:10px;
+
+
+	}
+	.span20 > .txtbanner{ width:785px; }
+
+	.contentbox{
+		border:solid 3px #E6E7E8;
+		padding:10px;
+		margin-top:20px;
+		.floatedtitle{
+			position:relative;
+			top:-26px;left:25px;
+		}
+	}
+
+	.error{
+			color:red;
+		
+		h2{
+			color:red;
+			.Bondoni;
+			.fs(38px);
+			border-bottom:none;
+		}
+		p{	
+			.fs(9px);
+			text-transform:uppercase;
+		}
+	}
+
+	.headeritem{
+		color:@baseColor;
+		.fs(9px);
+		.HBold;
+		text-transform:uppercase;
+		margin-bottom:1px;
+
+	}
+
+	table{
+		.leftpink{
+			background-color:@lightBaseColor;
+			color:@baseColor;
+			text-transform:uppercase;
+			.HBold;
+			.fs(11px);
+			width:120px;
+			//border:1px solid @lightBaseColor;
+		}
+		.rightborder{
+			
+		}
+		&.dotted{
+			td{
+
+				.bbunnyborderTop(grayLight);
+				&.top{.bbunnyborderTop(none);}
+				&.first{
+					.bbunnyborderTop(none);
+				}
+				&.leftpink{
+					.bbunnyborderTop(none);
+				}
+			}
+		}
+		&.custServTable{
+			.fs(13px);			
+			border:1px solid #DDD;
+			td{
+				border-left:1px solid #DDD;
+				.bbunnyborderTop(grayLight);
+				&.top{.bbunnyborderTop(none);}
+				&.leftpink{
+					.bbunnyborderTop(none);
+				}
+			}
+		}
+		ul{margin:0; padding-left:10px;
+			li{
+				//padding-left:25px;
+				margin-left:20px;
+			}
+		}
+	}
+
+	li{
+		//margin-left:20px;
+	}
+
+	
+	// Store Page
+	.store{
+		width:255px;
+		margin:-2px 7px 10px 0px;
+		float:left;
+		display:inline;
+		position: relative;
+		cursor:pointer;
+		border:solid 1px @grayLight;
+		overflow:hidden;
+			img{	}
+
+			h2{
+				width:100%;
+				position: absolute;
+				bottom:60px; left:10px;
+				float:left;
+				text-transform:uppercase;
+				letter-spacing: 2px;
+				font-size:18px;
+				line-height:20px;
+				&.white{color:white;}
+				&.pink{color:@baseColor;}
+			}
+			h4{
+				position: absolute;
+				margin-top:3px;
+				bottom:40px; left:10px;
+				float:left;
+				width:100%;
+				.fs(14px);
+				line-height:20px;
+				.Bondoni;
+				&.white{color:white;}
+				&.pink{color:@baseColor;}
+			}
+
+			td{padding:2px;}
+
+	}
+
+
+	//Wishlist
+	#wishlistcontainer{
+		.item{
+			.fs(10px);
+			margin-left:0;
+			padding-top:10px;
+			.prodImage{
+				margin-left:2px;
+			}
+			&.dotted{
+				//border-bottom: dotted 2px #bfbfbf;
+				margin-bottom:10px;
+				.bbunnyborder(gray);
+			}
+			.desc{
+				position: relative;
+				height:160px;
+				p{
+					.fs(11px);
+					//line-spacing(11px);
+					line-height:11px;
+				
+				}
+				h3{
+					.fs(12px);
+					line-height:14px;
+				}
+				h5{//used instead of h3 for cart overview
+					line-height:14px;
+					.fs(11px);
+				}
+				.bottom{
+					position: absolute;
+					bottom:0; left:550px;
+					width:200px;
+					p{margin-bottom:0;}
+					h5{margin:0;line-height:16px;}
+					h6{/*instock*/ 
+						.fs(9px);
+						color:@baseColor;
+						//line-height:14px;
+					}
+				}
+			}
+		}
+	}
+		
+}
