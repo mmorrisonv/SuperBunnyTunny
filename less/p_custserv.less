@@ -19,6 +19,7 @@
 	h2{
 		color:@baseColor;
 		border-bottom:solid 4px @lightBaseColor;
+
 		&.subheading{
 			.fs(18px);
 			line-height:20px;
@@ -30,6 +31,11 @@
 			.fs(13px);
 			.HBold;
 			font-style:italic;
+			&.small{
+				font-style:normal;
+				color:@grayDark;
+				padding-left:10px;
+			}
 		}
 	}
 
@@ -50,6 +56,20 @@
 	p{
 		.fs(13px);
 		.Helv;
+		&.fsize0{.fs(10px);}
+		&.fsize1{.fs(11px);}
+		&.fsize2{.fs(12px);}
+	}
+
+	.textlink{
+		text-decoration:underline;
+		color:@grayDark;
+		.fsize1;
+		cursor:pointer;
+		&.dotted{
+			text-decoration:none;
+			.bbunnyborder(grayLight);
+		}
 	}
 
 	.highlight{ text-transform:uppercase; color:@baseColor; .HBold; .fs(14px);}
@@ -81,6 +101,10 @@
 			position:relative;
 			top:-26px;left:25px;
 		}
+	}
+
+	.pageInstructions{
+		.fsize2;
 	}
 
 	.error{
@@ -145,40 +169,105 @@
 				}
 			}
 		}
+		&.accountTable{
+			address{line-height:14px;}
+			.num{
+				width:10px;
+			}
+			.card,.address,.status{
+				width:140px;
+			}
+			p{.fsize1;}
+			label
+			{
+				width:auto;
+				padding-top:3px;
+			}
+		}
 		ul{margin:0; padding-left:10px;
 			li{
 				//padding-left:25px;
 				margin-left:20px;
 			}
 		}
+
 	}
 
 	li{
 		//margin-left:20px;
 	}
 
+	//Options for diffrent Address
+	.address-option{
+		label{ padding-top:3px;}
+		.fsize0;
+		address{
+			padding-left:20px;
+		}
+	}
+
+
+
+	// Credit Card Entry
+	.ccardentry{
+		label{width:auto; padding-top:3px;}
+		.row{margin-top:2px;}
+
+	}
 	
+	//Locator Page
+	.StoreGrid{
+		.location{
+			margin-top:40px;
+			.fsize0;
+			float:left;
+			width:260px;
+			h6
+			{
+				color:black;
+				margin-bottom:2px;
+				.HBold;
+			}
+			address{
+				.lh(12px);
+				color:gray;
+				.HBold;
+			}
+		}
+	}
+
 	// Store Page
 	.store{
-		width:255px;
+		width:254px;
 		margin:-2px 7px 10px 0px;
 		float:left;
 		display:inline;
 		position: relative;
-		cursor:pointer;
-		border:solid 1px @grayLight;
+		height:380px;
+		.fsize0;
 		overflow:hidden;
-			img{	}
+		color:gray;
+		background:transparent url('/assets/images/css/background-storepolaroid.jpg') no-repeat left top ;
+			img{	
+				cursor:pointer;
+				position: relative; top:10px; left:12px;
+			}
+			.info{
+				position: absolute; bottom:20px; left:15px;
+			}
+			p{.fsize0;}
 
 			h2{
 				width:100%;
 				position: absolute;
-				bottom:60px; left:10px;
+				top:155px; left:20px;
 				float:left;
 				text-transform:uppercase;
 				letter-spacing: 2px;
-				font-size:18px;
+				font-size:13px;
 				line-height:20px;
+				.HUltra;
+				border-bottom:0;
 				&.white{color:white;}
 				&.pink{color:@baseColor;}
 			}
@@ -194,8 +283,11 @@
 				&.white{color:white;}
 				&.pink{color:@baseColor;}
 			}
-
-			td{padding:2px;}
+			address{
+				text-transform:uppercase;
+				margin-bottom:8px;
+			}
+			td{padding:2px; line-height:10px;}
 
 	}
 
@@ -206,13 +298,14 @@
 			.fs(10px);
 			margin-left:0;
 			padding-top:10px;
+			//.bbunnyborder(gray)
 			.prodImage{
 				margin-left:2px;
 			}
 			&.dotted{
 				//border-bottom: dotted 2px #bfbfbf;
 				margin-bottom:10px;
-				.bbunnyborder(gray);
+				.bbunnyborder(grayLight);
 			}
 			.desc{
 				position: relative;
@@ -233,8 +326,11 @@
 				}
 				.bottom{
 					position: absolute;
-					bottom:0; left:550px;
-					width:200px;
+					bottom:0; left:560px;
+					width:110px;
+					.btn{
+						margin-bottom:16px;
+					}
 					p{margin-bottom:0;}
 					h5{margin:0;line-height:16px;}
 					h6{/*instock*/ 
@@ -242,6 +338,14 @@
 						color:@baseColor;
 						//line-height:14px;
 					}
+				}
+			}
+			.desc-price{
+				position: relative;
+				.bottom{
+					position: absolute;
+					top:100px;
+					left:0;
 				}
 			}
 		}

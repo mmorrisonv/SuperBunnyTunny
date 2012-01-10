@@ -114,25 +114,30 @@
     
 
 
+                <div class="row">
+
+                      <a class="textlink dotted pull-right jRemoveAll">Remove All <span class="redtxt">Sold Out</span> Items</a>
+                    
+                </div>
 
               
                 <div class="row" id="itemsheader">
-                    <div class="span9 headeritem">description</div>
+                    <div class="span11 headeritem">description</div>
                     <div class="span2 headeritem txtcntr">color</div>
                     <div class="span2 headeritem">price</div>
                     <div class="span1 headeritem txtcntr">qty</div>
-                    <div class="span2 offset3 headeritem">availability</div>
+                    <div class="span2 offset1 headeritem">availability</div>
                 </div>
 
 
                 <div id="wishlistcontainer" style="border-top: solid 1px #bfbfbf;border-bottom: solid 1px #bfbfbf;margin-left:0;">
+                      
 
-
-                      <div class="row span20 item" style="border-bottom: solid 1px #bfbfbf;">
+                      <div class="row span20 item dotted" >
                         <div class="span3 prodImage" >
                               <img src="/assets/demo-images/feature-6up1-92x120.jpg">
                         </div>
-                        <div class="span6 desc">
+                        <div class="span8 desc">
                           <h3>HIPS DONT LIE</h3>
                           <h3>White tri top</h3>
                           <p style="margin-top:10px;">sliding triangle top with moroccan coin details of center front. tiles have good square cord eneds. ties at the neck and back</p>
@@ -156,14 +161,14 @@
                           </div>
                         </div>  
                         <div class="span1 txtcntr"><input type="text" class=" white txtcntr" style="width:20px;" value="1"/></div>
-                        <div class="span2 offset3"><b>IN-STOCK</b></div>
+                        <div class="span2 offset1"><b>IN-STOCK</b></div>
                       </div>
                 
                       <div class="row span20 item" >
                         <div class="span3 prodImage" >
                               <img src="/assets/demo-images/feature-6up1-92x120.jpg">
                         </div>
-                        <div class="span6 desc">
+                        <div class="span8 desc">
                           <h3>HIPS DONT LIE</h3>
                           <h3>White tri top</h3>
                           <p style="margin-top:10px;">sliding triangle top with moroccan coin details of center front. tiles have good square cord eneds. ties at the neck and back</p>
@@ -187,16 +192,26 @@
                           </div>
                         </div>  
                         <div class="span1 txtcntr"><input type="text" class=" white txtcntr" style="width:20px;" value="1"/></div>
-                        <div class="span2 offset3"><b>IN-STOCK</b></div>
+                        <div class="span2 offset1"><b>IN-STOCK</b></div>
                       </div>
 
 
 
                 </div>
 
-                <!-- end div itemscontainer -->
+                <!-- end div wishlistcontainer -->
 
-            </div>
+                <div class="span20">
+                          <span class="icon-triangle pink">&nbsp;</span>
+                          <p class="inline fsize1">Clear List</p>
+                          <br/>
+                          <span class="icon-triangle pink">&nbsp;</span>
+                          <p class="inline fsize1 jModalSendWishlist">Email My Wish List</p>
+
+                          <a class="bbunnybox btn jAddAll pull-right" style="margin-top:-10px;">ADD ALL TO CART </a>
+                </div>
+
+              </div>
 
 
 
@@ -205,6 +220,64 @@
       </div> 
     </div>
   </div>
+
+
+
+
+
+
+<div id="modal-sendwishlist" class="modal hide fade in" style="width: 330px; padding-top: 12px; padding-right: 12px; padding-bottom: 12px; padding-left: 12px; left: 0px; top: 0px; ">  
+      <a href="#" class="close" style="top:19px; right:12px;">×</a>
+      <div class="modal-content" style="margin-top:15px;">        
+
+              <div class="modal-body alignleft">
+                
+                <img src="/assets/images/css/title-emailmywishlist.jpg">
+                <div class="row">
+
+                    <div class="span8" style=" width:300px; margin-right:10px; ">
+                        <div class="row" style="margin-top:20px;">
+                              <div class="span2" ><h5>FROM:</h5></div>
+                              <div class="span5"><input class="spanFull white" type="text"></div>
+                        </div>
+                        <div class="row">
+                              <div class="span2" ><h5>TO:</h5></div>
+                              <div class="span5"><p>(Max. of 20 email addresses per invite.  Separate emails with a comma.)</p></div>
+                        </div>                        
+                        <div class="row">
+                              <div class="span2" ><h5 class="gray">Email</h5></div>
+                              <div class="span5"><textarea class="spanFull white" id="dunno" name="space" rows="5" size="50" type="text"></textarea></div>
+                        </div>
+                        <div class="row">
+                              <div class="span2" ><h5>NOTE:</h5></div>
+                              <!-- <div class="span5"><p>(Text field may contain up to 100 characters.)</p></div> -->
+                        </div>
+
+                        <div class="row">
+                              <div class="span2" ><h5 class="gray">(optional)</h5></div>
+                              <div class="span5"><textarea class="spanFull white" id="dunno" name="space" rows="5" size="50" type="text"></textarea></div>
+                        </div>
+                        <br/>
+                        <div class="row">
+                              <a href="#" class="btn bbunnybox white inline" style=" font-size:11px;">CANCEL</a>     
+                              <a href="#" class="btn bbunnybox-Light pull-right" style="margin-right:32px; font-size:11px;">SUBMIT</a>     
+                        </div>    
+
+                    </div>
+
+
+
+                </div>
+
+
+
+              </div>
+      </div>
+    </div>
+
+
+
+
 
 
 

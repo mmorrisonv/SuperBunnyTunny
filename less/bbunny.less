@@ -48,7 +48,7 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 	font-size:16px;
 	margin:-18px 0 4px;/*pull up a bit more than traditional content*/
 	padding:2px;
-	.bbunnyborder();
+	.bbunnyborder(pinklight);
 	span{
 		.Bondoni
 	}
@@ -425,7 +425,10 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 		.fs(12px);
 	}
 	p{
-		.fs(14px)
+		.fs(14px);
+		strong.pink{
+			color:@baseColor;
+		}
 	}
 	.returnlink{
 		width:300px; height:60px;
@@ -447,6 +450,7 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 		color:@grayDark;
 		a{color:@baseColor;}
 	}
+	/*specific page positioning*/
 	.confnum{
 		position: absolute;
 		top: 170px;
@@ -454,6 +458,14 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 		.fs(16px);
 		color:@baseColor;
 		.HBold;
+	}
+	.referfriend{
+		position: absolute;
+		top: 140px;
+		left: 240px;
+		.fs(16px);
+		width:300px;
+		.Helv;	
 	}
 
 }

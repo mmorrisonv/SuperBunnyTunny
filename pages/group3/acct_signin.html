@@ -20,6 +20,18 @@
     <script src="/assets/js/jquery-1.7.1.min.js" type="text/javascript"></script>
     <script src="/assets/js/plugin.js"              type="text/javascript"></script>
     <script src="/assets/js/bbunny.js" type="text/javascript"></script>
+
+
+    <script type="text/javascript">
+      $('.jforgotpass').click(function(e){
+        alert();
+        console.log($(this).parentUntil('.jrow1'));
+        e.preventDefault();
+      });
+
+      //transform page into forgot password form
+    </script>
+
   </head>
   <body>
 
@@ -71,7 +83,7 @@
                     </ul>
                   </div>
                   </div>
-                </header>
+</header>
 
 
 
@@ -117,7 +129,7 @@
 
 
           <form class="billingform">
-            <div class="row span20">
+            <div class="row span20 jrow1">
 
               <div class="span7" style="border-right:1px solid #E6E7E8;  margin-right:50px;">
                 <h3 class="baseColor HUltra" style="letter-spacing:1px;">MEMBERS SIGN IN</h3>
@@ -126,15 +138,17 @@
                   
                 </div>
 
+                <p class="pageInstructions hide">&nbsp;</p>
+
                 <div class="row">
-                  <div class="span5">
+                  <div class="span6">
                     <label>Email Address*</label><span class="fielderror"></span><br />
                     <input class="spanFull"
                            id="fn" name="fn" maxlength="50"size="30" type="text" />
                   </div>
                 </div>
                 <div class="row">
-                  <div class="span5" >
+                  <div class="span6" >
                     <label class="inline" style="width:70px;">Password*</label>
                     <span class="fielderror"></span><br />
                     <input class="spanFull" id="mi" name="mi" maxlength="2" type="text" />
@@ -145,8 +159,8 @@
 
                 <div class="row">
                   <div class="span5" >
-                      <img style="margin:20px 0px 0px 25px;" src="/assets/images/css/btn-signin.jpg"/><br/>
-                      <a class="textlink">Forgot Your Password</a>
+                      <img style="margin:20px 0px 0px 105px;" src="/assets/images/css/btn-signin.jpg"/><br/><br/>
+                      <span class="icon-triangle pink">&nbsp;</span>&nbsp;&nbsp;<a class="textlink jforgotpass" href="#">Forgot Your Password</a>
                   </div>
       
                 </div>
@@ -156,7 +170,7 @@
                 <h3 class="baseColor HUltra" style="letter-spacing:1px;margin-bottom:25px;">CREATE AN ACCOUNT</h3>
                 
                   <div class="fsize3">
-                  Register with Beachbunnyswimwear.com to enjoy personalized services, including:<br/><br/>
+                  <p class="pageInstructions">Register with Beachbunnyswimwear.com to enjoy personalized services, including:</p>
 
                           <span class="icon-triangle pink">&nbsp;</span>
                           <p class="inline fsize2">Online Order Status</p>

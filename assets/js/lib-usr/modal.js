@@ -2,7 +2,7 @@ $(document).ready(function(){
 	
 	//activate demo modals
 	$('#my-modal,#modal-thankyou,#modal-email,#modal-wlistconfirm,#modal-html,#modal-GCbal,#modal-tycontact,#modal-forgotpw').modal({backdrop:true,keyboard:true});
-
+	$('#modal-referfriend,#modal-sendwishlist').modal({backdrop:true,keyboard:true});
 	//activate global modals
 	$('#modal-newsletter-thankyou').modal({backdrop:true,keyboard:true});
 
@@ -58,15 +58,51 @@ $(document).ready(function(){
           }
         });
 	});
+	//jGCsubmit
+	
+	function setupGCBalanceSubmitBtn(e){ 
+	 
+	    e.preventDefault();
+	    var cardnum   = $('.FormGCnum').val(),
+	        cardpin   = $('.FormGCpin').val(),
+	        $amountDOM = $('.FormGCdisp'),
+	        $errorDOM = $('#gcError');
+	        
+	        $amountDOM.val("");
+
+	        console.log(cardnum + ' ' +cardpin);
+	    $.ajax({
+        
+            type:'POST',
+            dataType:'json',
+            url:'/ajx/giftcard.aspx?action=confirm',  
+            data: { num:cardnum,pin:cardpin },
+            success: function(data)
+            {
+                if(data.status == 'success') { 
+                    $errorDOM.text(""); 
+                    $amountDOM.val(data.amount); 
+                }
+                else { $errorDOM.text(data.msg); }
+            }
+        });
+	};
 	
 	
 	//setup modal for jwishlistbtn
 	$('.jwishlistbtn').click(function(){
 		$('#modal-wlistconfirm').modal('show');
 	});
+	
 	//setup modal for giftcard balance
-	$('.jModalGF').click(function(){
+	$('.jModalGF').click(function(e){
+	
+	    e.preventDefault();
 		$('#modal-GCbal').modal('show');
+		
+		    $('#gcError').text("");
+		
+		$('.jGCsubmit').unbind('click').click(setupGCBalanceSubmitBtn);
 	});
 	//setup modal for contact thank you message
 	$('.jModalContactTY').click(function(){
@@ -74,17 +110,26 @@ $(document).ready(function(){
 	});
 	//setup modal for forgotpw
 	$('.jModalFPass').click(function(){
+	    //console.log('yo');
 		$('#modal-forgotpw').modal('show');
+	});
+
+
+
+	$('.jModalReferFriend').click(function(){
+	    //console.log('yo');
+		$('#modal-referfriend').modal('show');
+	});
+
+
+	$('.jModalSendWishlist').click(function(){
+	    //console.log('yo');
+		$('#modal-sendwishlist').modal('show');
 	});
 
 	
 	
 })
-$(window).load(function(){
-	
-
-
-});
 
 function sendEmail(oid){
 	//Send Message
