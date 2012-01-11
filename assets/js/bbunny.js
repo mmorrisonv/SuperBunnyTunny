@@ -13,6 +13,7 @@ $(document).ready(function(){
 	
 	//if ready try to setup scrollable
 	onResizePage();
+	UTIL.cufontFontLoader();
 
 })
 $(window).load(function(){
@@ -121,7 +122,70 @@ BBUNNY  = { //namespace
 	            return;
 	        }
 	    }
-	}
+	},
+	BBacct:{
+  
+	    init : function(){
+	        
+	        //Accoutn Signin - forgot pasword
+	        $('.jforgotpass').click(this.onForgotPassword);
+
+	        //change account settings
+	      	$('.jAcctSaveEmail').click(this.onSaveNewEmail);
+	      	$('.jAcctSavePassword').click(this.onSaveNewPassword);
+
+	      	//address modification page
+	      	$('.jAcctAddAddress').click(this.onAddAddress);
+
+	      	//refer a friend page
+	      	$('.jAcctRF').click(this.onReferFriend);
+	    },
+	    onForgotPassword:function(e){
+	    	//$(this).parent().parent().siblings('.row').hide();
+	    	$('.signinDOM').animate({height:0},{complete:function(){ $(this).hide(); $('.forgotpwDOM').animate({height:100});}});
+	    	$('.jforgotpass').fadeOut();
+	    	
+	    	e.preventDefault();
+	    },
+	    onSaveNewEmail:function(e){
+	    	var columnDOM = $(this).parents('.jColumn')
+
+	    	columnDOM.animate({height:0},{complete:function(){
+	    		columnDOM.empty().animate({height:50}).append('<div class="HLight" style="margin-top:20px;">Your email has been updated.</div>');
+	    	}});
+	    	
+	    	e.preventDefault();
+	    },
+	    onSaveNewPassword:function(e){
+	    	var columnDOM = $(this).parents('.jColumn')
+
+	    	columnDOM.animate({height:0},{complete:function(){
+	    		columnDOM.empty().animate({height:50}).append('<div class="HLight" style="margin-top:20px;">Your password has been updated.</div>');
+	    	}});
+
+	    	e.preventDefault();
+	    },
+    	onAddAddress:function(e){
+	    	var columnDOM = $(this).parents('.jColumn');
+	    	columnDOM
+	    		.css({overflow:'hidden'})
+	    		.animate(
+	    			{height:0},
+	    			{
+		    			complete: function(){
+		    		
+		    				columnDOM.empty().animate({height:'100px'}).append('<div class="HLight" style="margin-top:20px;">Your address has been saved</div>');
+						}
+					}
+				);
+	    	
+	    	e.preventDefault();
+	    },
+	    onReferFriend:function(){
+	    	//$('.modal-body','#modal-referfriend').fadeOut();
+	    	$('.modal-body','#modal-referfriend').empty().append('<img src="/assets/images/css/modal-referfriendty.jpg"/>');
+	    }
+	}	
 };
 UTIL = {
 	fire : function(func,funcname,args){
@@ -141,6 +205,41 @@ UTIL = {
 		});
 		UTIL.fire('common','finalize');
 		UTIL.fire('common','debug');
+	},
+	cufontFontLoader : function(){
+	      //Cufon.replace('.cufon');
+      Cufon('.cufonHUltra',{
+        letterSpacing:'3px',
+        fontFamily:"Helvetica Neue Ultra Light"
+      });
+      Cufon('.cufonHLight',{
+        letterSpacing:'4px',
+        fontFamily:"Helvetica Neue Light"
+      });
+      Cufon('.cufonHelv',{
+        letterSpacing:'3px',
+        fontFamily:"Helvetica LT Std"
+      });	
+
+        var OSName="Unknown OS";
+        if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows PC";
+        if (navigator.appVersion.indexOf("Mac")!=-1) OSName="Macintosh";
+        if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX PC";
+        if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux PC";
+
+        //alert('Your operating system:' + OSName);
+
+        if(OSName == 'Macintosh')
+        {
+          $('.jDebug').text(" " +OSName + ' ( Helvetica Neue Ultra Light | size 27px | letter-spacing 2px )');
+          $('.jheading').addClass('HUltra');
+        }
+        else
+        {
+          $('.jDebug').text('  ' +OSName + ' ( Helvetica Light | size 25px | letter-spacing 2px )');
+      
+        }  
+
 	},
 	notEmpty: function (value){
 		var blankPattern = /\S/;

@@ -3,7 +3,7 @@
 //CUSTOMER SERVICE PAGE
 #custservlayout{
 	position:relative;
-
+	min-height:500px;
 	.banner{margin-bottom:10px;}
 
 	h1{
@@ -15,7 +15,28 @@
 			color:@grayDark;
 		}
 	}
-
+	h1{
+		&.heading{
+			.HUltra;
+			//font-weight:bold;
+			letter-spacing:3px;
+			color:@baseColor;
+			border-bottom:19px solid @lightBaseColor;
+			.fs(27px);
+		}
+		&.pink{
+			.HLight;
+			color:@baseColor;
+			letter-spacing:2px;
+			margin-bottom:10px;
+			&.HUltra{
+				  font-family:'HelveticaNeueULight';
+			}
+			&.Helv{
+				  font-family:'HelveticaLTStdRoman';
+			}
+		}
+	}
 	h2{
 		color:@baseColor;
 		border-bottom:solid 4px @lightBaseColor;
@@ -59,18 +80,10 @@
 		&.fsize0{.fs(10px);}
 		&.fsize1{.fs(11px);}
 		&.fsize2{.fs(12px);}
+		//&.HBold{.HBold;}
 	}
 
-	.textlink{
-		text-decoration:underline;
-		color:@grayDark;
-		.fsize1;
-		cursor:pointer;
-		&.dotted{
-			text-decoration:none;
-			.bbunnyborder(grayLight);
-		}
-	}
+
 
 	.highlight{ text-transform:uppercase; color:@baseColor; .HBold; .fs(14px);}
 
@@ -170,7 +183,8 @@
 			}
 		}
 		&.accountTable{
-			address{line-height:14px;}
+			width:560px;
+			address{line-height:14px; margin-bottom:auto;}
 			.num{
 				width:10px;
 			}
@@ -183,6 +197,7 @@
 				width:auto;
 				padding-top:3px;
 			}
+			tr{border-bottom:solid 1px #666;}
 		}
 		ul{margin:0; padding-left:10px;
 			li{

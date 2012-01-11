@@ -71,7 +71,7 @@
                     </ul>
                   </div>
                   </div>
-                </header>
+</header>
 
 
 
@@ -82,17 +82,20 @@
 
 
 <div class="container">
-  <div class="content">
-    <div class="span24 shippingbanner"><h2>ENJOY FREE SHIPPING <span> with orders over $100</span></h2></div>
-    <div id="custservlayout" class="row ">
+      <div class="content">
+                <div class="span24 shippingbanner"><h2>ENJOY FREE SHIPPING <span> with orders over $100</span></h2></div>
+        <div id="custservlayout" class="row ">
        
 
 
             <div id="leftnav" class="span4 ">
-                    <h4>WHERE TO BUY</h4>
+                    <h4>MY ACCOUNT</h4>
                     <ul>
-                        <li><a href="/listing.aspx?id=1580">BOUTIQUE</a></li>
-                        <li class="current"><a href="/listing.aspx?id=1581">RETAIL LOCATOR</a></li>
+                        <li class=""><a href="/listing.aspx?id=1580">ACCOUNT PROFILE</a></li>
+                        <li><a href="/listing.aspx?id=1581">WISH LIST</a></li>
+                        <li><a href="/listing.aspx?id=1581">ORDER HISTORY</a></li>
+                        <li><a href="/listing.aspx?id=1581">GIFT CARD</a></li>
+                        <li><a href="/listing.aspx?id=1581">REFER A FRIEND</a></li>
                     </ul>
 
 
@@ -107,179 +110,174 @@
 
 
             <div class="span20">   
-                <img class="banner" src="/assets/images/css/title-wheretobuy.jpg">
-  
-                <h1 class="pink jheading" style="font-size:27px; padding-bottom:10px;">BOUTIQUE</h1>
+                <img class="banner" src="/assets/images/css/title-myaccount.jpg">
+    
+                <h1 class="pink jheading" style="margin-bottom:0px; margin-top:30px;letter-spacing:2px; font-size:27px;">CREDIT CARDS</h1>
+                <img src="/assets/images/css/cclogo.jpg" width="150px" style="float:right;margin-top:-30px;">
 
-                <hr class="gray dotted" style="margin-top:-18px; margin-bottom:10px;"/>
+                <hr class="gray dotted"/>
+
+                <h2 class="subheading" style="border:0;">ADD NEW CREDIT CARD</h2>
+
+                
+                <p> <strong class="fsize0">Click the Save Button to confirm your changes.<br/>
+                    Changes made to your credit card will impact future orders only.</strong></p>
 
 
 
+              <div class="ccardentry">  
+                  <div class="row">
+                        <div class=" span2">NICKNAME:</div>
+                        <div class=" span3">
+                          <input class="span6" type="text" id="cardnum" />
+                        </div>
+                  </div>
+                  <div class="row">
+                        <div class=" span2">TYPE:</div>
+                        <div class=" span3">
+                          <select class="span3" name="amount" id="amountselect">
+                            <option>VISA</option><option>MASTERCARD</option><option>AMEX</option><option>DISCOVER</option>
+                          </select>
+                        </div>
+                  </div>          
+                  <div class="row">
+                        <div class=" span2">Number:</div>          
+                        <div class=" span6">
+                          <input class="span6" type="text" id="cardnum" />
+                        </div>
+                  </div>
+                  <div class="row">
+                        <div class=" span2">Exp. Date:</div>          
+                        <div class=" span3">
+                            <select class="span3" name=month value=''> <option value='00'>Select Month</option> <option value='01'>January</option> <option value='02'>February</option> <option value='03'>March</option> <option value='04'>April</option> <option value='05'>May</option> <option value='06'>June</option> <option value='07'>July</option> <option value='08'>August</option> <option value='09'>September</option> <option value='10'>October</option> <option value='11'>November</option> <option value='12'>December</option>
+                            </select>
+                        </div>
+         
+                        <div class=" span3">
+                            <select class="span3" name=year value=''> <option value='00'>Select Year</option> <option value='01'>2011</option> <option value='02'>2012</option> <option value='03'>2013</option> <option value='04'>2014</option> <option value='05'>2015</option> <option value='06'>2016</option>
+              
+                            </select>
+                        </div>
+                  </div>
+                  <div class="row">
+                        <div class=" span2">Cardholder</div>          
+                        <div class="span2">
+                          <input class="span5" type="text" id="cvv"/>
+                        </div>
+                  </div>
+                  <div class="row">
+                        <div class="span2">
+                            &nbsp;
+                        </div>
+                        <div class="span5">
+                          <input type="checkbox" name="shipopts" class="styled"><label>Make this my default address</label>
+                        </div>
+                        
+                  </div>
+              </div>  
 
-          
-                <div class=" ">
 
 
-                      <div class="store">
-                          <img src="/assets/demo-images/store1.jpg">
-                          <h2>Beach Bunny Swimwear<br>Beverly Center</h2>
+              
+                <p> <strong class="fsize0">Billing Address for this Credit Card.</strong></p>
+    
 
-                          <div class="info">
-                              <address>
-                                8550 Beverly Boulvard #669<br/>Lost Angeles, California 90046
-                              </address>
-                              <p>shopbeverly@beachbunnyswimwear.com<br/>301.360.3994</p>
-                              <table><tbody>
-                                  <tr>
-                                    <td>MON-FRI</td>
-                                    <td>10am - 9pm</td>
-                                  </tr> 
-                                  <tr>
-                                    <td>SAT</td>
-                                    <td>10am - 8pm</td>
-                                  </tr> 
-                                  <tr>
-                                    <td>SUN</td>
-                                    <td>10am - 8pm</td>
-                                  </tr> 
-                              </tbody></table>
-                          </div>
-                          
+                <div class="row span11">
+                      <div class="address-option span5">
+                          <input type="radio" name="shipopts" class="styled"><label>Address Name #1</label><br/><br/>
+                          <address>5555 COWAN ST. <br/> IRVINE, CA 92656<br/>US<br/>(555)555-5555</address>
                       </div>
 
-
-                      <div class="store">
-                          <img src="/assets/demo-images/store1.jpg">
-                          <h2>Beach Bunny Swimwear<br>Beverly Center</h2>
-                          <div class="info">
-                              <address>
-                                8550 Beverly Boulvard #669<br/>Lost Angeles, California 90046
-                              </address>
-                              <p>shopbeverly@beachbunnyswimwear.com<br/>301.360.3994</p>
-                              <table><tbody>
-                                  <tr>
-                                    <td>MON-FRI</td>
-                                    <td>10am - 9pm</td>
-                                  </tr> 
-                                  <tr>
-                                    <td>SAT</td>
-                                    <td>10am - 8pm</td>
-                                  </tr> 
-                                  <tr>
-                                    <td>SUN</td>
-                                    <td>10am - 8pm</td>
-                                  </tr> 
-                              </tbody></table>
-                          </div>                          
+                      <div class="address-option span5">
+                          <input type="radio" name="shipopts" class="styled"><label>Address Name #2</label><br/><br/>
+                          <address>LORIE LAVENDER<br/>5555 COWAN ST. <br/> IRVINE, CA 92656<br/>US<br/>(555)555-5555</address>
                       </div>
-
-                      <div class="store">
-                          <img src="/assets/demo-images/store1.jpg">
-                          <h2>Beach Bunny Swimwear<br>Beverly Center</h2>
-                          <div class="info">
-                              <address>
-                                8550 Beverly Boulvard #669<br/>Lost Angeles, California 90046
-                              </address>
-                              <p>shopbeverly@beachbunnyswimwear.com<br/>301.360.3994</p>
-                              <table><tbody>
-                                  <tr>
-                                    <td>MON-FRI</td>
-                                    <td>10am - 9pm</td>
-                                  </tr> 
-                                  <tr>
-                                    <td>SAT</td>
-                                    <td>10am - 8pm</td>
-                                  </tr> 
-                                  <tr>
-                                    <td>SUN</td>
-                                    <td>10am - 8pm</td>
-                                  </tr> 
-                              </tbody></table>
-                          </div>                          
+                      
+                      <div class="address-option span5">
+                          <input type="radio" name="shipopts" class="styled"><label>Address Name #3</label><br/><br/>
+                          <address>LORIE LAVENDER<br/>5555 COWAN ST. <br/> IRVINE, CA 92656<br/>US<br/>(555)555-5555</address>
                       </div>
+                      
+                      <div class="address-option span5">
+                          <input type="radio" name="shipopts" class="styled"><label>Address Name #4</label><br/><br/>
+                          <address>LORIE LAVENDER<br/>5555 COWAN ST. <br/> IRVINE, CA 92656<br/>US<br/>(555)555-5555</address>
+                      </div>                                                                  
+                </div>
 
 
-                      <div class="store">
-                          <img src="/assets/demo-images/store1.jpg">
-                          <h2>Beach Bunny Swimwear<br>Beverly Center</h2>
-                          <div class="info">
-                              <address>
-                                8550 Beverly Boulvard #669<br/>Lost Angeles, California 90046
-                              </address>
-                              <p>shopbeverly@beachbunnyswimwear.com<br/>301.360.3994</p>
-                              <table><tbody>
-                                  <tr>
-                                    <td>MON-FRI</td>
-                                    <td>10am - 9pm</td>
-                                  </tr> 
-                                  <tr>
-                                    <td>SAT</td>
-                                    <td>10am - 8pm</td>
-                                  </tr> 
-                                  <tr>
-                                    <td>SUN</td>
-                                    <td>10am - 8pm</td>
-                                  </tr> 
-                              </tbody></table>
-                          </div>                          
-                      </div>
-
-                      <div class="store">
-                          <img src="/assets/demo-images/store1.jpg">
-                          <h2>Beach Bunny Swimwear<br>Beverly Center</h2>
-                          <div class="info">
-                              <address>
-                                8550 Beverly Boulvard #669<br/>Lost Angeles, California 90046
-                              </address>
-                              <p>shopbeverly@beachbunnyswimwear.com<br/>301.360.3994</p>
-                              <table><tbody>
-                                  <tr>
-                                    <td>MON-FRI</td>
-                                    <td>10am - 9pm</td>
-                                  </tr> 
-                                  <tr>
-                                    <td>SAT</td>
-                                    <td>10am - 8pm</td>
-                                  </tr> 
-                                  <tr>
-                                    <td>SUN</td>
-                                    <td>10am - 8pm</td>
-                                  </tr> 
-                              </tbody></table>
-                          </div>                          
-                      </div>
+                <hr class="gray dotted"/>
+                <div class="row">
+                 
+                  <input type="checkbox" name="shipopts" class="styled"><label style="padding-top:2px;">Enter a new Billing Address</label>
+                 
+                </div>
 
 
-                      <div class="store">
-                          <img src="/assets/demo-images/store1.jpg">
-                          <h2>Beach Bunny Swimwear<br>Beverly Center</h2>
-                          <div class="info">
-                              <address>
-                                8550 Beverly Boulvard #669<br/>Lost Angeles, California 90046
-                              </address>
-                              <p>shopbeverly@beachbunnyswimwear.com<br/>301.360.3994</p>
-                              <table><tbody>
-                                  <tr>
-                                    <td>MON-FRI</td>
-                                    <td>10am - 9pm</td>
-                                  </tr> 
-                                  <tr>
-                                    <td>SAT</td>
-                                    <td>10am - 8pm</td>
-                                  </tr> 
-                                  <tr>
-                                    <td>SUN</td>
-                                    <td>10am - 8pm</td>
-                                  </tr> 
-                              </tbody></table>
-                          </div>
-                      </div>
+                <form class="-stacked">
+                  <div class="error hide">
+                    <h2 class="">Oops!</h2>
+                    <p>please complete all the details marked below</p>
+                  </div>
+                  <div class="row">
+                    <label class="span3" >Nickname* :</label>
+                    <input class="mini width5" id="name" name="name" size="30" type="text"/>
+                    
+                  </div>
+
+                  <div class="row">
+                      <label class="span3">Country* :</label>
+                      <select name="selCtry"id="selCtry" style="margin-left:10px; width:192px;"><option value="">PLEASE SELECT</option></select></div>
+                  
+                  <div class="row">
+                      <label class="span3">First Name* :</label>
+                      <input class="mini width5" id="name" name="name" size="30" type="text"/></div>
+                  
+                  <div class="row">
+                      <label class="span3">Last Name* :</label>
+                      <input class="mini width5" id="email" name="email" size="30" type="text"/></div>
+                  
+                  <div class="row">
+                      <label class="span3">Company (optional):</label>
+                      <input class="mini width5" id="toname" name="toname" size="30" type="text"/></div>
+                  
+                  <div class="row">
+                      <label class="span3">Address 1* :</label>
+                      <input class="mini width5" id="toemail" name="toemail" size="30" type="text"/></div>
+                  
+                  <div class="row">
+                      <label class="span3">Address 1* :</label>
+                      <input class="mini width5" id="toemail" name="toemail" size="30" type="text"/></div>
+
+                  <div class="row">
+                      <label class="span3">City* :</label>
+                      <input class="mini width5" id="toemail" name="toemail" size="30" type="text"/></div>                      
+
+                  <div class="row">
+                      <label class="span3">State* :</label>
+                      <select name="selSKU"id="selSKU" style="margin-left:10px; width:192px;"><option value="">PLEASE SELECT</option></select></div>
+                      
+                  <div class="row">
+                      <label class="span3">Postal Code* :</label>
+                      <input class="mini width5" id="toemail" name="toemail" size="30" type="text"/></div>   
+                      
+                  <div class="row">
+                      <label class="span3">Phone Number* :</label>
+                      <input class="mini width5" id="toemail" name="toemail" size="30" type="text"/></div>                                                                  
+                </form>
 
 
-                </div >
 
 
-      
+
+                <div class="span8">
+                    <a href="#" class="btn bbunnybox white inline" >CANCEL</a>
+                    <a href="#" class="btn bbunnybox inline pull-right">SAVE</a>
+                </div>
+
+
+
+
+
             </div>
 
 
@@ -324,7 +322,7 @@
             </ul>
           </div>
         </div>
-      </footer>
+</footer>
 
 
     

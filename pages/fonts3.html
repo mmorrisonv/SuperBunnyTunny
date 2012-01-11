@@ -14,45 +14,7 @@
     <script src="/assets/js/plugin.js" type="text/javascript"></script>
     <script src="/assets/js/bbunny.js" type="text/javascript"></script>
 
-    <script src="/assets/js/lib/cufon-yui.js" type="text/javascript"></script>
-    <script src="/assets/fonts/Helvetica_Neue_200.font.js" type="text/javascript"></script>
-    <script type="text/javascript">
-      //Cufon.replace('.cufon');
-      Cufon('.cufonHUltra',{
-        letterSpacing:'3px',
-        fontFamily:"Helvetica Neue Ultra Light"
-      });
-      Cufon('.cufonHLight',{
-        letterSpacing:'4px',
-        fontFamily:"Helvetica Neue Light"
-      });
-      Cufon('.cufonHelv',{
-        letterSpacing:'3px',
-        fontFamily:"Helvetica LT Std"
-      }
-      )
-
-      $(document).ready(function(){
-        var OSName="Unknown OS";
-        if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows PC";
-        if (navigator.appVersion.indexOf("Mac")!=-1) OSName="Macintosh";
-        if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX PC";
-        if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux PC";
-
-        //alert('Your operating system:' + OSName);
-
-        if(OSName == 'Macintosh')
-        {
-          $('.jDebug').text(" " +OSName + ' ( Helvetica Neue Ultra Light | size 27px | letter-spacing 2px )');
-          $('.jheading').addClass('HUltra');
-        }
-        else
-        {
-          $('.jDebug').text('  ' +OSName + ' ( Helvetica Light | size 25px | letter-spacing 2px )');
-      
-        }        
-      });
-    </script>    
+  
 </head>
 
 <body>

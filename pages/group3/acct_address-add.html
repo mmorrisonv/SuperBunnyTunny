@@ -21,7 +21,7 @@
     <script src="/assets/js/plugin.js"              type="text/javascript"></script>
     <script src="/assets/js/bbunny.js" type="text/javascript"></script>
   </head>
-  <body>
+  <body class="BBacct">
 
 
 
@@ -112,76 +112,80 @@
             <div class="span20">   
                 <img class="banner" src="/assets/images/css/title-myaccount.jpg">
     
-                <h1 class="pink jheading" style="margin-bottom:10px; letter-spacing:2px; font-size:27px;">ADDRESS BOOK</h1>
+                <h1 class="pink jheading" style="margin-bottom:0px; margin-top:20px; letter-spacing:2px; font-size:27px;">ADDRESS BOOK</h1>
                 <hr class="gray dotted"/>
 
-                <h2 class="subheading" style="border:0;">DELETE AN ADDRESS</h2>
+                <h2 class="subheading" style="border:0; margin-top:6px;">CHANGE AN ADDRESS</h2>
 
+                <div class="jColumn">
                 
-                <p> <strong class="fsize0">Update the address and click Save.</strong></p>
+                      <p class="fsize1" style="margin-bottom:10px; margin-top:10px; font-family : 'HelveticaNeue75Bold'" >Update the address and click Save.</p>
 
 
-                <form class="-stacked">
-                  <div class="error hide">
-                    <h2 class="">Oops!</h2>
-                    <p>please complete all the details marked below</p>
-                  </div>
-                  <div class="row">
-                    <label class="span3" >Nickname* :</label>
-                    <input class="mini span5" id="name" name="name" size="30" type="text"/>
-                    
-                  </div>
+                      <form class="-stacked">
+                        <div class="error hide">
+                          <h2 class="">Oops!</h2>
+                          <p>please complete all the details marked below</p>
+                        </div>
+                        <div class="row">
+                          <label class="span3" >Nickname* :</label>
+                          <input class="mini width5" id="name" name="name" size="30" type="text"/>
+                          
+                        </div>
 
-                  <div class="row">
-                      <label class="span3">Country* :</label>
-                      <input class="mini span5" id="name" name="name" size="30" type="text"/></div>
-                  
-                  <div class="row">
-                      <label class="span3">First Name* :</label>
-                      <input class="mini span5" id="name" name="name" size="30" type="text"/></div>
-                  
-                  <div class="row">
-                      <label class="span3">Last Name* :</label>
-                      <input class="mini span5" id="email" name="email" size="30" type="text"/></div>
-                  
-                  <div class="row">
-                      <label class="span3">Company (optional):</label>
-                      <input class="mini span5" id="toname" name="toname" size="30" type="text"/></div>
-                  
-                  <div class="row">
-                      <label class="span3">Address 1* :</label>
-                      <input class="mini span5" id="toemail" name="toemail" size="30" type="text"/></div>
-                  
-                  <div class="row">
-                      <label class="span3">Address 1* :</label>
-                      <input class="mini span5" id="toemail" name="toemail" size="30" type="text"/></div>
+                        <div class="row">
+                            <label class="span3">Country* :</label>
+                            <select name="selCtry"id="selCtry" style="margin-left:10px; width:192px;"><option value="">PLEASE SELECT</option></select>
+                        </div>
+                        
+                        <div class="row">
+                            <label class="span3">First Name* :</label>
+                            <input class="mini width5" id="name" name="name" size="30" type="text"/></div>
+                        
+                        <div class="row">
+                            <label class="span3">Last Name* :</label>
+                            <input class="mini width5" id="email" name="email" size="30" type="text"/></div>
+                        
+                        <div class="row">
+                            <label class="span3">Company (optional):</label>
+                            <input class="mini width5" id="toname" name="toname" size="30" type="text"/></div>
+                        
+                        <div class="row">
+                            <label class="span3">Address 1* :</label>
+                            <input class="mini width5" id="toemail" name="toemail" size="30" type="text"/></div>
+                        
+                        <div class="row">
+                            <label class="span3">Address 1* :</label>
+                            <input class="mini width5" id="toemail" name="toemail" size="30" type="text"/></div>
 
-                  <div class="row">
-                      <label class="span3">City* :</label>
-                      <input class="mini span5" id="toemail" name="toemail" size="30" type="text"/></div>                      
+                        <div class="row">
+                            <label class="span3">City* :</label>
+                            <input class="mini width5" id="toemail" name="toemail" size="30" type="text"/></div>                      
 
-                  <div class="row">
-                      <label class="span3">State* :</label>
-                      <input class="mini span5" id="toemail" name="toemail" size="30" type="text"/></div>
-                      
-                  <div class="row">
-                      <label class="span3">Postal Code* :</label>
-                      <input class="mini span5" id="toemail" name="toemail" size="30" type="text"/></div>   
-                      
-                  <div class="row">
-                      <label class="span3">Phone Number* :</label>
-                      <input class="mini span5" id="toemail" name="toemail" size="30" type="text"/></div>                                                                  
-                </form>
-
-
-
+                        <div class="row">
+                            <label class="span3">State* :</label>
+                            <select name="selSKU"id="selSKU" style="margin-left:10px; width:192px;"><option value="">PLEASE SELECT</option></select></div>
+                            
+                        <div class="row">
+                            <label class="span3">Postal Code* :</label>
+                            <input class="mini width5" id="toemail" name="toemail" size="30" type="text"/></div>   
+                            
+                        <div class="row">
+                            <label class="span3">Phone Number* :</label>
+                            <input class="mini width5" id="toemail" name="toemail" size="30" type="text"/></div>                                                                  
+                      </form>
 
 
-                <div class="span8">
-                    <a href="#" class="btn bbunnybox white inline" >CANCEL</a>
-                    <a href="#" class="btn bbunnybox inline pull-right">SAVE</a>
+
+
+
+                      <div class="span8">
+                          <a  class="btn bbunnybox white inline" >CANCEL</a>
+                          <a  class="btn bbunnybox inline pull-right jAcctAddAddress">SAVE</a>
+                      </div>
+
+
                 </div>
-
 
               
 

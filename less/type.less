@@ -182,6 +182,19 @@ blockquote {
   }
 }
 
+  .textlink{
+    text-decoration:underline;
+    color:@grayDark;
+    .fsize1;
+    line-height:12px;
+    cursor:pointer;
+    &.dotted{
+      padding-bottom:2px;
+      text-decoration:none;
+      .bbunnyborder(grayLight);
+    }
+  }
+
 // Addresses
 address {
   display: block;
