@@ -117,72 +117,136 @@
 
                 <h2 class="subheading" style="border:0; margin-top:6px;">CHANGE AN ADDRESS</h2>
 
-                <div class="jColumn">
+                <div class="jColumn" style="width:790px;">
                 
-                      <p class="fsize1" style="margin-bottom:10px; margin-top:10px; font-family : 'HelveticaNeue75Bold'" >Update the address and click Save.</p>
+                      
+
+                      <div class="row">
+                          <div class="span9">
+                          <p class="fsize1" style="margin-bottom:10px; margin-top:10px; font-family : 'HelveticaNeue75Bold'" >Update the address and click Save.</p>
+                            <form class="-stacked" style="width:336px;border-right:1px solid #eee;">
+                                <div class="error hide">
+                                  <h2 class="">Oops!</h2>
+                                  <p>please complete all the details marked below</p>
+                                </div>
+                                <div class="row">
+                                  <label class="span3" >Nickname* :</label>
+                                  <input class="mini width5" id="name" name="name" size="30" type="text"/>
+                                  
+                                </div>
+
+                                <div class="row">
+                                    <label class="span3">Country* :</label>
+                                    <select name="selCtry"id="selCtry" style="margin-left:10px; width:192px;"><option value="">PLEASE SELECT</option></select>
+                                </div>
+                                
+                                <div class="row">
+                                    <label class="span3">First Name* :</label>
+                                    <input class="mini width5" id="name" name="name" size="30" type="text"/></div>
+                                
+                                <div class="row">
+                                    <label class="span3">Last Name* :</label>
+                                    <input class="mini width5" id="email" name="email" size="30" type="text"/></div>
+                                
+                                <div class="row">
+                                    <label class="span3">Company (optional):</label>
+                                    <input class="mini width5" id="toname" name="toname" size="30" type="text"/></div>
+                                
+                                <div class="row">
+                                    <label class="span3">Address 1* :</label>
+                                    <input class="mini width5" id="toemail" name="toemail" size="30" type="text"/></div>
+                                
+                                <div class="row">
+                                    <label class="span3">Address 1* :</label>
+                                    <input class="mini width5" id="toemail" name="toemail" size="30" type="text"/></div>
+
+                                <div class="row">
+                                    <label class="span3">City* :</label>
+                                    <input class="mini width5" id="toemail" name="toemail" size="30" type="text"/></div>                      
+
+                                <div class="row">
+                                    <label class="span3">State* :</label>
+                                    <select name="selSKU"id="selSKU" style="margin-left:10px; width:192px;"><option value="">PLEASE SELECT</option></select></div>
+                                    
+                                <div class="row">
+                                    <label class="span3">Postal Code* :</label>
+                                    <input class="mini width5" id="toemail" name="toemail" size="30" type="text"/></div>   
+                                    
+                                <div class="row">
+                                    <label class="span3">Phone Number* :</label>
+                                    <input class="mini width5" id="toemail" name="toemail" size="30" type="text"/></div>                                                                  
+                            </form>
 
 
-                      <form class="-stacked">
-                        <div class="error hide">
-                          <h2 class="">Oops!</h2>
-                          <p>please complete all the details marked below</p>
-                        </div>
-                        <div class="row">
-                          <label class="span3" >Nickname* :</label>
-                          <input class="mini width5" id="name" name="name" size="30" type="text"/>
-                          
-                        </div>
-
-                        <div class="row">
-                            <label class="span3">Country* :</label>
-                            <select name="selCtry"id="selCtry" style="margin-left:10px; width:192px;"><option value="">PLEASE SELECT</option></select>
-                        </div>
-                        
-                        <div class="row">
-                            <label class="span3">First Name* :</label>
-                            <input class="mini width5" id="name" name="name" size="30" type="text"/></div>
-                        
-                        <div class="row">
-                            <label class="span3">Last Name* :</label>
-                            <input class="mini width5" id="email" name="email" size="30" type="text"/></div>
-                        
-                        <div class="row">
-                            <label class="span3">Company (optional):</label>
-                            <input class="mini width5" id="toname" name="toname" size="30" type="text"/></div>
-                        
-                        <div class="row">
-                            <label class="span3">Address 1* :</label>
-                            <input class="mini width5" id="toemail" name="toemail" size="30" type="text"/></div>
-                        
-                        <div class="row">
-                            <label class="span3">Address 1* :</label>
-                            <input class="mini width5" id="toemail" name="toemail" size="30" type="text"/></div>
-
-                        <div class="row">
-                            <label class="span3">City* :</label>
-                            <input class="mini width5" id="toemail" name="toemail" size="30" type="text"/></div>                      
-
-                        <div class="row">
-                            <label class="span3">State* :</label>
-                            <select name="selSKU"id="selSKU" style="margin-left:10px; width:192px;"><option value="">PLEASE SELECT</option></select></div>
-                            
-                        <div class="row">
-                            <label class="span3">Postal Code* :</label>
-                            <input class="mini width5" id="toemail" name="toemail" size="30" type="text"/></div>   
-                            
-                        <div class="row">
-                            <label class="span3">Phone Number* :</label>
-                            <input class="mini width5" id="toemail" name="toemail" size="30" type="text"/></div>                                                                  
-                      </form>
+                            <div class="span8">
+                                <a  class="btn bbunnybox white inline" >CANCEL</a>
+                                <a  class="btn bbunnybox inline pull-right jAcctAddAddress">SAVE</a>
+                            </div>
 
 
 
+                          </div> <!-- end column-->
+               
 
 
-                      <div class="span8">
-                          <a  class="btn bbunnybox white inline" >CANCEL</a>
-                          <a  class="btn bbunnybox inline pull-right jAcctAddAddress">SAVE</a>
+
+                      <div class="span11">
+
+
+                            <table class=" shipopts" style="width: 100%;" >
+                                <tbody>
+                                    <tr>
+                                        <td class="left "><div class="tddiv"><input type="radio" name="shipopts" class="styled"><label >Overnight</label></div></td>
+                                        <td><ul>
+                                            <li>$34.99 per order</li><li>Next business day delivery for orders placed by 1 P.M. PST Monday-Friday. </li>
+                                          </ul></td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td class="left"><div class="tddiv"><input type="radio" name="shipopts" class="styled"><label >2ND BUSINESS<br/>DAY EXPRESS</label></div></td>
+                                        <td><ul>
+                                            <li>$34.99 per order</li><li>Next business day delivery for orders placed by 1 P.M. PST Monday-Friday. </li>
+                                          </ul></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="left"><div class="tddiv"><input type="radio" name="shipopts" class="styled"><label >3RD BUSINESS<br/>DAY EXPRESS</label></div></td>
+                                        <td><ul>
+                                            <li>$34.99 per order</li><li>Next business day delivery for orders placed by 1 P.M. PST Monday-Friday. </li>
+                                          </ul></td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="left"><div class="tddiv"><input type="radio" name="shipopts" class="styled"><label >SATURDAY<br/>DELIVERY</label></div></td>
+                                        <td><ul>
+                                            <li>$34.99 per order</li><li>Next business day delivery for orders placed by 1 P.M. PST Monday-Friday. </li>
+                                          </ul></td>
+                                    </tr>
+
+                                    <tr style="border:0;">
+                                        <td class="left"><div class="tddiv"><input type="radio" name="shipopts" class="styled"><label >STANDARD<br/>DELIVERY</label></div></td>
+                                        <td><ul>
+                                            <li>$12.99 per order (NOT AVAILABLE FOR ALASKA OR HAWAII)</li><li>
+
+                                                Most orders arrive within 4-8 business days for in-stock items. </li>
+                                          </ul></td>
+                                    </tr>                            
+                                </tbody>
+                            </table>
+
+
+
                       </div>
+                  
+
+
+
+                  </div>
+
+
+
+
 
 
                 </div>

@@ -139,6 +139,9 @@ BBUNNY  = { //namespace
 
 	      	//refer a friend page
 	      	$('.jAcctRF').click(this.onReferFriend);
+
+	      	//ccard 
+	      	$('.jAcctDeleteCard').click(this.onCCardDelete);
 	    },
 	    onForgotPassword:function(e){
 	    	//$(this).parent().parent().siblings('.row').hide();
@@ -184,6 +187,15 @@ BBUNNY  = { //namespace
 	    onReferFriend:function(){
 	    	//$('.modal-body','#modal-referfriend').fadeOut();
 	    	$('.modal-body','#modal-referfriend').empty().append('<img src="/assets/images/css/modal-referfriendty.jpg"/>');
+	    },
+	    onCCardDelete:function(e){
+	    	var columnDOM = $(this).parents('.jColumn')
+
+	    	columnDOM.animate({height:0},{complete:function(){
+	    		columnDOM.empty().animate({height:50}).append('<div class="HLight" style="margin-top:20px;">Your credit card has been successfully removed.</div>');
+	    	}});
+	    	
+	    	e.preventDefault();
 	    }
 	}	
 };

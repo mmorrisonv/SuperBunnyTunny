@@ -205,6 +205,25 @@
 				margin-left:20px;
 			}
 		}
+		&.shipopts{
+			label{
+				width:90px;
+				padding: 2px 0 0 4px;
+				display: inline;
+				text-transform:uppercase;
+			}
+			td{
+				padding-left:0;
+				padding-right:0;
+				&.left{
+					width:120px;
+					float:left;
+				}
+			}
+			tr{
+				border-bottom:solid 1px @grayLight;
+			}
+		}
 
 	}
 
@@ -234,19 +253,20 @@
 	.StoreGrid{
 		.location{
 			margin-top:40px;
-			.fsize0;
+			.fsize2;
 			float:left;
 			width:260px;
 			h6
 			{
+				.fsize4;
 				color:black;
 				margin-bottom:2px;
 				.HBold;
 			}
 			address{
-				.lh(12px);
+				.lh(14px);
 				color:gray;
-				.HBold;
+				.Helv;
 			}
 		}
 	}
@@ -281,7 +301,7 @@
 				letter-spacing: 2px;
 				font-size:13px;
 				line-height:20px;
-				.HUltra;
+				.HLight;
 				border-bottom:0;
 				&.white{color:white;}
 				&.pink{color:@baseColor;}
