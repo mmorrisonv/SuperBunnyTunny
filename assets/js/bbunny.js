@@ -126,7 +126,11 @@ BBUNNY  = { //namespace
 	BBacct:{
   
 	    init : function(){
+
+	    	//setup DOM structures
+	    	this.alignStoresDisplay();
 	        
+	        //event listeners
 	        //Accoutn Signin - forgot pasword
 	        $('.jforgotpass').click(this.onForgotPassword);
 
@@ -142,6 +146,16 @@ BBUNNY  = { //namespace
 
 	      	//ccard 
 	      	$('.jAcctDeleteCard').click(this.onCCardDelete);
+	    },
+	    alignStoresDisplay:function(){
+	    	var DOMholder = $('.jalign3column');	
+	    	if(DOMholder.length == -1 )
+	    		return;
+    		$.each( DOMholder.children('.location') ,function(i,val){
+    			if( i % DOMholder.children('.location').length == 2)
+    				console.log($(this));
+    				$(this).css({'margin-right':0});
+    		});
 	    },
 	    onForgotPassword:function(e){
 	    	//$(this).parent().parent().siblings('.row').hide();
