@@ -147,24 +147,41 @@ BBUNNY  = { //namespace
 	      	//ccard 
 	      	$('.jAcctDeleteCard').click(this.onCCardDelete);
 	    },
-	    alignStoresDisplay:function(){
-	    	var DOMholder = $('.jalign3column');	
-	    	if(DOMholder.length == -1 )
-	    		return;
-    		$.each( DOMholder.children('.location') ,function(i,val){
-    			if( i % DOMholder.children('.location').length == 2)
+	    alignStoresDisplay:function()
+	    {
+	    	//rearrange the listing of stores for the customer locator page. 
+	    	//this is only used on that page
+	    	var StoresHolderDOM = $('.jalign3column'),
+	    		stores = StoresHolderDOM.children('.location'),
+	    		numStores = stores.length;
+	    			
+
+			console.log(numStores);
+	    	if(StoresHolderDOM.length == -1 ) 
+	    		return; // not stores page - lets exit
+
+    		$.each( stores ,function(i,val)
+    		{
+    			console.log(i % numStores)
+    			var mod = i % numStores;
+
+    			if( mod == 2 || mod == 5)
+    			{
     				console.log($(this));
     				$(this).css({'margin-right':0});
+				}
     		});
 	    },
-	    onForgotPassword:function(e){
+	    onForgotPassword:function(e)
+	    {
 	    	//$(this).parent().parent().siblings('.row').hide();
 	    	$('.signinDOM').animate({height:0},{complete:function(){ $(this).hide(); $('.forgotpwDOM').animate({height:100});}});
 	    	$('.jforgotpass').fadeOut();
 	    	
 	    	e.preventDefault();
 	    },
-	    onSaveNewEmail:function(e){
+	    onSaveNewEmail:function(e)
+	    {
 	    	var columnDOM = $(this).parents('.jColumn')
 
 	    	columnDOM.animate({height:0},{complete:function(){

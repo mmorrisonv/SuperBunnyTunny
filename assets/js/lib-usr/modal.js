@@ -110,11 +110,75 @@ $(document).ready(function(){
 	});
 	//setup modal for forgotpw
 	$('.jModalFPass').click(function(){
-	    //console.log('yo');
-		$('#modal-forgotpw').modal('show');
+	   
+	    ResetPassword('refresh');
+	  	$('#modal-forgotpw').modal('show');
+	});
+	
+	$('.jrefreshBtn').click(function() {
+	    ResetPassword('refresh');
 	});
 
+	$('.jsubmitFPassBtn').click(function() {
+       
+       var chal =  $('#challenge').val();
+       var emailText = $('#email-text').val();
+       var chalText = $('#challenge-text').val();
 
+	   ResetPassword('reset',chal,chalText,emailText);
+	});
+})
+
+$(window).load(function(){
+});
+
+// **** JSON version of the password challenge - SRD
+function ResetPassword(action,chal,chalText,emailText) {
+	 $.ajax({
+        type: 'POST',
+        dataType: 'json',
+        cache: false,
+        url: '/ajx/password.aspx?action='+action, 
+        data: {challenge:chal,challengeText:chalText,email:emailText},
+        success: function(data)
+        {
+            $('span[id$="_err"]').empty();
+            if(data.status == 'ok') { 
+                $('#modal-forgotpw').modal('hide');
+          		$('#modal-tycontact').modal('show');
+            }
+            else {
+                //Handle Error Messages
+                 $.each(data.errors, function(i,val){
+                        $('#'+val.field+'_err').html(val.msg);
+                        if (val.field=="system") alert(val.msg);
+                    });
+                
+                //Reset the Captcha Image
+                $('#imgChallenge').attr('src','/image_handler.ashx?c='+data.captcha);
+                $('input.#challenge').val(data.captcha);
+            }
+        }
+    });        
+}
+function SetCaptcha_old(action,chal,chalText,emailText) {
+    
+	 $.ajax({
+        type: 'POST',
+        dataType: 'html',
+        cache: false,
+        url: '/ajx/password.aspx?action='+action, 
+        data: {challenge:chal,challengeText:chalText,email:emailText},
+        success: function(data)
+        {
+            $('#Captcha-Drop').empty().append($(data).find('#container'));
+            
+            $('#spanEmailError').empty().append($(data).find('#spnemailErr').contents());
+            $('#spnchaltextErr').empty().append($(data).find('#spnchallErr').contents());
+        }
+    });        
+    if (action == 'refresh') { $('#challenge-text').val(''); }
+}
 
 	$('.jModalReferFriend').click(function(){
 	    //console.log('yo');
@@ -127,9 +191,8 @@ $(document).ready(function(){
 		$('#modal-sendwishlist').modal('show');
 	});
 
-	
-	
-})
+});//end document.ready
+
 
 function sendEmail(oid){
 	//Send Message
