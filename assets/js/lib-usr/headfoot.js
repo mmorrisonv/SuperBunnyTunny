@@ -45,7 +45,7 @@ function setupResettableInputs(inputs){
 function setupShoppingBag(){
 	$('.shopcart').hover(
 		function(){ ShowBag(); },
-		function(){	$(this).children('.shopcart-menu').hide();
+		function(){	$(this).removeClass('hovered').children('.shopcart-menu').hide();
 	});
 
 //  $.ajax({
@@ -64,7 +64,12 @@ function setupShoppingBag(){
 
 function ShowBag()
 {
-	$('.shopcart').children('.shopcart-menu').load('ajx/cartdrop.aspx').show();
+	var buttontxt = $('#account .shopcart a').text(),
+	numItems  = buttontxt.substring(14,17);
+	if(numItems == '(0)')
+		return;
+	
+	$('.shopcart').addClass('hovered').children('.shopcart-menu').load('ajx/cartdrop.aspx').show();
 }
 
 function setupHeaderDropdowns(){

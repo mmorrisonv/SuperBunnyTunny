@@ -126,6 +126,7 @@ BBUNNY  = { //namespace
 	BBacct:{
   
 	    init : function(){
+			console.log('test');
 
 	    	//setup DOM structures
 	    	this.alignStoresDisplay();

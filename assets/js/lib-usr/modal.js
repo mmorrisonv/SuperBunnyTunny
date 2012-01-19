@@ -1,8 +1,9 @@
 $(document).ready(function(){
-	
+	    
 	//activate demo modals
 	$('#my-modal,#modal-thankyou,#modal-email,#modal-wlistconfirm,#modal-html,#modal-GCbal,#modal-tycontact,#modal-forgotpw').modal({backdrop:true,keyboard:true});
 	$('#modal-referfriend,#modal-sendwishlist').modal({backdrop:true,keyboard:true});
+
 	//activate global modals
 	$('#modal-newsletter-thankyou').modal({backdrop:true,keyboard:true});
 
@@ -38,55 +39,29 @@ $(document).ready(function(){
 	
 	$('a.jContactUsbtn').click(function(){
         $.ajax({
-        type:'POST',
-        dataType:'json',
-        url:'/ajx/sendemail.aspx?action=contactus',   
-        data:$("form").serialize(),
-            
-        success: function(data){
-            $('span[id$="_err"]').empty();               
-            if(data.status == 'error'){
-                $('#dvOops').show();
-                $.each(data.errors, function(i,val){
-                    $('#'+val.field+'_err').html(val.msg);
-                    if (val.field=="system") alert(val.msg);
-                });
-            } else {
-                $('#dvOops').hide();
-                $('#modal-tycontact').modal('show');
-            }
-          }
-        });
-	});
-	//jGCsubmit
-	
-	function setupGCBalanceSubmitBtn(e){ 
-	 
-	    e.preventDefault();
-	    var cardnum   = $('.FormGCnum').val(),
-	        cardpin   = $('.FormGCpin').val(),
-	        $amountDOM = $('.FormGCdisp'),
-	        $errorDOM = $('#gcError');
-	        
-	        $amountDOM.val("");
-
-	        console.log(cardnum + ' ' +cardpin);
-	    $.ajax({
-        
             type:'POST',
             dataType:'json',
-            url:'/ajx/giftcard.aspx?action=confirm',  
-            data: { num:cardnum,pin:cardpin },
-            success: function(data)
-            {
-                if(data.status == 'success') { 
-                    $errorDOM.text(""); 
-                    $amountDOM.val(data.amount); 
+            url:'/ajx/sendemail.aspx?action=contactus',   
+            data:$("form").serialize(),
+            
+            success: function(data){
+                $('span[id$="_err"]').empty();               
+                if(data.status == 'error'){
+                    $('#dvOops').show();
+                    $.each(data.errors, function(i,val){
+                        $('#'+val.field+'_err').html(val.msg);
+                        if (val.field=="system") alert(val.msg);
+                    });
+                } 
+                else {
+                    $('#dvOops').hide();
+                    $('#modal-tycontact').modal('show');
                 }
-                else { $errorDOM.text(data.msg); }
             }
         });
-	};
+    });
+	//jGCsubmit
+
 	
 	
 	//setup modal for jwishlistbtn
@@ -127,7 +102,47 @@ $(document).ready(function(){
 
 	   ResetPassword('reset',chal,chalText,emailText);
 	});
-})
+	
+	$('.jModalReferFriend').click(function(){
+		$('#modal-referfriend').modal('show');
+	});
+
+
+	$('.jModalSendWishlist').click(function(){
+		$('#modal-sendwishlist').modal('show');
+	});
+
+});//end document ready
+
+	
+function setupGCBalanceSubmitBtn(e){ 
+ 
+    e.preventDefault();
+    var cardnum   = $('.FormGCnum').val(),
+        cardpin   = $('.FormGCpin').val(),
+        $amountDOM = $('.FormGCdisp'),
+        $errorDOM = $('#gcError');
+        
+        $amountDOM.val("");
+
+        console.log(cardnum + ' ' +cardpin);
+    $.ajax({
+    
+        type:'POST',
+        dataType:'json',
+        url:'/ajx/giftcard.aspx?action=confirm',  
+        data: { num:cardnum,pin:cardpin },
+        success: function(data)
+        {
+            if(data.status == 'success') { 
+                $errorDOM.text(""); 
+                $amountDOM.val(data.amount); 
+            }
+            else { $errorDOM.text(data.msg); }
+        }
+    });
+};
+
 
 $(window).load(function(){
 });
@@ -178,20 +193,9 @@ function SetCaptcha_old(action,chal,chalText,emailText) {
         }
     });        
     if (action == 'refresh') { $('#challenge-text').val(''); }
-}
-
-	$('.jModalReferFriend').click(function(){
-	    //console.log('yo');
-		$('#modal-referfriend').modal('show');
-	});
+};
 
 
-	$('.jModalSendWishlist').click(function(){
-	    //console.log('yo');
-		$('#modal-sendwishlist').modal('show');
-	});
-
-});//end document.ready
 
 
 function sendEmail(oid){
