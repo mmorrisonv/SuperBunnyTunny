@@ -242,6 +242,11 @@
 
 
 
+	/*----------------------------------------------------------------------------------------------------------------------*/
+	/*features*/
+
+
+
 	// Credit Card Entry
 	.ccardentry{
 		label{width:auto; padding-top:3px;}
@@ -329,6 +334,73 @@
 
 	}
 
+	// Press Page
+	.press{
+		width:254px;
+		margin:-2px 7px 10px 0px;
+		float:left;
+		display:inline;
+		position: relative;
+		height:230px;
+		.fsize0;
+		overflow:hidden;
+		color:gray;
+		background:transparent url('/assets/images/css/background-presspolaroid.jpg') no-repeat left top ;
+			img{	
+				cursor:pointer;
+				position: relative; top:10px; left:16px;
+			}
+	
+
+			h2{
+				width:100%;
+				position: absolute;
+				top:155px; left:20px;
+				float:left;
+				text-transform:uppercase;
+				letter-spacing: 2px;
+				font-size:13px;
+				line-height:20px;
+				.HLight;
+				color: #333;
+				border-bottom:0;
+				&.white{color:white;}
+				&.pink{color:@baseColor;}
+			}
+			h4{
+				position: absolute;
+				margin-top:3px;
+				bottom:36px; left:20px;
+				float:left;
+				width:100%;
+				.fs(14px);
+				line-height:20px;
+				.Bondoni;
+				&.white{color:white;}
+				&.pink{color:@baseColor;}
+			}
+
+
+	}
+
+
+	//Thumb Gallery
+	.thumb-gallery{
+		border:solid @grayLight 1px;
+			position:relative;
+			overflow:hidden;
+			padding:14px;
+			height:100px;
+		.thumbs{
+			/* this cannot be too large */
+			width:20000em;
+			position:absolute;
+		}
+		.thumbs img{
+				float: left;
+				margin-right:20px;
+		}
+	}
 
 	//Wishlist
 	#wishlistcontainer{
