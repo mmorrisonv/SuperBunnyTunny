@@ -902,7 +902,8 @@ label{text-align:left;}label .ui-selectmenu{height:20px;}
 .hero-unit h1{margin-bottom:0;font-size:60px;line-height:1;letter-spacing:-1px;}
 .hero-unit p{font-size:18px;font-weight:200;line-height:27px;}
 .hero-campaign{z-index:6;}.hero-campaign #hero-blurb{position:absolute;left:200px;top:100px;}
-.hero-campaign #leftnav{position:absolute;top:8px;left:30px;}.hero-campaign #leftnav h4{color:white;}
+.hero-campaign #leftnav{position:absolute;top:8px;left:30px;}.hero-campaign #leftnav.black{background-color:#000000;padding:6px 0px 4px 6px;}.hero-campaign #leftnav.black li{color:#ee4799;padding-left:8px;}.hero-campaign #leftnav.black li.active{background-color:#ee4799;color:#fff;width:146px;}
+.hero-campaign #leftnav h4{color:white;}
 .hero-campaign #leftnav a.title{font-weight:bold;}
 .hero-campaign #leftnav>ul{padding-top:4px;}
 .hero-campaign #leftnav li a:hover{background-color:#ee4799;}
