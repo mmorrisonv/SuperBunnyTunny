@@ -113,6 +113,19 @@
     position: absolute;
     top:8px;
     left:30px;
+    &.black{
+      background-color:#000000;
+      padding: 6px 0px 4px 6px;
+      li{
+        color: @baseColor;
+        padding-left:8px;
+        &.active{
+          background-color:@baseColor;
+          color:#fff;
+          width:146px;
+        }
+      }
+    }
     h4{color:white;}
     a.title{
       font-weight:bold;
