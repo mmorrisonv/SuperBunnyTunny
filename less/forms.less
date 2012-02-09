@@ -56,6 +56,22 @@ label {
   }
 }
 
+span.label {//we can use the class label to make this more specific
+  font-family: 'HelveticaLTStdRoman';
+  color:@grayDark;
+  .fs(10px);
+  padding-top: 6px;
+  line-height: @baseline;
+  float: left;
+  width: 130px;
+  text-align: right;
+  color: @grayDark;
+  text-transform:uppercase;
+  &.normalcase{
+    text-transform:inherit;
+  }
+}
+
 .fielderror{
   color:red;
   .fsize0;

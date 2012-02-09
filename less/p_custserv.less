@@ -80,7 +80,8 @@
 		&.fsize0{.fs(10px);}
 		&.fsize1{.fs(11px);}
 		&.fsize2{.fs(12px);}
-		//&.HBold{.HBold;}
+		&.bold{.HBold;}
+		&.italic{.Bondoni;}
 	}
 
 
@@ -103,6 +104,17 @@
 		margin-bottom:10px;
 
 
+	}
+
+	.interview
+	{ //first used in modelsearch for there interverew paradigm
+		h4{
+			.fs(13px);.lh(16px);
+			color:@baseColor;
+		}
+		p{
+			//.fs(11px);
+		}
 	}
 	.span20 > .txtbanner{ width:785px; }
 
@@ -142,6 +154,10 @@
 		text-transform:uppercase;
 		margin-bottom:1px;
 
+	}
+
+	.file-input{
+		margin-bottom:10px;
 	}
 
 	table{
@@ -240,7 +256,26 @@
 		}
 	}
 
+	.favsuit{
+		position: relative;
+		.favlabel
+		{
+			position: absolute;
+			top:160px;
+			left:0px;
+		}
+		h2{
+			border:none;
+			.fs(11px);
+			line-height:12px;
+			padding-top:6px;
+		}
+		p{
+			.fs(10px);
 
+		}
+
+	}
 
 	/*----------------------------------------------------------------------------------------------------------------------*/
 	/*features*/
@@ -335,13 +370,14 @@
 	}
 
 	// Press Page
+
 	.press{
-		width:254px;
-		margin:-2px 7px 10px 0px;
+		width:257px;
+		margin:-2px 9px 20px 0px;
 		float:left;
 		display:inline;
 		position: relative;
-		height:230px;
+		height:220px;
 		.fsize0;
 		overflow:hidden;
 		color:gray;
@@ -353,14 +389,15 @@
 	
 
 			h2{
-				width:100%;
+				width:240px;
 				position: absolute;
-				top:155px; left:20px;
+				bottom:35px; left:20px;
 				float:left;
 				text-transform:uppercase;
 				letter-spacing: 2px;
 				font-size:13px;
 				line-height:20px;
+	
 				.HLight;
 				color: #333;
 				border-bottom:0;
@@ -370,11 +407,12 @@
 			h4{
 				position: absolute;
 				margin-top:3px;
-				bottom:36px; left:20px;
+				bottom:20px; left:20px;
 				float:left;
-				width:100%;
-				.fs(14px);
+				width:240px;
+				.fs(12px);
 				line-height:20px;
+			
 				.Bondoni;
 				&.white{color:white;}
 				&.pink{color:@baseColor;}
@@ -382,15 +420,102 @@
 
 
 	}
+	// Semi-Finalist Page
+
+	.finalist{
+		width:256px;
+		margin:-2px 4px 20px 0px;
+		float:left;
+		display:inline;
+		position: relative;
+		height:340px;
+		.fsize0;
+		overflow:hidden;
+		color:gray;
+		background:transparent url('/assets/images/css/polaroids-modelsearch_listing.png') no-repeat left top ;
+		&.current{ background:transparent url('/assets/images/css/polaroids-modelsearch_listing-pink.png') no-repeat left top ; }
+			img{	
+				cursor:pointer;
+				position: relative; top:10px; left:14px;
+			}
+	
+
+			h2{
+				width:240px;
+				position: absolute;
+				bottom:40px; left:20px;
+				float:left;
+				text-transform:uppercase;
+				letter-spacing: 2px;
+				font-size:20px;
+				line-height:20px;
+				text-align:center;
+				.HLight;
+				color: #333;
+				border-bottom:0;
+				&.white{color:white;}
+				&.pink{color:@baseColor;}
+			}
+			h4{
+				position: absolute;
+				margin-top:3px;
+				bottom:4px; left:20px;
+				float:left;
+				width:240px;
+				.fs(18px);
+				line-height:20px;
+				text-align:center;
+				.HBold;
+				.icon-triangle{
+					position: relative;
+					top:-2px;
+				}
+				&.white{color:white;}
+				&.pink{color:@baseColor;}
+			}
+
+
+	}
+	.month{
+		float:left;
+		width:100%;
+		//border-top:2px solid gray;
+		.bbunnyborder();
+		background-position:0% -10%;
+		text-align:center;
+		h3{
+			.HLight;
+			margin-top:-20px;
+			background-color:#fff;
+			width:120px;
+			position: relative;
+			left:340px;
+			top:0px;
+			color:@baseColor;
+		}
+		&.current
+		{
+			.bbunnyborder(none);
+			border-top:3px solid @lightBaseColor;
+		}
+	}
 
 
 	//Thumb Gallery
 	.thumb-gallery{
-		border:solid @grayLight 1px;
+		border:solid @baseColor 1px;
 			position:relative;
 			overflow:hidden;
 			padding:14px;
 			height:100px;
+		.mask{
+			width:685px;
+			height:100%;	
+			overflow: hidden;
+			float: left;
+			position: relative;	
+			left:30px;
+		}
 		.thumbs{
 			/* this cannot be too large */
 			width:20000em;
@@ -399,6 +524,15 @@
 		.thumbs img{
 				float: left;
 				margin-right:20px;
+				&.current{border:2px @lightBaseColor solid;}
+		}
+		.btn-scroll{
+			width:20px;
+			height:30px;
+			position: absolute;
+			top:35px;
+			&.jprev{left:10px; cursor: pointer;background: url('/assets/images/css/btn-arrowleft.png') no-repeat;}
+			&.jnext{right:10px; cursor: pointer;background: url('/assets/images/css/btn-arrowright.png') no-repeat;}
 		}
 	}
 

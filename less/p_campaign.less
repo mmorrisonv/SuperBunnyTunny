@@ -3,7 +3,53 @@
   #scrollableHomepage{
     position: absolute;
   }
+  #leftnav{
+    position: absolute;
+    top:8px;
+    left:30px;
+    &.black{
+      background-color:#000000;
+      padding: 6px 0px 4px 6px;
+      top:0px;
+      li {
+        color: @baseColor;
+        padding-left:8px;
+        a:hover{
+          width:135px;
+        }
+        &.active{
+          background-color:@baseColor;
+          color:#fff;
+          width:146px;
+          >a{
+            color:#fff;
 
+          }
+        }
+      }
+    }
+    h4{color:white;}
+    a.title{
+      font-weight:bold;
+    }
+    > ul{padding-top:4px;}
+    li a:hover{ background-color:@baseColor; }
+    > ul > li > .subcat li a{
+      border-color:white;
+    }
+    > ul .open .subcat{
+    
+      border-top:solid 1px white;
+      border-color:white;
+    }
+    > ul > li > .subcat li ul.tertiarycats li a {
+      color:white;
+      &:hover{background-color:none;}
+      &.title{
+        font-weight:bold;
+      }
+    }
+  }
   #campaignNav{
     display:none;
     position: relative;
@@ -109,46 +155,56 @@
     left:200px;
     top:100px;
   }
-  #leftnav{
-    position: absolute;
-    top:8px;
-    left:30px;
-    &.black{
-      background-color:#000000;
-      padding: 6px 0px 4px 6px;
-      li{
-        color: @baseColor;
-        padding-left:8px;
-        &.active{
-          background-color:@baseColor;
-          color:#fff;
-          width:146px;
-        }
-      }
-    }
-    h4{color:white;}
-    a.title{
-      font-weight:bold;
-    }
-    > ul{padding-top:4px;}
-    li a:hover{ background-color:@baseColor; }
-    > ul > li > .subcat li a{
-      border-color:white;
-    }
-    > ul .open .subcat{
+
+
+
+  div{
     
-      border-top:solid 1px white;
-      border-color:white;
-    }
-    > ul > li > .subcat li ul.tertiarycats li a {
-      color:white;
-      &:hover{background-color:none;}
-      &.title{
-        font-weight:bold;
-      }
-    }
   }
 
+  h1 {
+    margin-bottom: 0;
+    font-size: 60px;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+  p {
+    font-size: 18px;
+    font-weight: 200;
+    line-height: @baseline * 1.5;
+  }
+}
+
+.hero-modelsearch {
+
+
+  z-index: 6;
+
+
+  #hero-blurb{ /*same as hero-blurb for hero-campaign*/
+    position: absolute;
+
+    left:200px;
+    top:100px;
+  }
+  #hero-center{ /*center content in 960 px width slide*/
+    position: absolute;
+
+    left:250px;
+    top:100px;
+  }
+  #hero-title{ /*modelsearch title for semi finalist*/
+    position: absolute;
+
+    left:220px;
+    top:10px;
+  }  
+  #hero-polaroid{ /*modelsearch content with poloaroids - semifinalist page*/
+    position: absolute;
+
+    left:220px;
+    top:160px;
+  }
 
   div{
     
