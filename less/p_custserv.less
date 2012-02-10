@@ -436,21 +436,21 @@
 		&.current{ background:transparent url('/assets/images/css/polaroids-modelsearch_listing-pink.png') no-repeat left top ; }
 			img{	
 				cursor:pointer;
-				position: relative; top:10px; left:14px;
+				position: relative; top:14px; left:14px;
 			}
 	
 
 			h2{
 				width:240px;
 				position: absolute;
-				bottom:40px; left:20px;
+				bottom:40px; left:10px;
 				float:left;
 				text-transform:uppercase;
 				letter-spacing: 2px;
 				font-size:20px;
 				line-height:20px;
 				text-align:center;
-				.HLight;
+				.HUltra;
 				color: #333;
 				border-bottom:0;
 				&.white{color:white;}
@@ -462,7 +462,8 @@
 				bottom:4px; left:20px;
 				float:left;
 				width:240px;
-				.fs(18px);
+				.fs(16px);
+				.ls(1px);
 				line-height:20px;
 				text-align:center;
 				.HBold;
@@ -483,15 +484,18 @@
 		.bbunnyborder();
 		background-position:0% -10%;
 		text-align:center;
-		h3{
-			.HLight;
+		h2{
+			.HUltra;
+			letter-spacing:2px;
 			margin-top:-20px;
 			background-color:#fff;
 			width:120px;
 			position: relative;
 			left:340px;
 			top:0px;
-			color:@baseColor;
+			color:@grayDark;
+			border:0;
+
 		}
 		&.current
 		{
@@ -503,7 +507,7 @@
 
 	//Thumb Gallery
 	.thumb-gallery{
-		border:solid @baseColor 1px;
+		border:solid @lightBaseColor 1px;
 			position:relative;
 			overflow:hidden;
 			padding:14px;

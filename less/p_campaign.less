@@ -6,26 +6,23 @@
   #leftnav{
     position: absolute;
     top:8px;
-    left:30px;
+    left:10px;
     &.black{
       background-color:#000000;
-      padding: 6px 0px 4px 6px;
+      padding: 6px 0px 6px 6px;
       top:0px;
+      width:146px;
       li {
         color: @baseColor;
         padding-left:8px;
-        a:hover{
+        a{
           width:135px;
-        }
-        &.active{
-          background-color:@baseColor;
-          color:#fff;
-          width:146px;
-          >a{
+          &.active{
+            background-color:@baseColor;
             color:#fff;
-
           }
         }
+
       }
     }
     h4{color:white;}
