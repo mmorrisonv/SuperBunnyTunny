@@ -37,6 +37,15 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 
 
 //GENERAL 
+
+body{
+	padding-top:100px;
+}
+/* The white background content wrapper */
+.container > .content {
+	margin: 10px 0px; /* negative indent the amount of the padding to maintain the grid system */
+
+}
 .content .banner{
 	border:solid 1px @grayLight;
 
@@ -553,7 +562,6 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 	.pageination{		
 		float:left; 
 		width:300px;
-
 		&.right{
 			margin-bottom:-20px; //if pageination has class
 		}
@@ -854,7 +862,17 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 		position: relative;
 		.bbunnyborder();
 		margin-bottom:20px;
-		h3{.HLight;.lh(16px);letter-spacing:1px;padding-bottom:4px;}
+		h3
+		{
+			.HLight;
+			.lh(16px);
+			letter-spacing:1px;
+			padding-bottom:4px;
+			.bold
+			{
+				.Helv;
+			}
+		}
 		.subheading{
 			position: absolute;
 			bottom:-20px;
@@ -870,7 +888,7 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 		.playbtn
 		{
 			position: absolute;
-			top:40px; left:84px;
+			top:40px; left:96px;
 		}
 		.subheading{
 			position: absolute;
