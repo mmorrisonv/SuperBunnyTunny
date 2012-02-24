@@ -1,0 +1,333 @@
+/*p_custserv.less site specific styles for customer service pages*/
+
+//CUSTOMER SERVICE PAGE
+#clubLayout{
+	position:relative;
+	top:-7px;
+	min-height:500px;
+	padding-top:10px;
+	background:@bbunnyClub url('/assets/images/css/background-club.jpg') no-repeat;
+
+
+	.banner{margin-bottom:10px;}
+
+	h1{
+		.HUltra;
+		.fs(27px);
+		.ls(2px);
+		color:@baseColor;
+		&.grayDark{
+			color:@grayDark;
+		}
+	}
+	h1{
+		&.heading{
+			.HUltra;
+			//font-weight:bold;
+			letter-spacing:3px;
+			color:@baseColor;
+			border-bottom:19px solid @lightBaseColor;
+			.fs(27px);
+		}
+		&.pink{
+			.HLight;
+			color:@baseColor;
+			letter-spacing:2px;
+			margin-bottom:10px;
+			&.HUltra{
+				  font-family:'HelveticaNeueULight';
+			}
+			&.Helv{
+				  font-family:'HelveticaLTStdRoman';
+			}
+		}
+	}
+	h2{
+		color:@baseColor;
+		border-bottom:solid 4px @lightBaseColor;
+
+		&.subheading{
+			.fs(18px);
+			line-height:20px;
+			margin:16px 0 8px 0;
+			.Helv;
+		}
+
+		span{ //like a sub heading inside the h2
+			.fs(13px);
+			.HBold;
+			font-style:italic;
+			&.small{
+				font-style:normal;
+				color:@grayDark;
+				padding-left:10px;
+			}
+		}
+	}
+
+	h5{
+		.fs(11px);
+		color:@baseColor;
+		&.subheading{color:@grayDark;}
+	}
+
+	h6{
+		color:@grayDark;
+		.Helv;
+		.fs(12px);
+		line-height:12px;
+		margin-bottom:6px;
+	}
+
+	p{
+		.fs(13px);
+		.Helv;
+		&.fsize0{.fs(10px);}
+		&.fsize1{.fs(11px);}
+		&.fsize2{.fs(12px);}
+		&.bold{.HBold;}
+		&.italic{.Bondoni;}
+	}
+
+
+
+	.highlight{ text-transform:uppercase; color:@baseColor; .HBold; .fs(14px);}
+
+	.txtbanner{
+		background-color:@lightBaseColor;
+		color:@baseColor;
+		width:100%;
+		.fs(12px);
+		.ls(1px);
+		span{
+			padding:6px;
+			margin-top:5px;
+			.HBold;
+			display:block;
+			text-align:center;
+		}
+		margin-bottom:10px;
+
+
+	}
+
+	.interview
+	{ //first used in modelsearch for there interverew paradigm
+		h4{
+			.fs(13px);.lh(16px);
+			color:@baseColor;
+		}
+		p{
+			//.fs(11px);
+		}
+	}
+	.span20 > .txtbanner{ width:785px; }
+
+	.contentbox{
+		border:solid 3px #E6E7E8;
+		padding:10px;
+		margin-top:20px;
+		.floatedtitle{
+			position:relative;
+			top:-26px;left:25px;
+		}
+	}
+
+	.pageInstructions{
+		.fsize2;
+	}
+
+	.error{
+			color:red;
+		
+		h2{
+			color:red;
+			.Bondoni;
+			.fs(38px);
+			border-bottom:none;
+		}
+		p{	
+			.fs(9px);
+			text-transform:uppercase;
+		}
+	}
+
+	.headeritem{
+		color:@baseColor;
+		.fs(9px);
+		.HBold;
+		text-transform:uppercase;
+		margin-bottom:1px;
+
+	}
+
+	.file-input{
+		margin-bottom:10px;
+		position: relative;
+		img{
+			position: relative;
+			left:inherit;
+			top:8px;
+			padding-bottom:1px;
+		}
+	}
+
+	table{
+		.leftpink{
+			background-color:@lightBaseColor;
+			color:@baseColor;
+			text-transform:uppercase;
+			.HBold;
+			.fs(11px);
+			width:120px;
+			//border:1px solid @lightBaseColor;
+		}
+		.rightborder{
+			
+		}
+		&.dotted{
+			td{
+
+				.bbunnyborderTop(grayLight);
+				&.top{.bbunnyborderTop(none);}
+				&.first{
+					.bbunnyborderTop(none);
+				}
+				&.leftpink{
+					.bbunnyborderTop(none);
+				}
+			}
+		}
+		&.custServTable{
+			.fs(13px);			
+			border:1px solid #DDD;
+			td{
+				border-left:1px solid #DDD;
+				.bbunnyborderTop(grayLight);
+				&.top{.bbunnyborderTop(none);}
+				&.leftpink{
+					.bbunnyborderTop(none);
+				}
+			}
+		}
+		&.accountTable{
+			width:560px;
+			address{line-height:14px; margin-bottom:auto;}
+			.num{
+				width:10px;
+			}
+			.card,.address,.status{
+				width:140px;
+			}
+			p{.fsize1;}
+			label
+			{
+				width:auto;
+				padding-top:3px;
+			}
+			tr{border-bottom:solid 1px #666;}
+		}
+		ul{margin:0; padding-left:10px;
+			li{
+				//padding-left:25px;
+				margin-left:20px;
+			}
+		}
+		&.shipopts{
+			label{
+				width:90px;
+				padding: 2px 0 0 4px;
+				display: inline;
+				text-transform:uppercase;
+			}
+			td{
+				padding-left:0;
+				padding-right:0;
+				&.left{
+					width:120px;
+					float:left;
+				}
+			}
+			tr{
+				border-bottom:solid 1px @grayLight;
+			}
+		}
+
+	}
+
+	li{
+		//margin-left:20px;
+	}
+
+	//Options for diffrent Address
+	.address-option{
+		label{ padding-top:3px;}
+		.fsize0;
+		address{
+			padding-left:20px;
+		}
+	}
+
+	.favsuit{
+		position: relative;
+		.favlabel
+		{
+			position: absolute;
+			bottom:30px;
+			left:0px;
+		}
+		h2{
+			border:none;
+			.fs(11px);
+			line-height:12px;
+			padding-top:6px;
+		}
+		p{
+			.fs(10px);
+
+		}
+
+	}
+
+	/*----------------------------------------------------------------------------------------------------------------------*/
+	/*features*/
+
+
+	//Thumb Gallery
+	.thumb-gallery{
+		border:solid @lightBaseColor 1px;
+			position:relative;
+			overflow:hidden;
+			padding:14px;
+			height:100px;
+		.mask{
+			width:685px;
+			height:100%;	
+			overflow: hidden;
+			float: left;
+			position: relative;	
+			left:30px;
+		}
+		.thumbs{
+			/* this cannot be too large */
+			width:20000em;
+			position:absolute;
+		}
+		.thumbs img{
+				float: left;
+				margin-right:20px;
+				&.current{border:2px @lightBaseColor solid;}
+		}
+		.btn-scroll{
+			width:20px;
+			height:30px;
+			position: absolute;
+			top:35px;
+			&.jprev{left:10px; cursor: pointer;background: url('/assets/images/css/btn-arrowleft.png') no-repeat;}
+			&.jnext{right:10px; cursor: pointer;background: url('/assets/images/css/btn-arrowright.png') no-repeat;}
+		}
+	}
+
+
+}
+
