@@ -111,15 +111,51 @@
 
 	}
 
-	.interview
-	{ //first used in modelsearch for there interverew paradigm
-		h4{
-			.fs(13px);.lh(16px);
-			color:@baseColor;
+	.postlist
+	{ //used to show a list of posts in the club section
+		h3{
+			.fs(20px);.lh(16px);.ls(1px);
+			color:@lightBaseColor;
+			.HLight;
 		}
 		p{
-			//.fs(11px);
+			.Helv;
+			.fs(12px);
+			color:@lightBaseColor;
 		}
+		.title
+		{ // title for the postlist
+			.bbunnyborder;
+			padding-bottom: 12px; margin-bottom:12px;
+			.bold
+			{
+				.HBold;
+			}
+			h2{border:none;.Helv;}
+			&.sansborder
+			{
+				.bbunnyborderTop('none');
+				padding:0;
+				margin-bottom:0px;
+			}	
+		}
+
+		article
+		{
+			.bbunnyborderTop;
+			margin-bottom:20px;
+			&.first
+			{
+				.bbunnyborderTop('none');
+				h3{padding-top:0px;}
+			}
+
+			h3{
+				
+				padding: 12px 0px 6px 0px;
+			}
+		}
+
 	}
 	.span20 > .txtbanner{ width:785px; }
 
@@ -301,7 +337,7 @@
 			padding:14px;
 			height:100px;
 		.mask{
-			width:685px;
+			
 			height:100%;	
 			overflow: hidden;
 			float: left;
