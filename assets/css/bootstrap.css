@@ -5382,6 +5382,37 @@ label .ui-selectmenu {
   bottom: -20px;
   left: 0px;
 }
+#rightcol .mini-feature {
+  position: relative;
+  float: left;
+  width: 100%;
+}
+#rightcol .mini-feature .desc {
+  position: absolute;
+  top: 10px;
+  left: 46px;
+  font-size: 12px;
+  color: #fbd7e7;
+  font-family: 'HelveticaNeue45Light';
+  letter-spacing: 1px;
+}
+#rightcol .fav-suit {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-bottom: 6px;
+}
+#rightcol .fav-suit img {
+  width: 70px;
+}
+#rightcol .fav-suit span {
+  position: absolute;
+  top: 20px;
+  left: 80px;
+  font-size: 14px;
+  color: #fbd7e7;
+  font-family: 'HelveticaLTStdRoman';
+}
 #rightcol .thumb-video {
   margin-top: 10px;
   margin-bottom: 20px;
@@ -6365,7 +6396,7 @@ label .ui-selectmenu {
 }
 #clubLayout h2 {
   color: #ee4799;
-  border-bottom: solid 4px #fbd7e7;
+  font-family: 'HelveticaNeue45Light';
 }
 #clubLayout h2.subheading {
   font-size: 18px;
@@ -6437,10 +6468,82 @@ label .ui-selectmenu {
   display: block;
   text-align: center;
 }
-#clubLayout .interview h4 {
-  font-size: 13px;
+#clubLayout .postlist h3 {
+  font-size: 20px;
   line-height: 16px;
-  color: #ee4799;
+  letter-spacing: 1px;
+  color: #fbd7e7;
+  font-family: 'HelveticaNeue45Light';
+}
+#clubLayout .postlist p {
+  font-size: 12px;
+  color: #fbd7e7;
+}
+#clubLayout .postlist .title {
+  background-image: url('/assets/images/css/borderbaseColor.png');
+  background-position: 0% 100%;
+  background-repeat: repeat-x;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+#clubLayout .postlist .title .bold {
+  font-family: 'HelveticaNeue75Bold';
+}
+#clubLayout .postlist .title h2 {
+  border: none;
+  font-family: 'HelveticaNeue45Light';
+}
+#clubLayout .postlist .title.sansborder {
+  background-image: url('/assets/images/css/bordernone.png');
+  background-position: 0% 0%;
+  background-repeat: repeat-x;
+  padding: 0;
+  margin-bottom: 0px;
+}
+#clubLayout .postlist .thumb-video {
+  margin: 10px 8px 30px 0;
+  position: relative;
+  float: left;
+}
+#clubLayout .postlist .thumb-video .thumb {
+  width: 202px;
+}
+#clubLayout .postlist .thumb-video .playbtn {
+  position: absolute;
+  top: 40px;
+  left: 96px;
+}
+#clubLayout .postlist .thumb-video .subheading {
+  color: #fbd7e7;
+  position: absolute;
+  bottom: -20px;
+  left: 0px;
+}
+#clubLayout .postlist article {
+  background-image: url('/assets/images/css/borderbaseColor.png');
+  background-position: 0% 0%;
+  background-repeat: repeat-x;
+  margin-bottom: 20px;
+  padding-top: 18px;
+}
+#clubLayout .postlist article.first {
+  background-image: url('/assets/images/css/bordernone.png');
+  background-position: 0% 0%;
+  background-repeat: repeat-x;
+}
+#clubLayout .postlist article.first h3 {
+  padding-top: 0px;
+}
+#clubLayout .postlist article.w450 {
+  width: 450px;
+}
+#clubLayout .postlist article h3 {
+  font-family: 'HelveticaNeue45Light';
+  line-height: 23px;
+  padding: 0px 0px 6px 0px;
+}
+#clubLayout .postlist article p {
+  padding-top: 4px;
 }
 #clubLayout .span20 > .txtbanner {
   width: 785px;
@@ -6617,7 +6720,6 @@ label .ui-selectmenu {
   height: 100px;
 }
 #clubLayout .thumb-gallery .mask {
-  width: 685px;
   height: 100%;
   overflow: hidden;
   float: left;
