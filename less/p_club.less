@@ -5,8 +5,8 @@
 	position:relative;
 	top:-7px;
 	min-height:500px;
-	padding-top:20px;
-	background:@bbunnyClub url('/assets/images/css/background-club.jpg') no-repeat;
+	padding-top:0px;
+	background:@bbunnyClub url('/assets/images/css/background-clubpurp.jpg') repeat-x;
 
 
 	.banner{margin-bottom:10px;}
@@ -43,9 +43,12 @@
 		}
 	}
 	h2{
-		color:@baseColor;
+		//color:@baseColor;
 		.HLight;
-
+		&.Bondoni
+		{
+			font-family:'BodoniBookItalic';
+		}
 		&.subheading{
 			.fs(18px);
 			line-height:20px;
@@ -90,6 +93,39 @@
 	}
 
 
+	.clubmenu
+	{
+		color:@white;
+		background: rgb(189, 34, 118);
+		background: rgba(189, 34, 118, 0.6);
+		padding-top:6px;
+		margin-bottom:10px;
+		/* For IE 5.5 - 7*/
+		filter:~"progid:DXImageTransform.Microsoft.gradient(startColorstr=#99bd2276, endColorstr=#99bd2276)";
+		/* For IE 8*/
+		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99bd2276, endColorstr=#99bd2276)";
+		&.ie{background:transparent;}	
+		.container{position: relative;}
+		ul
+		{	
+			position: absolute; top:8px; left:170px;
+			.fs(11px);
+			li
+			{
+			    position: relative;
+			    display: block;
+			    float: left;
+				text-decoration: none;
+				padding-right:38px;
+				.Helv;
+				a{
+					color:@white;
+					cursor:pointer;
+				}
+			}
+		}
+
+	}
 
 	.highlight{ text-transform:uppercase; color:@baseColor; .HBold; .fs(14px);}
 
@@ -138,7 +174,10 @@
 				margin-bottom:0px;
 			}	
 		}
-
+		.share
+		{
+			color:@lightBaseColor;
+		}
 		.thumb-video
 		{
 			margin:10px 8px 30px 0;
@@ -171,8 +210,9 @@
 			{
 				.bbunnyborderTop('none');
 				h3{padding-top:0px;}
+				padding-top:4px;
 			}
-			&.w450
+			&.w450 p
 			{
 				width:450px;
 			}
@@ -185,8 +225,25 @@
 			p
 			{
 				padding-top:4px;
-				//.fs(12px);
+				.fs(13px);
 			}
+			.share_area
+			{
+				margin-top:30px;
+				color:@lightBaseColor;
+				.share
+				{
+					margin-bottom:6px;
+				}
+			}
+
+		}
+		article.two_column{
+			h3{
+				.fs(32px);.lh(32px);
+				color:@baseColor;
+				padding-bottom:10px;
+			}		
 		}
 
 	}
@@ -360,14 +417,31 @@
 
 	/*----------------------------------------------------------------------------------------------------------------------*/
 	/*features*/
-
+	.sendBBBForm
+	{
+		p{.Helv;.fs(12px);}
+		.borderbox
+		{
+			color:@lightBaseColor;
+			.fs(22px);
+			padding:20px;
+			border:2px dotted @baseColor;
+			margin-bottom:10px;
+		}
+		.formelement
+		{
+			.fs(9px);.lh(8px);
+			color:@lightBaseColor;
+		}
+	}
 
 	//Thumb Gallery
 	.thumb-gallery{
 		border:solid @lightBaseColor 1px;
 			position:relative;
 			overflow:hidden;
-			padding:14px;
+			margin-top:10px;
+			padding:14px 19px 14px 19px;
 			height:100px;
 		.mask{
 			
@@ -401,6 +475,35 @@
 		//.bbunnyborder;
 	}
 
+	.twitteroverview
+	{
+		.Bondoni;
+		color:white;
+		text-align:center;
+		.fs(16px);
+		padding:16px 0 16px 0;
+
+	}
+	.twitterposts
+	{
+		.Bondoni;
+		color:white;
+		background-color:#231f20;
+		border:solid 2px @lightBaseColor;
+		padding:10px;
+		p{.Bondoni;color:white;.fs(16px);.lh(16px);margin-bottom:1px;}
+	}
+	#rightcol //overriding elements for the clublayouts right coloum
+	{
+		color:@lightBaseColor;
+		span.subheading//used as simple textbased dividers
+		{
+			float:left;
+			width:100%;
+			.lh(10px);
+			margin:-2px 0px 8px 0px;
+		}
+	}
 
 }
 
