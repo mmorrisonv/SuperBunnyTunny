@@ -249,11 +249,29 @@ footer {
   font-size:10px;
   margin-top: @baseline - 1;
 
-  .clubLayout
+  &.clubLayout
   {
     margin-top:-7px;
     padding-top:10px;
     background-color:@bbunnyClub;
+    //recolor elements for club
+    span //stay in the know text or other uninteractive text areas
+    {
+      color:@lightBaseColor;
+      &.HBold{color:@baseColor;}
+    }
+    input{//email sign up 
+      background-color:@bbunnyClub;
+      &.btn{background-color:@baseColor;&:hover{background-color:@bbunnyClub;}}
+    }
+    .share{color:@lightBaseColor;} //share / add follow area
+    .nav > li > a {color:white;} //bottom nav
+    h3 a:hover,
+    .brand:hover,
+    ul .active > a {  
+      background-color: #333;
+      background-color: rgba(255,255,255,.05);
+    }
   }
 
   > .container{
@@ -268,10 +286,16 @@ footer {
   }
   .social 
   {
- 
+    //to allow for background we need to jog over this section by 1opixels and remove and margin-left that bootraap would add 
+    width:950px;
     padding-bottom: 4px;
     //border-bottom: dotted 2px @baseColor;
     .bbunnyborder(pinklight);
+    position: relative; left:10px;top:0px;
+    >.span
+    {
+      margin-left:0;
+    }
   }
   .ftrFB{margin-right:3px; margin-left:3px;}
   .ftrYouTube{margin-right:3px; margin-left:3px;}

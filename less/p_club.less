@@ -6,7 +6,7 @@
 	top:-7px;
 	min-height:500px;
 	padding-top:0px;
-	background:@bbunnyClub url('/assets/images/css/background-clubpurp.jpg') repeat-x;
+	background:@bbunnyClub url('/assets/images/css/background-club.jpg') repeat-x;
 
 
 	.banner{margin-bottom:10px;}
@@ -97,13 +97,13 @@
 	{
 		color:@white;
 		background: rgb(189, 34, 118);
-		background: rgba(189, 34, 118, 0.6);
+		background: rgba(189, 34, 118, 0.9);
 		padding-top:6px;
 		margin-bottom:10px;
 		/* For IE 5.5 - 7*/
-		filter:~"progid:DXImageTransform.Microsoft.gradient(startColorstr=#99bd2276, endColorstr=#99bd2276)";
+		filter:~"progid:DXImageTransform.Microsoft.gradient(startColorstr=#99bd2276, endColorstr=#ddbd2276)";
 		/* For IE 8*/
-		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99bd2276, endColorstr=#99bd2276)";
+		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99bd2276, endColorstr=#ddbd2276)";
 		&.ie{background:transparent;}	
 		.container{position: relative;}
 		ul
@@ -160,13 +160,14 @@
 		}
 		.title
 		{ // title for the postlist
-			.bbunnyborder;
+			.bbunnyborder('basecolorclub');
 			padding-bottom: 12px; margin-bottom:12px;
 			.bold
 			{
 				.HBold;
 			}
 			h2{border:none;.HLight;}
+			h3{.HUltra;}
 			&.sansborder
 			{
 				.bbunnyborderTop('none');
@@ -176,7 +177,18 @@
 		}
 		.share
 		{
-			color:@lightBaseColor;
+			color:@baseColor;
+			.addthis_button_facebook
+			{
+				margin-right:5px;
+				img{width:15px;}
+			}
+			.addthis_button_twitter
+			{
+				margin-right:5px;
+				img{width:15px;}
+			}
+
 		}
 		.thumb-video
 		{
@@ -197,13 +209,14 @@
 				position: absolute;
 				bottom:-20px;
 				left:0px;
+
 			}
 		}
 	
 
 		article
 		{
-			.bbunnyborderTop;
+			.bbunnyborderTop(basecolorclub);
 			margin-bottom:20px;
 			padding-top:18px;
 			&.first
@@ -431,20 +444,33 @@
 		.formelement
 		{
 			.fs(9px);.lh(8px);
-			color:@lightBaseColor;
+			color:@baseColor;
+			float:left;
+			width:100%;
+			&.error
+			{
+				padding-top:4px;
+				color:@red;
+			}
+			.formcheckboxlabel
+			{
+				position: relative;
+				top:6px;
+			}
 		}
 	}
 
 	//Thumb Gallery
 	.thumb-gallery{
-		border:solid @lightBaseColor 1px;
-			position:relative;
-			overflow:hidden;
-			margin-top:10px;
-			padding:14px 19px 14px 19px;
-			height:100px;
+		border:solid @baseColor 1px;
+		position:relative;
+		overflow:hidden;
+		margin-top:10px;
+		padding:14px 19px 14px 19px;
+		height:100px;
+		width:910px;
 		.mask{
-			
+			width:870px;
 			height:100%;	
 			overflow: hidden;
 			float: left;
@@ -489,19 +515,24 @@
 		.Bondoni;
 		color:white;
 		background-color:#231f20;
-		border:solid 2px @lightBaseColor;
+		border:solid 4px @lightBaseColor;
 		padding:10px;
 		p{.Bondoni;color:white;.fs(16px);.lh(16px);margin-bottom:1px;}
 	}
 	#rightcol //overriding elements for the clublayouts right coloum
 	{
+		.title
+		{
+			h3{.HUltra;}
+			.bbunnyborder(basecolorclub);
+		}
 		color:@lightBaseColor;
 		span.subheading//used as simple textbased dividers
 		{
 			float:left;
 			width:100%;
 			.lh(10px);
-			margin:-2px 0px 8px 0px;
+			margin:0px 0px 2px 0px;
 		}
 	}
 
