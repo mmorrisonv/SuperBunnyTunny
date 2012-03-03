@@ -11,6 +11,8 @@
 
 	.banner{margin-bottom:10px;}
 
+	.jemailbtn{top:-1px;}
+
 	h1{
 		.HUltra;
 		.fs(27px);
@@ -45,9 +47,14 @@
 	h2{
 		//color:@baseColor;
 		.HLight;
+		.ls(1px);
 		&.Bondoni
 		{
 			font-family:'BodoniBookItalic';
+		}
+		&.HUltra
+		{
+			font-family:'HelveticaNeueULight';
 		}
 		&.subheading{
 			.fs(18px);
@@ -92,6 +99,7 @@
 		&.italic{.Bondoni;}
 	}
 
+	hr{.bbunnyborder(basecolorclub);}
 
 	.clubmenu
 	{
@@ -116,18 +124,49 @@
 			    display: block;
 			    float: left;
 				text-decoration: none;
-				padding-right:38px;
+				padding-left:49px;
+				&:first-child{padding-left:10px;}
 				.Helv;
 				a{
-					color:@white;
+					color:white;
 					cursor:pointer;
+					&.current
+					{
+						color:@lightBaseColor;
+					}
+					&:hover
+					{
+						color:@baseColor;
+					}
 				}
 			}
 		}
 
 	}
 
+	.share
+	{
+		color:@baseColor;
+		.addthis_button_facebook
+		{
+			margin-right:5px;
+			img{width:15px;}
+		}
+		.addthis_button_twitter
+		{
+			margin-right:5px;
+			img{width:15px;}
+		}
+
+	}
+
 	.highlight{ text-transform:uppercase; color:@baseColor; .HBold; .fs(14px);}
+
+	.pageination {
+		.fsize0;
+		color:@baseColor;
+		a,.startColorstr{color:@baseColor;}
+	}
 
 	.txtbanner{
 		background-color:@lightBaseColor;
@@ -166,7 +205,20 @@
 			{
 				.HBold;
 			}
-			h2{border:none;.HLight;}
+			h2
+			{
+				border:none;.HLight;
+				&.HUltra
+				{
+					font-family:'HelveticaNeueULight';
+				}
+				&.feature
+				{
+					.HUltra;
+					color:@baseColor;
+					.fs(32px);.ls(1px);
+				}
+			}
 			h3{.HUltra;}
 			&.sansborder
 			{
@@ -175,21 +227,7 @@
 				margin-bottom:0px;
 			}	
 		}
-		.share
-		{
-			color:@baseColor;
-			.addthis_button_facebook
-			{
-				margin-right:5px;
-				img{width:15px;}
-			}
-			.addthis_button_twitter
-			{
-				margin-right:5px;
-				img{width:15px;}
-			}
 
-		}
 		.thumb-video
 		{
 			margin:10px 8px 30px 0;
@@ -209,6 +247,7 @@
 				position: absolute;
 				bottom:-20px;
 				left:0px;
+
 
 			}
 		}
@@ -432,7 +471,13 @@
 	/*features*/
 	.sendBBBForm
 	{
-		p{.Helv;.fs(12px);}
+		p{
+			.Helv;.fs(14px);.lh(18px);
+			&.error
+			{
+				.fs(9px); color: red
+			}
+		}
 		.borderbox
 		{
 			color:@lightBaseColor;
@@ -457,6 +502,13 @@
 				position: relative;
 				top:6px;
 			}
+
+		}
+		.submitBtn
+		{
+			float:left;
+			width:100%;
+			text-align:center;
 		}
 	}
 
@@ -514,8 +566,8 @@
 	{
 		.Bondoni;
 		color:white;
-		background-color:#231f20;
-		border:solid 4px @lightBaseColor;
+		background-color:#000000;
+		border:solid 6px @lightBaseColor;
 		padding:10px;
 		p{.Bondoni;color:white;.fs(16px);.lh(16px);margin-bottom:1px;}
 	}
@@ -532,7 +584,7 @@
 			float:left;
 			width:100%;
 			.lh(10px);
-			margin:0px 0px 2px 0px;
+			margin:0px 0px 8px 0px;
 		}
 	}
 

@@ -881,6 +881,10 @@ body{
 	}
 	.connectlink
 	{
+		& :first-child
+		{
+			margin-top:10px;
+		}
 		.Helv;
 		.fs(16px);
 		padding-bottom:4px;
@@ -891,12 +895,16 @@ body{
 		float: left;
 		width:100%;
 		margin-bottom:14px;
+		img
+		{
+			width:50px;
+		}
 		.desc
 		{
-			position: relative;
-			bottom:16px;
-			left:0px;
-			.fs(12px);.lh(12px);
+			position: absolute;
+			bottom:14px;
+			left:58px;
+			.fs(14px);.lh(12px);
 			color:@lightBaseColor;
 			.Helv;
 			.ls(1px);
@@ -911,16 +919,16 @@ body{
 		position: relative;
 		float: left;
 		width:100%;
-		margin-bottom:6px;
+		margin-bottom:16px;
 		img
 		{
-			width:70px;
+			width:90px;
 		}
 		span
 		{
 			position: absolute;
-			top:20px;
-			left:80px;
+			top:30px;
+			left:100px;
 			.fs(14px);
 			color:@lightBaseColor;
 			.Helv;
@@ -939,8 +947,9 @@ body{
 		}
 		.subheading{
 			position: absolute;
-			bottom:-20px;
+			bottom:-18px;
 			left:0px;
+			margin:0 !important;
 		}
 	}
 }
