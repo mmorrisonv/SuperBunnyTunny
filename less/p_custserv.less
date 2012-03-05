@@ -562,22 +562,32 @@
 	.videoList{
 		.heading
 		{
-			.fs(16px);
-			.ls(1px);.lh(18px);
-			span.bold{ .fs(16px); font-style:normal; .Helv;}
+			.fs(18px);
+			.ls(1px);.lh(24px);
+			padding-bottom:4px;
+			margin:6px 0 20px 0;
+			border-bottom:6px solid @lightBaseColor;
+			span.bold{ .fs(18px); font-style:normal; .Helv;}
 		}
 		article.video
 		{
 			.bbunnyborder(baseColor);
-			padding-bottom:1px;
-			width:778px;
+			padding-bottom:2px;
+			margin-bottom:20px;
+			width:790px;
+			&:last-child
+			{
+				.bbunnyborder(none);
+			}
 			.desc{
 				position: relative;
+				padding-top:10px;
 				.Helv;
 				h3
 				{
-					.ls(1px);.lh(18px);
+					.ls(1px);.lh(20px);
 					.HLight;
+					.fs(20px);
 					&.subheading
 					{
 
@@ -597,7 +607,7 @@
 				{
 					position: absolute;
 					right:0;
-					top:0;
+					top:10px;
 				}	
 			}
 

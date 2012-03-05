@@ -104,8 +104,8 @@
 	.clubmenu
 	{
 		color:@white;
-		background: rgb(189, 34, 118);
-		background: rgba(189, 34, 118, 0.9);
+		background-color: @baseColor;
+		background-color: rgba(238, 71, 153, 0.9);
 		padding-top:6px;
 		margin-bottom:10px;
 		/* For IE 5.5 - 7*/
@@ -124,7 +124,7 @@
 			    display: block;
 			    float: left;
 				text-decoration: none;
-				padding-left:49px;
+				padding-left:43px;
 				&:first-child{padding-left:10px;}
 				.Helv;
 				a{
@@ -219,7 +219,7 @@
 					.fs(32px);.ls(1px);
 				}
 			}
-			h3{.HUltra;}
+			h3{.HUltra;.fs(22px);.ls(2px);}
 			&.sansborder
 			{
 				.bbunnyborderTop('none');
@@ -488,7 +488,7 @@
 		}
 		.formelement
 		{
-			.fs(9px);.lh(8px);
+			.fs(9px);.lh(10px);
 			color:@baseColor;
 			float:left;
 			width:100%;
@@ -500,7 +500,7 @@
 			.formcheckboxlabel
 			{
 				position: relative;
-				top:6px;
+				top:3px;
 			}
 
 		}
@@ -514,7 +514,7 @@
 
 	//Thumb Gallery
 	.thumb-gallery{
-		border:solid @baseColor 1px;
+		border:solid #77244d 1px;
 		position:relative;
 		overflow:hidden;
 		margin-top:10px;
@@ -567,7 +567,7 @@
 		.Bondoni;
 		color:white;
 		background-color:#000000;
-		border:solid 6px @lightBaseColor;
+		border:solid 6px #faafd0;
 		padding:10px;
 		p{.Bondoni;color:white;.fs(16px);.lh(16px);margin-bottom:1px;}
 	}
@@ -575,7 +575,15 @@
 	{
 		.title
 		{
-			h3{.HUltra;}
+			h3
+			{
+				.HUltra; 
+				.fs(21px);
+				&.fsize18
+				{
+					.fs(18px);
+				}
+			}
 			.bbunnyborder(basecolorclub);
 		}
 		color:@lightBaseColor;
