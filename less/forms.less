@@ -60,7 +60,7 @@ span.label {//we can use the class label to make this more specific
   font-family: 'HelveticaLTStdRoman';
   color:@grayDark;
   .fs(10px);
-  padding-top: 6px;
+  /*padding-top: 6px; seems to be inapproptiate*/
   line-height: @baseline;
   float: left;
   width: 130px;
@@ -72,7 +72,7 @@ span.label {//we can use the class label to make this more specific
   }
 }
 
-.fielderror{
+.fielderror,.field.error{
   color:red;
   .fsize0;
   margin-left:10px;
