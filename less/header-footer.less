@@ -80,8 +80,8 @@ header {
       .shopcart{
         position: relative;
         z-index:10005;
-
-        &.hovered{background:@lightBaseColor;}
+        
+        &.hovered{background:@lightBaseColor;.box-shadow( 0 3px 4px rgba(0,0,0,.45) );}
           h5{
             .fs(11px);
             line-height:inherit;
@@ -100,7 +100,7 @@ header {
             z-index:3;
             height:10px; 
             overflow: hidden;
-            .box-shadow( 0 3px 6px rgba(0,0,0,.45) );
+            .box-shadow( 0 3px 4px rgba(0,0,0,.45) );
             .loading
             { 
               text-align:center;
