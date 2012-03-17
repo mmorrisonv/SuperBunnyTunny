@@ -67,6 +67,11 @@
 		}
 	}
 
+	h3
+	{
+		&.large{.fs(26px);}
+	}
+
 	h5{
 		.fs(11px);
 		color:@baseColor;
@@ -305,17 +310,22 @@
 		//.ui-selectmenu{margin-left:10px;}
 
 	}
-	
+	.addressentryform
+	{
+		.row{margin-top:2px;margin-left:0;}
+	}
 	//Locator Page
 	.StoreGrid{
 		.location{
 			margin-top:40px;
-			margin-right:98px;
+			
 			.fsize2;
 			float:left;
-			//width:260px;
+			width:260px;
+			/* TODO: why was this change made??;
+			margin-right:98px;
 			width:197px;
-
+			*/
 			h6
 			{
 				.fsize4;

@@ -10,7 +10,7 @@
 	
 
 }
-#scrollableHomepage 
+#scrollableHomepage,#scrollableCampaign 
 {
 	/*overrides just for the homepage*/
 	
@@ -20,7 +20,7 @@
 	height:550px;/*must fit content*/
 }
 
-#scrollableHomepage .prev
+#scrollableHomepage .prev,#scrollableCampaign .prev
 {
 	background:transparent url(/assets/images/css/icon-prev.png) no-repeat;
 	width:26px; height:52px;
@@ -31,7 +31,7 @@
 	z-index:9999;
 }
 
-#scrollableHomepage .next
+#scrollableHomepage .next,#scrollableCampaign .next
 {
 	background:transparent url(/assets/images/css/icon-next.png) no-repeat;
 	width:26px; height:52px;
@@ -55,10 +55,7 @@
 	/*text-align: center; TODO:This text-align:center is only needed for IE4/WIN and should be defined in an override == removed apr 27 2011 becuase it breaks in IE7*/
 
 }
-#scrollableHomepage .items 
-{
-	/*height:700px;*//*removed so we can detect height*/
-}
+
 /*
 	Specifies the size of each scrolled element. TODO:update this on page load and window resize
 */
@@ -68,7 +65,10 @@
 
 
 }
-
+#scrollableCampaign .items .slide {
+	float: left;
+	width:960px;
+}
 /*
 .slide {
 	width: 800px;
@@ -84,9 +84,9 @@
 
 
 /* this makes it possible to add next button beside scrollable */
-.scrollable {
+/*.scrollable {
 	float:left;	
-}
+}*/
 
 /* prev, next, prevPage and nextPage buttons */
 a.browse {

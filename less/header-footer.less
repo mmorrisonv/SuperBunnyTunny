@@ -41,6 +41,7 @@ header {
         width:inherit;
         background-color: transparent;
         border:0;
+        width:18px;
       }
     }
   }
@@ -52,7 +53,7 @@ header {
     //border-left:solid 1px #333;
     .bbunnyborderLeft(grayLight);
     display:inline;
-    height: 30px;
+    height: 35px;
     margin-top: 10px;
     width:150px;
     text-transform:uppercase;
@@ -298,12 +299,18 @@ footer {
     width:950px;
     padding-bottom: 4px;
     //border-bottom: dotted 2px @baseColor;
-    border-bottom:solid 1px @baseColor;
+    //border-bottom:solid 1px @baseColor;
+    .bbunnyborder();
     position: relative; 
     left:0px;top:0px;
     >.span
     {
       margin-left:0;
+    }
+    form
+    {
+      margin-bottom:0;
+      float: left;
     }
   }
   .ftrFB{margin-right:3px; margin-left:3px;}
@@ -366,7 +373,7 @@ footer {
   }
 
 } 
-
+.jBBhome footer{margin-top:4px;}
 
 
 
