@@ -578,6 +578,11 @@ body{
 			text-align:right;
 			float:right;
 		}
+					a.active
+			{
+				.HBold;
+				color:@grayDark;
+			}
 	}
 	.pageination{		
 		float:left; 
@@ -593,11 +598,7 @@ body{
 		span
 		{
 			margin-left:14px;
-			a.active
-			{
-				font-weight:bold;
-				color:@grayDark;
-			}
+
 		}
 	}
 
@@ -653,15 +654,16 @@ body{
 	dd{ margin-top:-2px;
 		font-weight:bold;}
 
-	.colors{ float:right;
+	.colors{ 
+		float:right;
 		list-style:none;
 		width:46px;
 		position: absolute; top: 248px; right:0;
 		text-align:right;
 		float:right;
 		li{width:20px;display:inline;}
-		li img{width:20px;}
-		li span{width:20px;height:20px;float: left;}
+		li img{width:20px; margin-left:2px;cursor: pointer;}
+		li span{width:20px;height:20px;float: left;margin-left:2px;cursor: pointer;}
 	}
 }
 
