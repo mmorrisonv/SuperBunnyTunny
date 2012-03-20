@@ -503,6 +503,9 @@ body{
 {
 	border:solid 5px @gray;
 }
+
+
+
 //GIFTCARD PAGE
 .giftcardsignup{
 	margin-top:40px;
@@ -584,8 +587,19 @@ body{
 		}
 
 	}
-	.sort{float:right;
-		span{margin-left:14px;}}
+	.sort
+	{
+		float:right;
+		span
+		{
+			margin-left:14px;
+			a.active
+			{
+				font-weight:bold;
+				color:@grayDark;
+			}
+		}
+	}
 
 .listing{
 	width:190px;
@@ -647,6 +661,7 @@ body{
 		float:right;
 		li{width:20px;display:inline;}
 		li img{width:20px;}
+		li span{width:20px;height:20px;float: left;}
 	}
 }
 
