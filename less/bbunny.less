@@ -849,6 +849,21 @@ body{
 			}
 
 			ul.tertiarycats{
+				margin-left:0;
+				ul
+				{//ul's inside of tertiarycats - usually a shop by collection or shop by title
+					li.title
+					{
+						color:@baseColor;
+						.fs(10px);
+						border-bottom:solid 1px @grayDark;
+						border-top:solid 1px @grayDark;
+					}
+				}
+				ul:first-child
+				{
+					li.title{ border-top:none; }
+				}
 				li a{ 
 					
 					color:@grayDark;
@@ -859,7 +874,10 @@ body{
 					font-size:9px;
 					float:left;
 					padding:0 5px 0 5px;
-
+					&.title
+					{//used for bolding certain categories
+						.HBold;
+					}
 					&:hover{
 						text-decoration:none;
 						cursor:pointer;
@@ -920,6 +938,7 @@ body{
 	}
 	.connectlink
 	{
+		width:270px;//just a test to see if this will work, some connectlinks are wrapping
 		& :first-child
 		{
 			margin-top:10px;
@@ -979,15 +998,16 @@ body{
 		margin-top:10px;margin-bottom:20px;
 		position: relative;
 		float: left;
+		.thumb{width:202px;}
 		.playbtn
 		{
 			position: absolute;
 			top:40px; left:96px;
 		}
-		.subheading{
-			position: absolute;
-			bottom:-18px;
-			left:0px;
+		span.subheading{
+			.Helv;
+			.lh(14px);
+
 			margin:0 !important;
 		}
 	}
