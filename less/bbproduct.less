@@ -88,8 +88,15 @@
 		h4{//price
 			font-size:10px;
 			line-height:12px;
-			margin-bottom:15px;}
-
+			margin-bottom:15px;
+		}
+		h5{//copied from product-selct can be used in both places - "not available" "selected colors"
+			color:@grayDark;
+			.HLight;
+			font-size:10px;
+			line-height:10px; letter-spacing:.5px;
+			margin-bottom:4px;
+		}
 		p,#lblDescription{
 			line-height:12px;
 			margin-bottom:10px;
@@ -101,9 +108,16 @@
 			line-height:12px; 
 			text-align:center;
 			margin-bottom:5px;
-			.fs(8px);
+			.fs(9px);
 		}
-
+		.ui-selectmenu-status /*size and color select menus*/
+		{
+			text-align:center;
+		}
+		.ui-selectmenu
+		{
+		li a{padding-right:1em;/*help center the options*/}
+		}
 		.alt-color{margin-bottom:4px; padding:0;}
 
 		.jAddToCart{
@@ -116,6 +130,11 @@
 			li{padding-left:10px; 
 				background: url(/assets/images/css/bullet.png) left center no-repeat ;
 				 }
+		}
+
+		.input
+		{//any inputs like selectboxes or textboxes
+			margin-left:0; //just to make sure, some default styling makes mL:150px;
 		}
 	}
 	
@@ -131,14 +150,6 @@
 		.input{
 			margin:0;
 		}
-		.sizechart{
-			position: absolute;
-			bottom:4px; left:80px;
-			cursor: pointer;
-			color:@gray;
-			text-decoration:underline;
-			font-size:10px;
-		}
 		table{
 			.sizechart{
 				position: static;
@@ -151,7 +162,14 @@
 			padding:2px 2px 2px;
 		}
 	}
-
+		.sizechart{
+			position: absolute;
+			bottom:29px; left:80px;
+			cursor: pointer;
+			color:@gray;
+			text-decoration:underline;
+			font-size:10px;
+		}
 	#related-items {//any items that come below the main feature product area
 		margin-top:50px;
 		float:left;

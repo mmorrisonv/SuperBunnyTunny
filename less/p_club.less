@@ -124,7 +124,7 @@
 			    display: block;
 			    float: left;
 				text-decoration: none;
-				padding-left:43px;
+				padding-left:42px;
 				&:first-child{padding-left:8px;}
 				.Helv;
 				a{
@@ -545,8 +545,8 @@
 			height:30px;
 			position: absolute;
 			top:35px;
-			&.jprev{left:10px; cursor: pointer;background: url('/assets/images/css/btn-arrowleft.png') no-repeat;}
-			&.jnext{right:10px; cursor: pointer;background: url('/assets/images/css/btn-arrowright.png') no-repeat;}
+			&.js-prev{left:10px; cursor: pointer;background: url('/assets/images/css/btn-arrowleft.png') no-repeat;}
+			&.js-next{right:10px; cursor: pointer;background: url('/assets/images/css/btn-arrowright.png') no-repeat;}
 		}
 	}
 	.gallery-detail
@@ -570,7 +570,8 @@
 		background-color:#000000;
 		border:solid 6px #faafd0;
 		padding:10px;
-		p{.Bondoni;color:white;.fs(16px);.lh(16px);margin-bottom:1px;}
+		//ul{list-style-type:none;}
+		li{.Bondoni;color:white;.fs(16px);.lh(18px);margin-bottom:12px;list-style-type: none;}
 	}
 	#rightcol //overriding elements for the clublayouts right coloum
 	{
