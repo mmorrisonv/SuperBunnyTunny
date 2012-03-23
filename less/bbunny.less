@@ -50,12 +50,15 @@ body{
 	border:solid 1px @grayLight;
 
 }
-
+.content > .shippingbanner
+{
+	margin-top:-20px;/*pull up a bit more than traditional content - this is the usual use case*/
+}
 .shippingbanner{
 	text-align:center; 
 	.HBold;
 	font-size:16px;
-	margin:-18px 0 4px;/*pull up a bit more than traditional content*/
+	margin:-10px 0 4px;/*pull up a bit more than traditional content*/
 	padding-bottom:2px;//kick the padding down to allow the border to show up
 	.bbunnyborder();
 	span{
@@ -384,6 +387,11 @@ body{
 
 }
 
+	.error-section{
+		text-align:center;
+		margin-top:80px;margin-bottom:60px;
+		padding:30px;
+	}
 
 	.checkoutbtns{
 		margin:20px auto 20px auto;
@@ -539,32 +547,38 @@ body{
 
 	}
 	.address{
-	  margin-left:20px;
-	  h5{
-	  	line-height:26px;
-	  }
-		&:first-child{
+		margin-left:20px;
+		h5
+		{
+			line-height:26px;
+		}
+		&:first-child
+		{
 			margin-left:0;
 		}
-	  .pink{line-height:14px; color:@baseColor;
-		  .fs(11px);
+		.pink
+		{
+			line-height:14px; color:@baseColor;
+			.fs(11px);
 		}
-	  p{
-	  	.fs(12px);
-	  }
+		p{
+			.fs(12px);
+		}
 
 	}
-	.lettercount{
+	.lettercount
+	{
 		display:block;
 	}
 	.jotheramount{.hide}
-	.floatedtitle{
+	.floatedtitle
+	{
 		z-index: 2;
 		position: absolute;
 		top:-22px;
 		left:20px;
 	}
-	.error{//push this div over just on this page
+	.error{//push the error div over just on this page
 		margin-left:150px;
 	}
 }
@@ -851,7 +865,7 @@ body{
 			ul.tertiarycats{
 				margin-left:0;
 				ul
-				{//ul's inside of tertiarycats - usually a shop by collection or shop by title
+				{//ul's inside of tertiarycats - usually a shop by collection or shop by style
 					li.title
 					{
 						color:@baseColor;
@@ -877,6 +891,7 @@ body{
 					&.title
 					{//used for bolding certain categories
 						.HBold;
+						.fs(11px);
 					}
 					&:hover{
 						text-decoration:none;
