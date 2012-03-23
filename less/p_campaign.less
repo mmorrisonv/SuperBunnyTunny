@@ -3,6 +3,20 @@
   #scrollableHomepage{
     position: absolute;
   }
+  #scrollableCampaign{
+    #page
+    {
+      .slide
+      {
+        height:553px;
+        overflow: hidden;
+        img
+        {
+          width:960px;
+        }
+      }
+    }
+  }
   #leftnav{
     position: absolute;
     top:8px;
@@ -52,16 +66,17 @@
       }
     }
   }
-  #campaignNav{
+  #campaignGalleryNav{
     display:none;
     /*position: relative;
     top:545px;*/
     .row{margin-left:0px;}
     #row1{
-      border-bottom:solid 1px #eee;
-      .returnBtn{float:left;}
+      border-bottom:solid 1px @grayDark;
+      position: relative;
+      .returnBtn{float:left;cursor: pointer;}
     }
-    .slideNav
+    .slideNav //may not be needed - might be and old construct used durning comp build
     {
       float:left;
       list-style-type:none;
@@ -75,8 +90,11 @@
     }
     .pageination
     {
-      float:left;
-      margin-left:380px;
+      position: relative;
+      left:50%;//start with this - javascipt will catch from here
+      top:0;
+      margin:-2px 0 6px 0;
+      width:auto;
     }
     #row2{
       padding:0px;
@@ -88,26 +106,37 @@
       }
 
       h3{
-        .HLight;
+        .HUltra;
         display:inline-block;
         float:left;
+        text-transform:uppercase;
+        .fs(22px);
+        .ls(1px);
       }
       .productList{
         float:left;
+        width:460px;
+        text-align:center;
         display:inline-block;
         list-style-type:none;
         display:inline-block;
-        margin:8px 30px 0 30px;
+        margin:6px 0px 0 30px;
         float:left;
-        .fs(12px);
+        .fs(11px);
         li{
-          float:left;
-          margin-right:10px;
+          margin-right:14px;
           font-weight:bold;
+          display: inline-block;
         }
       }
       .shopThisBtn{
-        margin-top:8px;
+        float: right;
+        margin-top:6px;
+        a{
+            
+            color:@grayDark;
+        }
+
       }
       span{
         float:left;
@@ -147,7 +176,7 @@
   }
 }
 
-.hero-campaign {
+#campaign-hero {
 
 
   z-index: 6;
@@ -160,11 +189,6 @@
     top:100px;
   }
 
-
-
-  div{
-    
-  }
 
   h1 {
     margin-bottom: 0;
@@ -208,10 +232,6 @@
 
     left:220px;
     top:160px;
-  }
-
-  div{
-    
   }
 
   h1 {
