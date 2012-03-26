@@ -105,7 +105,8 @@ select,
   height: @baseline;
   offset:0;
   //padding: 4px;
-  font-size: @basefont;
+  //font-size: @basefont;
+  .fs(11px);
   line-height: @baseline;
   color: @gray;
   border: 1px solid @lightBaseColor;
@@ -121,6 +122,7 @@ select,
 // remove padding from select
 select {
   padding: initial;
+  text-transform:uppercase;//3/25/2012 request to make all selects uppercase
 }
 
 // mini reset for non-html5 file types

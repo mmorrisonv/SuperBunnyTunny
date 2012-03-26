@@ -1,3 +1,4 @@
+/* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
 /*!
  * BBunny Less File
  * Date: @DATE
@@ -918,7 +919,7 @@ select,
   width: 210px;
   height: 18px;
   offset: 0;
-  font-size: 10px;
+  font-size: 11px;
   line-height: 18px;
   color: #808080;
   border: 1px solid #fbd7e7;
@@ -933,6 +934,7 @@ select.white,
 }
 select {
   padding: initial;
+  text-transform: uppercase;
 }
 input[type=checkbox], input[type=radio] {
   width: auto;
@@ -1651,7 +1653,7 @@ table .headerSortUp.purple, table .headerSortDown.purple {
   background: transparent url('/assets/images/css/icon-heart.png') no-repeat 110px 5px;
 }
 .icon-zoomimage {
-  background: transparent url('/assets/images/css/icon-zoom.png') no-repeat 118px 0px;
+  background: transparent url('/assets/images/css/icon-zoom.png') no-repeat 120px 2px;
 }
 .icon-zoomvideo {
   background: transparent url('/assets/images/css/icon-zoomplay.png') no-repeat 64px 0px;
@@ -3641,6 +3643,9 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
 .mini.ui-selectmenu .ui-selectmenu-status {
   line-height: 14px;
 }
+.ui-selectmenu-menu li {
+  text-transform: uppercase;
+}
 .ui-selectmenu-icon {
   position: absolute;
   right: 0px;
@@ -4528,10 +4533,14 @@ a.menu:after,
   padding: 0 0 0px 0;
 }
 #productlayout .cross-sell .row a {
-  margin-right: 1px;
+  margin-left: 2px;
+  border: 1px solid #fbd7e7;
   padding: 0;
   position: relative;
   display: inline-block;
+}
+#productlayout .cross-sell .row a:first-child {
+  margin: 0;
 }
 #productlayout .cross-sell .row a .overlay {
   position: absolute;
@@ -4634,6 +4643,9 @@ a.menu:after,
   margin-bottom: 4px;
   padding: 0;
 }
+#productlayout .product-desc .alt-color.current {
+  border: solid 2px #fbd7e7;
+}
 #productlayout .product-desc .jAddToCart {
   margin-right: 4px;
 }
@@ -4731,7 +4743,7 @@ a.menu:after,
 }
 #productlayout .interact-zoom span {
   margin-right: 0px;
-  padding: 0 23px 0 0;
+  padding: 1px 23px 0 0;
 }
 #productlayout .interact-zoom .zoombtn {
   cursor: pointer;
@@ -4742,6 +4754,9 @@ a.menu:after,
 }
 #productlayout .thumbs img.active {
   border: solid 1px #ee4799;
+}
+#productlayout #mainAltViews img {
+  margin-right: 10px;
 }
 #zoomlayout .thumbs {
   background-color: white;
@@ -6011,8 +6026,10 @@ label .ui-selectmenu {
   line-height: 27px;
 }
 #listinglayout .error-section {
-  margin-bottom: 60px;
-  padding-bottom: 30px;
+  margin-top: 0px;
+  text-align: left;
+  margin-bottom: 160px;
+  padding: 0 0 0 10px;
 }
 #listinglayout .error-section h1 {
   color: #ee4799;
@@ -6077,6 +6094,7 @@ label .ui-selectmenu {
 #custservlayout h2.profileName {
   font-family: 'BodoniBookItalic';
   text-transform: uppercase;
+  border: 0;
 }
 #custservlayout h2.profileName span.HLight {
   color: #231f20;

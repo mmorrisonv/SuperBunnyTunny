@@ -21,10 +21,12 @@
 			padding:0 0 0px 0;
 			
 			a{
-				margin-right:1px;
+				margin-left:2px;
+				border:1px solid @lightBaseColor;
 				padding:0;
 				position: relative;
 				display:inline-block;
+				&:first-child{margin:0;}
 				.overlay{
 					position: absolute; top:0; left:0;
 					width:100%; height:80px;
@@ -118,7 +120,16 @@
 		{
 		li a{padding-right:1em;/*help center the options*/}
 		}
-		.alt-color{margin-bottom:4px; padding:0;}
+
+		.alt-color
+		{
+			margin-bottom:4px; 
+			padding:0;
+			&.current
+			{
+				border:solid 2px @lightBaseColor;
+			}
+		}
 
 		.jAddToCart{
 			margin-right:4px;
@@ -222,7 +233,7 @@
 	}
 
 	.interact-zoom{
-		span{margin-right:0px; padding:0 23px 0 0;}
+		span{margin-right:0px; padding:1px 23px 0 0;}
 		.zoombtn{cursor: pointer; }
 	}
 
@@ -231,6 +242,12 @@
 		border:solid 1px @gray;
 		&.active{
 			border:solid 1px @baseColor;
+		}
+	}
+	#mainAltViews//alt views under product
+	{
+		img{
+			margin-right:10px;
 		}
 	}
 }
