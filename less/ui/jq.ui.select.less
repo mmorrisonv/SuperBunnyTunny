@@ -12,10 +12,16 @@
 }
 .ui-selectmenu-menu li
 {
-
 	text-transform:uppercase;
 }
-
+.ui-selectmenu-status // this is the actual display of the selectbox, uninteracted with
+{
+	text-transform:uppercase;
+	//color:@gray;
+	.fs(10px);
+	.Helv;
+	padding:0 1.1em 0 .2em !important;
+}
 //defaults
 .ui-selectmenu-icon { position:absolute; right:0px; margin-top:-8px; top: 50%; width:14px; border-left:solid 1px darken(@lightBaseColor,5%); }
 .ui-selectmenu-menu { padding:0; margin:0; position:absolute; top: 0; display: none; z-index: 1005;} /* z-index: 1005 to make selectmenu work with dialog */

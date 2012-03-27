@@ -812,14 +812,15 @@ body{
 			> a{ 
 				color:@baseColor; 
 				.HBold; 
-				padding:1px 6px;
+				padding:1px 5px 1px 5px;
 				display:block;
 				.fs(10px);
-				&:hover,&.current{
+				&:hover,&.current,&.selected{
 					text-decoration:none;
 					cursor:pointer;
 					color:@white;
 					background-color: @grayDark;
+					margin-bottom:1px;
 				}
 			}
 			&.current > a{
@@ -839,8 +840,8 @@ body{
 			.subcat{
 				float:left;
 				display:block;
-				border-top:solid 1px @grayDark;
-				border-bottom:solid 1px @grayDark;
+				border-top:solid 1px @gray;
+				border-bottom:solid 1px @gray;
 			}
 		}
 
@@ -852,8 +853,8 @@ body{
 			a {
 				cursor: pointer;
 				color:@baseColor;
-				border-top:solid 1px @grayDark;
-				border-bottom:solid 1px @grayDark;
+				border-top:solid 1px @gray;
+				border-bottom:solid 1px @gray;
 				width:100%;
 				float:left;
 				text-decoration:none;
@@ -870,8 +871,8 @@ body{
 					{
 						color:@baseColor;
 						.fs(10px);
-						border-bottom:solid 1px @grayDark;
-						border-top:solid 1px @grayDark;
+						border-bottom:solid 1px @gray;
+						border-top:solid 1px @gray;
 					}
 				}
 				ul:first-child
@@ -984,6 +985,15 @@ body{
 			.bold{
 				.HBold;
 			}
+		}
+	}
+
+	.thumb3up //any area where 3 thumbnails shoudl fit 
+	{
+		float:left;
+		img
+		{
+			width:40px;
 		}
 	}
 	
