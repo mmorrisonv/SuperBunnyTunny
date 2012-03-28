@@ -32,13 +32,25 @@
   a > .icon-triangle{
     position: relative;
     top:5px;
+    left:0;
   } 
   dd > .icon-triangle
   {
     position: relative;
-    top:5px;
+    top:5px;left:0;
   }
 }
+a > .icon-triangle,  x:-moz-any-link  //mozilla firefox override
+{     
+  position: relative;
+  top:5px; left:1px;
+}
+dd > .icon-triangle,  x:-moz-any-link  //mozilla firefox override
+{
+  position: relative;
+  top:6px; left:1px;
+}
+
 .icon-triangle-large {
   margin-left:2px; margin-bottom:2px; padding:0;
   height:10px; width:8px;
@@ -494,9 +506,10 @@ input[type=submit].btn {
 }
 .pageination,.sort{
   a{
-        color:#231F20;
+      .Helv;
+      color:lighten( @grayDark , 15% );
       &.active, &:hover{
-        color:darken(@grayDark,50%);
+        color:black;
         .Helv;
       }
       &.active{
@@ -528,7 +541,8 @@ input[type=submit].btn {
 .pagination {
   height: @baseline * 2;
   margin: @baseline 0;
-  ul {
+  ul 
+  {
     float: left;
     margin: 0;
     border: 1px solid #ddd;
@@ -536,10 +550,12 @@ input[type=submit].btn {
     .border-radius(3px);
     .box-shadow(0 1px 2px rgba(0,0,0,.05));
   }
-  li {
+  li 
+  {
     display: inline;
   }
-  a {
+  a 
+  {
     float: left;
     padding: 0 14px;
     line-height: (@baseline * 2) - 2;
@@ -549,6 +565,7 @@ input[type=submit].btn {
     *border-right-color: #ddd; /* IE6-7 */
     text-decoration: none;
     color:#231F20;
+    .Helv;
   }
   a:hover,
   .active a {

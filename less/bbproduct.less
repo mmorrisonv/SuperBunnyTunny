@@ -72,6 +72,7 @@
 		border-bottom:solid 1px @grayLight;
 		padding:0 0 12px 0; 
 		margin:0 0 12px 0;
+		float:left;
 		h1,h2,h3,h4,h5,p{
 			margin:0;line-height:inherit;
 		}
@@ -115,6 +116,7 @@
 		.ui-selectmenu-status /*size and color select menus*/
 		{
 			text-align:center;
+			color:@baseColor;
 		}
 		.ui-selectmenu
 		{
@@ -208,18 +210,19 @@
 				position: relative;
 
 				.span18 { width:730px; }//stretch row out to the end of the parent
-					.interact{
-						position: absolute;
-						right:0;
-						top:34px;
-						.span6;
-						.purchase{float:right;}
-						.share{
-							margin-top:10px;
-							float:right;
-							color:@baseColor;
-						}
+				.interact{
+					/*position: absolute;
+					right:0;
+					top:34px;*/
+					float: left;
+					.span6;
+					.purchase{float:right;}
+					.share{
+						margin-top:10px;
+						float:right;
+						color:@baseColor;
 					}
+				}
 
 			}
 
