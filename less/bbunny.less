@@ -665,16 +665,30 @@ body{
 	width:125px;
 	float:left;
 	display:inline-block;
-	margin-right:6px;
+	margin-right:8px;
 	img{ border:solid 3px @lightBaseColor; }
 }
 
 .kicker7{
-	width:100px;
+
+	width:104px;
 	float:left;
 	display:inline-block;
-	margin-right:6px;
-	img{ border:solid 3px @lightBaseColor; }
+	margin-right:8px;
+	&:first-child{margin-left:4px;}
+	a{float:left;}
+	img
+	{
+		width:104px;
+		border:solid 2px @lightBaseColor; 
+	}
+	.name
+	{
+		text-align:center;
+		width:104px;
+		.lh(12px);
+	}
+
 }
 
 .banner1{
