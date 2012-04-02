@@ -236,7 +236,15 @@ body{
 			bottom:0; left:0;
 			h5{margin:0;line-height:16px;}
 			h6{/*instock*/ color:@baseColor;}
+			.fielderror
+			{
+				width:150px;
+				float:left;
+				margin-bottom:3px;
+			}
 		}
+
+
 	}
 
 	.error-section{
@@ -257,7 +265,9 @@ body{
 
 	table{
 		.HBold;
-		.fs(12.5px);
+		font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+		font-weight:bold;
+		.fs(12px);
 		margin-bottom:6px;
 		thead{
 			//.fs(13px);
@@ -290,7 +300,6 @@ body{
 		}
 		td{
 			//border-bottom:2px dotted @gray;
-
 			padding-top:20px;//padding-bottom:10px;
 			.tddiv{
 				position: relative;
@@ -303,7 +312,8 @@ body{
 		}
 		.leftpink{
 			color:@baseColor;
-			.HBold;
+			.Helv;
+			font-weight:bold;
 			text-transform:uppercase;
 			.fs(11px);
 			
@@ -325,12 +335,16 @@ body{
 
 	table.floatingcart{
 		.fs(11px);
+		td{font-weight:bold;}
+		/*font-family: Arial, sans-serif;*/
 	}
 	table.merch{
 		.fs(11px);
 		margin-bottom:6px;
+		td{font-weight:bold;}
 		span.note{
 			.Helv;
+			font-weight:normal;//bold was being applied here and needs to be overridden
 			color:@gray;
 			width:400px;
 			float:left;
@@ -427,7 +441,7 @@ body{
 	.checkoutheadings{
 		.fs(10px);
 		margin-bottom:4px;
-		text-align:center;
+		text-align:center;// mar.30th 2012 -  not sure why this was added, doesnt match comps or CT build
 
 	}
 	.bal{
@@ -435,7 +449,7 @@ body{
 		text-decoration:underline;
 		.HLight;
 		.fs(9px);
-		margin-bottom:4px;
+		margin:1px 0 4px 0;
 	}
 	label{
 		float:inherit;
@@ -488,11 +502,15 @@ body{
 	/*specific page positioning*/
 	.confnum{
 		position: absolute;
+		width:500px;
 		top: 170px;
-		left: 400px;
+		left: 180px;
+		text-align:center;
+
 		.fs(16px);
 		color:@baseColor;
-		.HBold;
+		//.HBold;//IE does not display numbers well here
+		.Arial.Bold;
 	}
 	.referfriend{
 		position: absolute;
@@ -624,7 +642,7 @@ body{
 // HOMEPAGE STYLES
 .feat{
 	width:257px;
-	margin:-2px 7px 10px 0px;
+	margin:-2px 6px 10px 0px;
 	float:left;
 	display:inline;
 	position: relative;

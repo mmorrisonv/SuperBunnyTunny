@@ -58,7 +58,7 @@ dd > .icon-triangle,  x:-moz-any-link  //mozilla firefox override
   line-height:18px;
   *vertical-align: middle;
   background-image:url('/assets/images/css/sprite-trianglelarge.png');
-  &.black{background-position:0px 0px;}
+  &.black{background-position:0px 10px;}
   &.white{background-position:0px 14px;}
   &.pink{background-position:0px 0px;} 
 }
@@ -311,6 +311,10 @@ dd > .icon-triangle,  x:-moz-any-link  //mozilla firefox override
   color: #fff;
   font-size: 10px;
   line-height: normal;
+  &.hotpink
+  {
+    background-color:@baseColor;
+  }
   //border: 1px solid #ccc;
   //border-bottom-color: #bbb;
   //.border-radius(4px);
@@ -370,6 +374,11 @@ dd > .icon-triangle,  x:-moz-any-link  //mozilla firefox override
   &.small {
     padding: 7px 9px 7px;
     font-size: @basefont - 2px;
+  }
+  &.medium
+  {
+    font-size:11px;
+    padding:4px 12px;
   }
 }
 // Super jank hack for removing border-radius from IE9 so we can keep filter gradients on alerts and buttons
