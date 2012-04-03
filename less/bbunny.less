@@ -702,9 +702,11 @@ body{
 	}
 	.name
 	{
+		color:@grayDark;
 		text-align:center;
 		width:104px;
 		.lh(12px);
+		cursor: pointer;
 	}
 
 }
@@ -761,143 +763,6 @@ body{
 	}
 }
 
-
-//LEFTNAV STYLES
-#leftnav{
-
-	width:140px;
-	margin-right:10px;
-
-	>h2{ .Helv; font-size:16px; padding-left: 6px; }
-	>h4{ .Helv; font-size:16px; padding-left: 6px; .fs(18px); line-height:18px; }
-	> ul{
-		list-style: none;
-		text-transform:uppercase;
-  		margin:0;
-	  
-		> li{ 
-			display:block;
-			width:100%;
-			float:left;
-			> a{ 
-				color:@baseColor; 
-				.HBold; 
-				padding:1px 5px 1px 5px;
-				display:block;
-				.fs(10px);
-				&:hover,&.current,&.selected{
-					text-decoration:none;
-					cursor:pointer;
-					color:@white;
-					background-color: @grayDark;
-				}
-				&.current,&.selected{
-					margin-bottom:1px;
-				}
-			}
-			&.current > a{
-
-					text-decoration:none;
-					cursor:pointer;
-					color:@white;
-					background-color: @grayDark; 
-				
-			}
-			
-
-		}
-		.subcat{display:none;margin:0; width:100%;}
-		.open{
-			//border-bottom:solid 1px @grayDark;
-			.subcat{
-				float:left;
-				display:block;
-				border-top:solid 1px @gray;
-				border-bottom:solid 1px @gray;
-			}
-		}
-
-		> li > .subcat li { 
-			float: left;
-			margin:0;
-			list-style:none;
-			width:100%;
-			a {
-				cursor: pointer;
-				color:@baseColor;
-				border-top:solid 1px @gray;
-				border-bottom:solid 1px @gray;
-				width:100%;
-				float:left;
-				text-decoration:none;
-				padding-left:2px;
-				padding-bottom:0;
-				margin-right:8px;
-			}
-
-			ul.tertiarycats{
-				margin-left:0;
-				ul
-				{//ul's inside of tertiarycats - usually a shop by collection or shop by style
-					li.title
-					{
-						color:@baseColor;
-						.fs(10px);
-						border-bottom:solid 1px @gray;
-						border-top:solid 1px @gray;
-					}
-				}
-				ul:first-child
-				{
-					li.title{ border-top:none; }
-				}
-				li a{ 
-					
-					color:@grayDark;
-					border:none;
-					width:auto;
-					text-decoration:none;
-					margin-left:10px;
-					font-size:9px;
-					float:left;
-					padding:0 5px 0 5px;
-					&.title
-					{//used for bolding certain categories
-						.HBold;
-						.fs(10px);
-					}
-					&:hover{
-						text-decoration:none;
-						cursor:pointer;
-						color:@white;
-						background-color: @grayDark;
-					}
-
-				}
-				li.active a{
-					background-color:@grayDark;
-					color:white;
-				}				
-
-			}
-		}
-	}
-
-	DL 
-	{	
-		width:98px;
-		margin-top:30px;
-		float:left;
-		DD{
-		  /*background:transparent url('/assets/images/css/sprite-triangle.png') no-repeat;
-			background-position:50px 5px;*/
-			position: relative;
-			bottom:0px;
-			.Bondoni;
-			font-size:14px;
-		}
-	}
-}
 
 //RIGHTCOL STYLES
 #rightcol{
@@ -963,12 +828,15 @@ body{
 	.thumb3up //any area where 3 thumbnails shoudl fit 
 	{
 		float:left;
-		height:66px;
+		width:66px;height:66px;
 		overflow: hidden;
 		margin:0 4px 4px 0;
 		img
 		{
-			width:66px;
+			min-width:66px;
+			min-height:66px;
+			max-width:80px;
+			max-height:90px;
 		}
 	}
 	
