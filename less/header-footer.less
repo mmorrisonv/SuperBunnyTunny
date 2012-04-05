@@ -190,6 +190,10 @@ header {
         &.title{.HBold;}
       }
     }
+    > li //this really shouldnt be needed, because of the way the menu is built on the page there can be a lone li inside of a .dropdown-nav
+    {
+      padding-left:14px;
+    }
     ul{//second level nav inside li's
       float:left;
       text-align:left;

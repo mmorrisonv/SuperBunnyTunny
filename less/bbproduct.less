@@ -239,6 +239,7 @@
 	.interact-zoom{
 		span{margin-right:0px; padding:1px 23px 0 0;}
 		.zoombtn{cursor: pointer; }
+		p{margin:0;}
 	}
 
 	.thumbs img{
@@ -258,9 +259,31 @@
 
 
 
-#zoomlayout{
+#zoomLayout{
 	
 	.thumbs{
 		background-color:white;
+		img
+		{
+			cursor: pointer;
+			padding:2px;
+			border:1px solid #efefef;
+			margin:1px;
+			&.active
+			{
+				border:2px solid @lightBaseColor;
+				margin:0;
+				&:hover
+				{
+				border:2px solid @lightBaseColor;
+				margin:0;
+				}
+			}
+			&:hover
+			{
+				border:2px solid #efefef;
+				margin:0;
+			}
+		}
 	}
 }
