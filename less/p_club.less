@@ -3,7 +3,7 @@
 //CUSTOMER SERVICE PAGE
 #clubLayout{
 	position:relative;
-	top:-7px;
+	top:-5px;
 	min-height:500px;
 	padding-top:0px;
 	background:@bbunnyClub url('/assets/images/css/background-club.jpg') repeat-x;
@@ -279,6 +279,10 @@
 				padding-top:4px;
 				.fs(13px);
 			}
+			.articleImage
+			{
+				max-width:630px;
+			}
 			.share_area
 			{
 				margin-top:30px;
@@ -290,6 +294,9 @@
 			}
 
 		}
+		article:first-child{				.bbunnyborderTop('none');
+				h3{padding-top:0px;}
+				padding-top:4px;}
 		article.two_column{
 			h3{
 				.fs(32px);.lh(32px);
@@ -477,6 +484,11 @@
 			{
 				.fs(9px); color: red
 			}
+			&.stepInstruction
+			{
+				padding:10px 0 10px 0;
+				.lh(20px);
+			}
 		}
 		.borderbox
 		{
@@ -488,7 +500,8 @@
 		}
 		.formelement
 		{
-			.fs(9px);.lh(10px);
+			.fs(8px);.lh(15px);letter-spacing:.2em;
+			.Helv;
 			color:@baseColor;
 			float:left;
 			width:100%;
@@ -500,15 +513,18 @@
 			.formcheckboxlabel
 			{
 				position: relative;
-				top:3px;
+				top:3px;left:2px;
 			}
 
 		}
+		.downloadlink{position: relative;top:4px; display: inline-block;}
 		.submitBtn
 		{
+			
+			margin-top:140px;
 			float:left;
 			width:100%;
-			text-align:center;
+			text-align:left;
 		}
 	}
 
