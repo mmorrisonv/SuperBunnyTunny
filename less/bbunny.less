@@ -216,13 +216,18 @@ body{
 			}
 			.bottom{
 				position: absolute;
-				bottom:0; left:0;
+				bottom:10px; left:0;
 				p{margin-bottom:0;}
 				h5{margin:0;line-height:16px;}
 				h6{/*instock*/ 
 					.fs(9px);
 					color:@baseColor;
+					.lh(10px);
 					//line-height:14px;
+					&.error
+					{
+						color:red;
+					}
 				}
 			}
 		}
