@@ -88,6 +88,7 @@
 		.fs(11px);
 		color:@baseColor;
 		&.subheading{color:@grayDark;font-weight:bold;}
+		&.grayDark{color:@grayDark;}
 	}
 
 	h6{
@@ -570,49 +571,7 @@
 	}
 
 
-	//Thumb Gallery
-	.thumb-gallery{
-		border:solid @lightBaseColor 1px;
-			position:relative;
-			overflow:hidden;
-			padding:14px;
-			height:100px;
-		.mask{
-			width:685px;
-			height:100%;	
-			overflow: hidden;
-			float: left;
-			position: relative;	
-			left:30px;
-		}
-		.thumbs{
-			/* this cannot be too large */
-			width:20000em;
-			position:absolute;
-			img
-			{
-				float: left;
-				margin-right:20px;
-				cursor: pointer;
-				&.current{border:2px @lightBaseColor solid;}
-			}
-			div
-			{
-				float:left;
-			}
-		}
-		.btn-scroll{
-			width:20px;
-			height:30px;
-			position: absolute;
-			top:35px;
-			&.disabled {
-			visibility:hidden !important;		
-			} 	
-			&.js-prev{left:10px; cursor: pointer;background: url('/assets/images/css/btn-arrowleft.png') no-repeat;}
-			&.js-next{right:10px; cursor: pointer;background: url('/assets/images/css/btn-arrowright.png') no-repeat;}
-		}
-	}
+
 
 	.videoList{
 		.heading

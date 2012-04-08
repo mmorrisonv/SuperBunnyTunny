@@ -83,390 +83,14 @@ body{
 }
 
 .jColumn{overflow:hidden;}
-//SHOPPING BAG / CHECKOUT PAGE
-#shopbaglayout,#checkoutlayout{
 
-
-	position:relative;
-	//margin-top:20px;
-	h4{
-		.fs(12px);
-	}
-	p{
-		.fs(14px); //why so large?
-		&.error{
-			.Helv;
-			.fs(9px);
-		}
-	}
-	.floatedtitle{
-		z-index: 2;
-		position: absolute;
-		top:-14px;
-		left:130px;
-	}
-	h1{
-		&.heading{
-			.HUltra;
-			//font-weight:bold;
-			letter-spacing:3px;
-			color:@baseColor;
-			border-bottom:19px solid @lightBaseColor;
-			.fs(27px);
-		}
-		&.pink{
-			.HLight;
-			color:@baseColor;
-			letter-spacing:2px;
-			margin-bottom:10px;
-			&.HUltra{
-				  font-family:'HelveticaNeueULight';
-			}
-			&.Helv{
-				  font-family:'HelveticaLTStdRoman';
-			}
-		}
-	}
-	h2{
-		color:@baseColor;
-		.HLight;
-		margin-bottom:10px;
-	}
-	h3{
-		line-height:20px;
-		&.bold{ .HBold; }
-	}
-
-	input{
-		&.white{ border-color:@grayDark;}
-	}
-
-	a.locked{
-		cursor:default;
-	}
-
-
-	.error
-	{
-		.fs(9px);
-		.Helv;
-		text-transform:uppercase;
-		ul
-		{
-			list-style-position:inside;
-			margin-left:0px;
-			list-style:none;
-			
-		}
-	}
-	.address{
-		float:left;
-		width:240px; height:140px;
-		padding: 12px;
-		padding-top:0;
-		border-right:solid 1px #E6E7E8;
-		position: relative;
-		h5{
-			line-height:16px;
-			margin-bottom:16px;
-		}
-		p{
-			.fs(11px);
-			line-height:11px;
-		}
-		&.last{
-			border:0;
-		}
-		h6{
-			position: absolute;
-			bottom:0;left:12px;
-			color:@baseColor;
-		 	text-decoration:underline;
-		 	.fs(9px);
-		}
-	}
-	.item{
-		.fs(10px);
-		margin-left:0;
-		padding-top:10px;
-		.prodImage{
-			margin-left:2px;
-		}
-		&.dotted{
-			//border-bottom: dotted 2px #bfbfbf;
-			margin-bottom:10px;
-			.bbunnyborder(gray);
-		}
-		.desc{
-			position: relative;
-			height:160px;
-			p{
-				.fs(11px);
-				//line-spacing(11px);
-				line-height:11px;
-			
-			}
-			h3{
-				.fs(12px);
-				line-height:14px;
-			}
-			h5{//used instead of h3 for cart overview
-				line-height:14px;
-				.fs(11px);
-			}
-			.bottom{
-				position: absolute;
-				bottom:10px; left:0;
-				p{margin-bottom:0;}
-				h5{margin:0;line-height:16px;}
-				h6{/*instock*/ 
-					.fs(9px);
-					color:@baseColor;
-					.lh(10px);
-					//line-height:14px;
-					&.error
-					{
-						color:red;
-					}
-				}
-			}
-		}
-	}
-
-	.desc-price{
-		position: relative;
-		height:155px;
-		.bottom{
-			position: absolute;
-			bottom:0; left:0;
-			h5{margin:0;line-height:16px;}
-			h6{/*instock*/ color:@baseColor;}
-			.fielderror
-			{
-				width:150px;
-				float:left;
-				margin-bottom:3px;
-				.fs(11px);
-			}
-		}
-
-
-	}
-
-	.error-section{
-		text-align:center;
-		margin-top:80px;margin-bottom:60px;
-		padding:30px;
-	}
-
-	.billingform{
-		
-		.row > [class*="span"] {
-			
-			//margin-left:6px;
-		}
-		.row > label{margin-left:10px;}
-		input{margin-bottom:10px;}
-	}
-
-	table{
-		.HBold;
-		font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
-		font-weight:bold;
-		.fs(12px);
-		margin-bottom:6px;
-		thead{
-			//.fs(13px);
-			color:@baseColor;
-		}
-		td{
-			border:0;
-			padding:4px;
-			&.rightcol{
-				text-align:right;
-				padding-right:40px;
-				width:180px;
-				
-			}
-			&.midcol{
-				width:200px;
-			}
-			.gray{color:@gray;}
-		}
-
-	}
-
-	table.shipopts{ //specifically to style shipping options table
-		.bbunnyborderTop(gray);
-		tr{
-			.bbunnyborder(gray);
-			/*&:first-child{
-				.bbunnyborderTop(gray);
-			}*/
-		}
-		td{
-			//border-bottom:2px dotted @gray;
-			padding-top:20px;//padding-bottom:10px;
-			.tddiv{
-				position: relative;
-				padding-left:27px;
-			}
-		}
-		li{
-			.fs(13px);
-			.Helv;
-		}
-		.leftpink{
-			color:@baseColor;
-			.Helv;
-			font-weight:bold;
-			text-transform:uppercase;
-			.fs(11px);
-			
-			label{
-				color:@baseColor;
-				.HBold;
-				text-transform:uppercase;
-				.fs(11px);
-				padding:0;
-			}
-			input,.radio{
-				margin-right:10px;
-				position: absolute;
-				left:5px;top:-2px;
-
-			}
-		}
-	}
-
-	table.floatingcart{
-		.fs(11px);
-		td{font-weight:bold;}
-		/*font-family: Arial, sans-serif;*/
-	}
-	table.merch{
-		.fs(11px);
-		margin-bottom:6px;
-		td{font-weight:bold;}
-		span.note{
-			.Helv;
-			font-weight:normal;//bold was being applied here and needs to be overridden
-			color:@gray;
-			width:400px;
-			float:left;
-
-		}
-	}
-	.merch{margin-top:-18px;margin-bottom:6px;}
-	.headeritem{
-		color:@baseColor;
-		.fs(9px);.lh(21px);
-		.HBold;
-		text-transform:uppercase;
-		margin-bottom:1px;
-
-	}
-
-	.promocode{
-		h5{
-			position: relative;
-			top:2px;
-			.fs(12px);
-			margin-right:4px;
-		}
-		input{
-			padding:3px;
-			padding-bottom:4px;
-		}
-		.btn{
-			padding:2px;
-		}
-
-	}
-
-	form{
-		label,span.label{
-			text-align:left;
-			width:inherit;
-		}
-	}
-
-		.error{
-			color:red;
-		
-		h2{
-			color:red;
-			.Bondoni;
-			.fs(38px);
-		}
-		p{	
-			.fs(9px);
-			text-transform:uppercase;
-		}
-	}
-
+.error-section{
+	text-align:center;
+	margin-top:80px;margin-bottom:60px;
+	padding:30px;
 }
 
-	.error-section{
-		text-align:center;
-		margin-top:80px;margin-bottom:60px;
-		padding:30px;
-	}
 
-	.checkoutbtns{
-		margin:20px auto 20px auto;
-		.bbunnybox{
-			.HBold;
-			border:0;
-			color:#f8d0e5;
-			text-shadow:none;
-			background-color:#f498c0;
-			float:left; margin-left:4px;
-			width:142px;
-			&.current{background-color:@baseColor;padding: 3px 8px;}
-			&.locked{background-color:#a7a9ac;}
-
-		}
-	}
-//JUST THE CHECKOUT FORM THAT TAKES MONMEY
-#checkout-paymentform{
-	h4{
-		.fs(14px);
-		line-height:16px;
-	}
-	h5{
-		
-	}
-	h6{
-		.fs(12px);
-		line-height:12px;
-		&.bal{
-			
-		}
-	}
-	.checkoutheadings{
-		.fs(10px);
-		margin-bottom:4px;
-		text-align:center;// mar.30th 2012 -  not sure why this was added, doesnt match comps or CT build
-
-	}
-	.bal{
-		//balance checker font
-		text-decoration:underline;
-		.HLight;
-		.fs(9px);
-		margin:1px 0 4px 0;
-	}
-	label{
-		float:inherit;
-		line-height:22px;
-	}
-	}
-	label{
-		text-align:left;
-		.ui-selectmenu{height:20px;
-	}
-}
 
 //ERROR PAGE
 #errorlayout{
@@ -797,14 +421,31 @@ body{
 	}
 	.connectlink
 	{
+		padding-bottom:4px;
 		width:270px;//just a test to see if this will work, some connectlinks are wrapping
+
 		& :first-child
 		{
 			margin-top:10px;
 		}
-		.Helv;
-		.fs(16px);
-		padding-bottom:4px;
+
+		a{
+			.Helv;
+			.fs(16px);
+			color:@lightBaseColor;
+			&:hover
+			{
+				color:lighten(@lightBaseColor,10%);
+			}
+		}
+
+		.icon-twitterlarge
+		{
+			margin-right:2px;
+		}
+
+
+
 	}
 	.mini-feature //primarily used on club pages
 	{

@@ -149,12 +149,12 @@
 		color:@baseColor;
 		.addthis_button_facebook
 		{
-			margin-right:5px;
+			
 			img{width:15px;}
 		}
 		.addthis_button_twitter
 		{
-			margin-right:5px;
+			
 			img{width:15px;}
 		}
 
@@ -230,24 +230,36 @@
 
 		.thumb-video
 		{
-			margin:10px 8px 30px 0;
+			@thumbnailheight: 136px;
+			margin:0px 8px 40px 0;
 			position: relative;
 			float: left;
+			cursor: pointer;
+			.thumb-wrapper{
+				height:@thumbnailheight;
+				overflow: hidden;
+			}
 			.thumb{
 				width:202px;
+				height:100%;
+				display:block;
 			}
 			.playbtn
 			{
 				position: absolute;
-				top:40px; left:96px;
+				top:40px; left:88px;
+				width:27px;height:53px;
+				background:transparent url(/assets/images/css/video-playbtnpink.png);
 			}
 			.subheading
 			{
 				color:@lightBaseColor;
 				position: absolute;
-				bottom:-20px;
+				top:@thumbnailheight + 4;
 				left:0px;
-
+				.Helv;
+				.fs(12px);
+				.lh(13px)
 
 			}
 		}
@@ -256,7 +268,7 @@
 		article
 		{
 			.bbunnyborderTop(basecolorclub);
-			margin-bottom:20px;
+			margin-bottom:36px;
 			padding-top:18px;
 			&.first
 			{
@@ -533,16 +545,12 @@
 		border:solid #77244d 1px;
 		position:relative;
 		overflow:hidden;
-		margin-top:10px;
+		/*margin-top:10px;*/
 		padding:14px 19px 14px 19px;
 		height:100px;
 		width:910px;
 		.mask{
 			width:860px;
-			height:100%;	
-			overflow: hidden;
-			float: left;
-			position: relative;	
 			left:30px;
 		}
 		.thumbs{
@@ -550,13 +558,8 @@
 			width:20000em;
 			position:absolute;
 		}
-		.thumbs img{
-				float: left;
-				margin-right:20px;
-				cursor: pointer;
-				&.current{border:2px @lightBaseColor solid;}
-		}
 		.thumbs div{float:left;}
+		.thumbs .slide{margin-right:22px;}
 		.btn-scroll{
 			width:20px;
 			height:30px;

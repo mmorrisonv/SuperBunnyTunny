@@ -15,3 +15,60 @@
 	}
 
 }
+
+.galleryshare
+{
+  margin-top:5px;
+  margin-bottom:5px;
+}
+
+//Thumb Gallery
+.thumb-gallery{
+	border:solid @lightBaseColor 1px;
+	position:relative;
+	overflow:hidden;
+	padding:14px;
+	height:100px;
+	.mask
+	{
+		width:690px;
+		height:100%;	
+		overflow: hidden;
+		float: left;
+		position: relative;	
+		left:30px;
+	}
+	.thumbs
+	{
+		/* this cannot be too large */
+		width:20000em;
+		position:absolute;
+		> div
+		{
+			float:left;
+			width:103px;
+			height:80px;
+			margin-right:14px;
+			overflow:hidden;
+			img
+			{
+				float: left;
+				cursor: pointer;
+				max-width:120px;
+				max-height:150px;
+				&.current{border:2px @lightBaseColor solid;}
+			}
+		}
+	}
+	.btn-scroll{
+		width:20px;
+		height:30px;
+		position: absolute;
+		top:35px;
+		&.disabled {
+		visibility:hidden !important;		
+		} 	
+		&.js-prev{left:10px; cursor: pointer;background: url('/assets/images/css/btn-arrowleft.png') no-repeat;}
+		&.js-next{right:10px; cursor: pointer;background: url('/assets/images/css/btn-arrowright.png') no-repeat;}
+	}
+}
