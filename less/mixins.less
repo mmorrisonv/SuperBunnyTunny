@@ -38,20 +38,32 @@
     background-position: 0% 100%;
     background-repeat: repeat-x;
 }
+.bbunnyborder(none){
+  background-image: none;
+}
 .bbunnyborderTop(@color:baseColor){
     background-image: url('/assets/images/css/border@{color}.png');
     background-position: 0% 0%;
     background-repeat: repeat-x;
+}
+.bbunnyborderTop(none){
+  background-image: none;
 }
 .bbunnyborderRight(@color:baseColor){
     background-image: url('/assets/images/css/border@{color}-right.jpg');
     background-position: 100% 0%;
     background-repeat: repeat-y;
 }
+.bbunnyborderRight(none){
+  background-image: none;
+}
 .bbunnyborderLeft(@color:baseColor){
     background-image: url('/assets/images/css/border@{color}-right.jpg');
     background-position: 0% 0%;
     background-repeat: repeat-y;
+}
+.bbunnyborderLeft(none){
+  background-image: none;
 }
 //fontsizes
 .fs(@fontsize: 12px){

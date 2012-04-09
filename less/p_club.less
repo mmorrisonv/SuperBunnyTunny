@@ -1,5 +1,11 @@
 /*p_custserv.less site specific styles for customer service pages*/
-
+.css-club
+{
+	header > .container
+	{
+		.bbunnyborder(none);
+	}
+}
 //CUSTOMER SERVICE PAGE
 #clubLayout{
 	position:relative;
@@ -222,7 +228,7 @@
 			h3{.HUltra;.fs(22px);.ls(2px);}
 			&.sansborder
 			{
-				.bbunnyborderTop('none');
+				.bbunnyborderTop(none);
 				padding:0;
 				margin-bottom:0px;
 			}	
@@ -268,11 +274,12 @@
 		article
 		{
 			.bbunnyborderTop(basecolorclub);
-			margin-bottom:36px;
-			padding-top:18px;
+			margin-bottom:8px;
+			padding-top:11px;
+			float: left;
 			&.first
 			{
-				.bbunnyborderTop('none');
+				.bbunnyborderTop(none);
 				h3{padding-top:0px;}
 				padding-top:4px;
 			}
@@ -293,7 +300,7 @@
 			}
 			.articleImage
 			{
-				max-width:630px;
+				max-width:665px;
 			}
 			.share_area
 			{
@@ -306,9 +313,11 @@
 			}
 
 		}
-		article:first-child{				.bbunnyborderTop('none');
-				h3{padding-top:0px;}
-				padding-top:4px;}
+		article:first-child{			
+			padding-top:4px;
+			.bbunnyborderTop(none);
+			h3{padding-top:0px;}
+		}
 		article.two_column{
 			h3{
 				.fs(32px);.lh(32px);
