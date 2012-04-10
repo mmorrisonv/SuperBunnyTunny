@@ -20,6 +20,14 @@
 {
   margin-top:5px;
   margin-bottom:5px;
+
+  .quickshopHolder
+  {
+  	float:left;
+  	width:123px;
+  	height:100%;
+  	a{display:inline-block;}
+  }
 }
 
 //Thumb Gallery
@@ -50,13 +58,15 @@
 			height:80px;
 			margin-right:14px;
 			overflow:hidden;
+			/*border:2px @lightBaseColor solid;*/
+			&.current{border:2px @baseColor solid;}
 			img
 			{
 				float: left;
 				cursor: pointer;
 				max-width:120px;
-				max-height:150px;
-				&.current{border:2px @lightBaseColor solid;}
+				max-height:160px;
+				
 			}
 		}
 	}

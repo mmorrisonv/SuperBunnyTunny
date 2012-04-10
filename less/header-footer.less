@@ -194,13 +194,15 @@ header {
     {
       padding-left:14px;
     }
-    ul{//second level nav inside li's
+    ul
+    {//second level nav inside li's
       float:left;
       text-align:left;
       //.fs(8px);
       width:130px;
           
-      &.right{
+      &.right
+      {
         float: right;
         width:130px;
         
@@ -213,16 +215,25 @@ header {
         
       }
 
-      li{
+      li
+      {
         &.title{
           //.fs(7px);      
           border-bottom:solid 1px #000;
           padding-bottom:0;
           margin-bottom:3px;
-          b{.HBold;}
+          b{font-weight:bold;/*.Helv;*/}
         }
       }
 
+    }
+    ul.bold-subcats
+    {
+      li
+      {
+        font-weight:bold;
+        &.title{font-weight:normal;}
+      }
     }
 
   }
