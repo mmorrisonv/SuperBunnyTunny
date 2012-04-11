@@ -227,16 +227,22 @@ header {
       }
 
     }
-    ul.bold-subcats
-    {
-      li
-      {
-        font-weight:bold;
-        &.title{font-weight:normal;}
-      }
-    }
 
   }
+
+  ul.bold-subcats
+  {
+    li
+    {
+      font-weight:bold;
+      //.HBold;
+
+      a{.HBold;font-weight:normal;}//font-weight:bold;.fs(10px);}
+      &.title{font-weight:normal;}
+    }
+  }
+
+
   //override for 2up dropdowns built under a div instead of a ul
   div.dropdown-nav{
     width:270px;
