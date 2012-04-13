@@ -121,7 +121,7 @@
 
 		.alt-color
 		{
-			cursor:pointer;
+			
 			margin-bottom:4px; 
 			padding:0;
 			&.current
@@ -129,8 +129,13 @@
 				border:solid 2px @lightBaseColor;
 			}
 		}
+		.js-altcolorbtn
+		{
+			cursor:pointer;
 
-		.jAddToCart{
+		}
+
+		.addToCart{
 			margin-right:4px;
 		}
 
@@ -205,7 +210,16 @@
 				/*padding-bottom:8px;
 				border-bottom:solid 1px @grayLight;*/
 				position: relative;
-
+				.productImageHolder
+				{
+					margin:0;
+					overflow: hidden;
+					max-height:260px;
+				}
+				.productImage
+				{
+					width:200px;
+				}
 				.span18 { width:730px; }//stretch row out to the end of the parent
 				.interact{
 					/*position: absolute;
@@ -251,6 +265,7 @@
 			margin-right:10px;
 			margin-bottom:10px;
 			width:66px;
+			cursor: pointer;
 		}
 	}
 }
