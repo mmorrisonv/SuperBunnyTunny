@@ -186,6 +186,7 @@ header {
       a{
         font-family:verdana,Arial;
         color:@grayDark;
+        &.inactive:hover{color:@grayDark;}
         &:hover{color:@baseColor;}
         &.title{.HBold;}
       }
@@ -555,13 +556,18 @@ footer {
             .HBold;
             .fs(10px);
           }
+
           &:hover{
             text-decoration:none;
             cursor:pointer;
             color:@grayDark;
             background-color: @lightBaseColor;
           }
-
+          &.inactive{
+            cursor: default;
+            &:hover{background-color:transparent;}
+          }
+          
         }
         li.active a{
           background-color:@baseColor;
