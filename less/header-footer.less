@@ -186,9 +186,10 @@ header {
       a{
         font-family:verdana,Arial;
         color:@grayDark;
+        &.inactive{cursor:default;}
         &.inactive:hover{color:@grayDark;}
         &:hover{color:@baseColor;}
-        &.title{.HBold;}
+        &.title{.HBold; &.inactive{cursor:default;}}
       }
     }
     > li //this really shouldnt be needed, because of the way the menu is built on the page there can be a lone li inside of a .dropdown-nav
@@ -523,6 +524,7 @@ footer {
         padding-left:2px;
         padding-bottom:0;
         margin-right:8px;
+
       }
 
       ul.tertiarycats{
