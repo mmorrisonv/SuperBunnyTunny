@@ -253,9 +253,8 @@
 			.subheading
 			{
 				color:@lightBaseColor;
-				position: absolute;
-				top:@thumbnailheight + 4;
-				left:0px;
+
+				float:left;
 			}
 		}
 	
@@ -276,6 +275,17 @@
 			{
 				width:450px;
 			}
+			&.w500
+			{ 
+				p
+				{
+					width:506px;
+				}
+				.model-image
+				{
+					min-width:506px;
+				}
+			}			
 			h3{
 				.HLight;
 				.lh(23px);
