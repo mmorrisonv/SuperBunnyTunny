@@ -164,73 +164,73 @@ header {
     }
 }
 
-  .dropdown-nav{
-    width:138px;
-    display: none;
-    float:left;
-    background-color: @lightBaseColor;
-    .fs(11px);
-    //text-transform:uppercase;
-    position: absolute;
-    top:20px;left:0;
-    margin:0;
-    padding:5px 0 10px 4px;
+.dropdown-nav{
+  width:138px;
+  display: none;
+  float:left;
+  background-color: @lightBaseColor;
+  .fs(11px);
+  //text-transform:uppercase;
+  position: absolute;
+  top:20px;left:0;
+  margin:0;
+  padding:5px 0 10px 4px;
 
 
-    li{ //all li's under dropdown
-      list-style:none;
+  li{ //all li's under dropdown
+    list-style:none;
+    color:@grayDark;
+    line-height:18px;
+    padding:3px 0 3px 0;
+    font-family:Verdana,Arial;
+    a{
+      font-family:verdana,Arial;
       color:@grayDark;
-      line-height:18px;
-      padding:3px 0 3px 0;
-      font-family:Verdana,Arial;
-      a{
-        font-family:verdana,Arial;
-        color:@grayDark;
-        &.inactive{cursor:default;}
-        &.inactive:hover{color:@grayDark;}
-        &:hover{color:@baseColor;}
-        &.title{.HBold; &.inactive{cursor:default;}}
-      }
+      &.inactive{cursor:default;}
+      &.inactive:hover{color:@grayDark;}
+      &:hover{color:@baseColor;}
+      &.title{.HBold; &.inactive{cursor:default;}}
     }
-    > li //this really shouldnt be needed, because of the way the menu is built on the page there can be a lone li inside of a .dropdown-nav
+  }
+  > li //this really shouldnt be needed, because of the way the menu is built on the page there can be a lone li inside of a .dropdown-nav
+  {
+    padding-left:14px;
+  }
+  ul
+  {//second level nav inside li's
+    float:left;
+    text-align:left;
+    //.fs(8px);
+    width:130px;
+        
+    &.right
     {
-      padding-left:14px;
-    }
-    ul
-    {//second level nav inside li's
-      float:left;
-      text-align:left;
-      //.fs(8px);
+      float: right;
       width:130px;
-          
-      &.right
-      {
-        float: right;
-        width:130px;
-        
-        ul{
-          //padding-left:10px;
-          //border-left:solid 1px @grayDark;
-          margin:0;
-          padding-left:10px;
-        }
-        
+      
+      ul{
+        //padding-left:10px;
+        //border-left:solid 1px @grayDark;
+        margin:0;
+        padding-left:10px;
       }
+      
+    }
 
-      li
-      {
-        &.title{
-          //.fs(7px);      
-          border-bottom:solid 1px #000;
-          padding-bottom:0;
-          margin-bottom:3px;
-          b{font-weight:bold;/*.Helv;*/}
-        }
+    li
+    {
+      &.title{
+        //.fs(7px);      
+        border-bottom:solid 1px #000;
+        padding-bottom:0;
+        margin-bottom:3px;
+        b{font-weight:bold;/*.Helv;*/}
       }
-
     }
 
   }
+
+}
 
   ul.bold-subcats
   {
@@ -296,6 +296,15 @@ header {
 }
 
 
+
+
+.css-club header
+{
+  .nav
+  {
+    margin-bottom:0;
+  }
+}
 
 
 // FOOTER
@@ -627,8 +636,8 @@ footer {
     float: left;
     //text-align:center;
     min-width:50px;
-    padding-left:10.708333;//preliminary values, will be replaced by jsqcript
-    padding-right:10.70833;//preliminary values, will be replaced by jsqcript
+    padding-left:10.708333px;//preliminary values, will be replaced by jsqcript
+    padding-right:10.70833px;//preliminary values, will be replaced by jsqcript
     &.selected,&.active{
       background-color:@lightBaseColor;
       text-decoration: none;

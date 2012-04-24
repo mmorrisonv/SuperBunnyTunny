@@ -40,6 +40,10 @@ H1.bbunnybox{padding: 8px 0px 8px 0px; margin-bottom:8px; letter-spacing:2px; .H
 
 body{
 	padding-top:100px;
+	&.css-club
+	{
+		padding-top:90px;
+	}
 }
 /* The white background content wrapper */
 .container > .content {
@@ -334,6 +338,10 @@ body{
 	position: relative;
 	float: left;
 	cursor: pointer;
+	> a //some are wrapped in a tags so they can be clickable
+	{
+		float: left;
+	}
 	.thumb-img{
 		width:202px;
 		height:136px;
@@ -345,7 +353,7 @@ body{
 	.playbtn
 	{
 		position: absolute;
-		top:40px; left:96px;
+		top:40px; left:92px;
 		width:27px; height:54px;
 		background:transparent url('/assets/images/css/video-playbtnpink.png') no-repeat;
 	}

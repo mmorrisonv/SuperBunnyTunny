@@ -4078,6 +4078,14 @@ a.down:active {
   margin-top: 5px;
   margin-bottom: 5px;
 }
+.galleryshare .quickshopHolder {
+  float: left;
+  width: 123px;
+  height: 100%;
+}
+.galleryshare .quickshopHolder a {
+  display: inline-block;
+}
 .thumb-gallery {
   border: solid #fbd7e7 1px;
   position: relative;
@@ -4105,15 +4113,17 @@ a.down:active {
   height: 80px;
   margin-right: 14px;
   overflow: hidden;
+  /*border:2px @lightBaseColor solid;*/
+
+}
+.thumb-gallery .thumbs > div.current {
+  border: 2px #ee4799 solid;
 }
 .thumb-gallery .thumbs > div img {
   float: left;
   cursor: pointer;
   max-width: 120px;
-  max-height: 150px;
-}
-.thumb-gallery .thumbs > div img.current {
-  border: 2px #fbd7e7 solid;
+  max-height: 160px;
 }
 .thumb-gallery .btn-scroll {
   width: 20px;
@@ -4348,7 +4358,14 @@ header .dropdown-nav ul li.title {
   margin-bottom: 3px;
 }
 header .dropdown-nav ul li.title b {
-  font-family: 'HelveticaNeue75Bold';
+  font-weight: bold;
+  /*.Helv;*/
+}
+header .dropdown-nav ul.bold-subcats li {
+  font-weight: bold;
+}
+header .dropdown-nav ul.bold-subcats li.title {
+  font-weight: normal;
 }
 header div.dropdown-nav {
   width: 270px;
@@ -5459,67 +5476,6 @@ body {
 #wholesaleformcontainer {
   border: solid 5px #808080;
 }
-.giftcardsignup {
-  margin-top: 40px;
-  padding-top: 30px;
-  border: solid 3px #E6E7E8;
-  position: relative;
-  width: 783px;
-  margin-left: -2px;
-}
-.giftcardsignup label {
-  display: inline-block;
-  color: #231520;
-}
-.giftcardsignup .fielderror {
-  display: inline-block;
-  color: red;
-  text-transform: uppercase;
-}
-.giftcardsignup .error {
-  color: red;
-}
-.giftcardsignup .error h2 {
-  color: red;
-  font-family: 'BodoniBookItalic';
-  font-size: 38px;
-}
-.giftcardsignup .error p {
-  font-size: 9px;
-  text-transform: uppercase;
-}
-.giftcardsignup .address {
-  margin-left: 20px;
-}
-.giftcardsignup .address h5 {
-  line-height: 26px;
-}
-.giftcardsignup .address:first-child {
-  margin-left: 0;
-}
-.giftcardsignup .address .pink {
-  line-height: 14px;
-  color: #ee4799;
-  font-size: 11px;
-}
-.giftcardsignup .address p {
-  font-size: 12px;
-}
-.giftcardsignup .lettercount {
-  display: block;
-}
-.giftcardsignup .jotheramount {
-  display: none;
-}
-.giftcardsignup .floatedtitle {
-  z-index: 2;
-  position: absolute;
-  top: -22px;
-  left: 20px;
-}
-.giftcardsignup .error {
-  margin-left: 150px;
-}
 .pageination,
 .sort {
   margin-top: 4px;
@@ -5668,6 +5624,34 @@ body {
 .banner3 a img {
   border: solid 1px #fbd7e7;
 }
+.thumb-video {
+  width: 202px;
+  height: 136px;
+  position: relative;
+  float: left;
+  cursor: pointer;
+}
+.thumb-video .thumb-img {
+  width: 202px;
+  height: 100%;
+  float: left;
+  margin-bottom: 2px;
+}
+.thumb-video .playbtn {
+  position: absolute;
+  top: 40px;
+  left: 96px;
+  width: 27px;
+  height: 54px;
+  background: transparent url('/assets/images/css/video-playbtnpink.png') no-repeat;
+}
+.thumb-video .subheading {
+  font-family: 'HelveticaLTStdRoman';
+  line-height: 14px;
+  font-size: 12px;
+  line-height: 13px;
+  margin: 0 !important;
+}
 #rightcol .title {
   float: left;
   width: 100%;
@@ -5764,21 +5748,6 @@ body {
 #rightcol .thumb-video {
   margin-top: 10px;
   margin-bottom: 20px;
-  position: relative;
-  float: left;
-}
-#rightcol .thumb-video .thumb {
-  width: 202px;
-}
-#rightcol .thumb-video .playbtn {
-  position: absolute;
-  top: 40px;
-  left: 96px;
-}
-#rightcol .thumb-video span.subheading {
-  font-family: 'HelveticaLTStdRoman';
-  line-height: 14px;
-  margin: 0 !important;
 }
 #herolayout {
   min-height: 555px;
@@ -6070,17 +6039,19 @@ body {
 .listing dl lh,
 .listing dl dt,
 .listing dl dd {
-  font-size: 11px;
+  font-family: 'HelveticaNeue45Light';
+  font-size: 10px;
   line-height: 14px;
+  letter-spacing: 1px;
 }
 .listing dl .sale {
   color: #ee4799;
   font-weight: bold;
-  font-size: 11px;
+  font-size: 10px;
 }
 .listing dd {
   margin-top: -2px;
-  font-weight: bold;
+  font-family: 'HelveticaNeue75Bold';
 }
 .listing .notice {
   position: absolute;
@@ -6227,6 +6198,10 @@ body {
 }
 #custservlayout h5.grayDark {
   color: #231f20;
+}
+#custservlayout h5.bold {
+  font-size: 14px;
+  font-family: 'HelveticaNeue75Bold';
 }
 #custservlayout h6 {
   color: #231f20;
@@ -6526,10 +6501,11 @@ body {
   color: gray;
   background: transparent url('/assets/images/css/background-storepolaroid.jpg') no-repeat left top;
 }
-#custservlayout .store img {
+#custservlayout .store .storeImg {
   position: relative;
-  top: 10px;
+  top: 12px;
   left: 12px;
+  width: 230px;
 }
 #custservlayout .store .info {
   position: absolute;
@@ -6941,6 +6917,71 @@ body {
   line-height: 11px;
   padding-bottom: 16px;
 }
+.giftcardsignup {
+  margin-top: 40px;
+  padding-top: 30px;
+  border: solid 3px #E6E7E8;
+  position: relative;
+  width: 783px;
+  margin-left: -2px;
+}
+.giftcardsignup label {
+  display: inline-block;
+  color: #231520;
+}
+.giftcardsignup label.error {
+  color: red;
+  margin-left: 0;
+}
+.giftcardsignup .fielderror {
+  display: inline-block;
+  color: red;
+  text-transform: uppercase;
+}
+.giftcardsignup .error {
+  color: red;
+}
+.giftcardsignup .error h2 {
+  color: red;
+  font-family: 'BodoniBookItalic';
+  font-size: 38px;
+}
+.giftcardsignup .error p {
+  font-size: 9px;
+  text-transform: uppercase;
+}
+.giftcardsignup .address {
+  margin-left: 20px;
+}
+.giftcardsignup .address h5 {
+  line-height: 26px;
+}
+.giftcardsignup .address:first-child {
+  margin-left: 0;
+}
+.giftcardsignup .address .pink {
+  line-height: 14px;
+  color: #ee4799;
+  font-size: 11px;
+}
+.giftcardsignup .address p {
+  font-size: 12px;
+}
+.giftcardsignup .lettercount {
+  display: block;
+}
+.giftcardsignup .jotheramount {
+  display: none;
+}
+.giftcardsignup .floatedtitle {
+  z-index: 2;
+  position: absolute;
+  top: -22px;
+  left: 20px;
+}
+.giftcardsignup .error {
+  margin-left: 150px;
+}
 /*p_custserv.less site specific styles for customer service pages*/
 .css-club header > .container {
   background-image: url('/assets/images/css/bordernone.png');
@@ -7194,31 +7235,11 @@ body {
   float: left;
   cursor: pointer;
 }
-#clubLayout .postlist .thumb-video .thumb-wrapper {
-  height: 136px;
-  overflow: hidden;
-}
-#clubLayout .postlist .thumb-video .thumb {
-  width: 202px;
-  height: 100%;
-  display: block;
-}
-#clubLayout .postlist .thumb-video .playbtn {
-  position: absolute;
-  top: 40px;
-  left: 88px;
-  width: 27px;
-  height: 53px;
-  background: transparent url(/assets/images/css/video-playbtnpink.png);
-}
 #clubLayout .postlist .thumb-video .subheading {
   color: #fbd7e7;
   position: absolute;
   top: 140px;
   left: 0px;
-  font-family: 'HelveticaLTStdRoman';
-  font-size: 12px;
-  line-height: 13px;
 }
 #clubLayout .postlist article {
   background-image: url('/assets/images/css/borderbasecolorclub.png');
