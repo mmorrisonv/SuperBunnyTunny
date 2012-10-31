@@ -69,6 +69,7 @@
 		padding:0 0 12px 0; 
 		margin:0 0 12px 0;
 		float:left;
+		width:100%;
 		h1,h2,h3,h4,h5,p{
 			margin:0;line-height:inherit;
 		}
@@ -181,16 +182,27 @@
 			color:red;
 			.fs(10px);
 			.HBold;
+			position: relative;
+			top: -3px;
 		}
 	}
 	.sizechart{
 		position: absolute;
-		bottom:29px; left:80px;
+		top: -18px; left:80px;
 		cursor: pointer;
 		color:@gray;
 		text-decoration:underline;
 		font-size:10px;
 	}
+	.bottomchart{
+		position: absolute;
+		top:3px; left:80px;
+		cursor: pointer;
+		color:@gray;
+		text-decoration:underline;
+		font-size:10px;
+	}
+	.bottomGuideDot{max-width:30px;}
 	#related-items {//any items that come below the main feature product area
 		margin-top:50px;
 		float:left;
@@ -276,10 +288,37 @@
 	}
 }
 
+	.sizechart-tabs li{
+		height: 42px;
+		border:solid 1px @gray;
 
+		background-color: @lightBaseColor !important;		
+		a{ 
+			color:@baseColor !important; 
+			font-size:12px;
+			padding-left:8px;
+			padding-right: 8px;
+		}
 
+		&.active{
+			background-color: white !important;
+			a{color:#231F20 !important;}
+		}
+
+		&:hover{ background-color: white;  }
+
+		a:hover{
+			background-color: inherit !important;
+		}
+	}
+	#imgMain{
+		max-width: 550px;
+		max-height:600px;
+		width:530px;
+		margin-left:10px;
+	}
 #zoomLayout{
-	
+
 	.thumbs{
 		background-color:white;
 		img
