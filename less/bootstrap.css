@@ -5251,10 +5251,12 @@ a.menu:after,
   color: red;
   font-size: 10px;
   font-family: 'HelveticaNeue75Bold';
+  position: relative;
+  top: -3px;
 }
 #productlayout .sizechart {
   position: absolute;
-  bottom: 29px;
+  top: 75px;
   left: 80px;
   cursor: pointer;
   color: #808080;
@@ -5263,7 +5265,7 @@ a.menu:after,
 }
 #productlayout .bottomchart {
   position: absolute;
-  bottom: 8px;
+  top: 98px;
   left: 80px;
   cursor: pointer;
   color: #808080;
